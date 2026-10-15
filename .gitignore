@@ -1,0 +1,24 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# macOS and editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Generated experiment outputs
+**/output/
+*.log
+*.png
+*.jpg
+*.jpeg
+
+# Local checkpoints and large artifacts
+*.pt
+*.pth
+*.ckpt
