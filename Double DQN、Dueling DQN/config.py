@@ -25,4 +25,5 @@ SEED = 0
 
 ENV_NAME = 'Pendulum-v1'
 ACTION_DIM = 11
-DEVICE = torch.device("mps") if (torch.backends.mps.is_available() and torch.backends.mps.is_built()) else torch.device("cpu")
+DEVICE = torch.device("cuda") if torch.cuda.is_available() else torch.device(
+    "cpu")
