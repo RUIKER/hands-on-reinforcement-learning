@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/architecture-rl-training-pipeline-20261023-151621/candidate.json",
+    "sha256": "6c1fcd5277856c24753efc97da4b84af0cd45041aae994b765e31ba05cf30ef8",
+    "bytes": 4834
+  },
+  "artifact": {
+    "path": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/architecture-rl-training-pipeline-20261023-151621/rl-training-pipeline.html",
+    "sha256": "412f9ed6d44f1842d5c8da6b9124f94291d5510991059d43e7bbd354c02ae93a",
+    "bytes": 825559
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/architecture-rl-training-pipeline-20261023-151621/rl-training-pipeline.finalize.json",
+    "summaryReceipt": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/architecture-rl-training-pipeline-20261023-151621/rl-training-pipeline.finalize-summary.json",
+    "browserCheckReceipt": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/architecture-rl-training-pipeline-20261023-151621/rl-training-pipeline.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-23T07:17:03.821Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 1866,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

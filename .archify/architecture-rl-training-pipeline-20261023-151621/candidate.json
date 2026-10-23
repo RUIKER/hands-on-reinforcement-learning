@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "强化学习仓库：共享训练流水线",
+    "locale": "zh-CN",
+    "output": ".archify/architecture-rl-training-pipeline-20261023-151621/rl-training-pipeline.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "config",
+      "type": "backend",
+      "label": "config.py",
+      "sublabel": "超参数 / 环境名",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        140,
+        64
+      ]
+    },
+    {
+      "id": "main",
+      "type": "backend",
+      "label": "main.py",
+      "sublabel": "组装并启动实验",
+      "pos": [
+        240,
+        40
+      ],
+      "size": [
+        150,
+        68
+      ]
+    },
+    {
+      "id": "agent",
+      "type": "backend",
+      "label": "agents.py",
+      "sublabel": "算法更新与 target",
+      "pos": [
+        450,
+        40
+      ],
+      "size": [
+        160,
+        68
+      ]
+    },
+    {
+      "id": "networks",
+      "type": "backend",
+      "label": "networks.py",
+      "sublabel": "Actor / Critic",
+      "pos": [
+        670,
+        40
+      ],
+      "size": [
+        150,
+        68
+      ]
+    },
+    {
+      "id": "visualization",
+      "type": "backend",
+      "label": "visualization.py",
+      "sublabel": "回报曲线",
+      "pos": [
+        40,
+        220
+      ],
+      "size": [
+        150,
+        64
+      ]
+    },
+    {
+      "id": "trainer",
+      "type": "backend",
+      "label": "trainer.py",
+      "sublabel": "交互循环 / 评估",
+      "pos": [
+        240,
+        220
+      ],
+      "size": [
+        150,
+        68
+      ]
+    },
+    {
+      "id": "noise",
+      "type": "backend",
+      "label": "noise.py",
+      "sublabel": "探索 / target 平滑",
+      "pos": [
+        450,
+        220
+      ],
+      "size": [
+        160,
+        64
+      ]
+    },
+    {
+      "id": "environment",
+      "type": "backend",
+      "label": "environment.py",
+      "sublabel": "Gymnasium reset / step",
+      "pos": [
+        240,
+        400
+      ],
+      "size": [
+        160,
+        64
+      ]
+    },
+    {
+      "id": "replay",
+      "type": "database",
+      "label": "rl_utils.py",
+      "sublabel": "ReplayBuffer / 移动平均",
+      "pos": [
+        450,
+        400
+      ],
+      "size": [
+        160,
+        64
+      ],
+      "tag": "in-memory"
+    },
+    {
+      "id": "output",
+      "type": "database",
+      "label": "output / 图像",
+      "sublabel": "曲线 / CSV / 模型",
+      "pos": [
+        40,
+        400
+      ],
+      "size": [
+        150,
+        64
+      ],
+      "tag": "artifact"
+    }
+  ],
+  "connections": [
+    {
+      "id": "config-main",
+      "from": "config",
+      "to": "main",
+      "label": "参数"
+    },
+    {
+      "id": "main-agent",
+      "from": "main",
+      "to": "agent",
+      "label": "构造"
+    },
+    {
+      "id": "agent-networks",
+      "from": "agent",
+      "to": "networks",
+      "label": "前向"
+    },
+    {
+      "id": "main-trainer",
+      "from": "main",
+      "to": "trainer",
+      "label": "启动训练"
+    },
+    {
+      "id": "trainer-agent",
+      "from": "trainer",
+      "to": "agent",
+      "label": "更新"
+    },
+    {
+      "id": "trainer-environment",
+      "from": "trainer",
+      "to": "environment",
+      "label": "reset / step"
+    },
+    {
+      "id": "trainer-replay",
+      "from": "trainer",
+      "to": "replay",
+      "label": "采样"
+    },
+    {
+      "id": "agent-noise",
+      "from": "agent",
+      "to": "noise",
+      "label": "探索/平滑"
+    },
+    {
+      "id": "main-visualization",
+      "from": "main",
+      "to": "visualization",
+      "label": "训练后绘图"
+    },
+    {
+      "id": "visualization-output",
+      "from": "visualization",
+      "to": "output",
+      "label": "图像/文件"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "三条算法分支",
+      "items": [
+        "01–03 价值型：Q-learning、DQN、Double/Dueling，离散动作",
+        "04–08 策略梯度：REINFORCE、AC、TRPO、PPO，on-policy",
+        "09–11 连续控制：DDPG、TD3、SAC，off-policy + replay"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "共享模块约定",
+      "items": [
+        "03–11 的算法目录采用 config / environment / agent / trainer / main 拆分",
+        "01 使用 Q 表 + q_learning / sarsa；02 是最小练习实现",
+        "off-policy 目录使用 ReplayBuffer；on-policy 目录使用 rollout 数据",
+        "DDPG / TD3 额外使用 noise.py；SAC 由随机策略自带探索"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "输出与阅读",
+      "items": [
+        "可视化模块绘制原始回报与移动平均",
+        "Mountain Car PyTorch 另存 CSV / PNG / PT",
+        "算法定位见 算法路线.md 与各目录 经验总结.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "34955ef0-f849-4e23-9728-1430f15cc8e2",
+  "status": "current",
+  "command": "deliver",
+  "type": "explainer",
+  "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+  "output": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/code-atlas.html",
+  "specification": {
+    "sha256": "f5d8338e09066987904d0b7a70d5b94d952b4cd8e0fe8e20b100f06fe56227a8",
+    "bytes": 130341
+  },
+  "artifact": {
+    "sha256": "d72a13fa90d53e95ed53afda4cdd0593977ff8af2d63730a3b308e48a77bebf2",
+    "bytes": 1744773
+  },
+  "explainer": {
+    "preparedSha256": "360d8503dbd093c2f504f86593bad5be834a15cb8462bb08f9d61ee357edc05b",
+    "dependencies": [
+      {
+        "kind": "diagram-spec",
+        "id": "repo-tree",
+        "inline": true,
+        "sha256": "80e066b1d28704dc6e3a6a67961e67e615c3115b1ee92cb094864684e21e797e",
+        "bytes": 1199
+      }
+    ]
+  }
+}

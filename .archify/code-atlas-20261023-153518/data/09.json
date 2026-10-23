@@ -1,0 +1,716 @@
+{
+  "root_id": "09",
+  "root_dir": "09_DDPG",
+  "summary": "DDPG 的 CartPole 与 Pendulum 两套教学实现：Actor-Critic 双网络加双 target 网络、软更新、经验回放，并配套噪声、训练循环与绘图模块。",
+  "files": [
+    {
+      "path": "09_DDPG/CartPole/agents.py",
+      "purpose": "CartPole 版 DDPG 智能体，封装四个网络、优化器、探索噪声以及 critic/actor 的更新步骤。",
+      "lines": 78,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-6",
+          "logic": "导入 numpy、torch 与 F，并从 networks 引入 Actor/Critic、从 noise 引入 NormalNoise/OUNoise；模块内无自定义常量。"
+        },
+        {
+          "kind": "类",
+          "name": "DDPG",
+          "line": "9-78",
+          "logic": "车杆任务的 DDPG 适配器类：actor 输出一维连续信号，由环境层再映射成左右两个离散动作。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.__init__",
+          "line": "12-33",
+          "logic": "接收状态/动作维度、动作上下界、学习率、gamma、tau 与噪声参数；构建 actor/critic 及各自 target 网络并复制参数，创建两个 Adam 优化器，按 noise_type 选择 OUNoise 或 NormalNoise，非法取值抛 ValueError。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.reset_noise",
+          "line": "35-36",
+          "logic": "每回合开始时调用噪声对象的 reset，清除 OU 噪声的历史状态。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.take_action",
+          "line": "38-46",
+          "logic": "把状态转成 (1, state_dim) 张量，no_grad 下经 actor 得到动作；explore 为真时叠加噪声采样，最后裁剪到 [-1, 1] 并返回 numpy 数组。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.soft_update",
+          "line": "48-53",
+          "logic": "对 target 与 online 网络的同名参数逐一对齐，执行 target = (1-tau)*target + tau*online 的原地软更新。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.update",
+          "line": "55-78",
+          "logic": "把回放批次转为张量，用 target_actor/target_critic 计算 q_targets = r + gamma*Q'*(1-done)；先以 MSE 更新 critic，再以 -mean(Q(s, actor(s))) 更新 actor，最后对两对网络各做一次软更新。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/CartPole/config.py",
+      "purpose": "CartPole DDPG 的超参数配置模块，集中定义学习率、回合数、回放池与噪声设置。",
+      "lines": 18,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-18",
+          "logic": "导入 torch 后定义 actor_lr=3e-4、critic_lr=3e-3、NUM_EPISODES=500、HIDDEN_DIM=64、GAMMA=0.98、TAU=0.005、BUFFER_SIZE/MINIMAL_SIZE/BATCH_SIZE、NOISE_TYPE='normal'、NOISE_SIGMA、OU_THETA、SEED、ENV_NAME='CartPole-v1'，并按 CUDA 可用性选择 DEVICE。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/CartPole/environment.py",
+      "purpose": "创建 CartPole 环境，并为 DDPG 提供一维连续动作代理空间及其离散化转换。",
+      "lines": 17,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-2",
+          "logic": "导入 numpy 与 gymnasium；无模块级常量。"
+        },
+        {
+          "kind": "函数",
+          "name": "make_environment",
+          "line": "5-12",
+          "logic": "以 env_name 创建 gym 环境，校验动作空间为两个离散动作（否则 TypeError），返回 env、状态维度、动作维度 1 以及 [-1.0] / [1.0] 的动作上下界。"
+        },
+        {
+          "kind": "函数",
+          "name": "continuous_to_discrete",
+          "line": "15-17",
+          "logic": "取连续动作第一个分量，>=0 映射为 1，否则为 0，作为 CartPole 的左右推力动作。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/CartPole/main.py",
+      "purpose": "CartPole DDPG 的运行入口，负责设置随机种子、装配环境/智能体/回放池、调用训练并绘图。",
+      "lines": 40,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-11",
+          "logic": "导入 random、numpy、torch 以及本目录的 config、DDPG、make_environment、ReplayBuffer、train_off_policy_agent、plot_training_results。"
+        },
+        {
+          "kind": "函数",
+          "name": "set_seed",
+          "line": "14-17",
+          "logic": "同时设置 random、numpy 与 torch 的随机种子，保证实验可复现。"
+        },
+        {
+          "kind": "函数",
+          "name": "main",
+          "line": "20-36",
+          "logic": "设定种子后创建 CartPole 环境，用 config 中的参数实例化 DDPG 与 ReplayBuffer，调用 train_off_policy_agent 得到每回合回报，随后绘图并关闭环境。"
+        },
+        {
+          "kind": "入口",
+          "name": "if __name__ == '__main__'",
+          "line": "39-40",
+          "logic": "脚本直接运行时调用 main()。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/CartPole/networks.py",
+      "purpose": "定义 CartPole DDPG 使用的确定性 Actor 网络与 Q 值 Critic 网络。",
+      "lines": 35,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-2",
+          "logic": "导入 torch 与 torch.nn.functional 作为 F；无模块级常量。"
+        },
+        {
+          "kind": "类",
+          "name": "Actor",
+          "line": "5-19",
+          "logic": "确定性策略网络，输出映射到动作上下界之间的连续动作。"
+        },
+        {
+          "kind": "方法",
+          "name": "Actor.__init__",
+          "line": "8-15",
+          "logic": "构建两层全连接（state_dim→hidden_dim→len(action_low)），并把动作缩放 (high-low)/2 与偏移 (high+low)/2 注册为 buffer。"
+        },
+        {
+          "kind": "方法",
+          "name": "Actor.forward",
+          "line": "17-19",
+          "logic": "对状态做 ReLU 隐层后接 tanh 得到 [-1,1] 输出，再按 action_bias + action_scale*tanh 映射到动作区间。"
+        },
+        {
+          "kind": "类",
+          "name": "Critic",
+          "line": "22-35",
+          "logic": "Q(s,a) 价值网络，接收状态与动作并输出标量价值。"
+        },
+        {
+          "kind": "方法",
+          "name": "Critic.__init__",
+          "line": "25-29",
+          "logic": "第一层输入维度为 state_dim+action_dim，第二层为 hidden_dim→hidden_dim，最后 fc_out 输出 1 维。"
+        },
+        {
+          "kind": "方法",
+          "name": "Critic.forward",
+          "line": "31-35",
+          "logic": "沿特征维拼接状态与动作，经过两层 ReLU 隐层后由 fc_out 返回 Q 值。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/CartPole/noise.py",
+      "purpose": "提供 DDPG 探索用的高斯噪声和 Ornstein-Uhlenbeck 噪声两种实现。",
+      "lines": 34,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1",
+          "logic": "仅导入 numpy；无模块级常量。"
+        },
+        {
+          "kind": "类",
+          "name": "NormalNoise",
+          "line": "4-15",
+          "logic": "每一步独立采样的高斯噪声生成器。"
+        },
+        {
+          "kind": "方法",
+          "name": "NormalNoise.__init__",
+          "line": "7-9",
+          "logic": "保存动作维度和噪声标准差 sigma。"
+        },
+        {
+          "kind": "方法",
+          "name": "NormalNoise.reset",
+          "line": "11-12",
+          "logic": "空实现，仅为与其他噪声类保持统一接口。"
+        },
+        {
+          "kind": "方法",
+          "name": "NormalNoise.sample",
+          "line": "14-15",
+          "logic": "返回 sigma * randn(action_dim) 的独立高斯噪声向量。"
+        },
+        {
+          "kind": "类",
+          "name": "OUNoise",
+          "line": "18-34",
+          "logic": "带时间相关性的 Ornstein-Uhlenbeck 噪声，维护跨步的噪声状态。"
+        },
+        {
+          "kind": "方法",
+          "name": "OUNoise.__init__",
+          "line": "21-26",
+          "logic": "保存 action_dim、sigma、theta、mu，并把内部状态初始化为零向量。"
+        },
+        {
+          "kind": "方法",
+          "name": "OUNoise.reset",
+          "line": "28-29",
+          "logic": "将内部状态原地清零，用于每回合重新开始。"
+        },
+        {
+          "kind": "方法",
+          "name": "OUNoise.sample",
+          "line": "31-34",
+          "logic": "按 state += theta*(mu-state) + sigma*randn 更新噪声状态，并返回其副本。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/CartPole/rl_utils.py",
+      "purpose": "提供 CartPole DDPG 的经验回放池和滑动平均工具函数。",
+      "lines": 34,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-4",
+          "logic": "导入 collections、random 与 numpy；无模块级常量。"
+        },
+        {
+          "kind": "类",
+          "name": "ReplayBuffer",
+          "line": "7-22",
+          "logic": "基于 deque 的定长 off-policy 经验回放池。"
+        },
+        {
+          "kind": "方法",
+          "name": "ReplayBuffer.__init__",
+          "line": "10-11",
+          "logic": "用 capacity 创建 maxlen 受限的 deque 作为存储。"
+        },
+        {
+          "kind": "方法",
+          "name": "ReplayBuffer.add",
+          "line": "13-14",
+          "logic": "把 (state, action, reward, next_state, done) 五元组追加进缓冲区，超出容量时自动丢弃最旧样本。"
+        },
+        {
+          "kind": "方法",
+          "name": "ReplayBuffer.sample",
+          "line": "16-19",
+          "logic": "用 random.sample 无放回抽取 batch_size 条转移，zip 拆解后转成 numpy 数组的五个返回值。"
+        },
+        {
+          "kind": "方法",
+          "name": "ReplayBuffer.size",
+          "line": "21-22",
+          "logic": "返回当前缓冲区内的样本条数。"
+        },
+        {
+          "kind": "函数",
+          "name": "moving_average",
+          "line": "25-34",
+          "logic": "对序列做指定窗口的滑动平均；长度不足时原样返回，否则用累积和计算中段，并单独处理首尾两段后拼接输出。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/CartPole/trainer.py",
+      "purpose": "实现 CartPole 上带连续动作代理器的 DDPG off-policy 训练循环。",
+      "lines": 38,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-4",
+          "logic": "导入 numpy、tqdm 以及本目录的 continuous_to_discrete，用于动作离散化。"
+        },
+        {
+          "kind": "函数",
+          "name": "train_off_policy_agent",
+          "line": "7-38",
+          "logic": "外层按 num_episodes 循环（可传 seed 逐回合重置环境），每回合先 reset_noise；内层用 agent 连续动作换算成 0/1 动作执行 env.step，缓冲连续动作与 terminated 标志（截断处仍 bootstrap），缓冲区达到 minimal_size 后每步采样 batch 调用 agent.update，最后返回每回合回报列表并用 tqdm 显示最近 10 回合均值。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/CartPole/visualization.py",
+      "purpose": "绘制 CartPole DDPG 训练回报曲线与滑动平均曲线。",
+      "lines": 20,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-3",
+          "logic": "导入 matplotlib.pyplot 与 rl_utils 的 moving_average。"
+        },
+        {
+          "kind": "函数",
+          "name": "plot_training_results",
+          "line": "6-20",
+          "logic": "创建 1x2 子图：左侧画每回合原始回报，右侧画窗口为 window_size 的滑动平均，最后 tight_layout 并 plt.show 显示。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/Pendulum/agents.py",
+      "purpose": "Pendulum 版 DDPG 智能体，封装四个网络、噪声选择以及 critic/actor 的梯度更新与软更新。",
+      "lines": 89,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-6",
+          "logic": "导入 numpy、torch、F，以及本目录 networks 的 Actor/Critic 与 noise 的两种噪声类；无模块级常量。"
+        },
+        {
+          "kind": "类",
+          "name": "DDPG",
+          "line": "9-89",
+          "logic": "标准 DDPG 智能体实现，包含确定性 actor、Q critic 及各自 target 网络。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.__init__",
+          "line": "12-37",
+          "logic": "构建 actor/critic 与 target 网络并将参数复制到 target，创建两个 Adam 优化器，保存 gamma/tau/device/action_dim，根据 noise_type 选择 OUNoise 或 NormalNoise，其余取值报 ValueError。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.reset_noise",
+          "line": "39-40",
+          "logic": "调用噪声对象的 reset，在每回合开始时重置噪声状态。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.take_action",
+          "line": "42-52",
+          "logic": "将状态转为 (1, state_dim) 张量并 no_grad 前向 actor；explore 为真时加噪声，最后用 actor 的 action_bias±action_scale 裁剪，保证动作落在环境允许区间。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.soft_update",
+          "line": "54-60",
+          "logic": "对 target 与 online 参数的每一对执行原地 target = (1-tau)*target + tau*online 的软更新。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.update",
+          "line": "62-89",
+          "logic": "批次转张量后，用 target 网络在 no_grad 下算 Bellman 目标；先 MSE 更新 critic，再以 -mean(Q(s, actor(s))) 更新 actor，最后软更新 actor 与 critic 的 target 网络。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/Pendulum/config.py",
+      "purpose": "Pendulum DDPG 的超参数配置文件。",
+      "lines": 18,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-18",
+          "logic": "导入 torch 后定义 actor_lr、critic_lr、NUM_EPISODES=200、HIDDEN_DIM、GAMMA、TAU、缓冲区与批大小、NOISE_TYPE/SIGMA、OU_THETA、SEED、ENV_NAME='Pendulum-v1'，并按 CUDA 可用性设置 DEVICE。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/Pendulum/environment.py",
+      "purpose": "创建 Pendulum 连续控制环境并返回其状态/动作维度与动作上下界。",
+      "lines": 17,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1",
+          "logic": "仅导入 gymnasium；无模块级常量。"
+        },
+        {
+          "kind": "函数",
+          "name": "make_environment",
+          "line": "4-17",
+          "logic": "按 env_name 创建环境，校验动作空间具有 shape（否则抛 TypeError），读取 observation_space 与 action_space 的维度，并返回 env、state_dim、action_dim 以及动作空间的 low/high 副本。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/Pendulum/main.py",
+      "purpose": "Pendulum DDPG 的运行入口，装配环境、智能体、回放池并启动训练与绘图。",
+      "lines": 41,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-11",
+          "logic": "导入 random、numpy、torch 及本目录的 config、DDPG、make_environment、ReplayBuffer、训练函数与绘图函数。"
+        },
+        {
+          "kind": "函数",
+          "name": "set_seed",
+          "line": "14-17",
+          "logic": "统一设置 random、numpy 与 torch 的随机种子以复现实验。"
+        },
+        {
+          "kind": "函数",
+          "name": "main",
+          "line": "20-37",
+          "logic": "设置种子并创建 Pendulum 环境，再用 seed 重置一次；用 config 参数构造 DDPG 和 ReplayBuffer，调用 train_off_policy_agent 获得回报列表，绘制结果后关闭环境。"
+        },
+        {
+          "kind": "入口",
+          "name": "if __name__ == '__main__'",
+          "line": "40-41",
+          "logic": "脚本直接执行时调用 main()。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/Pendulum/networks.py",
+      "purpose": "定义 Pendulum DDPG 的确定性策略网络与状态-动作价值网络。",
+      "lines": 37,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-2",
+          "logic": "导入 torch 与 torch.nn.functional；无模块级常量。"
+        },
+        {
+          "kind": "类",
+          "name": "Actor",
+          "line": "5-20",
+          "logic": "确定性策略 mu(s)，输出环境动作范围内的连续动作。"
+        },
+        {
+          "kind": "方法",
+          "name": "Actor.__init__",
+          "line": "8-15",
+          "logic": "构造 state_dim→hidden_dim→len(action_low) 的两层网络，并将动作缩放与偏移注册为 buffer 以便随设备迁移。"
+        },
+        {
+          "kind": "方法",
+          "name": "Actor.forward",
+          "line": "17-20",
+          "logic": "ReLU 隐层后接 tanh 限幅到 [-1,1]，再经 action_bias + action_scale*tanh 映射到动作区间。"
+        },
+        {
+          "kind": "类",
+          "name": "Critic",
+          "line": "23-37",
+          "logic": "Q(s,a) 网络，同时接收状态与动作并输出标量价值。"
+        },
+        {
+          "kind": "方法",
+          "name": "Critic.__init__",
+          "line": "26-30",
+          "logic": "三层全连接：state_dim+action_dim→hidden_dim、hidden_dim→hidden_dim、hidden_dim→1。"
+        },
+        {
+          "kind": "方法",
+          "name": "Critic.forward",
+          "line": "32-37",
+          "logic": "拼接状态与动作后过两层 ReLU 隐层，由 fc_out 输出每个状态-动作对的 Q 值。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/Pendulum/noise.py",
+      "purpose": "提供 Pendulum DDPG 探索使用的高斯噪声与 OU 噪声。",
+      "lines": 41,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1",
+          "logic": "仅导入 numpy；无模块级常量。"
+        },
+        {
+          "kind": "类",
+          "name": "NormalNoise",
+          "line": "4-16",
+          "logic": "逐步独立重采样的高斯探索噪声。"
+        },
+        {
+          "kind": "方法",
+          "name": "NormalNoise.__init__",
+          "line": "7-9",
+          "logic": "保存动作维度与标准差 sigma。"
+        },
+        {
+          "kind": "方法",
+          "name": "NormalNoise.reset",
+          "line": "11-13",
+          "logic": "空实现，仅为统一接口，因为高斯噪声无跨时间状态。"
+        },
+        {
+          "kind": "方法",
+          "name": "NormalNoise.sample",
+          "line": "15-16",
+          "logic": "返回 sigma * randn(action_dim) 的噪声向量。"
+        },
+        {
+          "kind": "类",
+          "name": "OUNoise",
+          "line": "19-41",
+          "logic": "Ornstein-Uhlenbeck 噪声，按文档字符串中的递推式产生时间相关的探索扰动。"
+        },
+        {
+          "kind": "方法",
+          "name": "OUNoise.__init__",
+          "line": "26-31",
+          "logic": "保存 action_dim、sigma、theta、mu，并把内部噪声状态初始化为零向量。"
+        },
+        {
+          "kind": "方法",
+          "name": "OUNoise.reset",
+          "line": "33-35",
+          "logic": "每回合开始时把内部状态填零，清除上一条轨迹的噪声。"
+        },
+        {
+          "kind": "方法",
+          "name": "OUNoise.sample",
+          "line": "37-41",
+          "logic": "计算漂移 theta*(mu-state) 与随机项 sigma*randn，更新 state 后返回其副本。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/Pendulum/practice.py",
+      "purpose": "单文件版 DDPG 练习脚本，把网络、智能体、超参数与训练流程全部写在同一文件内。",
+      "lines": 112,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-9",
+          "logic": "导入 random、gym、numpy、tqdm、torch 及其 nn/F、matplotlib.pyplot 以及本目录的 rl_utils；无模块级常量定义（常量集中在文件末尾）。"
+        },
+        {
+          "kind": "类",
+          "name": "PolicyNet",
+          "line": "11-20",
+          "logic": "确定性策略网络，用 tanh 乘以 action_bound 输出有界动作。"
+        },
+        {
+          "kind": "方法",
+          "name": "PolicyNet.__init__",
+          "line": "12-16",
+          "logic": "构建 state_dim→hidden_dim→action_dim 的两层全连接，并保存标量 action_bound 作为动作最大值。"
+        },
+        {
+          "kind": "方法",
+          "name": "PolicyNet.forward",
+          "line": "18-20",
+          "logic": "ReLU 隐层后接 tanh 并乘以 action_bound，返回环境可接受的连续动作。"
+        },
+        {
+          "kind": "类",
+          "name": "QValueNet",
+          "line": "23-34",
+          "logic": "状态-动作价值网络，输出标量 Q 值。"
+        },
+        {
+          "kind": "方法",
+          "name": "QValueNet.__init__",
+          "line": "24-28",
+          "logic": "构造输入维度 state_dim+action_dim 的三层全连接网络，末端输出 1 维。"
+        },
+        {
+          "kind": "方法",
+          "name": "QValueNet.forward",
+          "line": "30-34",
+          "logic": "沿特征维拼接状态 x 与动作 a，经两层 ReLU 后由 fc_out 输出 Q 值。"
+        },
+        {
+          "kind": "类",
+          "name": "DDPG",
+          "line": "36-86",
+          "logic": "练习用 DDPG 智能体，内含 actor/critic 及 target 网络、双优化器与噪声探索逻辑。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.__init__",
+          "line": "38-53",
+          "logic": "创建 PolicyNet/QValueNet 与其 target 副本并复制参数，建立两个 Adam 优化器，保存 gamma、sigma、tau、action_dim 与 device。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.take_action",
+          "line": "55-60",
+          "logic": "把状态包成 (1, state_dim) 张量前向 actor 取标量动作，再叠加 sigma*randn 的高斯噪声用于探索，返回 numpy 标量。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.soft_update",
+          "line": "62-64",
+          "logic": "逐个参数执行 target = (1-tau)*target + tau*online 的软更新。"
+        },
+        {
+          "kind": "方法",
+          "name": "DDPG.update",
+          "line": "66-86",
+          "logic": "从 transition_dict 取五类数据并整理形状，用 target 网络计算 q_targets；先 MSE 更新 critic，再以 -mean(Q(s,actor(s))) 更新 actor，最后对 actor/critic 的 target 网络各做软更新。"
+        },
+        {
+          "kind": "导入与常量",
+          "name": "模块级常量与脚本初始化",
+          "line": "88-112",
+          "logic": "定义 actor_lr、critic_lr、num_episodes、hidden_dim、gamma、tau、buffer_size、minimal_size、batch_size、sigma 与 device；随后创建 Pendulum-v0 环境、设置各库种子、构建回放池与 agent，并直接调用 rl_utils.train_off_policy_agent 执行训练（文件无 __main__ 保护）。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/Pendulum/rl_utils.py",
+      "purpose": "提供 Pendulum DDPG 的经验回放池与滑动平均计算工具。",
+      "lines": 40,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-4",
+          "logic": "导入 collections、random 与 numpy；无模块级常量。"
+        },
+        {
+          "kind": "类",
+          "name": "ReplayBuffer",
+          "line": "7-28",
+          "logic": "基于 deque 的 off-policy 经验回放池。"
+        },
+        {
+          "kind": "方法",
+          "name": "ReplayBuffer.__init__",
+          "line": "10-11",
+          "logic": "以 capacity 作为 maxlen 创建 deque 存储。"
+        },
+        {
+          "kind": "方法",
+          "name": "ReplayBuffer.add",
+          "line": "13-14",
+          "logic": "追加一条 (state, action, reward, next_state, done) 转移，满容量时自动淘汰最旧数据。"
+        },
+        {
+          "kind": "方法",
+          "name": "ReplayBuffer.sample",
+          "line": "16-25",
+          "logic": "随机无放回抽取 batch_size 条转移，拆包后转换为五个 numpy 数组返回。"
+        },
+        {
+          "kind": "方法",
+          "name": "ReplayBuffer.size",
+          "line": "27-28",
+          "logic": "返回缓冲区当前样本数。"
+        },
+        {
+          "kind": "函数",
+          "name": "moving_average",
+          "line": "31-40",
+          "logic": "序列长度不足 window_size 时原样返回；否则用累积和计算中间段均值，并分别计算开头与结尾的逐步平均后拼接为完整序列。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/Pendulum/trainer.py",
+      "purpose": "实现 Pendulum DDPG 的 off-policy 训练循环，负责交互、回放与按步更新。",
+      "lines": 46,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-2",
+          "logic": "导入 numpy 与 tqdm 进度条；无模块级常量。"
+        },
+        {
+          "kind": "函数",
+          "name": "train_off_policy_agent",
+          "line": "5-46",
+          "logic": "按 num_episodes 循环，每回合先 agent.reset_noise 并按 seed+episode 重置环境；内层用 take_action 采样连续动作执行 env.step，把 terminated（而非 truncated）作为 done 存入回放池以便截断处继续 bootstrap，缓冲区达到 minimal_size 后每步采样并调用 agent.update，最终返回每回合回报列表并用 tqdm 显示最近十回合均值。"
+        }
+      ]
+    },
+    {
+      "path": "09_DDPG/Pendulum/visualization.py",
+      "purpose": "绘制 Pendulum DDPG 的原始回报与滑动平均回报曲线。",
+      "lines": 20,
+      "blocks": [
+        {
+          "kind": "导入与常量",
+          "name": "导入与常量",
+          "line": "1-3",
+          "logic": "导入 matplotlib.pyplot 与 rl_utils.moving_average。"
+        },
+        {
+          "kind": "函数",
+          "name": "plot_training_results",
+          "line": "6-20",
+          "logic": "建立 1x2 子图分别绘制每回合回报与 window_size 窗口的滑动平均，设置坐标轴标签与标题后 tight_layout 并 show。"
+        }
+      ]
+    }
+  ]
+}
