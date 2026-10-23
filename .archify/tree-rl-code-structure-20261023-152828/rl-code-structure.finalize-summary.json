@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "tree",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/tree-rl-code-structure-20261023-152828/candidate.json",
+    "sha256": "35d5122128d46a39cafe899d0348380e3ebb3f7ec8bd8edb55a6c8a842373bea",
+    "bytes": 3991
+  },
+  "artifact": {
+    "path": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/tree-rl-code-structure-20261023-152828/rl-code-structure.html",
+    "sha256": "d4fa04a38a5365881a0ff15b4b870261bb2a614534f7e51e473d88c28af21536",
+    "bytes": 839589
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/tree-rl-code-structure-20261023-152828/rl-code-structure.finalize.json",
+    "summaryReceipt": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/tree-rl-code-structure-20261023-152828/rl-code-structure.finalize-summary.json",
+    "browserCheckReceipt": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/tree-rl-code-structure-20261023-152828/rl-code-structure.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-23T07:17:03.821Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 1819,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}
