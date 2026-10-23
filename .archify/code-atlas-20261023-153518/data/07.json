@@ -1,0 +1,207 @@
+{
+  "root_id": "07",
+  "root_dir": "07_TRPO",
+  "summary": "TRPO（信赖域策略优化）的两个独立实现：CartPole 用 Categorical 离散策略，Pendulum 用 Normal 连续策略，均包含 GAE、Hessian-向量积、共轭梯度、KL 约束与线搜索。",
+  "files": [
+    {
+      "path": "07_TRPO/CartPole/agents.py",
+      "purpose": "离散动作 TRPO agent，实现优势估计、Hessian-向量积、共轭梯度、线搜索与策略/价值更新。",
+      "lines": 185,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-8", "logic": "导入 copy、numpy、torch、torch.nn.functional，以及本地 rl_utils 和 networks 中的 PolicyNet、ValueNet；无模块级常量。"},
+        {"kind": "类", "name": "TRPO", "line": "11-185", "logic": "封装 CartPole 上的 TRPO：actor 输出离散动作概率，critic 回归 TD 目标，策略更新通过自然梯度方向加 KL 信赖域约束完成。"},
+        {"kind": "方法", "name": "TRPO.__init__", "line": "14-25", "logic": "按 state_dim、hidden_dim、action_dim 构建 PolicyNet 与 ValueNet，只为 critic 建 Adam 优化器（actor 由 TRPO 直接改参数），保存 gamma、lmbda、kl_constraint、alpha 与 device。"},
+        {"kind": "方法", "name": "TRPO.take_action", "line": "27-32", "logic": "把单条 state 转成 [1, state_dim] 的 float32 张量，经 actor 得动作概率并构造 Categorical 分布，采样后返回 Python int 动作。"},
+        {"kind": "方法", "name": "TRPO.hessian_matrix_vector_product", "line": "34-48", "logic": "以旧分布与当前策略的平均 KL 为标量，create_graph=True 对 actor 参数求一阶导，拼接后与 vector 点积再求导，返回 detach 后的 H·v。"},
+        {"kind": "方法", "name": "TRPO.conjugate_gradient", "line": "50-71", "logic": "用最多 10 次共轭梯度迭代求解 H^{-1}g，每步调用 Hessian-向量积，残差平方和小于 1e-10 时提前退出，返回近似自然梯度方向 x。"},
+        {"kind": "方法", "name": "TRPO._log_probs", "line": "74-76", "logic": "静态方法：用给定 actor 构造 Categorical 分布，对 actions.squeeze(-1) 取 log_prob 并 unsqueeze(-1) 成列向量。"},
+        {"kind": "方法", "name": "TRPO.compute_surrogate_obj", "line": "78-82", "logic": "用新 actor 的对数概率减去 old_log_probs 取 exp 得 ratio，返回 mean(ratio * advantage) 作为 surrogate 目标。"},
+        {"kind": "方法", "name": "TRPO.line_search", "line": "84-110", "logic": "把 actor 参数展平为向量，按 alpha^i（i=0..14）沿 max_vector 搜索候选参数；每个候选 deepcopy actor 后写入参数，若 surrogate 提升且平均 KL 小于 kl_constraint 则返回该参数，否则最终回退旧参数。"},
+        {"kind": "方法", "name": "TRPO.policy_learn", "line": "112-139", "logic": "对 surrogate 目标求 actor 梯度并拼接为一维，经共轭梯度得下降方向，用 H·d 计算缩放 sqrt(2*kl/(d^T H d))，线搜索后把新参数 vector_to_parameters 写回 actor。"},
+        {"kind": "方法", "name": "TRPO.update", "line": "141-185", "logic": "把 transition_dict 的五个字段转成张量，计算 td_target 与 td_delta，调用 rl_utils.compute_advantage 得 GAE 优势；记录 old_log_probs 与旧 Categorical 分布，先用 MSE 更新 critic，再调用 policy_learn 更新策略。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/CartPole/config.py",
+      "purpose": "集中定义 CartPole 离散 TRPO 的训练超参数与运行设备。",
+      "lines": 16,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-16", "logic": "导入 torch，并定义 NUM_EPISODES=500、HIDDEN_DIM=128、GAMMA=0.98、LMBDA=0.95、CRITIC_LR=1e-2、KL_CONSTRAINT=0.0005、ALPHA=0.5、SEED=0、ENV_NAME='CartPole-v1'，按 CUDA 可用性选择 DEVICE。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/CartPole/environment.py",
+      "purpose": "创建离散动作 Gym 环境并返回状态维度与动作数量。",
+      "lines": 15,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-4", "logic": "导入 gymnasium（前两行为空行），无模块级常量。"},
+        {"kind": "函数", "name": "make_environment", "line": "6-15", "logic": "调用 gym.make(env_name)，若 action_space 没有 n 属性则抛 TypeError；随后从 observation_space.shape[0] 与 action_space.n 取维度，返回 (env, state_dim, action_dim)。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/CartPole/main.py",
+      "purpose": "CartPole TRPO 实验的入口脚本，负责装配环境、agent 并启动训练与绘图。",
+      "lines": 41,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-10", "logic": "导入 random、numpy、torch，以及本地 config、TRPO、make_environment、train_on_policy_agent、plot_training_results；无模块级常量。"},
+        {"kind": "函数", "name": "set_seed", "line": "13-16", "logic": "依次调用 random.seed、np.random.seed、torch.manual_seed，用同一 seed 固定三处随机源。"},
+        {"kind": "函数", "name": "main", "line": "19-37", "logic": "先设随机种子，用 make_environment 取 env 与状态/动作维度，按 config 超参构造 TRPO，调用 train_on_policy_agent 训练 NUM_EPISODES 局，绘图后 env.close()。"},
+        {"kind": "入口", "name": "if __name__ == '__main__'", "line": "40-41", "logic": "脚本直接运行时调用 main() 启动训练。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/CartPole/networks.py",
+      "purpose": "定义 CartPole 使用的离散策略网络与状态价值网络。",
+      "lines": 28,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-2", "logic": "导入 torch 与 torch.nn.functional，无模块级常量。"},
+        {"kind": "类", "name": "PolicyNet", "line": "5-15", "logic": "两层全连接网络，输入状态，输出每个离散动作的 softmax 概率。"},
+        {"kind": "方法", "name": "PolicyNet.__init__", "line": "8-11", "logic": "建立 fc1(state_dim→hidden_dim) 与 fc2(hidden_dim→action_dim) 两个线性层。"},
+        {"kind": "方法", "name": "PolicyNet.forward", "line": "13-15", "logic": "先对 fc1 输出做 ReLU，再经 fc2 并在 dim=1 上 softmax，返回动作概率分布。"},
+        {"kind": "类", "name": "ValueNet", "line": "18-28", "logic": "状态价值网络，输入状态，输出标量 V(s)。"},
+        {"kind": "方法", "name": "ValueNet.__init__", "line": "21-24", "logic": "建立 fc1(state_dim→hidden_dim) 与 fc2(hidden_dim→1) 两个线性层。"},
+        {"kind": "方法", "name": "ValueNet.forward", "line": "26-28", "logic": "对 fc1 输出做 ReLU 后过 fc2，返回形状 [batch, 1] 的状态价值。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/CartPole/practice.py",
+      "purpose": "单文件练习版 TRPO 实现，把网络、agent 与训练依赖集中在一个脚本中。",
+      "lines": 169,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-7", "logic": "导入 torch、numpy、gymnasium、matplotlib.pyplot、F、rl_utils 与 copy；无模块级常量。"},
+        {"kind": "类", "name": "PolicyNet", "line": "9-18", "logic": "与 networks.py 相同的离散策略网络，输出各动作概率。"},
+        {"kind": "方法", "name": "PolicyNet.__init__", "line": "11-14", "logic": "建立 fc1(state_dim→hidden_dim) 与 fc2(hidden_dim→action_dim)。"},
+        {"kind": "方法", "name": "PolicyNet.forward", "line": "16-18", "logic": "fc1 后接 ReLU，再过 fc2 并在 dim=1 上 softmax 返回概率。"},
+        {"kind": "类", "name": "ValueNet", "line": "21-30", "logic": "状态价值网络，输出标量状态价值。"},
+        {"kind": "方法", "name": "ValueNet.__init__", "line": "23-26", "logic": "建立 fc1(state_dim→hidden_dim) 与 fc2(hidden_dim→1)。"},
+        {"kind": "方法", "name": "ValueNet.forward", "line": "28-30", "logic": "fc1 后接 ReLU，再经 fc2 输出 [batch, 1] 价值。"},
+        {"kind": "类", "name": "TRPO", "line": "33-169", "logic": "练习版 TRPO agent，直接接收 gym 的 state_space/action_space 对象，流程与模块版一致（surrogate、HVP、CG、线搜索）。"},
+        {"kind": "方法", "name": "TRPO.__init__", "line": "35-48", "logic": "从 state_space.shape[0] 与 action_space.n 取维度，构建 actor/critic 及 critic 的 Adam 优化器，保存 gamma、lmbda、kl_constraint、alpha、device。"},
+        {"kind": "方法", "name": "TRPO.take_action", "line": "50-55", "logic": "把 state 包成 [1, state_dim] 的 float 张量，经 actor 得概率并构造 Categorical 分布，采样后返回 item。"},
+        {"kind": "方法", "name": "TRPO.hessian_matrix_vector_product", "line": "57-72", "logic": "计算新旧 Categorical 分布的平均 KL，create_graph 求一阶导后与 vector 点积，再次求导并拼接，返回 H·v（未做 damping）。"},
+        {"kind": "方法", "name": "TRPO.conjugate_gradient", "line": "74-91", "logic": "最多 10 次共轭梯度迭代求解 H^{-1}g，残差平方和小于 1e-10 时 break，返回解向量。"},
+        {"kind": "方法", "name": "TRPO.compute_surrogate_obj", "line": "93-97", "logic": "用 actor(states).gather(1, actions) 取所选动作对数概率，计算 ratio = exp(logp - old_logp)，返回 mean(ratio * advantage)。"},
+        {"kind": "方法", "name": "TRPO.line_search", "line": "99-120", "logic": "把参数展平，按 alpha^i 尝试 15 个候选参数，deepcopy actor 并写入候选参数，比较 surrogate 与平均 KL，返回首个满足提升且 KL 小于约束的参数，否则返回原参数。"},
+        {"kind": "方法", "name": "TRPO.policy_learn", "line": "122-140", "logic": "对 surrogate 求 actor 梯度并拼接，用共轭梯度得方向，按 sqrt(2*kl/(d^T H d)) 缩放后线搜索，最后 vector_to_parameters 写回 actor。"},
+        {"kind": "方法", "name": "TRPO.update", "line": "142-169", "logic": "张量化 transition 的五个字段，计算 td_target、td_delta 并用 rl_utils.compute_advantage（先转 CPU）得 GAE 优势；取 old_log_probs 与旧分布后，用 MSE 更新 critic，再调用 policy_learn。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/CartPole/rl_utils.py",
+      "purpose": "提供移动平均与 GAE 优势估计两个通用工具函数。",
+      "lines": 31,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-2", "logic": "导入 numpy 与 torch，无模块级常量。"},
+        {"kind": "函数", "name": "moving_average", "line": "5-19", "logic": "把输入转成 float32 数组，长度小于 window_size 时原样返回；否则用 cumsum 计算中间段窗口均值，两端用半径 1,3,5... 的前缀/后缀累积均值补齐，最后 concatenate。"},
+        {"kind": "函数", "name": "compute_advantage", "line": "22-31", "logic": "将 td_delta 转为一维 numpy，从后向前递推 advantage = gamma*lmbda*advantage + delta，反转序列后返回 float32 的 torch 张量。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/CartPole/trainer.py",
+      "purpose": "实现按整局采样的 on-policy 训练循环。",
+      "lines": 41,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-2", "logic": "导入 numpy 与 tqdm 进度条，无模块级常量。"},
+        {"kind": "函数", "name": "train_on_policy_agent", "line": "5-41", "logic": "用 tqdm 循环 num_episodes 局：每局 reset 后反复调用 agent.take_action 与 env.step，直到 terminated 或 truncated，沿途收集 states/actions/next_states/rewards/dones；整局结束后调用一次 agent.update 并记录回报，每 10 局打印最近 10 局均值，最终返回 return_list。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/CartPole/visualization.py",
+      "purpose": "绘制 CartPole TRPO 训练的原始回报与移动平均回报曲线。",
+      "lines": 27,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-3", "logic": "导入 matplotlib.pyplot 与本地 rl_utils.moving_average，无模块级常量。"},
+        {"kind": "函数", "name": "plot_training_results", "line": "6-27", "logic": "创建 1x2 子图：左图绘制每局原始回报；右图在样本数不少于 9 时用 moving_average(window=9) 平滑、否则用原始值，设置坐标轴标题后 tight_layout 并 plt.show()。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/Pendulum/agents.py",
+      "purpose": "连续动作 TRPO agent，使用高斯策略并处理动作边界与奖励缩放。",
+      "lines": 205,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-8", "logic": "导入 copy、numpy、torch、torch.nn.functional，以及本地 rl_utils 与 networks 中的 PolicyNetContinuous、ValueNet；无模块级常量。"},
+        {"kind": "类", "name": "TRPOContinuous", "line": "11-205", "logic": "面向 Pendulum 的连续动作 TRPO：策略为 Normal 分布，KL 按动作维求和，Hessian-向量积带阻尼，配合共轭梯度、信赖域缩放与线搜索更新策略。"},
+        {"kind": "方法", "name": "TRPOContinuous.__init__", "line": "14-36", "logic": "构建 PolicyNetContinuous（传入动作上下界）与 ValueNet，把 action_low/action_high 存为张量，为 critic 建 Adam 优化器，保存 gamma、lmbda、kl_constraint、alpha、reward_shift、reward_scale 与 device。"},
+        {"kind": "方法", "name": "TRPOContinuous._distribution", "line": "38-40", "logic": "调用 actor 得到均值与标准差，返回 torch.distributions.Normal 分布对象。"},
+        {"kind": "方法", "name": "TRPOContinuous.take_action", "line": "42-48", "logic": "把 state 转为 [1, state_dim] 张量，从 Normal 分布采样，再用 clamp 裁剪到 [action_low, action_high]，返回去掉 batch 维的 numpy 动作。"},
+        {"kind": "方法", "name": "TRPOContinuous.hessian_matrix_vector_product", "line": "50-65", "logic": "计算新旧 Normal 分布 KL（动作维求和后取均值），create_graph 求一阶导并与 vector 点积后再求导，返回 H·v 加上阻尼项 damping*vector（默认 0.1）。"},
+        {"kind": "方法", "name": "TRPOContinuous.conjugate_gradient", "line": "67-87", "logic": "最多 10 次共轭梯度迭代求解 H^{-1}g，每步调用带阻尼的 Hessian-向量积，残差平方和小于 1e-10 时提前退出并返回解向量。"},
+        {"kind": "方法", "name": "TRPOContinuous._log_probs", "line": "90-94", "logic": "静态方法：用 actor 输出的 mean/std 构造 Normal，对 actions 求 log_prob 并在动作维求和，返回列向量对数概率。"},
+        {"kind": "方法", "name": "TRPOContinuous.compute_surrogate_obj", "line": "96-100", "logic": "由新旧对数概率之差取 exp 得 ratio，返回 mean(ratio * advantage) 作为 surrogate 目标。"},
+        {"kind": "方法", "name": "TRPOContinuous.line_search", "line": "102-126", "logic": "沿 max_vector 按 alpha^i（i=0..14）生成候选参数，deepcopy actor 后写入并计算 KL（动作维求和取均值）与 surrogate，返回首个同时满足目标提升和 KL 小于约束的参数，否则回退旧参数。"},
+        {"kind": "方法", "name": "TRPOContinuous.policy_learn", "line": "128-155", "logic": "对 surrogate 求 actor 梯度并拼接为一维，经共轭梯度得下降方向，用 clamp 后的曲率 d^T H d 计算缩放 sqrt(2*kl/curvature)，线搜索后用 vector_to_parameters 写回 actor。"},
+        {"kind": "方法", "name": "TRPOContinuous.update", "line": "157-205", "logic": "把 transition_dict 转成张量（动作为 float），先用 (reward+reward_shift)/reward_scale 缩放奖励，再算 td_target、td_delta 与 GAE 优势；记录 old_log_probs 和 detach 后的旧 Normal 分布，以 MSE 更新 critic，最后调用 policy_learn 更新策略。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/Pendulum/config.py",
+      "purpose": "集中定义 Pendulum 连续 TRPO 的训练超参数与运行设备。",
+      "lines": 15,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-15", "logic": "导入 torch，定义 NUM_EPISODES=2000、HIDDEN_DIM=128、GAMMA=0.9、LMBDA=0.9、CRITIC_LR=1e-2、KL_CONSTRAINT=0.00005、ALPHA=0.5、REWARD_SHIFT=8.0、REWARD_SCALE=8.0、SEED=0、ENV_NAME='Pendulum-v1'，并按 CUDA 可用性选择 DEVICE。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/Pendulum/environment.py",
+      "purpose": "创建连续动作 Gym 环境并返回状态维度、动作维度及动作上下界。",
+      "lines": 17,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-2", "logic": "导入 gymnasium as gym，无模块级常量。"},
+        {"kind": "函数", "name": "make_environment", "line": "4-17", "logic": "调用 gym.make(env_name)，检查 action_space 是否有非 None 的 shape，不满足则抛 TypeError；随后读取状态维、动作维，并返回 (env, state_dim, action_dim, action_space.low.copy(), action_space.high.copy())。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/Pendulum/main.py",
+      "purpose": "Pendulum TRPO 实验的入口脚本，装配连续动作环境、agent 并启动训练与绘图。",
+      "lines": 47,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-10", "logic": "导入 random、numpy、torch，以及本地 config、TRPOContinuous、make_environment、train_on_policy_agent、plot_training_results；无模块级常量。"},
+        {"kind": "函数", "name": "set_seed", "line": "13-16", "logic": "依次设置 random、numpy 与 torch 的随机种子以固定实验随机性。"},
+        {"kind": "函数", "name": "main", "line": "19-43", "logic": "设种子后解包 make_environment 返回的 5 个值，按 config 超参（含动作边界、reward_shift/scale）构造 TRPOContinuous，训练 NUM_EPISODES 局，绘图并 env.close()。"},
+        {"kind": "入口", "name": "if __name__ == '__main__'", "line": "46-47", "logic": "脚本直接运行时调用 main() 启动训练。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/Pendulum/networks.py",
+      "purpose": "定义连续动作策略网络（输出高斯均值与标准差）与状态价值网络。",
+      "lines": 34,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-2", "logic": "导入 torch 与 torch.nn.functional，无模块级常量。"},
+        {"kind": "类", "name": "PolicyNetContinuous", "line": "5-22", "logic": "连续动作策略网络，输出动作高斯分布的均值与标准差，均值经 tanh 映射到动作区间。"},
+        {"kind": "方法", "name": "PolicyNetContinuous.__init__", "line": "8-16", "logic": "建立 fc1、fc_mu、fc_std 三个线性层，并把动作上下界转成张量后以 register_buffer 保存 action_scale=(high-low)/2 与 action_bias=(high+low)/2。"},
+        {"kind": "方法", "name": "PolicyNetContinuous.forward", "line": "18-22", "logic": "fc1 后接 ReLU，分两路输出：mu = bias + scale*tanh(fc_mu)，std = softplus(fc_std)+1e-5，返回 (mu, std)。"},
+        {"kind": "类", "name": "ValueNet", "line": "25-34", "logic": "状态价值网络，输入状态输出标量 V(s)。"},
+        {"kind": "方法", "name": "ValueNet.__init__", "line": "28-31", "logic": "建立 fc1(state_dim→hidden_dim) 与 fc2(hidden_dim→1)。"},
+        {"kind": "方法", "name": "ValueNet.forward", "line": "33-34", "logic": "将输入经 fc1、ReLU、fc2 后返回 [batch, 1] 状态价值。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/Pendulum/rl_utils.py",
+      "purpose": "提供移动平均与 GAE 优势估计工具函数（CartPole 版本的简化实现）。",
+      "lines": 25,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-2", "logic": "导入 numpy 与 torch，无模块级常量。"},
+        {"kind": "函数", "name": "moving_average", "line": "5-14", "logic": "把输入转成 float32 数组，长度不足窗口时原样返回；否则用 cumsum 计算中间段窗口均值，两端按半径 1,3,5... 的前后缀累积均值补齐并拼接返回。"},
+        {"kind": "函数", "name": "compute_advantage", "line": "17-25", "logic": "将 td_delta 转一维 numpy 后从后向前递推 advantage = gamma*lmbda*advantage + delta，反转并转成 float32 torch 张量返回。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/Pendulum/trainer.py",
+      "purpose": "实现 Pendulum 的按整局采样 on-policy 训练循环。",
+      "lines": 35,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-2", "logic": "导入 numpy 与 tqdm 进度条，无模块级常量。"},
+        {"kind": "函数", "name": "train_on_policy_agent", "line": "5-35", "logic": "用 tqdm 循环 num_episodes 局，每局 reset 后循环执行 agent.take_action 与 env.step 直到 done，积累回报并收集五类 transition 字段；每局结束调用一次 agent.update，每 10 局打印最近 10 局平均回报，最终返回 return_list。"}
+      ]
+    },
+    {
+      "path": "07_TRPO/Pendulum/visualization.py",
+      "purpose": "绘制 Pendulum TRPO 训练的原始回报与移动平均回报曲线。",
+      "lines": 21,
+      "blocks": [
+        {"kind": "导入与常量", "name": "导入与常量", "line": "1-3", "logic": "导入 matplotlib.pyplot 与本地 rl_utils.moving_average，无模块级常量。"},
+        {"kind": "函数", "name": "plot_training_results", "line": "6-21", "logic": "创建 1x2 子图，左图画每局原始回报，右图画 moving_average(return_list, 9) 平滑曲线，设置坐标轴标题后 tight_layout 并 plt.show()。"}
+      ]
+    }
+  ]
+}

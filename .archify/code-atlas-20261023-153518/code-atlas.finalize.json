@@ -1,0 +1,1927 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "explainer",
+  "quality": "showcase",
+  "startedAt": "2026-10-23T07:37:56.238Z",
+  "specification": {
+    "path": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+    "sha256": "f5d8338e09066987904d0b7a70d5b94d952b4cd8e0fe8e20b100f06fe56227a8",
+    "bytes": 130341
+  },
+  "artifact": {
+    "path": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/code-atlas.html",
+    "sha256": "d72a13fa90d53e95ed53afda4cdd0593977ff8af2d63730a3b308e48a77bebf2",
+    "bytes": 1744773
+  },
+  "stages": {
+    "browser-check": {
+      "status": "not-run",
+      "execution": "not-requested"
+    },
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.9.0_2/bin/node",
+        "/Users/yanrui/.claude/skills/archify/bin/archify.mjs",
+        "deliver",
+        "explainer",
+        "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/code-atlas.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "f5d8338e09066987904d0b7a70d5b94d952b4cd8e0fe8e20b100f06fe56227a8",
+          "bytes": 130341
+        },
+        "validation": {
+          "checksPassed": 4,
+          "checkCount": 4,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 757,
+      "command": [
+        "/opt/homebrew/Cellar/node/25.9.0_2/bin/node",
+        "/Users/yanrui/.claude/skills/archify/bin/archify.mjs",
+        "deliver",
+        "explainer",
+        "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/code-atlas.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "34955ef0-f849-4e23-9728-1430f15cc8e2",
+        "ok": true,
+        "command": "deliver",
+        "type": "explainer",
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "output": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/code-atlas.html",
+        "explainer": {
+          "preparedSha256": "360d8503dbd093c2f504f86593bad5be834a15cb8462bb08f9d61ee357edc05b",
+          "dependencies": [
+            {
+              "kind": "diagram-spec",
+              "id": "repo-tree",
+              "inline": true,
+              "sha256": "80e066b1d28704dc6e3a6a67961e67e615c3115b1ee92cb094864684e21e797e",
+              "bytes": 1199
+            }
+          ]
+        },
+        "specification": {
+          "sha256": "f5d8338e09066987904d0b7a70d5b94d952b4cd8e0fe8e20b100f06fe56227a8",
+          "bytes": 130341
+        },
+        "artifact": {
+          "sha256": "d72a13fa90d53e95ed53afda4cdd0593977ff8af2d63730a3b308e48a77bebf2",
+          "bytes": 1744773
+        },
+        "validation": {
+          "checksPassed": 4,
+          "checkCount": 4,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        },
+        "diagnostics": [
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 59 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 3,
+              "component": "answer",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 59 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 59,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 58 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 78,
+              "component": "comparison",
+              "panelId": "algo01",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 58 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 58,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 80 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 140,
+              "component": "comparison",
+              "panelId": "algo02",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 80 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 80,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 52 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 152,
+              "component": "comparison",
+              "panelId": "algo02",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 52 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 52,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 68 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 170,
+              "component": "comparison",
+              "panelId": "algo03",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 68 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 68,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 55 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 193,
+              "component": "comparison",
+              "panelId": "algo03",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 55 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 55,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-de-chain",
+            "severity": "warning",
+            "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+            "subject": {
+              "line": 225,
+              "component": "comparison",
+              "panelId": "algo03",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "de-chain",
+              "reason": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+              "example": "负责处理用户提交的订单的服务的日志 → 订单服务的日志。它记录用户提交的订单。",
+              "matched": "cumsum 的差分计算窗口均值，并单独处理首尾不足整窗的部分，返回与输入等长的平滑序列。"
+            },
+            "supportedFixes": [
+              "Split the sentence or move a modifier into its own clause."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 52 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 242,
+              "component": "comparison",
+              "panelId": "algo03",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 52 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 52,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 54 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 301,
+              "component": "comparison",
+              "panelId": "algo04",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 54 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 54,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-de-chain",
+            "severity": "warning",
+            "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+            "subject": {
+              "line": 313,
+              "component": "comparison",
+              "panelId": "algo04",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "de-chain",
+              "reason": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+              "example": "负责处理用户提交的订单的服务的日志 → 订单服务的日志。它记录用户提交的订单。",
+              "matched": "cumsum 的差分求窗口均值，并单独拼接首尾不足整窗的部分，输出与输入等长的平滑序列。"
+            },
+            "supportedFixes": [
+              "Split the sentence or move a modifier into its own clause."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 60 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 333,
+              "component": "prose",
+              "panelId": "algo05",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 60 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 60,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 56 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 346,
+              "component": "comparison",
+              "panelId": "algo05",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 56 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 56,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 59 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 376,
+              "component": "comparison",
+              "panelId": "algo05",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 59 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 59,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-de-chain",
+            "severity": "warning",
+            "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+            "subject": {
+              "line": 393,
+              "component": "comparison",
+              "panelId": "algo05",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "de-chain",
+              "reason": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+              "example": "负责处理用户提交的订单的服务的日志 → 订单服务的日志。它记录用户提交的订单。",
+              "matched": "解析脚本同级的 output 目录并创建；用 config 构造带种子的环境、RBFStateFeaturizer、GaussianPolicy（动作界取自 action_space 的 low/high）与 ValueEstimator，调用 train 得到统计后写出 episode_stats."
+            },
+            "supportedFixes": [
+              "Split the sentence or move a modifier into its own clause."
+            ]
+          },
+          {
+            "code": "explainer/writing-de-chain",
+            "severity": "warning",
+            "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+            "subject": {
+              "line": 400,
+              "component": "comparison",
+              "panelId": "algo05",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "de-chain",
+              "reason": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+              "example": "负责处理用户提交的订单的服务的日志 → 订单服务的日志。它记录用户提交的订单。",
+              "matched": "导入 dataclass、numpy，以及 environment 的 reset/step 封装与协议类型、estimators 的 GaussianPolicy/ValueEstimator、features 的 RBFStateFeaturizer。"
+            },
+            "supportedFixes": [
+              "Split the sentence or move a modifier into its own clause."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 53 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 402,
+              "component": "comparison",
+              "panelId": "algo05",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 53 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 53,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 62 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 419,
+              "component": "comparison",
+              "panelId": "algo06",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 62 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 62,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-de-chain",
+            "severity": "warning",
+            "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+            "subject": {
+              "line": 444,
+              "component": "comparison",
+              "panelId": "algo06",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "de-chain",
+              "reason": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+              "example": "负责处理用户提交的订单的服务的日志 → 订单服务的日志。它记录用户提交的订单。",
+              "matched": "构建 state→hidden→hidden 的两层 ReLU Sequential 与输出均值的 Linear(hidden, action_size)，并把 log_std 初始化为 0（std=1）的可学习 Parameter。"
+            },
+            "supportedFixes": [
+              "Split the sentence or move a modifier into its own clause."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 57 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 458,
+              "component": "comparison",
+              "panelId": "algo06",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 57 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 57,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 60 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 459,
+              "component": "comparison",
+              "panelId": "algo06",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 60 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 60,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 56 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 539,
+              "component": "comparison",
+              "panelId": "algo07",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 56 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 56,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 54 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 578,
+              "component": "comparison",
+              "panelId": "algo07",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 54 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 54,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 52 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 580,
+              "component": "comparison",
+              "panelId": "algo07",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 52 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 52,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 54 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 640,
+              "component": "prose",
+              "panelId": "algo08",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 54 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 54,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 66 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 717,
+              "component": "comparison",
+              "panelId": "algo08",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 66 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 66,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 59 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 785,
+              "component": "comparison",
+              "panelId": "algo08",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 59 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 59,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 59 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 812,
+              "component": "comparison",
+              "panelId": "algo09",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 59 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 59,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 55 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 1007,
+              "component": "comparison",
+              "panelId": "algo10",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 55 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 55,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 69 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 1018,
+              "component": "comparison",
+              "panelId": "algo10",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 69 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 69,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 63 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 1033,
+              "component": "comparison",
+              "panelId": "algo10",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 63 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 63,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 53 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 1063,
+              "component": "comparison",
+              "panelId": "algo10",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 53 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 53,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 59 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 1080,
+              "component": "comparison",
+              "panelId": "algo10",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 59 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 59,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 53 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 1093,
+              "component": "comparison",
+              "panelId": "algo10",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 53 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 53,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 54 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 1121,
+              "component": "comparison",
+              "panelId": "algo11",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 54 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 54,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 56 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 1130,
+              "component": "comparison",
+              "panelId": "algo11",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 56 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 56,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 53 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 1153,
+              "component": "comparison",
+              "panelId": "algo11",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 53 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 53,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 56 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 1155,
+              "component": "comparison",
+              "panelId": "algo11",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 56 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 56,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          },
+          {
+            "code": "explainer/writing-sentence-length",
+            "severity": "warning",
+            "message": "Sentence has 61 reading units, above the configured zh limit of 50.",
+            "subject": {
+              "line": 1176,
+              "component": "comparison",
+              "panelId": "algo11",
+              "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md"
+            },
+            "evidence": {
+              "rule": "sentence-length",
+              "reason": "Sentence has 61 reading units, above the configured zh limit of 50.",
+              "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+              "units": 61,
+              "limit": 50
+            },
+            "supportedFixes": [
+              "Split at a logical action or condition boundary while preserving qualifications and causal links."
+            ]
+          }
+        ],
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      },
+      "stderr": "archify: Sentence has 59 reading units, above the configured zh limit of 50.\narchify: Sentence has 58 reading units, above the configured zh limit of 50.\narchify: Sentence has 80 reading units, above the configured zh limit of 50.\narchify: Sentence has 52 reading units, above the configured zh limit of 50.\narchify: Sentence has 68 reading units, above the configured zh limit of 50.\narchify: Sentence has 55 reading units, above the configured zh limit of 50.\narchify: This sentence chains 3 “的” modifiers, so the head noun arrives late.\narchify: Sentence has 52 reading units, above the configured zh limit of 50.\narchify: Sentence has 54 reading units, above the configured zh limit of 50.\narchify: This sentence chains 3 “的” modifiers, so the head noun arrives late.\narchify: Sentence has 60 reading units, above the configured zh limit of 50.\narchify: Sentence has 56 reading units, above the configured zh limit of 50.\narchify: Sentence has 59 reading units, above the configured zh limit of 50.\narchify: This sentence chains 3 “的” modifiers, so the head noun arrives late.\narchify: This sentence chains 3 “的” modifiers, so the head noun arrives late.\narchify: Sentence has 53 reading units, above the configured zh limit of 50.\narchify: Sentence has 62 reading units, above the configured zh limit of 50.\narchify: This sentence chains 3 “的” modifiers, so the head noun arrives late.\narchify: Sentence has 57 reading units, above the configured zh limit of 50.\narchify: Sentence has 60 reading units, above the configured zh limit of 50.\narchify: Sentence has 56 reading units, above the configured zh limit of 50.\narchify: Sentence has 54 reading units, above the configured zh limit of 50.\narchify: Sentence has 52 reading units, above the configured zh limit of 50.\narchify: Sentence has 54 reading units, above the configured zh limit of 50.\narchify: Sentence has 66 reading units, above the configured zh limit of 50.\narchify: Sentence has 59 reading units, above the configured zh limit of 50.\narchify: Sentence has 59 reading units, above the configured zh limit of 50.\narchify: Sentence has 55 reading units, above the configured zh limit of 50.\narchify: Sentence has 69 reading units, above the configured zh limit of 50.\narchify: Sentence has 63 reading units, above the configured zh limit of 50.\narchify: Sentence has 53 reading units, above the configured zh limit of 50.\narchify: Sentence has 59 reading units, above the configured zh limit of 50.\narchify: Sentence has 53 reading units, above the configured zh limit of 50.\narchify: Sentence has 54 reading units, above the configured zh limit of 50.\narchify: Sentence has 56 reading units, above the configured zh limit of 50.\narchify: Sentence has 53 reading units, above the configured zh limit of 50.\narchify: Sentence has 56 reading units, above the configured zh limit of 50.\narchify: Sentence has 61 reading units, above the configured zh limit of 50."
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 479,
+      "command": [
+        "/opt/homebrew/Cellar/node/25.9.0_2/bin/node",
+        "/Users/yanrui/.claude/skills/archify/bin/archify.mjs",
+        "check",
+        "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/code-atlas.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/code-atlas.html",
+        "family": "explainer",
+        "artifact": {
+          "sha256": "d72a13fa90d53e95ed53afda4cdd0593977ff8af2d63730a3b308e48a77bebf2",
+          "bytes": 1744773
+        },
+        "checks": [
+          {
+            "name": "explainer_structure",
+            "ok": true,
+            "details": [
+              "838 unique DOM IDs"
+            ]
+          },
+          {
+            "name": "explainer_payload_identity",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "explainer_dependencies",
+            "ok": true,
+            "details": [
+              "1 frozen dependencies"
+            ]
+          },
+          {
+            "name": "explainer_native_diagrams",
+            "ok": true,
+            "details": [
+              "repo-tree: pass"
+            ]
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "showcase",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "issues": [],
+          "nativeDiagrams": [
+            {
+              "id": "repo-tree",
+              "receipt": {
+                "ok": true,
+                "file": "/var/folders/c3/kxvxf3lx2ss1b349yz2hthfh0000gn/T/archify-explainer-check-Y5EYch/child.html",
+                "artifact": {
+                  "sha256": "6c3a0c0f4b418bdcca082d0979762e13423b9a785c19ba433779f92aaaabf85c",
+                  "bytes": 832748
+                },
+                "checks": [
+                  {
+                    "name": "single_svg",
+                    "ok": true,
+                    "details": [
+                      "found 1 <svg> block(s)"
+                    ]
+                  },
+                  {
+                    "name": "finite_svg",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "orthogonal_arrows",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "label_route_clearance",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "relationship_crossings",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "relationship_corridors",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "container_border_runs",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "route_rhythm",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "legend_clearance",
+                    "ok": true,
+                    "details": [
+                      "no legend marker found"
+                    ]
+                  }
+                ],
+                "composition": {
+                  "schemaVersion": 1,
+                  "profile": "showcase",
+                  "status": "pass",
+                  "summary": {
+                    "errors": 0,
+                    "warnings": 0
+                  },
+                  "metrics": {
+                    "properCrossings": 0,
+                    "resolvedCrossovers": 0,
+                    "ambiguousCorridors": 0,
+                    "arrowheadCollisions": 0,
+                    "containerBorderRuns": 0,
+                    "labelRouteClearanceIssues": 0,
+                    "labelCanvasOverflowIssues": 0,
+                    "minLabelRouteClearance": null,
+                    "desktopReadabilityIssues": 0,
+                    "viewportHeightIssues": 0,
+                    "minProjectedNodeTextPx": 7.499999999999999,
+                    "maxBends": 0,
+                    "routesOverSuggestedBends": 0,
+                    "maxStretch": null,
+                    "routesOverSuggestedStretch": 0,
+                    "minSegmentPx": null,
+                    "minInteriorSegmentPx": null,
+                    "shortSegmentCount": 0,
+                    "shortEndpointSegmentCount": 0,
+                    "shortInteriorSegmentCount": 0,
+                    "microSegmentCount": 0
+                  },
+                  "suggestedLimits": {
+                    "bendsPerRelationship": 2,
+                    "stretch": 1.35,
+                    "segmentPx": 16,
+                    "microSegmentPx": 8
+                  },
+                  "routeReview": {
+                    "crossings": [],
+                    "detours": []
+                  },
+                  "leadingSpace": {
+                    "measured": false,
+                    "reviewSuggested": false
+                  },
+                  "desktopReadability": {
+                    "budgetBasis": "recognized-declared-wide",
+                    "readerContract": "declared-wide-v1",
+                    "availableDiagramWidth": 965.1923076923076,
+                    "actualBudgetPx": 965.1923076923076,
+                    "actualReaderWidth": 995.1923076923076,
+                    "desiredReaderWidth": 995.1923076923076,
+                    "viewportCap": 1376,
+                    "limit": "source-size",
+                    "requestedTargetPx": 7.5,
+                    "requestedTargetMet": false,
+                    "hardFloorPx": 6,
+                    "hardFloorMet": true,
+                    "minimumOwner": {
+                      "kind": "node",
+                      "id": "a01"
+                    },
+                    "minimumSourceTextPx": 13,
+                    "minimumProjectedTextPx": 7.499999999999999,
+                    "semanticTextCount": 20
+                  },
+                  "issues": []
+                }
+              }
+            }
+          ]
+        },
+        "diagnostics": [],
+        "provenance": "current",
+        "deliveryReceiptId": "34955ef0-f849-4e23-9728-1430f15cc8e2"
+      }
+    }
+  },
+  "browserCheck": {
+    "requested": false,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 59 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 3,
+        "component": "answer"
+      },
+      "evidence": {
+        "reason": "Sentence has 59 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 59,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 58 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 78,
+        "component": "comparison",
+        "panelId": "algo01"
+      },
+      "evidence": {
+        "reason": "Sentence has 58 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 58,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 80 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 140,
+        "component": "comparison",
+        "panelId": "algo02"
+      },
+      "evidence": {
+        "reason": "Sentence has 80 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 80,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 52 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 152,
+        "component": "comparison",
+        "panelId": "algo02"
+      },
+      "evidence": {
+        "reason": "Sentence has 52 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 52,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 68 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 170,
+        "component": "comparison",
+        "panelId": "algo03"
+      },
+      "evidence": {
+        "reason": "Sentence has 68 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 68,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 55 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 193,
+        "component": "comparison",
+        "panelId": "algo03"
+      },
+      "evidence": {
+        "reason": "Sentence has 55 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 55,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-de-chain",
+      "severity": "warning",
+      "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 225,
+        "component": "comparison",
+        "panelId": "algo03"
+      },
+      "evidence": {
+        "reason": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+        "example": "负责处理用户提交的订单的服务的日志 → 订单服务的日志。它记录用户提交的订单。",
+        "rule": "de-chain",
+        "matched": "cumsum 的差分计算窗口均值，并单独处理首尾不足整窗的部分，返回与输入等长的平滑序列。"
+      },
+      "supportedFixes": [
+        "Split the sentence or move a modifier into its own clause."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 52 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 242,
+        "component": "comparison",
+        "panelId": "algo03"
+      },
+      "evidence": {
+        "reason": "Sentence has 52 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 52,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 54 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 301,
+        "component": "comparison",
+        "panelId": "algo04"
+      },
+      "evidence": {
+        "reason": "Sentence has 54 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 54,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-de-chain",
+      "severity": "warning",
+      "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 313,
+        "component": "comparison",
+        "panelId": "algo04"
+      },
+      "evidence": {
+        "reason": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+        "example": "负责处理用户提交的订单的服务的日志 → 订单服务的日志。它记录用户提交的订单。",
+        "rule": "de-chain",
+        "matched": "cumsum 的差分求窗口均值，并单独拼接首尾不足整窗的部分，输出与输入等长的平滑序列。"
+      },
+      "supportedFixes": [
+        "Split the sentence or move a modifier into its own clause."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 60 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 333,
+        "component": "prose",
+        "panelId": "algo05"
+      },
+      "evidence": {
+        "reason": "Sentence has 60 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 60,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 56 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 346,
+        "component": "comparison",
+        "panelId": "algo05"
+      },
+      "evidence": {
+        "reason": "Sentence has 56 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 56,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 59 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 376,
+        "component": "comparison",
+        "panelId": "algo05"
+      },
+      "evidence": {
+        "reason": "Sentence has 59 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 59,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-de-chain",
+      "severity": "warning",
+      "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 393,
+        "component": "comparison",
+        "panelId": "algo05"
+      },
+      "evidence": {
+        "reason": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+        "example": "负责处理用户提交的订单的服务的日志 → 订单服务的日志。它记录用户提交的订单。",
+        "rule": "de-chain",
+        "matched": "解析脚本同级的 output 目录并创建；用 config 构造带种子的环境、RBFStateFeaturizer、GaussianPolicy（动作界取自 action_space 的 low/high）与 ValueEstimator，调用 train 得到统计后写出 episode_stats."
+      },
+      "supportedFixes": [
+        "Split the sentence or move a modifier into its own clause."
+      ]
+    },
+    {
+      "code": "explainer/writing-de-chain",
+      "severity": "warning",
+      "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 400,
+        "component": "comparison",
+        "panelId": "algo05"
+      },
+      "evidence": {
+        "reason": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+        "example": "负责处理用户提交的订单的服务的日志 → 订单服务的日志。它记录用户提交的订单。",
+        "rule": "de-chain",
+        "matched": "导入 dataclass、numpy，以及 environment 的 reset/step 封装与协议类型、estimators 的 GaussianPolicy/ValueEstimator、features 的 RBFStateFeaturizer。"
+      },
+      "supportedFixes": [
+        "Split the sentence or move a modifier into its own clause."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 53 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 402,
+        "component": "comparison",
+        "panelId": "algo05"
+      },
+      "evidence": {
+        "reason": "Sentence has 53 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 53,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 62 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 419,
+        "component": "comparison",
+        "panelId": "algo06"
+      },
+      "evidence": {
+        "reason": "Sentence has 62 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 62,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-de-chain",
+      "severity": "warning",
+      "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 444,
+        "component": "comparison",
+        "panelId": "algo06"
+      },
+      "evidence": {
+        "reason": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+        "example": "负责处理用户提交的订单的服务的日志 → 订单服务的日志。它记录用户提交的订单。",
+        "rule": "de-chain",
+        "matched": "构建 state→hidden→hidden 的两层 ReLU Sequential 与输出均值的 Linear(hidden, action_size)，并把 log_std 初始化为 0（std=1）的可学习 Parameter。"
+      },
+      "supportedFixes": [
+        "Split the sentence or move a modifier into its own clause."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 57 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 458,
+        "component": "comparison",
+        "panelId": "algo06"
+      },
+      "evidence": {
+        "reason": "Sentence has 57 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 57,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 60 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 459,
+        "component": "comparison",
+        "panelId": "algo06"
+      },
+      "evidence": {
+        "reason": "Sentence has 60 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 60,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 56 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 539,
+        "component": "comparison",
+        "panelId": "algo07"
+      },
+      "evidence": {
+        "reason": "Sentence has 56 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 56,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 54 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 578,
+        "component": "comparison",
+        "panelId": "algo07"
+      },
+      "evidence": {
+        "reason": "Sentence has 54 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 54,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 52 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 580,
+        "component": "comparison",
+        "panelId": "algo07"
+      },
+      "evidence": {
+        "reason": "Sentence has 52 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 52,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 54 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 640,
+        "component": "prose",
+        "panelId": "algo08"
+      },
+      "evidence": {
+        "reason": "Sentence has 54 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 54,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 66 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 717,
+        "component": "comparison",
+        "panelId": "algo08"
+      },
+      "evidence": {
+        "reason": "Sentence has 66 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 66,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 59 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 785,
+        "component": "comparison",
+        "panelId": "algo08"
+      },
+      "evidence": {
+        "reason": "Sentence has 59 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 59,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 59 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 812,
+        "component": "comparison",
+        "panelId": "algo09"
+      },
+      "evidence": {
+        "reason": "Sentence has 59 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 59,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 55 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 1007,
+        "component": "comparison",
+        "panelId": "algo10"
+      },
+      "evidence": {
+        "reason": "Sentence has 55 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 55,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 69 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 1018,
+        "component": "comparison",
+        "panelId": "algo10"
+      },
+      "evidence": {
+        "reason": "Sentence has 69 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 69,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 63 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 1033,
+        "component": "comparison",
+        "panelId": "algo10"
+      },
+      "evidence": {
+        "reason": "Sentence has 63 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 63,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 53 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 1063,
+        "component": "comparison",
+        "panelId": "algo10"
+      },
+      "evidence": {
+        "reason": "Sentence has 53 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 53,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 59 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 1080,
+        "component": "comparison",
+        "panelId": "algo10"
+      },
+      "evidence": {
+        "reason": "Sentence has 59 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 59,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 53 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 1093,
+        "component": "comparison",
+        "panelId": "algo10"
+      },
+      "evidence": {
+        "reason": "Sentence has 53 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 53,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 54 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 1121,
+        "component": "comparison",
+        "panelId": "algo11"
+      },
+      "evidence": {
+        "reason": "Sentence has 54 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 54,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 56 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 1130,
+        "component": "comparison",
+        "panelId": "algo11"
+      },
+      "evidence": {
+        "reason": "Sentence has 56 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 56,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 53 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 1153,
+        "component": "comparison",
+        "panelId": "algo11"
+      },
+      "evidence": {
+        "reason": "Sentence has 53 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 53,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 56 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 1155,
+        "component": "comparison",
+        "panelId": "algo11"
+      },
+      "evidence": {
+        "reason": "Sentence has 56 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 56,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    },
+    {
+      "code": "explainer/writing-sentence-length",
+      "severity": "warning",
+      "message": "Sentence has 61 reading units, above the configured zh limit of 50.",
+      "subject": {
+        "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/candidate.archify.md",
+        "line": 1176,
+        "component": "comparison",
+        "panelId": "algo11"
+      },
+      "evidence": {
+        "reason": "Sentence has 61 reading units, above the configured zh limit of 50.",
+        "example": "先查缓存。未命中时再查数据库。 / Check the cache first. Query the database on a miss.",
+        "rule": "sentence-length",
+        "units": 61,
+        "limit": 50
+      },
+      "supportedFixes": [
+        "Split at a logical action or condition boundary while preserving qualifications and causal links."
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/code-atlas.finalize.json",
+    "summaryReceipt": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/code-atlas-20261023-153518/code-atlas.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "finishedAt": "2026-10-23T07:37:57.563Z",
+  "durationMs": 1324,
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-23T07:17:03.821Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

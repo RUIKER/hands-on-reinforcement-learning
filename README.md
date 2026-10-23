@@ -1,19 +1,70 @@
 # Reinforcement Learning 实验代码
 
-这是一个强化学习学习项目，包含从表格型方法到深度强化学习和策略梯度方法的实现。代码主要使用 Python、Gymnasium、NumPy、PyTorch 和 Matplotlib。
+这是一个强化学习学习项目，按“表格型方法 → 深度价值方法 → 策略梯度 → 连续控制”的路线组织。代码主要使用 Python、Gymnasium、NumPy、PyTorch 和 Matplotlib。
+
+目录编号表示**推荐阅读顺序**，不是严格的历史时间顺序。算法之间的继承与分支关系见 [算法路线.md](算法路线.md)。
 
 ## 项目目录
 
-| 目录 | 内容 | 入口 |
-| --- | --- | --- |
-| `Cliff Walking` | Cliff Walking 上的 Q-learning 和 SARSA | `train.py` |
-| `DQN` | DQN 练习代码和经验回放 | `practice.py` |
-| `Double DQN、Dueling DQN` | DQN、Double DQN、Dueling DQN 统一 pipeline | `main.py` |
-| `策略梯度算法_Reinforce` | CartPole-v1 上的 REINFORCE | `main.py` |
-| `Mountain Car` | 基于 RBF 特征的 Actor-Critic | `main.py` |
-| `Mountain Car PyTorch` | 基于 PyTorch 的 Mountain Car Actor-Critic | `main.py` |
+| 编号 | 目录 | 内容 | 入口 |
+| ---: | --- | --- | --- |
+| 01 | `01_Cliff Walking` | Cliff Walking 上的表格型 Q-learning 和 SARSA | `train.py` |
+| 02 | `02_DQN` | DQN 最小练习实现（Q 网络、replay buffer、target network） | `practice.py`（参考代码） |
+| 03 | `03_Double DQN、Dueling DQN` | DQN、Double DQN、Dueling DQN 统一 pipeline | `main.py` |
+| 04 | `04_策略梯度算法_Reinforce` | CartPole-v1 上的 REINFORCE | `main.py` |
+| 05 | `05_Mountain Car` | 基于 RBF 特征的线性 Actor-Critic | `main.py` |
+| 06 | `06_Mountain Car PyTorch` | 基于 PyTorch MLP 的 Actor-Critic | `main.py` |
+| 07 | `07_TRPO` | CartPole 离散动作与 Pendulum 连续动作 TRPO | `*/main.py` |
+| 08 | `08_PPO` | CartPole 离散动作与 Pendulum 连续动作 PPO | `*/main.py` |
+| 09 | `09_DDPG` | Pendulum 标准 DDPG 与 CartPole 教学适配 | `*/main.py` |
+| 10 | `10_TD3` | Pendulum 连续动作 TD3 | `Pendulum/main.py` |
+| 11 | `11_SAC` | Pendulum 连续动作 SAC | `Pendulum/main.py` |
 
-每个实验目录尽量独立管理自己的 `requirements.txt`，建议在对应目录中安装依赖和运行代码。
+每个算法目录下的 `经验总结.md` 都采用同一结构：先回答“特点、针对的缺陷、局限性、应用场景”四个问题，再记录实现细节、实验结果和排错经验。
+
+## 算法推进线（速览）
+
+```text
+价值型分支
+01 表格型 Q-learning / SARSA
+        │  状态空间爆炸
+        ▼
+02 DQN ──► 03 Double DQN / Dueling DQN
+        │  离散动作、间接学策略
+        ▼
+策略梯度分支
+04 REINFORCE ──► 05 Actor-Critic ──► 06 Actor-Critic (PyTorch)
+                                      │  步长敏感、更新可能崩溃
+                                      ▼
+                              07 TRPO ──► 08 PPO
+
+连续控制 off-policy 分支
+02 DQN 的 replay + target network
+08 PPO 的连续动作策略经验
+        │
+        ▼
+09 DDPG ──► 10 TD3 ──► 11 SAC
+```
+
+更完整的对比表、每一条箭头的含义，以及“为什么编号不是一条直线”，见 [算法路线.md](算法路线.md)。
+
+## 代码结构可视化
+
+仓库提供一份单文件的交互式代码流页面：[强化学习代码流](code-flow.html)。页面覆盖 11 个目录、112 个文件条目和 541 个逻辑块：
+
+- 每个文件的主流程，例如 `__init__ → take_action → update → calc_target`；
+- 每个类和函数的逻辑块、行号与中文注释；
+- 点击关键算法块，可在“伪代码 / 源码”之间切换；
+- 支持按文件、函数名或逻辑内容搜索，并可用 URL 定位到具体代码块。
+
+其中 7 个历史 `practice.py`（03、04、07、08、09、10、11）当前不在工作区；页面保留提取时的逻辑块和伪代码，源码视图会标注不可用。页面不依赖外部脚本或网络，直接用浏览器打开即可。重新生成时运行：
+
+```bash
+cd .archify/code-flow-20261023-155959
+python3 build_flow.py
+```
+
+脚本会同时更新 `.archify/` 下的构建产物和仓库根目录的 `code-flow.html`。
 
 ## 环境准备
 
@@ -24,69 +75,129 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-进入具体实验目录后安装依赖，例如：
-
-```bash
-cd "Double DQN、Dueling DQN"
-python -m pip install -r requirements.txt
-python main.py
-```
+每个实验目录尽量独立管理自己的 `requirements.txt`，进入对应目录后安装依赖。
 
 ## 运行示例
 
-### Cliff Walking
+### 01 Cliff Walking
 
-该项目只使用 Python 标准库：
+只使用 Python 标准库：
 
 ```bash
-cd "Cliff Walking"
+cd "01_Cliff Walking"
 python train.py
 ```
 
 在 `train.py` 中切换 `q_learning.QTable` 和 `sarsa.SarsaTable` 可以对比 Q-learning 与 SARSA。
 
-### Double DQN、Dueling DQN
+### 03 Double DQN、Dueling DQN
 
 ```bash
-cd "Double DQN、Dueling DQN"
+cd "03_Double DQN、Dueling DQN"
 python -m pip install -r requirements.txt
 python main.py
 ```
 
-在 `config.py` 中修改：
+在 `config.py` 中修改 `ALGORITHM`，可选 `DQN`、`DoubleDQN`、`DuelingDQN`。
 
-```python
-ALGORITHM = 'DQN'
-```
-
-可选值为 `DQN`、`DoubleDQN` 和 `DuelingDQN`。
-
-### REINFORCE
+### 04 REINFORCE
 
 ```bash
-cd "策略梯度算法_Reinforce"
+cd "04_策略梯度算法_Reinforce"
 python -m pip install -r requirements.txt
 python main.py
 ```
 
-### Mountain Car
+### 05 / 06 Mountain Car
 
 ```bash
-cd "Mountain Car"
+cd "05_Mountain Car"
 python -m pip install -r requirements.txt
 python main.py
 ```
 
-### Mountain Car PyTorch
-
 ```bash
-cd "Mountain Car PyTorch"
+cd "06_Mountain Car PyTorch"
 python -m pip install -r requirements.txt
 python main.py
 ```
+
+### 07 TRPO / 08 PPO
+
+```bash
+cd "07_TRPO/CartPole"
+python main.py
+
+cd "08_PPO/Pendulum"
+python main.py
+```
+
+### 09 DDPG / 10 TD3 / 11 SAC
+
+```bash
+cd "09_DDPG/Pendulum"
+python main.py
+
+cd "10_TD3/Pendulum"
+python main.py
+
+cd "11_SAC/Pendulum"
+python main.py
+```
+
+## 参考与致谢
+
+本项目是学习与复现项目，不是任何论文、教材或开源项目的官方实现。代码按“每个算法一个独立 pipeline”的方式重新组织，并适配了 Gymnasium 的新版接口；具体的拆分方式、实现细节和超参数起点参考了以下资料。
+
+### 教程与参考实现
+
+- **《动手学强化学习》**，张伟楠、沈键、俞勇，人民邮电出版社，2022：[在线教程](https://hrl.boyuai.com/) · [配套代码](https://github.com/boyu-ai/Hands-on-RL)。本仓库的 `config.py` / `environment.py` / `networks.py` / `agents.py` / `trainer.py` / `main.py` 拆分方式，以及 `rl_utils.py` 中的 replay buffer、`moving_average`、`compute_advantage` 等工具，参考了该教程的组织方式。
+- **OpenAI Spinning Up**：[教程主页](https://spinningup.openai.com/) · [TD3 教程](https://spinningup.openai.com/en/latest/algorithms/td3.html) · [TD3 PyTorch 参考实现](https://github.com/openai/spinningup/tree/master/spinup/algos/pytorch/td3)。`10_TD3` 的算法结构、默认噪声参数和 `practice.py` 的对照写法参考了这里。
+- **Gymnasium 文档**：[https://gymnasium.farama.org/](https://gymnasium.farama.org/)。环境接口、`reset()` / `step()` 的返回值，以及 `terminated` / `truncated` 的语义，以官方文档为准。
+
+### 算法论文
+
+| 编号 | 算法 | 原始论文 / 主要参考 |
+| ---: | --- | --- |
+| 01 | 表格型 Q-learning / SARSA | [Watkins & Dayan, *Q-learning*, Machine Learning, 1992](https://doi.org/10.1007/BF00992698)；[Sutton & Barto, *Reinforcement Learning: An Introduction*, 2nd ed., 2018](http://incompleteideas.net/book/the-book-2nd.html) |
+| 02 | DQN | [Mnih et al., *Human-level control through deep reinforcement learning*, Nature, 2015](https://doi.org/10.1038/nature14236) |
+| 03 | Double DQN / Dueling DQN | [van Hasselt et al., *Deep Reinforcement Learning with Double Q-Learning*, AAAI 2016](https://arxiv.org/abs/1509.06461)；[Wang et al., *Dueling Network Architectures for Deep Reinforcement Learning*, ICML 2016](https://arxiv.org/abs/1511.06581) |
+| 04 | REINFORCE | [Williams, *Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning*, Machine Learning, 1992](https://doi.org/10.1007/BF00992696) |
+| 05–06 | Actor-Critic | [Sutton & Barto, 2018](http://incompleteideas.net/book/the-book-2nd.html)，第 13 章；具体实现参考《动手学强化学习》 |
+| 07 | TRPO | [Schulman et al., *Trust Region Policy Optimization*, ICML 2015](https://arxiv.org/abs/1502.05477)；优势估计使用 [GAE, Schulman et al., ICLR 2016](https://arxiv.org/abs/1506.02438) |
+| 08 | PPO | [Schulman et al., *Proximal Policy Optimization Algorithms*, 2017](https://arxiv.org/abs/1707.06347) |
+| 09 | DDPG | [Lillicrap et al., *Continuous Control with Deep Reinforcement Learning*, ICLR 2016](https://arxiv.org/abs/1509.02971) |
+| 10 | TD3 | [Fujimoto et al., *Addressing Function Approximation Error in Actor-Critic Methods*, ICML 2018](https://arxiv.org/abs/1802.09477) |
+| 11 | SAC | [Haarnoja et al., *Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor*, ICML 2018](https://arxiv.org/abs/1801.01290)；自动温度系数参考 [*Soft Actor-Critic Algorithms and Applications*, 2018](https://arxiv.org/abs/1812.05905) |
+
+### 工具与依赖
+
+- [Python](https://www.python.org/)
+- [Gymnasium](https://gymnasium.farama.org/)（Farama Foundation）
+- [NumPy](https://numpy.org/)
+- [PyTorch](https://pytorch.org/)
+- [Matplotlib](https://matplotlib.org/)
+
+需要第三方依赖的实验目录通过 `requirements.txt` 记录实际版本；本仓库不包含上述库的源代码。
+
+### 许可证说明
+
+- 《动手学强化学习》配套代码以 [Apache License 2.0](https://github.com/boyu-ai/Hands-on-RL/blob/main/LICENSE) 发布。
+- OpenAI Spinning Up 以 [MIT License](https://github.com/openai/spinningup/blob/master/LICENSE) 发布。
+
+本仓库中的相关实现是在这些公开代码基础上重新拆分、改写并适配 Gymnasium 的。再分发或公开发布时，请保留原项目的版权、许可证和 NOTICE 声明（如有），并注明本项目做了哪些修改。
+
+### 致谢
+
+感谢《动手学强化学习》的作者和社区提供公开课程与配套代码，感谢上海交通大学 APEX 实验室和伯禹学习平台对相关课程与代码的公开支持，感谢 OpenAI Spinning Up 团队对 TD3 等算法的清晰讲解和参考实现，也感谢 Gymnasium、PyTorch、NumPy 和 Matplotlib 等开源项目的维护者。没有这些公开资料和工具，本项目难以完成。
+
+### 引用说明
+
+如果本项目帮助你完成了课程作业、论文或开源项目，建议引用对应算法的原始论文；如果参考了本仓库的代码组织，也请一并引用《动手学强化学习》。本仓库中的实现经过重新拆分、改写和 Gymnasium 适配，若与原始论文或参考实现存在差异，应以原始论文和当前代码为准。
 
 ## 说明
 
-- `经验总结.md` 文件记录每个实验的算法原理、实现细节、排错过程和后续改进方向。
+- 每个实验的 `经验总结.md` 记录算法原理、实现细节、排错过程和后续改进方向。
+- TD3 只适用于连续动作空间，因此只提供 `Pendulum-v1` 案例。
 - `.venv`、缓存文件和训练生成的输出默认不会提交到 Git。
-- Gymnasium 项目使用新版 `reset()` 和 `step()` 接口，旧版 Gym 示例可能需要额外适配。
+- Gymnasium 项目使用新版 `reset()` 和 `step()` 接口；旧版 Gym 示例需要适配。
