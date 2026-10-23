@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "diagram_type": "tree",
+  "meta": {
+    "title": "强化学习仓库目录结构",
+    "locale": "zh-CN",
+    "output": ".archify/tree-rl-code-structure-20261023-152828/rl-code-structure.html",
+    "quality_profile": "showcase"
+  },
+  "layout": {
+    "direction": "right"
+  },
+  "nodes": [
+    {
+      "id": "rl_repo",
+      "label": "强化学习代码库",
+      "sublabel": "01–11 · 三条分支"
+    },
+    {
+      "id": "a01",
+      "parent": "rl_repo",
+      "label": "01_Cliff Walking",
+      "sublabel": "表格型 · Q-learning / SARSA"
+    },
+    {
+      "id": "a02",
+      "parent": "rl_repo",
+      "label": "02_DQN",
+      "sublabel": "最小练习 · practice.py"
+    },
+    {
+      "id": "a03",
+      "parent": "rl_repo",
+      "label": "03_Double DQN、Dueling DQN",
+      "sublabel": "离散 off-policy · 统一 pipeline"
+    },
+    {
+      "id": "a04",
+      "parent": "rl_repo",
+      "label": "04_策略梯度算法_Reinforce",
+      "sublabel": "on-policy · REINFORCE"
+    },
+    {
+      "id": "a05",
+      "parent": "rl_repo",
+      "label": "05_Mountain Car",
+      "sublabel": "线性 AC · RBF 特征"
+    },
+    {
+      "id": "a06",
+      "parent": "rl_repo",
+      "label": "06_Mountain Car PyTorch",
+      "sublabel": "MLP AC · 05 的框架升级"
+    },
+    {
+      "id": "a07",
+      "parent": "rl_repo",
+      "label": "07_TRPO",
+      "sublabel": "信赖域 · 约束更新"
+    },
+    {
+      "id": "a07_cartpole",
+      "parent": "a07",
+      "label": "CartPole",
+      "sublabel": "离散动作"
+    },
+    {
+      "id": "a07_pendulum",
+      "parent": "a07",
+      "label": "Pendulum",
+      "sublabel": "连续动作"
+    },
+    {
+      "id": "a08",
+      "parent": "rl_repo",
+      "label": "08_PPO",
+      "sublabel": "裁剪代理目标 · 工程化"
+    },
+    {
+      "id": "a08_cartpole",
+      "parent": "a08",
+      "label": "CartPole",
+      "sublabel": "离散动作"
+    },
+    {
+      "id": "a08_pendulum",
+      "parent": "a08",
+      "label": "Pendulum",
+      "sublabel": "连续动作"
+    },
+    {
+      "id": "a09",
+      "parent": "rl_repo",
+      "label": "09_DDPG",
+      "sublabel": "确定性 AC · off-policy"
+    },
+    {
+      "id": "a09_cartpole",
+      "parent": "a09",
+      "label": "CartPole",
+      "sublabel": "教学适配"
+    },
+    {
+      "id": "a09_pendulum",
+      "parent": "a09",
+      "label": "Pendulum",
+      "sublabel": "标准 DDPG"
+    },
+    {
+      "id": "a10",
+      "parent": "rl_repo",
+      "label": "10_TD3",
+      "sublabel": "双 critic · 延迟更新"
+    },
+    {
+      "id": "a10_pendulum",
+      "parent": "a10",
+      "label": "Pendulum",
+      "sublabel": "连续动作"
+    },
+    {
+      "id": "a11",
+      "parent": "rl_repo",
+      "label": "11_SAC",
+      "sublabel": "最大熵 · 自动温度"
+    },
+    {
+      "id": "a11_pendulum",
+      "parent": "a11",
+      "label": "Pendulum",
+      "sublabel": "连续动作"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "三条阅读分支",
+      "items": [
+        "01–03 价值型：Q-learning → DQN → Double / Dueling，离散动作",
+        "04–08 策略梯度：REINFORCE → Actor-Critic → TRPO → PPO",
+        "09–11 连续控制：DDPG → TD3 → SAC，off-policy + replay"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "共享模块约定",
+      "items": [
+        "03–11 通常拆为 config / environment / agents / networks / trainer / main",
+        "off-policy 用 ReplayBuffer；on-policy 用回合 rollout",
+        "DDPG / TD3 额外有 noise.py；SAC 由随机策略自带探索"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "文档与输出",
+      "items": [
+        "根 README.md 给目录表，算法路线.md 给继承关系",
+        "每个目录的 经验总结.md 回答特点、缺陷、局限、场景四问",
+        "05 / 06 的 output 保存 CSV 与曲线；06 另存 actor_critic.pt"
+      ]
+    }
+  ]
+}

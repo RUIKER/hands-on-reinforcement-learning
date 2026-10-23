@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "b3503e65-70cb-4938-8b86-07052108c5ca",
+  "status": "current",
+  "command": "deliver",
+  "type": "tree",
+  "input": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/tree-rl-code-structure-20261023-152828/candidate.json",
+  "output": "/Users/yanrui/Downloads/硕士/gpulab/Reinforcement Learning/code/.archify/tree-rl-code-structure-20261023-152828/rl-code-structure.html",
+  "specification": {
+    "sha256": "35d5122128d46a39cafe899d0348380e3ebb3f7ec8bd8edb55a6c8a842373bea",
+    "bytes": 3991
+  },
+  "artifact": {
+    "sha256": "d4fa04a38a5365881a0ff15b4b870261bb2a614534f7e51e473d88c28af21536",
+    "bytes": 839589
+  }
+}
