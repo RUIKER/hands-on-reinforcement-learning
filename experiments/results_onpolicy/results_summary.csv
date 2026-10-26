@@ -1,0 +1,3 @@
+algo,n_seeds,eval_mean_median,eval_mean_q1,eval_mean_q3,eval_mean_iqr,train_last10_median,wall_clock_median,steps_to_90pct_median
+ppo,3,-593.458,-728.241,-581.567,146.675,-645.555,419.838,245000.000
+trpo,3,-1403.430,-1440.276,-1022.247,418.029,-1347.334,348.658,390000.000
