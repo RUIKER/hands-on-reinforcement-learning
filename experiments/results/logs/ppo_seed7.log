@@ -1,0 +1,23 @@
+[ppo seed=7] device=cpu gamma=0.99 episodes=2000 per_update=10
+[ppo seed=7] ep 1/2000 steps=200 last10=-1619.1 elapsed=0s
+[ppo seed=7] ep 100/2000 steps=20000 last10=-1241.7 elapsed=4s
+[ppo seed=7] ep 200/2000 steps=40000 last10=-827.7 elapsed=7s
+[ppo seed=7] ep 300/2000 steps=60000 last10=-547.4 elapsed=11s
+[ppo seed=7] ep 400/2000 steps=80000 last10=-277.2 elapsed=15s
+[ppo seed=7] ep 500/2000 steps=100000 last10=-390.6 elapsed=18s
+[ppo seed=7] ep 600/2000 steps=120000 last10=-248.2 elapsed=22s
+[ppo seed=7] ep 700/2000 steps=140000 last10=-236.1 elapsed=26s
+[ppo seed=7] ep 800/2000 steps=160000 last10=-529.7 elapsed=29s
+[ppo seed=7] ep 900/2000 steps=180000 last10=-284.3 elapsed=32s
+[ppo seed=7] ep 1000/2000 steps=200000 last10=-189.3 elapsed=36s
+[ppo seed=7] ep 1100/2000 steps=220000 last10=-147.7 elapsed=40s
+[ppo seed=7] ep 1200/2000 steps=240000 last10=-178.4 elapsed=43s
+[ppo seed=7] ep 1300/2000 steps=260000 last10=-169.8 elapsed=46s
+[ppo seed=7] ep 1400/2000 steps=280000 last10=-149.4 elapsed=50s
+[ppo seed=7] ep 1500/2000 steps=300000 last10=-236.6 elapsed=55s
+[ppo seed=7] ep 1600/2000 steps=320000 last10=-233.0 elapsed=59s
+[ppo seed=7] ep 1700/2000 steps=340000 last10=-188.0 elapsed=63s
+[ppo seed=7] ep 1800/2000 steps=360000 last10=-164.4 elapsed=67s
+[ppo seed=7] ep 1900/2000 steps=380000 last10=-149.7 elapsed=70s
+[ppo seed=7] ep 2000/2000 steps=400000 last10=-137.2 elapsed=74s
+RESULT {"algo": "ppo", "seed": 7, "eval_mean": -124.4525375366211, "eval_median": -126.12631225585938, "eval_std": 86.22566223144531, "eval_best": -1.2030266523361206, "eval_worst": -261.084228515625, "train_return_last10": -137.2132703439383, "env_steps": 400000, "wall_clock_sec": 74.30138295801589, "final_eval_wall_sec": 0.15712266700575128}

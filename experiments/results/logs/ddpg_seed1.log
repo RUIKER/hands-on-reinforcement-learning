@@ -1,0 +1,13 @@
+[ddpg seed=1] device=cpu state_dim=3 action_dim=1 episodes=200
+[ddpg seed=1] ep 1/200 steps=200 return=-1170.6 last10=-1170.6 elapsed=0s
+[ddpg seed=1] ep 20/200 steps=4000 return=-896.3 last10=-1090.9 elapsed=2s
+[ddpg seed=1] ep 40/200 steps=8000 return=-123.7 last10=-143.2 elapsed=6s
+[ddpg seed=1] ep 60/200 steps=12000 return=-129.1 last10=-243.5 elapsed=9s
+[ddpg seed=1] ep 80/200 steps=16000 return=-129.3 last10=-142.7 elapsed=12s
+[ddpg seed=1] ep 100/200 steps=20000 return=-118.1 last10=-151.6 elapsed=16s
+[ddpg seed=1] ep 120/200 steps=24000 return=-261.7 last10=-202.2 elapsed=19s
+[ddpg seed=1] ep 140/200 steps=28000 return=-127.9 last10=-181.5 elapsed=22s
+[ddpg seed=1] ep 160/200 steps=32000 return=-8.4 last10=-161.8 elapsed=25s
+[ddpg seed=1] ep 180/200 steps=36000 return=-129.5 last10=-168.0 elapsed=29s
+[ddpg seed=1] ep 200/200 steps=40000 return=-259.3 last10=-181.1 elapsed=32s
+RESULT {"algo": "ddpg", "seed": 1, "eval_mean": -125.30818176269531, "eval_median": -127.34251403808594, "eval_std": 86.02152252197266, "eval_best": -1.7298504114151, "eval_worst": -255.67835998535156, "train_return_last10": -181.0824926370422, "env_steps": 40000, "wall_clock_sec": 31.74784795800224, "final_eval_wall_sec": 0.12661029197624885}

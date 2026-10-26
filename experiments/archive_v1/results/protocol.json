@@ -1,0 +1,25 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "algos": [
+    "ddpg",
+    "td3",
+    "sac"
+  ],
+  "episodes": 200,
+  "env_steps": 40000,
+  "eval_episodes": 20,
+  "eval_seed": 10000,
+  "eval_every": 5000,
+  "periodic_eval_episodes": 5,
+  "smooth_window": 10,
+  "normalization": {
+    "random": -1200.0,
+    "best": -150.0
+  },
+  "threshold_norm": 0.9256339154924665,
+  "best_final_eval": -120.09376525878906
+}

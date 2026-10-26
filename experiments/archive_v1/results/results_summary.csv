@@ -1,0 +1,4 @@
+algo,n_seeds,eval_mean_median,eval_mean_q1,eval_mean_q3,eval_mean_iqr,train_last10_median,wall_clock_median,steps_to_90pct_median
+ddpg,3,-150.948,-347.781,-138.983,208.799,-187.483,160.202,10000.000
+td3,3,-122.827,-123.422,-122.709,0.712,-164.694,212.357,10000.000
+sac,3,-120.618,-121.249,-120.356,0.893,-164.830,486.896,5000.000

@@ -1,0 +1,18 @@
+{
+  "seeds": [
+    0
+  ],
+  "algos": [
+    "ppo",
+    "trpo"
+  ],
+  "episodes": 2000,
+  "env_steps": 400000,
+  "gamma": 0.9,
+  "eval_episodes": 20,
+  "eval_seed": 10000,
+  "eval_every": 10000,
+  "periodic_eval_episodes": 5,
+  "threshold_norm": 0.7386782749720983,
+  "best_final_eval": -338.20867919921875
+}

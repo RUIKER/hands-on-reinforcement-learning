@@ -35,9 +35,12 @@ def main():
         config.REWARD_SHIFT,
         config.REWARD_SCALE,
         config.DEVICE,
+        config.CRITIC_EPOCHS,
+        config.MINIBATCH_SIZE,
     )
     return_list = train_on_policy_agent(
-        env, agent, config.NUM_EPISODES
+        env, agent, config.NUM_EPISODES, config.EPISODES_PER_UPDATE,
+        seed=config.SEED,
     )
     plot_training_results(return_list, config.ENV_NAME)
     env.close()

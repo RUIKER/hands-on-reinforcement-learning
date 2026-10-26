@@ -18,3 +18,6 @@ python main.py
 - 使用 reward scaling 改善 critic 的数值范围。
 
 TRPO 的 GAE、共轭梯度、Hessian-vector product 和线搜索步骤与离散版本保持一致。
+
+
+**v2 变更（2026-10）**：每 10 个回合更新一次；修复 `take_action` 先 clamp 再算 log_prob 的问题；GAE 在回合边界切断、截断处 bootstrap；`KL_CONSTRAINT` 5e-5 → 0.01；γ=0.99、λ=0.95。改动前的版本在 `legacy_v1/`，对比见 `experiments/经验总结.md` §4。

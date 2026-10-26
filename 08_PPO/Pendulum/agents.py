@@ -15,7 +15,8 @@ class PPOContinuous:
 
     def __init__(self, state_dim, hidden_dim, action_dim, action_low,
                  action_high, actor_lr, critic_lr, lmbda, epochs, eps, gamma,
-                 reward_shift, reward_scale, device):
+                 reward_shift, reward_scale, device, minibatch_size=64,
+                 max_grad_norm=0.5):
         self.actor = PolicyNetContinuous(
             state_dim, hidden_dim, action_dim, action_low, action_high
         ).to(device)
@@ -38,6 +39,8 @@ class PPOContinuous:
         self.eps = eps
         self.reward_shift = reward_shift
         self.reward_scale = reward_scale
+        self.minibatch_size = minibatch_size
+        self.max_grad_norm = max_grad_norm
         self.device = device
 
     @staticmethod
@@ -91,34 +94,54 @@ class PPOContinuous:
             device=self.device,
         ).view(-1, 1)
 
+        # `dones` 只含真正的 terminated；`ends` 是回合边界（含时间截断）。
+        ends = np.asarray(transition_dict['ends'], dtype=np.float32)
+
         # Pendulum reward 数值较大且为负，缩放只用于 critic 的训练目标；
         # return_list 仍然记录环境原始 reward，方便和教程比较。
         scaled_rewards = (rewards + self.reward_shift) / self.reward_scale
-        td_target = scaled_rewards + self.gamma * self.critic(next_states) * (1 - dones)
-        td_delta = td_target - self.critic(states)
+        with torch.no_grad():
+            values = self.critic(states)
+            next_values = self.critic(next_states)
+        td_target = scaled_rewards + self.gamma * next_values * (1 - dones)
+        td_delta = td_target - values
 
-        # advantage 与 ratio 都保持 [T, 1]，避免广播成 [T, T]。
-        advantage = rl_utils.compute_advantage(
-            self.gamma, self.lmbda, td_delta
+        # GAE 在回合边界切断；advantage 与 ratio 都保持 [T, 1]，避免广播成 [T, T]。
+        advantage = rl_utils.compute_gae(
+            self.gamma, self.lmbda, td_delta, ends
         ).to(self.device).unsqueeze(1)
+        # critic 的回归目标是 GAE return = advantage + V(s)，比单步 TD 目标方差小。
+        returns = advantage + values
         # old policy 是采样这批数据时的策略；detach 后固定不变。
         old_log_probs = self._log_probs(
             self.actor, states, actions
         ).detach()
 
+        batch_size = states.shape[0]
         for _ in range(self.epochs):
-            log_probs = self._log_probs(self.actor, states, actions)
-            # ratio 比较新旧策略对同一个已采样动作的概率。
-            ratio = torch.exp(log_probs - old_log_probs)
-            clipped_ratio = torch.clamp(ratio, 1 - self.eps, 1 + self.eps)
-            # PPO-Clip 同时计算未截断目标和截断目标，取更保守的一个。
-            surrogate = torch.min(ratio * advantage, clipped_ratio * advantage)
-            actor_loss = -surrogate.mean()
-            critic_loss = F.mse_loss(self.critic(states), td_target.detach())
+            permutation = torch.randperm(batch_size, device=self.device)
+            for start in range(0, batch_size, self.minibatch_size):
+                index = permutation[start:start + self.minibatch_size]
+                batch_adv = advantage[index]
+                batch_adv = (batch_adv - batch_adv.mean()) / (batch_adv.std() + 1e-8)
+                log_probs = self._log_probs(self.actor, states[index], actions[index])
+                # ratio 比较新旧策略对同一个已采样动作的概率。
+                ratio = torch.exp(log_probs - old_log_probs[index])
+                clipped_ratio = torch.clamp(ratio, 1 - self.eps, 1 + self.eps)
+                # PPO-Clip 同时计算未截断目标和截断目标，取更保守的一个。
+                surrogate = torch.min(ratio * batch_adv, clipped_ratio * batch_adv)
+                actor_loss = -surrogate.mean()
+                critic_loss = F.mse_loss(self.critic(states[index]), returns[index])
 
-            self.actor_optimizer.zero_grad()
-            self.critic_optimizer.zero_grad()
-            actor_loss.backward()
-            critic_loss.backward()
-            self.actor_optimizer.step()
-            self.critic_optimizer.step()
+                self.actor_optimizer.zero_grad()
+                actor_loss.backward()
+                torch.nn.utils.clip_grad_norm_(
+                    self.actor.parameters(), self.max_grad_norm
+                )
+                self.actor_optimizer.step()
+                self.critic_optimizer.zero_grad()
+                critic_loss.backward()
+                torch.nn.utils.clip_grad_norm_(
+                    self.critic.parameters(), self.max_grad_norm
+                )
+                self.critic_optimizer.step()

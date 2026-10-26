@@ -1,0 +1,13 @@
+[td3 seed=3] device=cpu state_dim=3 action_dim=1 episodes=200
+[td3 seed=3] ep 1/200 steps=200 return=-1543.0 last10=-1543.0 elapsed=0s
+[td3 seed=3] ep 20/200 steps=4000 return=-1351.8 last10=-1493.7 elapsed=4s
+[td3 seed=3] ep 40/200 steps=8000 return=-644.7 last10=-700.1 elapsed=9s
+[td3 seed=3] ep 60/200 steps=12000 return=-131.5 last10=-181.3 elapsed=14s
+[td3 seed=3] ep 80/200 steps=16000 return=-353.1 last10=-150.1 elapsed=19s
+[td3 seed=3] ep 100/200 steps=20000 return=-252.5 last10=-176.4 elapsed=24s
+[td3 seed=3] ep 120/200 steps=24000 return=-127.8 last10=-187.7 elapsed=29s
+[td3 seed=3] ep 140/200 steps=28000 return=-235.4 last10=-200.4 elapsed=34s
+[td3 seed=3] ep 160/200 steps=32000 return=-234.5 last10=-149.5 elapsed=40s
+[td3 seed=3] ep 180/200 steps=36000 return=-124.8 last10=-163.7 elapsed=45s
+[td3 seed=3] ep 200/200 steps=40000 return=-132.5 last10=-186.3 elapsed=51s
+RESULT {"algo": "td3", "seed": 3, "eval_mean": -129.34475708007812, "eval_median": -134.01705932617188, "eval_std": 81.21196746826172, "eval_best": -10.410929679870605, "eval_worst": -248.4617919921875, "train_return_last10": -186.3050361125867, "env_steps": 40000, "wall_clock_sec": 50.52951479199692, "final_eval_wall_sec": 0.132205875008367}

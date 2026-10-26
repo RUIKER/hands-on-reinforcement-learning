@@ -23,3 +23,21 @@ def compute_advantage(gamma, lmbda, td_delta):
         advantage_list.append(advantage)
     advantage_list.reverse()
     return torch.from_numpy(np.asarray(advantage_list, dtype=np.float32))
+
+
+def compute_gae(gamma, lmbda, td_delta, ends):
+    """多回合批数据的 GAE：在回合边界处切断优势的向后传播。
+
+    td_delta: [T] 或 [T, 1]，delta_t = r_t + gamma * V(s_{t+1}) * (1 - terminated_t) - V(s_t)；
+              时间上限造成的 truncated 仍然 bootstrap，所以 terminated 与 ends 是两回事。
+    ends:     [T]，该步之后回合是否结束（terminated 或 truncated）。
+    返回形状为 [T] 的优势序列。
+    """
+    td_delta = td_delta.detach().cpu().numpy().reshape(-1)
+    ends = np.asarray(ends, dtype=np.float32).reshape(-1)
+    advantage = np.zeros_like(td_delta)
+    running = 0.0
+    for t in reversed(range(len(td_delta))):
+        running = td_delta[t] + gamma * lmbda * (1.0 - ends[t]) * running
+        advantage[t] = running
+    return torch.from_numpy(advantage.astype(np.float32))

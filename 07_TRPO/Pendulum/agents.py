@@ -13,7 +13,8 @@ class TRPOContinuous:
 
     def __init__(self, state_dim, action_dim, hidden_dim, action_low,
                  action_high, lmbda, kl_constraint, alpha, critic_lr, gamma,
-                 reward_shift, reward_scale, device):
+                 reward_shift, reward_scale, device, critic_epochs=10,
+                 minibatch_size=64):
         self.actor = PolicyNetContinuous(
             state_dim, hidden_dim, action_dim, action_low, action_high
         ).to(device)
@@ -33,6 +34,8 @@ class TRPOContinuous:
         self.alpha = alpha
         self.reward_shift = reward_shift
         self.reward_scale = reward_scale
+        self.critic_epochs = critic_epochs
+        self.minibatch_size = minibatch_size
         self.device = device
 
     def _distribution(self, actor, states):
@@ -43,8 +46,9 @@ class TRPOContinuous:
         state = torch.as_tensor(
             np.asarray(state), dtype=torch.float32, device=self.device
         ).unsqueeze(0)
+        # 保存策略实际采样的动作，不能先 clamp 再算 log probability，
+        # 否则 old_log_probs 与实际采样分布不一致（环境执行时会自行裁剪动作）。
         action = self._distribution(self.actor, state).sample()
-        action = torch.clamp(action, self.action_low, self.action_high)
         return action.squeeze(0).detach().cpu().numpy()
 
     def hessian_matrix_vector_product(self, states, old_action_dists,
@@ -181,12 +185,20 @@ class TRPOContinuous:
             device=self.device,
         ).view(-1, 1)
 
+        ends = np.asarray(transition_dict['ends'], dtype=np.float32)
+
         scaled_rewards = (rewards + self.reward_shift) / self.reward_scale
-        td_target = scaled_rewards + self.gamma * self.critic(next_states) * (1 - dones)
-        td_delta = td_target - self.critic(states)
-        advantage = rl_utils.compute_advantage(
-            self.gamma, self.lmbda, td_delta
+        with torch.no_grad():
+            values = self.critic(states)
+            next_values = self.critic(next_states)
+        # dones 只含真正的 terminated；时间截断处仍用 V(s') bootstrap。
+        td_target = scaled_rewards + self.gamma * next_values * (1 - dones)
+        td_delta = td_target - values
+        advantage = rl_utils.compute_gae(
+            self.gamma, self.lmbda, td_delta, ends
         ).to(self.device).unsqueeze(1)
+        returns = advantage + values
+        advantage = (advantage - advantage.mean()) / (advantage.std() + 1e-8)
 
         old_log_probs = self._log_probs(
             self.actor, states, actions
@@ -195,10 +207,17 @@ class TRPOContinuous:
         old_action_dists = torch.distributions.Normal(
             old_action_dists.loc.detach(), old_action_dists.scale.detach()
         )
-        critic_loss = F.mse_loss(self.critic(states), td_target.detach())
-        self.critic_optimizer.zero_grad()
-        critic_loss.backward()
-        self.critic_optimizer.step()
+
+        # critic 用 GAE return 做多轮 minibatch 回归；actor 用整批数据做一次信赖域更新。
+        batch_size = states.shape[0]
+        for _ in range(self.critic_epochs):
+            permutation = torch.randperm(batch_size, device=self.device)
+            for start in range(0, batch_size, self.minibatch_size):
+                index = permutation[start:start + self.minibatch_size]
+                critic_loss = F.mse_loss(self.critic(states[index]), returns[index])
+                self.critic_optimizer.zero_grad()
+                critic_loss.backward()
+                self.critic_optimizer.step()
 
         self.policy_learn(
             states, actions, old_action_dists, old_log_probs, advantage
