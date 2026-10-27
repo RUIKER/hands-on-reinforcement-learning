@@ -53,6 +53,8 @@
 `experiments/` 在统一协议下比较 09–11（DDPG / TD3 / SAC）与 07–08 的 Pendulum 版本（TRPO / PPO）：
 **10 个固定 seed、20 个固定评估起始状态、确定性评估**；off-policy 跑 40k 步，on-policy 跑 400k 步。
 
+![五算法学习曲线：中位数 ± IQR，10 个 seed](experiments/results/fig1_learning_curves.png)
+
 | 算法 | 最终评估中位数 | 首次达到 -200 的步数 |
 | --- | ---: | ---: |
 | SAC | -121.2 | 5k |
