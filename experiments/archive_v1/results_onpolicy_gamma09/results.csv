@@ -1,3 +1,0 @@
-algo,seed,env_steps,eval_mean,eval_median,eval_std,eval_best,steps_to_90pct,wall_clock_sec,train_return_last10
-ppo,0,400000,-338.209,-261.421,339.687,-1.994,110000,514.720,-214.618
-trpo,0,400000,-880.628,-887.288,113.472,-716.117,NA,594.883,-867.100

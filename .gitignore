@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# macOS
+.DS_Store
+
+# 实验产物：权重和日志可由 experiments/run_all.py 重新生成；
+# raw/*.json、图和汇总表需要保留。
+experiments/results/models/
+experiments/results/logs/
+*.pt
+
+# archify 中间产物
+.archify/

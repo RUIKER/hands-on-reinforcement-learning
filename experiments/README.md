@@ -38,14 +38,14 @@ cd <repo>
 | `fig3_eval_states.png/.pdf` | 20 个固定评估起始状态上的逐状态回报（诊断图） |
 | `tables.md` / `summary.csv` / `per_seed.csv` | 汇总表 / 聚合 / 逐 seed 明细 |
 | `raw/{algo}_seed{n}.json` | 单次运行：逐回合训练回报、每个评估点的 20 个回合回报、最终评估、超参快照 |
-| `models/` | actor 权重（后续鲁棒性实验可直接复用） |
+| `models/` | actor 权重（后续鲁棒性 / 模仿学习可直接复用；**不入库**，由 `.gitignore` 排除，丢失后用 `run_all.py --force` 重新生成） |
 | `logs/` | 每次运行的标准输出 |
 
 ## 目录说明
 
 - `run_all.py`：编排；`run_one.py` / `run_one_onpolicy.py`：单次运行驱动；`analyze.py`：表格与图。
-- `archive_v1/`：第一版实验（3 seeds、旧版 PPO/TRPO、旧图和旧总结）。**其中 PPO/TRPO 的结论已作废**，
-  原因见 `经验总结.md` §4；保留仅为追溯。
+- `archive_v1/`：只剩一个说明。第一版（3 seeds、旧版 PPO/TRPO）的 PPO/TRPO 结论已作废，原因见 `经验总结.md` §4；
+  旧文件可从 git 历史取回（命令见该目录的 README）。
 - 算法代码在 `07_TRPO/Pendulum`、`08_PPO/Pendulum`；改动前的版本在各自的 `legacy_v1/`。
 
 ## 注意

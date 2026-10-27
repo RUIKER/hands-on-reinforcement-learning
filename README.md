@@ -48,16 +48,34 @@
 
 更完整的对比表、每一条箭头的含义，以及“为什么编号不是一条直线”，见 [算法路线.md](算法路线.md)。
 
+## 对比实验（`experiments/`）
+
+`experiments/` 在统一协议下比较 09–11（DDPG / TD3 / SAC）与 07–08 的 Pendulum 版本（TRPO / PPO）：
+**10 个固定 seed、20 个固定评估起始状态、确定性评估**；off-policy 跑 40k 步，on-policy 跑 400k 步。
+
+| 算法 | 最终评估中位数 | 首次达到 -200 的步数 |
+| --- | ---: | ---: |
+| SAC | -121.2 | 5k |
+| TD3 | -123.1 | 10k |
+| DDPG | -127.9 | 8k |
+| PPO | -129.7 | 95k |
+| TRPO | -132.5 | 90k |
+
+五个算法最终水平相当，差别在样本效率和稳定性；这组实验也定位并修复了第一版 PPO/TRPO 的实现问题（更新批太小、
+时间截断当终止、TRPO 的 KL 约束过小）。用法和图表见 [experiments/README.md](experiments/README.md)，
+结论见 [experiments/经验总结.md](experiments/经验总结.md)。
+
 ## 代码结构可视化
 
-仓库提供一份单文件的交互式代码流页面：[强化学习代码流](code-flow.html)。页面覆盖 11 个目录、112 个文件条目和 541 个逻辑块：
+仓库提供一份单文件的交互式代码流页面：[强化学习代码流](code-flow.html)。页面回答一个问题：这些目录和文件是怎么连起来的。
 
-- 每个文件的主流程，例如 `__init__ → take_action → update → calc_target`；
-- 每个类和函数的逻辑块、行号与中文注释；
-- 点击关键算法块，可在“伪代码 / 源码”之间切换；
-- 支持按文件、函数名或逻辑内容搜索，并可用 URL 定位到具体代码块。
+- 一条算法目录的调用链：`main.py → config.py → environment.py → agents.py → trainer.py → visualization.py`；
+- 11 个目录各自的入口与训练循环；
+- off-policy 与 on-policy 的更新时机差异（每步 / 每回合 / 每 10 回合）；
+- `experiments/` 用子进程横切 5 个算法的完整流水线；
+- 2026-10 这次改写的 PPO / TRPO v2 对照表。
 
-其中 7 个历史 `practice.py`（03、04、07、08、09、10、11）当前不在工作区；页面保留提取时的逻辑块和伪代码，源码视图会标注不可用。页面不依赖外部脚本或网络，直接用浏览器打开即可。
+文件引用带行号，指向提交 `fbe0e5f`；页面不依赖外部脚本或网络，直接用浏览器打开即可。
 
 ## 环境准备
 
@@ -68,7 +86,13 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-每个实验目录尽量独立管理自己的 `requirements.txt`，进入对应目录后安装依赖。
+根目录的 `requirements.txt` 覆盖全部实验，一次装好即可：
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+每个实验目录也保留了自己的 `requirements.txt`（01 只用标准库，05/06 额外需要 scikit-learn），只想跑单个算法时可以只装对应目录的。
 
 ## 运行示例
 
@@ -124,6 +148,8 @@ python main.py
 cd "08_PPO/Pendulum"
 python main.py
 ```
+
+Pendulum 版本已更新为 v2（每 10 个回合更新一次等），改动前的代码在各自的 `Pendulum/legacy_v1/`，原因见 `experiments/经验总结.md` §4。
 
 ### 09 DDPG / 10 TD3 / 11 SAC
 
@@ -192,5 +218,5 @@ python main.py
 
 - 每个实验的 `经验总结.md` 记录算法原理、实现细节、排错过程和后续改进方向。
 - TD3 只适用于连续动作空间，因此只提供 `Pendulum-v1` 案例。
-- `.venv`、缓存文件和训练生成的输出默认不会提交到 Git。
+- `.venv`、`__pycache__`、`.DS_Store` 和 `.pt` 权重由根目录 `.gitignore` 排除；`experiments/results/` 里的 `raw/*.json`、图和汇总表会保留。
 - Gymnasium 项目使用新版 `reset()` 和 `step()` 接口；旧版 Gym 示例需要适配。
