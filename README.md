@@ -19,8 +19,11 @@
 | 09 | `09_DDPG` | Pendulum 标准 DDPG 与 CartPole 教学适配 | `*/main.py` |
 | 10 | `10_TD3` | Pendulum 连续动作 TD3 | `Pendulum/main.py` |
 | 11 | `11_SAC` | Pendulum 连续动作 SAC | `Pendulum/main.py` |
+| 12 | `12_HER` | 二维目标导向任务上的 DDPG + HER（replay buffer 改造） | `GridWorld/main.py` |
 
 每个算法目录下的 `经验总结.md` 都采用同一结构：先回答“特点、针对的缺陷、局限性、应用场景”四个问题，再记录实现细节、实验结果和排错经验。
+
+> `12_HER` 不是新的算法分支，而是 DDPG 在目标导向任务上的 replay buffer 改造；它与 DDPG 的逐段差异和 10-seed 实测结果见 [`12_HER/GridWorld/经验总结.md`](12_HER/GridWorld/经验总结.md)。
 
 ## 算法推进线（速览）
 
