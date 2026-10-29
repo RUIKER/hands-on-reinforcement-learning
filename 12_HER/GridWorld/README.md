@@ -12,8 +12,21 @@
 | --- | --- | --- | --- |
 | `done` | 一个 bool，到达或超时都为 True | 拆成 `terminated` / `truncated` | 换目标时只有 `terminated` 该被重算，超时和目标无关。教程混在一起，直接改写容易埋 bug，`experiments/经验总结.md` §4 已经栽过一次同类问题 |
 | 随机数 | 全局 `np.random.seed` | 每个 env 一个 `np.random.default_rng(seed)` | 多 seed 并行跑时全局状态会互相污染 |
-| 评估 | 看训练回报 | 固定 20 个目标 + **成功率** | 稀疏奖励下回报只有 -100 / 0 两档，看不出差别；具身方向面试问的也是成功率 |
+| 评估 | 看训练回报 | 固定 20 个目标 + **成功率** | 稀疏奖励下回报只有 -50（全程失败）/ -5 左右（到达）两档，看不出差别；具身方向面试问的也是成功率 |
 | 训练脚本 | notebook 里两段复制粘贴 | 一个 `main.py` + 开关 | 消融只改 `config.py` |
+
+## 代码阅读顺序（教学用）
+
+代码里的注释按"第一次读也能跟上"的密度写，建议按依赖顺序读：
+
+1. `environment.py` —— 先搞清 s、a、r、φ、terminated/truncated 分别是什么；
+2. `rl_utils.py` —— 本周核心。`Trajectory` 的存储布局 → `_choose_goal` 的三种策略 → `sample` 的五步流程；
+3. `trainer.py` —— 看一条轨迹如何被收集、入 buffer、触发更新、被评估；
+4. `agents.py` —— DDPG 的两次反向传播和一次软更新（公式写在模块 docstring 里）；
+5. `networks.py` —— 只有形状和激活，确认"网络不知道哪两维是目标"；
+6. `config.py` / `main.py` —— 最后看装配和超参，再跑起来对照曲线。
+
+`practice.py` 是教程原版，保持原样作为对照；它和本实现逐段差异见 `pipeline.md`。
 
 ## 文件结构
 
