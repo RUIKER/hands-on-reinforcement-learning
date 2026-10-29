@@ -23,7 +23,7 @@
 
 每个算法目录下的 `经验总结.md` 都采用同一结构：先回答“特点、针对的缺陷、局限性、应用场景”四个问题，再记录实现细节、实验结果和排错经验。
 
-> `12_HER` 不是新的算法分支，而是 DDPG 在目标导向任务上的 replay buffer 改造；它与 DDPG 的逐段差异和 10-seed 实测结果见 [`12_HER/GridWorld/经验总结.md`](12_HER/GridWorld/经验总结.md)。
+> `12_HER` 不是新的算法分支，而是 DDPG 在目标导向任务上的 replay buffer 改造；它与 DDPG 的逐段差异和 10-seed 实测结果见 [`12_HER/经验总结.md`](12_HER/经验总结.md)。
 
 ## 算法推进线（速览）
 
@@ -56,7 +56,7 @@
 `experiments/` 在统一协议下比较 09–11（DDPG / TD3 / SAC）与 07–08 的 Pendulum 版本（TRPO / PPO）：
 **10 个固定 seed、20 个固定评估起始状态、确定性评估**；off-policy 跑 40k 步，on-policy 跑 400k 步。
 
-![五算法学习曲线：中位数 ± IQR，10 个 seed](experiments/results/fig1_learning_curves.png)
+![五算法学习曲线：中位数 ± IQR，10 个 seed](experiments/seed_experiments/five_algorithms/results/fig1_learning_curves.png)
 
 | 算法 | 最终评估中位数 | 首次达到 -200 的步数 |
 | --- | ---: | ---: |
@@ -68,7 +68,7 @@
 
 五个算法最终水平相当，差别在样本效率和稳定性；这组实验也定位并修复了第一版 PPO/TRPO 的实现问题（更新批太小、
 时间截断当终止、TRPO 的 KL 约束过小）。用法和图表见 [experiments/README.md](experiments/README.md)，
-结论见 [experiments/经验总结.md](experiments/经验总结.md)。
+结论见 [experiments/seed_experiments/five_algorithms/经验总结.md](experiments/seed_experiments/five_algorithms/经验总结.md)。
 
 ## 代码结构可视化
 
@@ -154,7 +154,7 @@ cd "08_PPO/Pendulum"
 python main.py
 ```
 
-Pendulum 版本已更新为 v2（每 10 个回合更新一次等），改动前的代码在各自的 `Pendulum/legacy_v1/`，原因见 `experiments/经验总结.md` §4。
+Pendulum 版本已更新为 v2（每 10 个回合更新一次等），改动前的代码在各自的 `Pendulum/legacy_v1/`，原因见 `experiments/seed_experiments/five_algorithms/经验总结.md` §4。
 
 ### 09 DDPG / 10 TD3 / 11 SAC
 
@@ -223,5 +223,5 @@ python main.py
 
 - 每个实验的 `经验总结.md` 记录算法原理、实现细节、排错过程和后续改进方向。
 - TD3 只适用于连续动作空间，因此只提供 `Pendulum-v1` 案例。
-- `.venv`、`__pycache__`、`.DS_Store` 和 `.pt` 权重由根目录 `.gitignore` 排除；`experiments/results/` 里的 `raw/*.json`、图和汇总表会保留。
+- `.venv`、`__pycache__`、`.DS_Store` 和 `.pt` 权重由根目录 `.gitignore` 排除；`experiments/seed_experiments/five_algorithms/results/` 里的 `raw/*.json`、图和汇总表会保留。
 - Gymnasium 项目使用新版 `reset()` 和 `step()` 接口；旧版 Gym 示例需要适配。

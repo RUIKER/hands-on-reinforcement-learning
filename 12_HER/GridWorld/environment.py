@@ -248,7 +248,7 @@ class GridWorldEnv:
 def make_environment(**kwargs):
     """建环境，并把构造网络要用的维度/动作范围一起返回。
 
-    返回 5 元组而不是只返回 env，是为了让 main.py / run_experiment.py
+    返回 5 元组而不是只返回 env，是为了让 main.py / experiments/seed_experiments/her_main/run_one.py
     不必写死 STATE_DIM=4、ACTION_DIM=2；换环境时调用方只改这一行。
     """
     env = GridWorldEnv(**kwargs)

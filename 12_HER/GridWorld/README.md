@@ -10,7 +10,7 @@
 
 | 项 | 教程 | 这里 | 为什么 |
 | --- | --- | --- | --- |
-| `done` | 一个 bool，到达或超时都为 True | 拆成 `terminated` / `truncated` | 换目标时只有 `terminated` 该被重算，超时和目标无关。教程混在一起，直接改写容易埋 bug，`experiments/经验总结.md` §4 已经栽过一次同类问题 |
+| `done` | 一个 bool，到达或超时都为 True | 拆成 `terminated` / `truncated` | 换目标时只有 `terminated` 该被重算，超时和目标无关。教程混在一起，直接改写容易埋 bug，`../../experiments/seed_experiments/five_algorithms/经验总结.md` §4 已经栽过一次同类问题 |
 | 随机数 | 全局 `np.random.seed` | 每个 env 一个 `np.random.default_rng(seed)` | 多 seed 并行跑时全局状态会互相污染 |
 | 评估 | 看训练回报 | 固定 20 个目标 + **成功率** | 稀疏奖励下回报只有 -50（全程失败）/ -5 左右（到达）两档，看不出差别；具身方向面试问的也是成功率 |
 | 训练脚本 | notebook 里两段复制粘贴 | 一个 `main.py` + 开关 | 消融只改 `config.py` |
@@ -40,17 +40,18 @@
   trainer.py         按轨迹训练 + 固定目标成功率评估
   visualization.py   回报曲线 + 成功率曲线
   main.py            入口（默认配置，画图）
-  run_experiment.py  参数化单次实验（写 JSON，不弹窗）
-  aggregate.py       聚合 CSV / summary / 成功率曲线
-  run_all.sh         10 seeds × (HER, 无 HER) 批量脚本
   run.cmd            Windows 一键运行 main.py
   practice.py        教程原版，保留作对照
   pipeline.md        practice.py 的逐段拆解与 DDPG 差异说明
   requirements.txt   numpy / torch / tqdm / matplotlib
-  results/           实测结果（raw JSON、CSV、图）
-  经验总结.md        10-seed 结果、失败模式、debug 记录
   README.md          本文件
 ```
+
+实验脚本、结果和经验总结在仓库级目录：
+
+- 主对比：`../../experiments/seed_experiments/her_main/`
+- ratio 消融：`../../experiments/ablations/her_ratio/`
+- 经验总结：`../经验总结.md`
 
 ## 实现说明（已按此拆分）
 
@@ -143,11 +144,11 @@ for episode:
 | HER `ratio=0.8 future` | **263 [237, 266]** | **408 [317, 426]** | **0.80** | **8/10** |
 | 无 HER | 550 [404, 712] | 769 [608, 914] | 0.66 | 6/10 |
 
-![HER vs no-HER success curves](results/success_curves.png)
+![HER vs no-HER success curves](../../experiments/seed_experiments/her_main/results/success_curves.png)
 
 - HER 把首次成功回合和收敛回合都缩短到约一半；最终成功率均值 0.80 vs 0.66。
 - 但 HER 有 2/10 个 seed 完全崩溃（seed 5 没学会，seed 8 学会后崩），所以 HER 不是
-  稳定性保证。失败形态、debug 记录和与教程差异的解释见 [`经验总结.md`](经验总结.md)。
+  稳定性保证。失败形态、debug 记录和与教程差异的解释见 [`经验总结.md`](../经验总结.md)。
 - n=10，不做显著性检验；中位数会掩盖失败，报告时要同时给“≥0.9 seeds”。
 
 ## 消融计划与状态
