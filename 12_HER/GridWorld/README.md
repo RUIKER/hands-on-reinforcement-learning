@@ -163,7 +163,7 @@ for episode:
 ## 运行
 
 ```powershell
-cd "C:/Users/PC/Desktop/具身智能实习/hands-on-reinforcement-learning/12_HER/GridWorld"
+cd "C:/Users/PC/Desktop/Embodied_Inteligence_Internship/hands-on-reinforcement-learning/12_HER/GridWorld"
 ../../.venv/Scripts/python.exe main.py
 ```
 
