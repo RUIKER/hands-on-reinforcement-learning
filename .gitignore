@@ -13,6 +13,7 @@ experiments/seed_experiments/five_algorithms/results/logs/
 *.pt
 experiments/ablations/*/results/logs/
 experiments/ablations/sac_hparams/sweep_driver.log
+experiments/ablations/sac_hparams/sensitivity_driver.log
 experiments/seed_experiments/halfcheetah_sac/results/logs/
 
 # archify 中间产物

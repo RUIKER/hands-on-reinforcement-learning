@@ -18,6 +18,8 @@
 | `gamma0.95` | gamma 0.99 → 0.95 | 视野长度对跑步任务的影响 |
 | `alpha1.0` | 初始 alpha 0.01 → 1.0 | 本仓库 SAC 写死 0.01，SB3 默认 1.0 |
 
+结果解读见 [`经验总结.md`](经验总结.md)。
+
 ## 运行
 
 ```bash
@@ -27,7 +29,26 @@ bash run_sweep.sh            # JOBS=6，已有结果自动跳过
 ```
 
 输出：`results/raw/*.json`、`results/sweep_table.md`、`results/sweep_results.csv`、
-`results/sweep_curves.png`。
+`results/sweep_curves.png`；alpha 诊断：`python diagnose_alpha.py --init-alpha 0.01`（或 `1.0`）
+→ `results/diagnostics/`、`results/alpha_diagnostic.png`。
+
+## 灵敏度图（第二阶段，10 个超参 × 3–5 个取值）
+
+目标是一张**可解释的灵敏度图**，不是找更好的配置。设计、每个超参的含义与作用、
+预注册预测、读图规则见 [`超参说明与实验设计.md`](超参说明与实验设计.md)。
+
+```bash
+cd experiments/ablations/sac_hparams
+DRY=1 bash run_sensitivity.sh                  # 只列出将跑的 run（69 个新增，已有的自动跳过）
+nohup bash run_sensitivity.sh > sensitivity_driver.log 2>&1 &    # 启动；脚本内置防睡眠
+TIERS="1" bash run_sensitivity.sh              # 只跑核心 tier（约 4–5h）
+../../../.venv/Scripts/python.exe aggregate_sensitivity.py       # 随时可聚合（未跑完的点只画不检验）
+```
+
+- `grid.py`：网格定义，调度和聚合共用；`run_one.py` 新增 `--target-entropy`、`--utd`，并在网络发散（NaN）时记录而不是崩溃。
+- 输出：`results/sensitivity_map.png`（后期）、`sensitivity_early.png`（早期）、`sensitivity_tornado.png`、
+  `sensitivity_summary.md`、`sensitivity_table.md/csv`。
+- 第一阶段（6 个配置）的解读在 [`经验总结.md`](经验总结.md)。
 
 ## 注意
 

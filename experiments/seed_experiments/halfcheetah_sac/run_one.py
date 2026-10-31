@@ -64,6 +64,10 @@ def parse_args():
     parser.add_argument('--reward-scale', type=float, default=settings.REWARD_SCALE)
     parser.add_argument('--init-alpha', type=float, default=None,
                         help='覆盖 SAC 类里写死的初始 alpha=0.01')
+    parser.add_argument('--target-entropy', type=float, default=None,
+                        help='自动调温的目标熵；默认 -action_dim（HalfCheetah 为 -6）')
+    parser.add_argument('--utd', type=int, default=1,
+                        help='update-to-data：每个 env step 做几次梯度更新，默认 1')
     parser.add_argument('--out', required=True)
     return parser.parse_args()
 
@@ -113,9 +117,11 @@ def evaluate(env, agent, num_episodes, seed):
         done = False
         episode_return = 0.0
         while not done:
-            obs, reward, terminated, truncated, _ = env.step(
-                deterministic_action(agent, obs)
-            )
+            action = deterministic_action(agent, obs)
+            if not np.all(np.isfinite(action)):
+                # 网络已发散（NaN/Inf）：整次评估记为 NaN，由聚合脚本标成“发散”。
+                return np.full(num_episodes, np.nan, dtype=np.float32)
+            obs, reward, terminated, truncated, _ = env.step(action)
             done = terminated or truncated
             episode_return += float(reward)
         returns.append(episode_return)
@@ -137,7 +143,8 @@ def main():
     agent = SAC(
         state_dim, args.hidden_dim, action_low, action_high,
         args.actor_lr, args.critic_lr, args.alpha_lr,
-        -action_dim, args.tau, args.gamma,
+        args.target_entropy if args.target_entropy is not None else -action_dim,
+        args.tau, args.gamma,
         settings.REWARD_SHIFT, args.reward_scale, device,
     )
     if args.init_alpha is not None:
@@ -157,6 +164,7 @@ def main():
     eval_steps, eval_returns = [], []
     global_step = 0
     eval_index = 0
+    diverged_at = None
     started = time.perf_counter()
 
     obs, _ = env.reset(seed=args.seed)
@@ -164,7 +172,14 @@ def main():
         done = False
         episode_return = 0.0
         while not done and global_step < args.steps:
-            action = agent.take_action(obs)
+            try:
+                action = agent.take_action(obs)
+            except ValueError:
+                # 参数变成 NaN 后 torch.distributions.Normal 会直接抛 ValueError。
+                action = None
+            if action is None or not np.all(np.isfinite(action)):
+                diverged_at = global_step
+                break
             next_obs, reward, terminated, truncated, _ = env.step(action)
             done = terminated or truncated
             # 只把 terminated 当作 done 存进 buffer：truncated 是回合时间上限，
@@ -177,7 +192,13 @@ def main():
             global_step += 1
 
             if buffer.size() >= args.minimal_size:
-                agent.update(buffer.sample(args.batch_size))
+                # UTD>1 时每个 env step 多次更新，每次重新采样一个 batch。
+                try:
+                    for _ in range(args.utd):
+                        agent.update(buffer.sample(args.batch_size))
+                except ValueError:
+                    diverged_at = global_step
+                    break
 
             if args.eval_interval > 0 and global_step % args.eval_interval == 0:
                 # 每个评估点换一组初始状态（+100 + 10*i），
@@ -190,6 +211,9 @@ def main():
                 eval_returns.append(float(values.mean()))
                 eval_index += 1
 
+        if diverged_at is not None:
+            print(f'[sac seed={args.seed}] DIVERGED at step {diverged_at}', flush=True)
+            break
         train_steps.append(int(global_step))
         train_returns.append(float(episode_return))
         if global_step < args.steps:
@@ -208,6 +232,11 @@ def main():
             )
 
     wall = time.perf_counter() - started
+    if diverged_at is not None and args.eval_interval > 0:
+        # 把缺失的评估点补成 NaN，保证所有 run 的评估网格等长、可逐点对齐。
+        while len(eval_steps) < args.steps // args.eval_interval:
+            eval_steps.append((len(eval_steps) + 1) * args.eval_interval)
+            eval_returns.append(float('nan'))
     # 最终评估用 20 回合（比训练中间的 5 回合多）：终点数字要进报告，
     # 4 倍的样本量能把标准误降到约一半。
     final_returns = evaluate(
@@ -229,6 +258,9 @@ def main():
             'reward_shift': settings.REWARD_SHIFT,
             'reward_scale': args.reward_scale,
             'init_alpha': args.init_alpha if args.init_alpha is not None else 0.01,
+            'target_entropy': (args.target_entropy if args.target_entropy is not None
+                               else -action_dim),
+            'utd': args.utd,
         },
         'train': {
             'steps': train_steps,
@@ -247,6 +279,7 @@ def main():
             'best': float(final_returns.max()),
         },
         'wall_clock_sec': float(wall),
+        'diverged_at_step': diverged_at,
     }
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)

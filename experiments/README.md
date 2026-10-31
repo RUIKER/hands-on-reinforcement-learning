@@ -16,4 +16,4 @@
 | --- | --- | --- |
 | `her_ratio/` | HER ratio ∈ {0, 0.2, 0.5, 0.8, 1.0}，10 seeds；有 HER 优于无 HER，ratio=1.0 一定失败，0.2/0.5/0.8 不可分 | `her_ratio/README.md`、`her_ratio/results/` |
 | `her_strategy/` | 采样策略 future / final / episode，10 seeds；episode 略好但含平凡目标 | `her_strategy/README.md`、`her_strategy/results/` |
-| `sac_hparams/` | HalfCheetah SAC 超参单因素扫描（lr / batch / gamma / 初始 alpha），100k × 3 seeds | `sac_hparams/README.md`、`sac_hparams/results/` |
+| `sac_hparams/` | HalfCheetah SAC 超参单因素扫描（lr / batch / gamma / 初始 alpha），100k × 3 seeds；lr 1e-4 与 γ 0.95 明显更慢，init alpha 1.0 只造成约 20k 步延迟，batch / lr 1e-3 分不开 | `sac_hparams/README.md`、`sac_hparams/经验总结.md` |
