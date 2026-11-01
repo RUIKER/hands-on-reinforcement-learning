@@ -48,6 +48,8 @@ TIERS="1" bash run_sensitivity.sh              # 只跑核心 tier（约 4–5h�
 - `grid.py`：网格定义，调度和聚合共用；`run_one.py` 新增 `--target-entropy`、`--utd`，并在网络发散（NaN）时记录而不是崩溃。
 - 输出：`results/sensitivity_map.png`（后期）、`sensitivity_early.png`（早期）、`sensitivity_tornado.png`、
   `sensitivity_summary.md`、`sensitivity_table.md/csv`。
+- 判定：★ = 池化方差 t 检验 + Holm 校正后 p<0.05（能当结论）；◇ = 3/3 同号但未过校正（只能说有迹象）。
+  全网格只有 5 个 ★，其余不要当结论讲。
 - 第一阶段（6 个配置）的解读在 [`经验总结.md`](经验总结.md)。
 
 ## 注意
