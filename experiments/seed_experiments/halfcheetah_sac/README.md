@@ -12,7 +12,7 @@ MuJoCo HalfCheetah 上的 SAC，3 seeds × 1M steps。复用 `11_SAC/Pendulum/ag
 | 学习率 | actor / critic / alpha = 3e-4 |
 | 训练 | 1M env steps，每步更新一次；前 10k 步只填 buffer |
 | 评估 | 每 20k 步 5 回合；最终 20 回合；确定性 `tanh(mu)` |
-| seeds | 0 / 1 / 2（agent 可扩到 5） |
+| seeds | 0 / 1 / 2（可扩到 5） |
 | 设备 | CUDA（RTX 5060 Ti） |
 
 ## 运行
@@ -30,7 +30,7 @@ bash run_all.sh
 
 `run_one.py` 支持 `--hidden-dim --actor-lr --critic-lr --alpha-lr --tau --gamma
 --batch-size --reward-scale --init-alpha`，默认值来自 `settings.py`；实际使用值写入 JSON 的
-`config`。基线 1M run 使用默认值，**初始 alpha 为 0.01**（`11_SAC/Pendulum/agents.py` 写死）。
+`config`。基线 1M run 使用默认值，初始 alpha 为 0.01（`11_SAC/Pendulum/agents.py` 写死）。
 
 ## 环境说明
 
@@ -46,19 +46,55 @@ bash run_all.sh
 | 1 | 11437.9 | 11451.6 | 11572.6 | 14042s |
 | 2 | 10230.8 | 10230.8 | 10562.2 | 14068s |
 
-均值 **10917.4**，中位数 11083.6。曲线在 32–52 万步达到最终值的 80%，
+均值 10917.4，中位数 11083.6。曲线在 32–52 万步达到最终值的 80%，
 之后缓慢上升/平台，1M 时没有明显崩塌。产物见 `results/SUMMARY.md`、
 `results/summary.csv`、`results/learning_curves.png`、`results/final_eval.png`。
 
-注意：final mean 来自 20 个固定评估回合（`EVAL_SEED=10000`），确定性动作
-`tanh(mu)`；和 SB3 zoo 的公开数字比较前，先对齐环境版本、评估回合数和动作噪声。
+final mean 来自 20 个固定评估回合（`EVAL_SEED=10000`），动作取确定性的 `tanh(mu)`。
+与公开数字比较时需要对齐环境版本、评估回合数和动作选择方式，见下一节。
 
-## 你需要自己判断的三件事
+## 与公开参考值对比
 
-Agent 只负责跑数和出图，下面三件事不要直接抄结论：
+参考值来自 rl-baselines3-zoo 的 `benchmark.md`：1M 步训练，确定性策略，150 个评估回合，每个环境 1 次训练。
 
-1. HalfCheetah 的奖励是稠密的，为什么这里不能用 HER？如果硬套 HER，目标是什么？
-2. SAC 在 Pendulum 和 HalfCheetah 上的超参（hidden、reward scale、target entropy）
-   为什么不同？哪些是环境维度决定的，哪些是调出来的？
-3. 学习曲线的波动、最终 return 和 SB3 zoo 的公开值差多少，差异应该归因于
-   算法、实现、评估协议还是训练预算？
+| 来源 | 环境 | 超参 | 最终回报 | 评估回合 |
+| --- | --- | --- | ---: | ---: |
+| 本仓库 SAC | HalfCheetah-v5 | lr 3e-4、τ 0.005、γ 0.99、batch 256、2×256、UTD 1 | 10917（3 seeds 均值） | 20 |
+| SB3 rl-zoo SAC | HalfCheetah-v3 | SB3 默认（lr 3e-4、τ 0.005、γ 0.99、batch 256、2×256） | 9535 ± 100（1 次训练） | 150 |
+
+本仓库比参考值高约 14%。
+
+可比的部分：
+
+- 超参一致。zoo 的 `hyperparams/sac.yml` 中 HalfCheetah-v4 只设置了 `learning_starts: 10000`，其余沿用 SB3 的 SAC 默认值。
+- 环境版本。按 gymnasium 自带的 changelog，v3 到 v5 的变化在接口层（info 键名、`frame_skip` 和 `xml_file` 参数、`observation_structure`），没有改动力学和奖励，回报量级可比。
+
+未排除的差异，因此该对比不能用来说明本实现更优：
+
+- 训练次数与评估回合：参考值为 1 次训练、150 回合；本仓库为 3 个 seed、每个 20 回合。
+- 底层绑定：v3 使用 mujoco-py，v5 使用新绑定，数值差异未验证。
+- 初始 alpha：SB3 从 1.0 起步，本实现从 0.01 起步，影响见 `experiments/ablations/sac_hparams`。
+
+归因需要在同一环境和评估协议下重跑 SB3，本仓库没有做。
+
+## 设计说明
+
+### 不使用 HER 的原因
+
+HER 面向稀疏二值奖励的目标到达任务：多数 transition 的奖励相同（-1），通过把目标换成实际到达的状态来获得学习信号。
+HalfCheetah 的奖励每一步都带信息（`1.0 × x_velocity − 0.1 × ‖a‖²`），不存在失败样本没有信号的问题，
+也没有天然的目标 g 和映射 φ(s)。
+
+如果强行套用，需要改写成目标条件任务，例如目标为期望速度 v*，奖励为 `−|x_velocity − v*|`，
+用回合中实际达到的速度作为 hindsight 目标。得到的是跟踪给定速度的策略，与最大化前进速度不是同一个任务，本实验不做。
+
+### 与 Pendulum 配置的差异
+
+| 项 | Pendulum（`11_SAC/Pendulum`） | HalfCheetah（本目录） | 决定因素 |
+| --- | --- | --- | --- |
+| target entropy | -1 | -6 | 动作维度，取 -dim(A) |
+| 网络 | 1 个隐藏层，128 | 2 个隐藏层，256 | 经验选择 |
+| reward shift / scale | 8 / 8 | 0 / 1 | 奖励量级：Pendulum 单步奖励约在 [-16, 0]，需要平移缩放；HalfCheetah 随训练从约 0 增长到约 11，不需要 |
+| critic lr | 3e-3 | 3e-4 | 调参结果；3e-4 是 MuJoCo SAC 的常用值 |
+| batch / buffer | 64 / 1e5 | 256 / 1e6 | 训练预算，经验选择 |
+| 训练步数 | 约 2 万（100 回合 × 200 步） | 100 万 | 任务难度 |
