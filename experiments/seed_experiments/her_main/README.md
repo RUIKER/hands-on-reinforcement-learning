@@ -15,7 +15,7 @@ DDPG vs DDPG+HER 的主对比（10 seeds，GridWorld）。
 ```bash
 cd experiments/seed_experiments/her_main
 bash run_all.sh
-../../../.venv/Scripts/python.exe aggregate.py
+python aggregate.py
 ```
 
 ## 结果

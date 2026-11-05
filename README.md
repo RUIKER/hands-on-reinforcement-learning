@@ -1,182 +1,105 @@
-# Reinforcement Learning 实验代码
+# 强化学习：算法实现与可复现实验
 
-这是一个强化学习学习项目，按“表格型方法 → 深度价值方法 → 策略梯度 → 连续控制”的路线组织。代码主要使用 Python、Gymnasium、NumPy、PyTorch 和 Matplotlib。
+从表格型控制到连续动作策略，使用 Python、Gymnasium 和 PyTorch 实现并分析强化学习算法。项目以《动手学强化学习》等公开资料为起点，覆盖算法组件拆分、固定种子评估、失败案例诊断、消融实验，以及经典控制与模仿学习对照。
 
-目录编号表示**推荐阅读顺序**，不是严格的历史时间顺序。算法之间的继承与分支关系见 [算法路线.md](算法路线.md)。
+## 项目重点
 
-## 项目目录
+- **算法实现**：Q-learning / SARSA、DQN 系列、REINFORCE、Actor-Critic、TRPO、PPO、DDPG、TD3、SAC 和 HER。每个章节保留独立入口，便于阅读更新公式与数据流。
+- **实验设计**：Pendulum 五算法对比使用 10 个训练种子和相同的 20 个评估初始状态，记录确定性评估、训练预算和逐种子结果。
+- **问题诊断**：记录 PPO/TRPO 的批量大小、时间截断与 GAE 边界问题；通过 HER 比例/采样策略消融和 SAC 超参扫描，区分性能变化与实现问题。
+- **对照分析**：HalfCheetah SAC 的较大规模实验、Pendulum 经典控制的参数扰动/执行延迟测试，以及 BC 在反馈控制和多模态任务上的表现。
 
-| 编号 | 目录 | 内容 | 入口 |
-| ---: | --- | --- | --- |
-| 01 | `01_Cliff Walking` | Cliff Walking 上的表格型 Q-learning 和 SARSA | `train.py` |
-| 02 | `02_DQN` | DQN 最小练习实现（Q 网络、replay buffer、target network） | `practice.py`（参考代码） |
-| 03 | `03_Double DQN、Dueling DQN` | DQN、Double DQN、Dueling DQN 统一 pipeline | `main.py` |
-| 04 | `04_策略梯度算法_Reinforce` | CartPole-v1 上的 REINFORCE | `main.py` |
-| 05 | `05_Mountain Car` | 基于 RBF 特征的线性 Actor-Critic | `main.py` |
-| 06 | `06_Mountain Car PyTorch` | 基于 PyTorch MLP 的 Actor-Critic | `main.py` |
-| 07 | `07_TRPO` | CartPole 离散动作与 Pendulum 连续动作 TRPO | `*/main.py` |
-| 08 | `08_PPO` | CartPole 离散动作与 Pendulum 连续动作 PPO | `*/main.py` |
-| 09 | `09_DDPG` | Pendulum 标准 DDPG 与 CartPole 教学适配 | `*/main.py` |
-| 10 | `10_TD3` | Pendulum 连续动作 TD3 | `Pendulum/main.py` |
-| 11 | `11_SAC` | Pendulum 连续动作 SAC | `Pendulum/main.py` |
-| 12 | `12_HER` | 二维目标导向任务上的 DDPG + HER（replay buffer 改造） | `GridWorld/main.py` |
-| 13 | `13_Imitation` | 模仿学习：BC 最小实现（GridWorld / 双走廊），BC / ACT / Diffusion Policy 算法卡片 | `bc_minimal.py` |
-| 14 | `14_Control/Pendulum` | 有模型的经典控制对照线：LQR、能量摆起、参数扰动与执行延迟 | `lqr.py`、`evaluate.py` |
+这些是教学实现与实验复现；结果范围受环境、预算和种子数量限制。ACT 与 Diffusion Policy 目前只有算法笔记，未实现训练系统。来源和参考实现见文末。
 
-每个算法目录下的 `经验总结.md` 都采用同一结构：先回答“特点、针对的缺陷、局限性、应用场景”四个问题，再记录实现细节、实验结果和排错经验。
+## 建议阅读路径
 
-> `12_HER` 不是新的算法分支，而是 DDPG 在目标导向任务上的 replay buffer 改造；它与 DDPG 的逐段差异和 10-seed 实测结果见 [`12_HER/经验总结.md`](12_HER/经验总结.md)。
+| 阅读目的 | 推荐入口 |
+| --- | --- |
+| 快速了解实验质量 | [五算法结果](experiments/seed_experiments/five_algorithms/results/tables.md)与[分析](experiments/seed_experiments/five_algorithms/经验总结.md) |
+| 查看连续控制实现 | [SAC](11_SAC/README.md)：策略采样 → 双 Q 目标 → actor 更新 → 温度调节 |
+| 查看数据层改造 | [DDPG + HER](12_HER/GridWorld/README.md)：轨迹回放、目标重标记、成功率评估 |
+| 查看更大任务与消融 | [HalfCheetah SAC](experiments/seed_experiments/halfcheetah_sac/README.md)与[超参实验](experiments/ablations/sac_hparams/README.md) |
+| 理解工程结构与验证方式 | [开发说明](docs/development.md) |
+| 顺序学习算法 | [算法路线](算法路线.md)与下方章节索引 |
 
-## 算法推进线（速览）
+## 实验结果与边界
 
-```text
-价值型分支
-01 表格型 Q-learning / SARSA
-        │  状态空间爆炸
-        ▼
-02 DQN ──► 03 Double DQN / Dueling DQN
-        │  离散动作、间接学策略
-        ▼
-策略梯度分支
-04 REINFORCE ──► 05 Actor-Critic ──► 06 Actor-Critic (PyTorch)
-                                      │  步长敏感、更新可能崩溃
-                                      ▼
-                              07 TRPO ──► 08 PPO
+以下为仓库中保留的历史实验数据，修改文档时未重跑完整训练。所有表格均可追溯到对应目录的原始 JSON 和汇总脚本。
 
-连续控制 off-policy 分支
-02 DQN 的 replay + target network
-08 PPO 的连续动作策略经验
-        │
-        ▼
-09 DDPG ──► 10 TD3 ──► 11 SAC
-```
+### Pendulum：五算法对比
 
-更完整的对比表、每一条箭头的含义，以及“为什么编号不是一条直线”，见 [算法路线.md](算法路线.md)。
+10 个训练种子；每次评估使用相同的 20 个起始状态和确定性策略。off-policy 预算为 40k 环境步，on-policy 为 400k，**两组训练预算不同**。首次达标指平均评估回报 ≥ −200，具体统计见[原始汇总表](experiments/seed_experiments/five_algorithms/results/tables.md)。
 
-## 对比实验（`experiments/`）
+![五算法评估曲线：中位数与四分位区间](experiments/seed_experiments/five_algorithms/results/fig1_learning_curves.png)
 
-`experiments/` 在统一协议下比较 09–11（DDPG / TD3 / SAC）与 07–08 的 Pendulum 版本（TRPO / PPO）：
-**10 个固定 seed、20 个固定评估起始状态、确定性评估**；off-policy 跑 40k 步，on-policy 跑 400k 步。
+| 算法 | 训练预算 | 最终评估回报中位数 | 最终达标种子 | 首次达标步数中位数 |
+| --- | ---: | ---: | ---: | ---: |
+| SAC | 40k | −121.2 | 10/10 | 5k |
+| TD3 | 40k | −123.1 | 10/10 | 10k |
+| DDPG | 40k | −127.9 | 9/10 | 8k |
+| PPO | 400k | −129.7 | 9/10 | 95k |
+| TRPO | 400k | −132.5 | 9/10 | 90k |
 
-![五算法学习曲线：中位数 ± IQR，10 个 seed](experiments/seed_experiments/five_algorithms/results/fig1_learning_curves.png)
+在这组配置下，off-policy 方法用更少的环境交互达到阈值。小幅最终回报差异不足以支持算法排名；首次达标也不代表训练结束时仍然达标。种子 0–2 参与过 PPO/TRPO 配置调整，3–9 为留出集，分析中单独报告。
 
-| 算法 | 最终评估中位数 | 首次达到 -200 的步数 |
-| --- | ---: | ---: |
-| SAC | -121.2 | 5k |
-| TD3 | -123.1 | 10k |
-| DDPG | -127.9 | 8k |
-| PPO | -129.7 | 95k |
-| TRPO | -132.5 | 90k |
+### 其他实验
 
-五个算法最终水平相当，差别在样本效率和稳定性；这组实验也定位并修复了第一版 PPO/TRPO 的实现问题（更新批太小、
-时间截断当终止、TRPO 的 KL 约束过小）。用法和图表见 [experiments/README.md](experiments/README.md)，
-结论见 [experiments/seed_experiments/five_algorithms/经验总结.md](experiments/seed_experiments/five_algorithms/经验总结.md)。
+| 实验 | 记录的结果 | 限制与证据 |
+| --- | --- | --- |
+| HalfCheetah-v5 SAC | 3 seeds × 1M 步；最终评估回报的跨种子均值 10917.4 | 每个 seed 最终评估 20 回合；未在同协议下重跑外部基线。[结果](experiments/seed_experiments/halfcheetah_sac/results/SUMMARY.md) |
+| GridWorld DDPG + HER | 检查 HER 比例与目标采样策略对成功率的影响 | 10 seeds，包含训练失败；结论限于此任务和配置。[分析](12_HER/经验总结.md) |
+| Pendulum 摆起 + LQR | 名义条件成功 20/20；3 步延迟时为 0/20 | 已知模型与固定起点对照，不代表所有经典控制方法。[协议](14_Control/Pendulum/README.md) |
+| Behavior Cloning | 比较反馈任务与多模态绕障任务的闭环成功率 | 规则专家、小规模任务；ACT/DP 仅有笔记。[说明](13_Imitation/README.md) |
 
-## 经典控制对照（`14_Control/Pendulum`）
+## 快速开始
 
-在同一批固定评估起点上，加了一条"有模型"的对照组：能量摆起 + LQR。
-名义条件 20/20、平均回报 -128.5；被控对象质量或长度偏移 ±30% 时仍是 20/20，
-但 3 步（0.15 s）执行延迟下崩到 0/20；LQR 单独只有 7/20。
-口径、调参方式和边界见 [14_Control/Pendulum/README.md](14_Control/Pendulum/README.md)。
-
-## 代码结构可视化
-
-仓库提供一份单文件的交互式代码流页面：[强化学习代码流](code-flow.html)。页面回答一个问题：这些目录和文件是怎么连起来的。
-
-- 一条算法目录的调用链：`main.py → config.py → environment.py → agents.py → trainer.py → visualization.py`；
-- 11 个目录各自的入口与训练循环；
-- off-policy 与 on-policy 的更新时机差异（每步 / 每回合 / 每 10 回合）；
-- `experiments/` 用子进程横切 5 个算法的完整流水线；
-- 2026-10 这次改写的 PPO / TRPO v2 对照表。
-
-文件引用带行号，指向提交 `fbe0e5f`；页面不依赖外部脚本或网络，直接用浏览器打开即可。
-
-## 环境准备
-
-推荐使用 Python 3.10 或更高版本，并为项目创建虚拟环境：
+建议使用 Python 3.12。根目录 `requirements.txt` 提供经典控制实验依赖下界，未锁定完整环境；不同版本或设备不保证复现相同轨迹。
 
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate
-```
-
-根目录的 `requirements.txt` 覆盖全部实验，一次装好即可：
-
-```bash
+source .venv/bin/activate              # Windows PowerShell: .venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
+python -m pip check
 ```
 
-每个实验目录也保留了自己的 `requirements.txt`（01 只用标准库，05/06 额外需要 scikit-learn），只想跑单个算法时可以只装对应目录的。
-
-## 运行示例
-
-### 01 Cliff Walking
-
-只使用 Python 标准库：
+不安装第三方库也可运行 Cliff Walking：
 
 ```bash
-cd "01_Cliff Walking"
-python train.py
+python "01_Cliff Walking/train.py" --algorithm q-learning --episodes 100 --seed 0
+python "01_Cliff Walking/train.py" --algorithm sarsa --episodes 100 --seed 0
 ```
 
-在 `train.py` 中切换 `q_learning.QTable` 和 `sarsa.SarsaTable` 可以对比 Q-learning 与 SARSA。
-
-### 03 Double DQN、Dueling DQN
+从仓库根目录运行已有五算法驱动，进行短流程验证；独立输出目录避免覆盖历史数据：
 
 ```bash
-cd "03_Double DQN、Dueling DQN"
-python -m pip install -r requirements.txt
-python main.py
+python -I experiments/seed_experiments/five_algorithms/run_all.py \
+  --algos sac ppo --seeds 0 --off-episodes 6 --on-episodes 10 \
+  --eval-episodes 2 --jobs 1 --outdir /tmp/rl-smoke
+python -m unittest discover -s tests -v
 ```
 
-在 `config.py` 中修改 `ALGORITHM`，可选 `DQN`、`DoubleDQN`、`DuelingDQN`。
+短训练只用于验证采样、更新、评估和输出流程，不检验收敛。完整训练、MuJoCo 附加依赖和批任务参数见[实验索引](experiments/README.md)。各章节的 `main.py` 按本地 `config.py` 运行，通常需要先进入对应目录；无图形界面时可设置 `MPLBACKEND=Agg`。
 
-### 04 REINFORCE
+## 章节索引
 
-```bash
-cd "04_策略梯度算法_Reinforce"
-python -m pip install -r requirements.txt
-python main.py
-```
+编号为推荐阅读顺序，算法依赖关系见[算法路线](算法路线.md)。
 
-### 05 / 06 Mountain Car
+| 目录 | 实现内容 | 入口（相对于章节目录） |
+| --- | --- | --- |
+| `01_Cliff Walking` | 表格型 Q-learning / SARSA | `train.py` |
+| `02_DQN` | DQN 最小组件；完整训练见 03 | `practice.py`（可导入组件） |
+| `03_Double DQN、Dueling DQN` | DQN / Double DQN / Dueling DQN；Pendulum 动作离散化 | `main.py` |
+| `04_策略梯度算法_Reinforce` | CartPole REINFORCE | `main.py` |
+| `05_Mountain Car` | RBF 特征 + 线性 Actor-Critic | `main.py` |
+| `06_Mountain Car PyTorch` | MLP + n 步 TD Actor-Critic | `main.py` |
+| `07_TRPO` / `08_PPO` | CartPole / Pendulum 策略优化 | `CartPole/main.py`、`Pendulum/main.py` |
+| `09_DDPG` | Pendulum 连续控制；CartPole 为教学适配 | `Pendulum/main.py`、`CartPole/main.py` |
+| `10_TD3` / `11_SAC` | 连续动作控制 | `Pendulum/main.py` |
+| `12_HER` | 目标条件 DDPG + 轨迹重标记 | `GridWorld/main.py` |
+| `13_Imitation` | BC 实现；ACT / Diffusion Policy 笔记 | `bc_minimal.py` |
+| `14_Control` | LQR、能量摆起、扰动与延迟评估 | `Pendulum/evaluate.py` |
 
-```bash
-cd "05_Mountain Car"
-python -m pip install -r requirements.txt
-python main.py
-```
-
-```bash
-cd "06_Mountain Car PyTorch"
-python -m pip install -r requirements.txt
-python main.py
-```
-
-### 07 TRPO / 08 PPO
-
-```bash
-cd "07_TRPO/CartPole"
-python main.py
-
-cd "08_PPO/Pendulum"
-python main.py
-```
-
-Pendulum 版本已更新为 v2（每 10 个回合更新一次等），改动前的代码在各自的 `Pendulum/legacy_v1/`，原因见 `experiments/seed_experiments/five_algorithms/经验总结.md` §4。
-
-### 09 DDPG / 10 TD3 / 11 SAC
-
-```bash
-cd "09_DDPG/Pendulum"
-python main.py
-
-cd "10_TD3/Pendulum"
-python main.py
-
-cd "11_SAC/Pendulum"
-python main.py
-```
+各章节 `经验总结.md` 记录原理、实现取舍和诊断过程。`legacy_v1/` 保留 PPO/TRPO 的历史版本；[代码流页面](code-flow.html)是基于旧提交的静态阅读辅助，行号与当前代码可能不同。
 
 ## 参考与致谢
 
@@ -185,7 +108,7 @@ python main.py
 ### 教程与参考实现
 
 - **《动手学强化学习》**，张伟楠、沈键、俞勇，人民邮电出版社，2022：[在线教程](https://hrl.boyuai.com/) · [配套代码](https://github.com/boyu-ai/Hands-on-RL)。本仓库的 `config.py` / `environment.py` / `networks.py` / `agents.py` / `trainer.py` / `main.py` 拆分方式，以及 `rl_utils.py` 中的 replay buffer、`moving_average`、`compute_advantage` 等工具，参考了该教程的组织方式。
-- **OpenAI Spinning Up**：[教程主页](https://spinningup.openai.com/) · [TD3 教程](https://spinningup.openai.com/en/latest/algorithms/td3.html) · [TD3 PyTorch 参考实现](https://github.com/openai/spinningup/tree/master/spinup/algos/pytorch/td3)。`10_TD3` 的算法结构、默认噪声参数和 `practice.py` 的对照写法参考了这里。
+- **OpenAI Spinning Up**：[教程主页](https://spinningup.openai.com/) · [TD3 教程](https://spinningup.openai.com/en/latest/algorithms/td3.html) · [TD3 PyTorch 参考实现](https://github.com/openai/spinningup/tree/master/spinup/algos/pytorch/td3)。`10_TD3` 的算法结构、默认噪声参数参考了这里。
 - **Gymnasium 文档**：[https://gymnasium.farama.org/](https://gymnasium.farama.org/)。环境接口、`reset()` / `step()` 的返回值，以及 `terminated` / `truncated` 的语义，以官方文档为准。
 
 ### 算法论文
@@ -227,10 +150,3 @@ python main.py
 ### 引用说明
 
 如果本项目帮助你完成了课程作业、论文或开源项目，建议引用对应算法的原始论文；如果参考了本仓库的代码组织，也请一并引用《动手学强化学习》。本仓库中的实现经过重新拆分、改写和 Gymnasium 适配，若与原始论文或参考实现存在差异，应以原始论文和当前代码为准。
-
-## 说明
-
-- 每个实验的 `经验总结.md` 记录算法原理、实现细节、排错过程和后续改进方向。
-- TD3 只适用于连续动作空间，因此只提供 `Pendulum-v1` 案例。
-- `.venv`、`__pycache__`、`.DS_Store` 和 `.pt` 权重由根目录 `.gitignore` 排除；`experiments/seed_experiments/five_algorithms/results/` 里的 `raw/*.json`、图和汇总表会保留。
-- Gymnasium 项目使用新版 `reset()` 和 `step()` 接口；旧版 Gym 示例需要适配。

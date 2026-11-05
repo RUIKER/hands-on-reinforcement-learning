@@ -11,7 +11,7 @@
 ```bash
 cd experiments/ablations/her_strategy
 bash run_strategy_ablation.sh
-../../../.venv/Scripts/python.exe aggregate_strategy.py
+python aggregate_strategy.py
 ```
 
 输出：`results/strategy_table.md`、`results/strategy_results.csv`、

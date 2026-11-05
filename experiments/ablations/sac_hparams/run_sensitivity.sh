@@ -9,28 +9,20 @@
 #   JOBS=6 SEEDS="0 1 2" bash run_sensitivity.sh
 #   DRY=1 bash run_sensitivity.sh           # 只列出将要跑的 run，不启动
 # 预计：tier1 ≈ 4–5h，tier2 ≈ 2–3h，tier3（UTD=4）≈ 1–2h（6 并行，估算，见 README）。
-set -u
+set -euo pipefail
 cd "$(dirname "$0")"
-PY="../../../.venv/Scripts/python.exe"
 RUNNER="../../seed_experiments/halfcheetah_sac/run_one.py"
 SEEDS="${SEEDS:-0 1 2}"
 JOBS="${JOBS:-6}"
 TIERS="${TIERS:-1 2 3}"
 STEPS="${STEPS:-100000}"
+source ../../_runner.sh
 export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONUTF8=1
 mkdir -p results/raw results/logs
 
-# 防睡眠：只在本脚本存活期间生效（SetThreadExecutionState），不改系统电源设置。
-WINPID="$(cat /proc/$$/winpid 2>/dev/null || echo 0)"
-if [ "$WINPID" != "0" ] && [ -z "${DRY:-}" ]; then
-    powershell.exe -NoProfile -Command "
-        Add-Type -Namespace W -Name P -MemberDefinition '[DllImport(\"kernel32.dll\")] public static extern uint SetThreadExecutionState(uint f);';
-        [void][W.P]::SetThreadExecutionState(0x80000001);
-        while (Get-Process -Id $WINPID -ErrorAction SilentlyContinue) { Start-Sleep -Seconds 30 }" \
-        > /dev/null 2>&1 &
-fi
-
-mapfile -t LINES < <("$PY" grid.py)
+# 先检查网格生成退出码，避免 process substitution 隐藏 Python 失败。
+grid_lines="$("$PY" grid.py)"
+mapfile -t LINES <<< "$grid_lines"
 
 run_one() {
     local name="$1" seed="$2" extra="$3"
@@ -40,7 +32,7 @@ run_one() {
     # shellcheck disable=SC2086
     "$PY" "$RUNNER" --seed "$seed" --steps "$STEPS" --eval-interval 20000 \
         --final-eval-episodes 10 $extra \
-        --out "results/raw/${tag}.json" > "results/logs/${tag}.log" 2>&1
+        --out "results/raw/${tag}.json" > "results/logs/${tag}.log" 2>&1 || return "$?"
     echo "[done] ${tag} $(date +%H:%M)"
 }
 
@@ -50,10 +42,9 @@ for tier in $TIERS; do
             t="${line%%|*}"; rest="${line#*|}"
             [ "$t" = "$tier" ] || continue
             name="${rest%%|*}"; extra="${rest#*|}"
-            while [ "$(jobs -rp | wc -l)" -ge "$JOBS" ]; do sleep 2; done
-            run_one "$name" "$seed" "$extra" &
+            submit_job run_one "$name" "$seed" "$extra"
         done
     done
 done
-wait
+wait_all
 echo "SAC SENSITIVITY DONE $(date +%H:%M)"

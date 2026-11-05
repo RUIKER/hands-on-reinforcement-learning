@@ -19,8 +19,9 @@ MuJoCo HalfCheetah 上的 SAC，3 seeds × 1M steps。复用 `11_SAC/Pendulum/ag
 
 ```bash
 cd experiments/seed_experiments/halfcheetah_sac
-bash run_all.sh
-../../../.venv/Scripts/python.exe aggregate.py
+python -m pip install "gymnasium[mujoco]>=1.3"
+PY=python JOBS=3 bash run_all.sh
+python aggregate.py
 ```
 
 输出：`results/raw/sac_s*.json`、`results/learning_curves.png`、
@@ -30,11 +31,11 @@ bash run_all.sh
 
 `run_one.py` 支持 `--hidden-dim --actor-lr --critic-lr --alpha-lr --tau --gamma
 --batch-size --reward-scale --init-alpha`，默认值来自 `settings.py`；实际使用值写入 JSON 的
-`config`。基线 1M run 使用默认值，初始 alpha 为 0.01（`11_SAC/Pendulum/agents.py` 写死）。
+`config`。基线 1M run 使用默认值，初始 alpha 为 0.01（`11_SAC/Pendulum/agents.py` 默认设置为）。
 
 ## 环境说明
 
-- `.venv` 已安装 `gymnasium[mujoco]`（mujoco 3.17）。
+- MuJoCo 为可选依赖，需要单独安装 `gymnasium[mujoco]`；根目录依赖只包含 classic-control。
 - 目录已经改成英文路径后，MuJoCo 可以直接读取 assets；不再需要 ASCII 资产补丁。
 - `HalfCheetah-v4` 已 deprecated，统一用 v5。
 
@@ -62,7 +63,7 @@ final mean 来自 20 个固定评估回合（`EVAL_SEED=10000`），动作取确
 | 本仓库 SAC | HalfCheetah-v5 | lr 3e-4、τ 0.005、γ 0.99、batch 256、2×256、UTD 1 | 10917（3 seeds 均值） | 20 |
 | SB3 rl-zoo SAC | HalfCheetah-v3 | SB3 默认（lr 3e-4、τ 0.005、γ 0.99、batch 256、2×256） | 9535 ± 100（1 次训练） | 150 |
 
-本仓库比参考值高约 14%。
+两个报告的数值相差约 14%，但训练与评估协议未完全对齐，不能作为性能提升结论。
 
 可比的部分：
 

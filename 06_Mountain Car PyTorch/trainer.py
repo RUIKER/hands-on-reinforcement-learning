@@ -1,16 +1,7 @@
-"""Episode-batch actor-critic training with n-step returns (PyTorch autograd).
+"""按完整回合收集轨迹，使用 n 步 TD 目标批量更新 Actor-Critic。
 
-更新方式：每个 episode 收集完整轨迹，episode 结束后用 n 步 TD 回报
-做一次批量更新。相比逐步（per-step）更新：
-
-1. n 步回报把终点 +100 的信号一次回传 n 步，信用传播快得多——
-   逐步一步 TD 每个状态要等下次访问才能传播价值，MLP critic 用
-   Adam 学习时价值传播极慢，200 个 episode 内 advantage 基本不含
-   位置信息，策略均值学不到"该往哪边摆"。
-2. 批量平均显著降低梯度方差。逐步更新时，Adam 的二阶矩归一化会把
-   大量小 advantage 步骤的噪声梯度放大到与少数关键步骤同等量级，
-   策略被噪声主导；同时"到达终点的都是极端动作"这一事实会把
-   log_std 一步步顶到上限（棘轮效应），行为彻底被探索噪声淹没。
+真实终止停止 bootstrap；时间截断保留下一状态价值。
+reward_scale 只作用于更新目标，统计回报使用环境原始奖励。
 """
 
 from dataclasses import dataclass
@@ -119,7 +110,7 @@ def train(
         )
 
         # reward_scale 让 critic 的目标值保持在 O(1)（终点 +100 -> +1），
-        # MLP+Adam 才能快速拟合；统计输出仍用原始奖励，曲线单位不变。
+        # 以改善目标值的数值尺度；统计输出仍用原始奖励。
         values = critic(states_tensor)
         critic_loss = (targets - values).pow(2).mean()
         critic_optimizer.zero_grad()

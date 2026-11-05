@@ -25,7 +25,7 @@
 ```bash
 cd experiments/ablations/sac_hparams
 bash run_sweep.sh            # JOBS=6，已有结果自动跳过
-../../../.venv/Scripts/python.exe aggregate_sweep.py
+python aggregate_sweep.py
 ```
 
 输出：`results/raw/*.json`、`results/sweep_table.md`、`results/sweep_results.csv`、
@@ -42,7 +42,7 @@ cd experiments/ablations/sac_hparams
 DRY=1 bash run_sensitivity.sh                  # 只列出将跑的 run（69 个新增，已有的自动跳过）
 nohup bash run_sensitivity.sh > sensitivity_driver.log 2>&1 &    # 启动；脚本内置防睡眠
 TIERS="1" bash run_sensitivity.sh              # 只跑核心 tier（约 4–5h）
-../../../.venv/Scripts/python.exe aggregate_sensitivity.py       # 随时可聚合（未跑完的点只画不检验）
+python aggregate_sensitivity.py       # 随时可聚合（未跑完的点只画不检验）
 ```
 
 - `grid.py`：网格定义，调度和聚合共用；`run_one.py` 新增 `--target-entropy`、`--utd`，并在网络发散（NaN）时记录而不是崩溃。

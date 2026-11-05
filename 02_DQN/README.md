@@ -14,14 +14,14 @@
 | `rl_utils.py` | 旧版训练循环和工具函数，历史参考 |
 | `requirements.txt` | 依赖 |
 
-> `practice.py` 是练习题性质的代码，没有完整训练入口，并且包含一处 `states` / `rewards` 的笔误（见 `经验总结.md` 的“已知问题”）。它适合阅读，不适合直接跑实验。
+`practice.py` 提供可导入的 DQN 和经验回放组件，不含训练入口。状态字段、目标网络初始化和梯度隔离已修正，并由 `tests/` 中的参数更新测试覆盖；`rl_utils.py` 保留旧接口供历史阅读。
 
 ## 完整实验
 
 需要运行完整 DQN、Double DQN、Dueling DQN 对照实验，请使用：
 
 ```bash
-cd "03_Double DQN、Dueling DQN"
+cd "../03_Double DQN、Dueling DQN"
 python main.py
 ```
 

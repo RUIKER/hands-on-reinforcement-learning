@@ -8,7 +8,7 @@
    （EVAL_SEED..EVAL_SEED+19），所有算法、所有 seed、所有评估点共用；
 4. 训练结束后再用同一组初始状态做最终评估。
 
-用法（由 run_compare.py 调用）：
+用法（由 run_all.py 调用）：
     python experiments/seed_experiments/five_algorithms/run_one.py --algo td3 --seed 0 --episodes 200 \
         --out experiments/seed_experiments/five_algorithms/results/raw/td3_seed0.json
 """

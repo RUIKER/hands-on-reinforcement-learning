@@ -1,53 +1,43 @@
+"""离散动作 Pendulum 的经验采集与 DQN 更新。"""
+
 import numpy as np
 from tqdm import tqdm
 
 from environment import dis_to_con
 
 
-def train_DQN(agent, env, num_episodes, replay_buffer, minimal_size, batch_size):
-    '''执行统一训练流程，agent内部决定使用哪一种DQN变体。'''
-    return_list = []
-    max_q_value_list = []
-    max_q_value = 0
-    for i in range(10):
-        with tqdm(total=int(num_episodes / 10), desc='Iteration %d' % i) as pbar:
-            for i_episode in range(int(num_episodes / 10)):
-                episode_return = 0
-                state, _ = env.reset()
-                done = False
-                while not done:
-                    # 1. agent根据当前状态选择离散动作。
-                    action = agent.take_action(state)
-                    max_q_value = agent.max_q_value(state) * 0.005 + max_q_value * 0.995
-                    max_q_value_list.append(max_q_value)
-
-                    # Pendulum本身需要连续动作；这里把离散动作映射回连续区间。
-                    action_continuous = dis_to_con(action, env, agent.action_dim)
-                    next_state, reward, terminated, truncated, _ = env.step([action_continuous])
-                    done = terminated or truncated
-
-                    # 2. 保存经验(s, a, r, s', done)，暂时不立即更新网络。
-                    replay_buffer.add(state, action, reward, next_state, done)
-                    state = next_state
-                    episode_return += reward
-
-                    # 3. buffer积累足够样本后，随机采样batch交给agent.update()。
-                    # 随机采样能打散相邻时刻的相关性，提高训练稳定性。
-                    if replay_buffer.size() > minimal_size:
-                        b_s, b_a, b_r, b_ns, b_d = replay_buffer.sample(batch_size)
-                        transition_dict = {
-                            'states': b_s,
-                            'actions': b_a,
-                            'next_states': b_ns,
-                            'rewards': b_r,
-                            'dones': b_d
-                        }
-                        agent.update(transition_dict)
-                return_list.append(episode_return)
-                if (i_episode + 1) % 10 == 0:
-                    pbar.set_postfix({
-                        'episode': '%d' % (num_episodes / 10 * i + i_episode + 1),
-                        'return': '%.3f' % np.mean(return_list[-10:])
+def train_dqn(agent, env, num_episodes, replay_buffer, minimal_size, batch_size):
+    """执行恰好 num_episodes 个回合，返回回报和逐步平滑最大 Q 值。"""
+    returns, max_q_values = [], []
+    smoothed_q = 0.0
+    with tqdm(total=num_episodes, desc="Training") as progress:
+        for episode in range(num_episodes):
+            state, _ = env.reset()
+            episode_return = 0.0
+            while True:
+                action = agent.take_action(state)
+                smoothed_q = 0.005 * agent.max_q_value(state) + 0.995 * smoothed_q
+                max_q_values.append(smoothed_q)
+                continuous_action = dis_to_con(action, env, agent.action_dim)
+                next_state, reward, terminated, truncated, _ = env.step([continuous_action])
+                # 时间限制只结束采样，Bellman 目标仍保留下一状态价值。
+                replay_buffer.add(state, action, reward, next_state, terminated)
+                state = next_state
+                episode_return += reward
+                if replay_buffer.size() >= max(minimal_size, batch_size):
+                    states, actions, rewards, next_states, dones = replay_buffer.sample(batch_size)
+                    agent.update({
+                        "states": states, "actions": actions, "rewards": rewards,
+                        "next_states": next_states, "dones": dones,
                     })
-                pbar.update(1)
-    return return_list, max_q_value_list
+                if terminated or truncated:
+                    break
+            returns.append(episode_return)
+            if (episode + 1) % 10 == 0:
+                progress.set_postfix(episode=episode + 1, mean_return=np.mean(returns[-10:]))
+            progress.update(1)
+    return returns, max_q_values
+
+
+# 兼容早期笔记和调用方；新代码统一使用 snake_case。
+train_DQN = train_dqn

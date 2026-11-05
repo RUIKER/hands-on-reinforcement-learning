@@ -26,7 +26,7 @@ HER（Hindsight Experience Replay）的消融实验目录。
 ```bash
 cd experiments/ablations/her_ratio
 bash run_ratio_ablation.sh
-../../../.venv/Scripts/python.exe aggregate_ratio.py
+python aggregate_ratio.py
 ```
 
 输出：
@@ -49,7 +49,7 @@ bash run_ratio_ablation.sh
 | 0.8 | 0.80 [0.50, 1.00] | 8/10 | 410 [317, 522]（9/10 收敛） |
 | 1.0 | 0.13 [0.06, 0.19] | 0/10 | >2000（0/10 收敛） |
 
-可以下的结论：有 HER（0.2–0.8）都比无 HER 好；ratio=1.0 一定失败。
+可以下的结论：有 HER（0.2–0.8）都比无 HER 好；本实验中 ratio=1.0 的 10 个种子均未达标。
 **不能下的结论**：0.2 / 0.5 / 0.8 之间谁更好——置信区间高度重叠。
 
 ## 方法说明（相对第一版的修正）
@@ -67,8 +67,8 @@ bash run_ratio_ablation.sh
 结论见 `../../../12_HER/经验总结.md` §3.3。
 
 ```bash
-../../../.venv/Scripts/python.exe diagnose_ratio1.py --ratio 1.0 --seed 0
-../../../.venv/Scripts/python.exe diagnose_ratio1.py --ratio 0.8 --seed 0
+python diagnose_ratio1.py --ratio 1.0 --seed 0
+python diagnose_ratio1.py --ratio 0.8 --seed 0
 ```
 
 输出：`results/diagnostics/ratio{r}_s{seed}.json`。

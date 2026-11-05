@@ -20,4 +20,3 @@ python main.py
 - `rl_utils.py`：经验回放池和移动平均。
 - `visualization.py`：回报曲线。
 - `经验总结.md`：SAC 原理、代码流程和教程结果对比。
-- `practice.py`：原始示例，仅作参考。

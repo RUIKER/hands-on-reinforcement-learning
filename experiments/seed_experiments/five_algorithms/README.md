@@ -22,9 +22,11 @@ DDPG / TD3 / SAC（off-policy）与 PPO / TRPO（on-policy），seeds 0–9，�
 
 ```bash
 cd <repo>/experiments/seed_experiments/five_algorithms
-python -I run_all.py          # 50 次运行，已有结果自动跳过，约 5 分钟
+python -I run_all.py          # 50 次运行，已有结果自动跳过；耗时取决于设备和并发
 python -I analyze.py          # 生成表格和三张图
 ```
+
+默认最多并行 4 个任务；资源有限时使用 `--jobs 1`。更改协议时请用 `--outdir` 指定新目录；现有 JSON 仅按文件存在跳过，不验证其预算或配置。
 
 常用选项：`run_all.py --seeds 0 1 2 --algos ppo trpo --force`；
 `run_one.py` / `run_one_onpolicy.py` 可单独调试，`--set KEY=VALUE` 覆盖 config 里的超参。

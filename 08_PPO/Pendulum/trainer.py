@@ -8,7 +8,7 @@ def train_on_policy_agent(env, agent, num_episodes, episodes_per_update=1,
 
     transition_dict 里 `dones` 只记录真正的终止（terminated），用于 bootstrap；
     `ends` 记录回合边界（terminated 或 truncated），用于切断 GAE。
-    Pendulum 永远不会 terminated，200 步截断处仍要用 V(s') 继续 bootstrap。
+    标准 Pendulum-v1 没有任务终止条件，200 步截断处仍要用 V(s') 继续 bootstrap。
     """
     return_list = []
     with tqdm(total=num_episodes, desc='Training') as progress:

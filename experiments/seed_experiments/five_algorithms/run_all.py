@@ -34,20 +34,27 @@ ON_POLICY = ["ppo", "trpo"]
 ALGOS = OFF_POLICY + ON_POLICY
 
 
+def positive_int(value):
+    number = int(value)
+    if number <= 0:
+        raise argparse.ArgumentTypeError("must be a positive integer")
+    return number
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Run all five algorithms.")
     parser.add_argument("--seeds", type=int, nargs="+", default=list(range(10)))
     parser.add_argument("--algos", nargs="+", default=ALGOS, choices=ALGOS)
-    parser.add_argument("--off-episodes", type=int, default=200,
+    parser.add_argument("--off-episodes", type=positive_int, default=200,
                         help="off-policy 回合数；200 回合 = 40k 步")
-    parser.add_argument("--on-episodes", type=int, default=2000,
+    parser.add_argument("--on-episodes", type=positive_int, default=2000,
                         help="on-policy 回合数；2000 回合 = 400k 步")
-    parser.add_argument("--off-eval-every", type=int, default=2000)
-    parser.add_argument("--on-eval-every", type=int, default=10000)
-    parser.add_argument("--eval-episodes", type=int, default=20)
+    parser.add_argument("--off-eval-every", type=positive_int, default=2000)
+    parser.add_argument("--on-eval-every", type=positive_int, default=10000)
+    parser.add_argument("--eval-episodes", type=positive_int, default=20)
     parser.add_argument("--eval-seed", type=int, default=10000)
     parser.add_argument("--device", default="cpu")
-    parser.add_argument("--jobs", type=int, default=max(1, (os.cpu_count() or 2) - 1))
+    parser.add_argument("--jobs", type=positive_int, default=min(4, max(1, (os.cpu_count() or 2) - 1)))
     parser.add_argument("--outdir", default=str(EXP_DIR / "results"))
     parser.add_argument("--force", action="store_true")
     return parser.parse_args()
@@ -100,7 +107,7 @@ def main():
                          log_dir / f"{algo}_seed{seed}.log"))
 
     # 慢任务（SAC）排在前面，避免最后只剩一个长尾。
-    jobs.sort(key=lambda job: ALGOS.index(job[0]) != 2)
+    jobs.sort(key=lambda job: job[0] != "sac")
     print(f"{len(jobs)} runs, {args.jobs} parallel", flush=True)
     with ThreadPoolExecutor(max_workers=args.jobs) as pool:
         codes = list(pool.map(run_job, jobs))

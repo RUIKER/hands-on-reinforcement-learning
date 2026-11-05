@@ -1,76 +1,95 @@
+"""DQN 最小组件：离散动作 Q 网络、经验回放与目标网络。
+
+本文件提供可导入的组件；完整训练和变体对照见 03_Double DQN、Dueling DQN。
+批数据的 dones 表示 MDP 终止，时间限制截断不应置为 1。
+"""
+
 import random
-import gymnasium as gym
+from collections import deque
+
 import numpy as np
-import collections
-from tqdm import tqdm
 import torch
-import torch.nn.functional as F
-import matplotlib.pyplot as plt
-import rl_utils
+from torch import nn
+from torch.nn import functional as F
+
 
 class ReplayBuffer:
-    '''经验回放池'''
-    def __init__(self, capacity):
-        self.buffer = collections.deque(maxlen=capacity) #队列，先进先出
+    """固定容量的 FIFO 回放池，均匀抽样且不放回。"""
 
-    def add(self, state, action, reward, next_state, done): #将数据加入buffer
+    def __init__(self, capacity):
+        self.buffer = deque(maxlen=capacity)
+
+    def add(self, state, action, reward, next_state, done):
         self.buffer.append((state, action, reward, next_state, done))
 
-    def sample(self, batch_size): #从buffer中采样数据, 数量为batch_size
-        transitions = random.sample(self.buffer, batch_size) #随机采样
-        states, actions, rewards, next_states, dones = zip(*transitions) #解压
+    def sample(self, batch_size):
+        states, actions, rewards, next_states, dones = zip(
+            *random.sample(self.buffer, batch_size)
+        )
         return np.array(states), actions, rewards, np.array(next_states), dones
 
-    def size(self): #目前buffer中数据的数量
+    def size(self):
         return len(self.buffer)
 
-class Qnet(torch.nn.Module):
-    '''只有一层隐藏层的Q网络'''
-    def __init__(self, state_dim, hidden_dim, action_dim):
-        super(Qnet, self).__init__()
-        self.fc1 = torch.nn.Linear(state_dim, hidden_dim) #输入层到隐藏层
-        self.fc2 = torch.nn.Linear(hidden_dim, action_dim) #隐藏层到输出层
 
-    def forward(self, x): #前向传播
-        x = F.relu(self.fc1(x)) #隐藏层使用ReLU激活函数
-        return self.fc2(x)
+class Qnet(nn.Module):
+    """单隐藏层网络，输出形状为 [batch_size, action_dim]。"""
+
+    def __init__(self, state_dim, hidden_dim, action_dim):
+        super().__init__()
+        self.fc1 = nn.Linear(state_dim, hidden_dim)
+        self.fc2 = nn.Linear(hidden_dim, action_dim)
+
+    def forward(self, states):
+        return self.fc2(F.relu(self.fc1(states)))
+
 
 class DQN:
-    '''DQN算法'''
-    def __init__(self, state_dim, hidden_dim, action_dim, learning_rate, gamma, epsilon, target_update, device):
-        self.action_dim = action_dim
-        self.q_net = Qnet(state_dim, hidden_dim, action_dim).to(device) #Q网络
-        self.target_q_net = Qnet(state_dim, hidden_dim, action_dim).to(device) #目标Q网络
-        self.optimizer = torch.optim.Adam(self.q_net.parameters(), lr=learning_rate) #Adam优化器
-        self.gamma = gamma #折扣因子
-        self.epsilon = epsilon #epsilon-greedy
-        self.target_update = target_update #目标网络更新频率
-        self.count = 0 #计数器，记录更新次数
-        self.device = device #设备
+    """使用硬同步目标网络的 DQN。"""
 
-    def take_action(self, state): #epsilon-greedy采取策略
+    def __init__(self, state_dim, hidden_dim, action_dim, learning_rate,
+                 gamma, epsilon, target_update, device):
+        if target_update <= 0:
+            raise ValueError("target_update 必须为正整数")
+        self.action_dim = action_dim
+        self.device = device
+        self.q_net = Qnet(state_dim, hidden_dim, action_dim).to(device)
+        self.target_q_net = Qnet(state_dim, hidden_dim, action_dim).to(device)
+        self.target_q_net.load_state_dict(self.q_net.state_dict())
+        self.target_q_net.requires_grad_(False)
+        self.optimizer = torch.optim.Adam(self.q_net.parameters(), lr=learning_rate)
+        self.gamma = gamma
+        self.epsilon = epsilon
+        self.target_update = target_update
+        self.count = 0
+
+    def take_action(self, state):
         if np.random.random() < self.epsilon:
-            action = np.random.randint(self.action_dim) #随机选择动作
-        else:
-            state = torch.tensor([state], dtype = torch.float).to(self.device) #将状态转换为tensor
-            action = self.q_net(state).argmax().item() #选择Q值最大的动作
-        return action
+            return np.random.randint(self.action_dim)
+        state = torch.as_tensor(np.asarray(state), dtype=torch.float32,
+                                device=self.device).unsqueeze(0)
+        with torch.no_grad():
+            return self.q_net(state).argmax(dim=1).item()
 
     def update(self, transition_dict):
-        states = torch.tensor(transition_dict['rewards'], dtype = torch.float).to(self.device)
-        actions = torch.tensor(transition_dict['actions'], dtype = torch.long).view(-1, 1).to(self.device)
-        rewards = torch.tensor(transition_dict['rewards'], dtype = torch.float).view(-1, 1).to(self.device)
-        next_states = torch.tensor(transition_dict['next_states'], dtype = torch.float).to(self.device)
-        dones = torch.tensor(transition_dict['dones'], dtype = torch.float).view(-1, 1).to(self.device)
-        q_values = self.q_net(states).gather(1, actions) #当前状态的Q值
-        max_next_q_values = self.target_q_net(next_states).max(1)[0].view(-1, 1) #下一个状态的最大Q值
-        q_targets = rewards + self.gamma * max_next_q_values * (1 - dones) #TD误差目标
-        dqn_loss = torch.mean(F.mse_loss(q_values, q_targets)) #均方误差损失函数
-        self.optimizer.zero_grad() #Pytorch中默认梯度会累积，这里需要显式将梯度设置为0
-        dqn_loss.backward() #反向传播
-        self.optimizer.step() #更新参数
+        """对一个 batch 执行 TD 更新；返回标量 loss 用于诊断。"""
+        def tensor(key, dtype=torch.float32):
+            return torch.as_tensor(np.asarray(transition_dict[key]),
+                                   dtype=dtype, device=self.device)
 
-        if self.count % self.target_update == 0: #每隔target_update步更新目标网络
-            self.target_q_net.load_state_dict(self.q_net.state_dict()) #将Q网络的参数复制到目标Q网络
-
+        states = tensor("states")
+        actions = tensor("actions", torch.long).view(-1, 1)
+        rewards = tensor("rewards").view(-1, 1)
+        next_states = tensor("next_states")
+        dones = tensor("dones").view(-1, 1)
+        with torch.no_grad():
+            next_values = self.target_q_net(next_states).max(dim=1, keepdim=True).values
+            targets = rewards + self.gamma * next_values * (1 - dones)
+        loss = F.mse_loss(self.q_net(states).gather(1, actions), targets)
+        self.optimizer.zero_grad()
+        loss.backward()
+        self.optimizer.step()
         self.count += 1
+        if self.count % self.target_update == 0:
+            self.target_q_net.load_state_dict(self.q_net.state_dict())
+        return loss.item()
