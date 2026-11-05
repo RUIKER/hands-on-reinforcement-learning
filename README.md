@@ -20,6 +20,8 @@
 | 10 | `10_TD3` | Pendulum 连续动作 TD3 | `Pendulum/main.py` |
 | 11 | `11_SAC` | Pendulum 连续动作 SAC | `Pendulum/main.py` |
 | 12 | `12_HER` | 二维目标导向任务上的 DDPG + HER（replay buffer 改造） | `GridWorld/main.py` |
+| 13 | `13_Imitation` | 模仿学习：BC 最小实现（GridWorld / 双走廊），BC / ACT / Diffusion Policy 算法卡片 | `bc_minimal.py` |
+| 14 | `14_Control/Pendulum` | 有模型的经典控制对照线：LQR、能量摆起、参数扰动与执行延迟 | `lqr.py`、`evaluate.py` |
 
 每个算法目录下的 `经验总结.md` 都采用同一结构：先回答“特点、针对的缺陷、局限性、应用场景”四个问题，再记录实现细节、实验结果和排错经验。
 
@@ -69,6 +71,13 @@
 五个算法最终水平相当，差别在样本效率和稳定性；这组实验也定位并修复了第一版 PPO/TRPO 的实现问题（更新批太小、
 时间截断当终止、TRPO 的 KL 约束过小）。用法和图表见 [experiments/README.md](experiments/README.md)，
 结论见 [experiments/seed_experiments/five_algorithms/经验总结.md](experiments/seed_experiments/five_algorithms/经验总结.md)。
+
+## 经典控制对照（`14_Control/Pendulum`）
+
+在同一批固定评估起点上，加了一条"有模型"的对照组：能量摆起 + LQR。
+名义条件 20/20、平均回报 -128.5；被控对象质量或长度偏移 ±30% 时仍是 20/20，
+但 3 步（0.15 s）执行延迟下崩到 0/20；LQR 单独只有 7/20。
+口径、调参方式和边界见 [14_Control/Pendulum/README.md](14_Control/Pendulum/README.md)。
 
 ## 代码结构可视化
 
