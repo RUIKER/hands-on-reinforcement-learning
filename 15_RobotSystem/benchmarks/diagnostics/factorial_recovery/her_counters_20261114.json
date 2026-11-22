@@ -1,0 +1,634 @@
+{
+  "her": {
+    "0-10000": [
+      {
+        "seed": 1103,
+        "attempts": 311808,
+        "relabeled": 254105,
+        "relabeled_success": 9556,
+        "no_future_goal": 9908,
+        "already_at_goal": 47795,
+        "source_failed": 0,
+        "original": 369511
+      },
+      {
+        "seed": 1129,
+        "attempts": 311808,
+        "relabeled": 253587,
+        "relabeled_success": 10912,
+        "no_future_goal": 14064,
+        "already_at_goal": 44157,
+        "source_failed": 0,
+        "original": 370029
+      },
+      {
+        "seed": 1181,
+        "attempts": 311808,
+        "relabeled": 254495,
+        "relabeled_success": 13303,
+        "no_future_goal": 25305,
+        "already_at_goal": 32006,
+        "source_failed": 2,
+        "original": 369121
+      },
+      {
+        "seed": 1213,
+        "attempts": 311808,
+        "relabeled": 266833,
+        "relabeled_success": 11419,
+        "no_future_goal": 14040,
+        "already_at_goal": 30935,
+        "source_failed": 0,
+        "original": 356783
+      },
+      {
+        "seed": 1277,
+        "attempts": 311808,
+        "relabeled": 246674,
+        "relabeled_success": 8768,
+        "no_future_goal": 18514,
+        "already_at_goal": 46620,
+        "source_failed": 0,
+        "original": 376942
+      }
+    ],
+    "10000-20000": [
+      {
+        "seed": 1103,
+        "attempts": 320000,
+        "relabeled": 251320,
+        "relabeled_success": 18091,
+        "no_future_goal": 2707,
+        "already_at_goal": 65973,
+        "source_failed": 0,
+        "original": 388680
+      },
+      {
+        "seed": 1129,
+        "attempts": 320000,
+        "relabeled": 246897,
+        "relabeled_success": 17026,
+        "no_future_goal": 5126,
+        "already_at_goal": 67977,
+        "source_failed": 0,
+        "original": 393103
+      },
+      {
+        "seed": 1181,
+        "attempts": 320000,
+        "relabeled": 189692,
+        "relabeled_success": 11226,
+        "no_future_goal": 99917,
+        "already_at_goal": 30253,
+        "source_failed": 138,
+        "original": 450308
+      },
+      {
+        "seed": 1213,
+        "attempts": 320000,
+        "relabeled": 237001,
+        "relabeled_success": 13351,
+        "no_future_goal": 47915,
+        "already_at_goal": 35084,
+        "source_failed": 0,
+        "original": 402999
+      },
+      {
+        "seed": 1277,
+        "attempts": 320000,
+        "relabeled": 247218,
+        "relabeled_success": 14478,
+        "no_future_goal": 20556,
+        "already_at_goal": 52226,
+        "source_failed": 0,
+        "original": 392782
+      }
+    ],
+    "20000-30000": [
+      {
+        "seed": 1103,
+        "attempts": 320000,
+        "relabeled": 237768,
+        "relabeled_success": 22019,
+        "no_future_goal": 2063,
+        "already_at_goal": 80169,
+        "source_failed": 0,
+        "original": 402232
+      },
+      {
+        "seed": 1129,
+        "attempts": 320000,
+        "relabeled": 239199,
+        "relabeled_success": 21100,
+        "no_future_goal": 3354,
+        "already_at_goal": 77447,
+        "source_failed": 0,
+        "original": 400801
+      },
+      {
+        "seed": 1181,
+        "attempts": 320000,
+        "relabeled": 198560,
+        "relabeled_success": 12868,
+        "no_future_goal": 87863,
+        "already_at_goal": 33459,
+        "source_failed": 118,
+        "original": 441440
+      },
+      {
+        "seed": 1213,
+        "attempts": 320000,
+        "relabeled": 237738,
+        "relabeled_success": 20680,
+        "no_future_goal": 30615,
+        "already_at_goal": 51647,
+        "source_failed": 0,
+        "original": 402262
+      },
+      {
+        "seed": 1277,
+        "attempts": 320000,
+        "relabeled": 248152,
+        "relabeled_success": 16884,
+        "no_future_goal": 14667,
+        "already_at_goal": 57181,
+        "source_failed": 0,
+        "original": 391848
+      }
+    ]
+  },
+  "her_shape": {
+    "0-10000": [
+      {
+        "seed": 1103,
+        "attempts": 311808,
+        "relabeled": 255394,
+        "relabeled_success": 8537,
+        "no_future_goal": 13247,
+        "already_at_goal": 43167,
+        "source_failed": 0,
+        "original": 368222
+      },
+      {
+        "seed": 1129,
+        "attempts": 311808,
+        "relabeled": 250473,
+        "relabeled_success": 9888,
+        "no_future_goal": 24260,
+        "already_at_goal": 37075,
+        "source_failed": 0,
+        "original": 373143
+      },
+      {
+        "seed": 1181,
+        "attempts": 311808,
+        "relabeled": 246984,
+        "relabeled_success": 12639,
+        "no_future_goal": 27509,
+        "already_at_goal": 37315,
+        "source_failed": 0,
+        "original": 376632
+      },
+      {
+        "seed": 1213,
+        "attempts": 311808,
+        "relabeled": 257464,
+        "relabeled_success": 11118,
+        "no_future_goal": 7326,
+        "already_at_goal": 47018,
+        "source_failed": 0,
+        "original": 366152
+      },
+      {
+        "seed": 1277,
+        "attempts": 311808,
+        "relabeled": 256812,
+        "relabeled_success": 9596,
+        "no_future_goal": 13166,
+        "already_at_goal": 41830,
+        "source_failed": 0,
+        "original": 366804
+      }
+    ],
+    "10000-20000": [
+      {
+        "seed": 1103,
+        "attempts": 320000,
+        "relabeled": 253858,
+        "relabeled_success": 14804,
+        "no_future_goal": 8072,
+        "already_at_goal": 58070,
+        "source_failed": 0,
+        "original": 386142
+      },
+      {
+        "seed": 1129,
+        "attempts": 320000,
+        "relabeled": 247757,
+        "relabeled_success": 15330,
+        "no_future_goal": 34218,
+        "already_at_goal": 38025,
+        "source_failed": 0,
+        "original": 392243
+      },
+      {
+        "seed": 1181,
+        "attempts": 320000,
+        "relabeled": 167404,
+        "relabeled_success": 9602,
+        "no_future_goal": 120871,
+        "already_at_goal": 31725,
+        "source_failed": 0,
+        "original": 472596
+      },
+      {
+        "seed": 1213,
+        "attempts": 320000,
+        "relabeled": 249664,
+        "relabeled_success": 18058,
+        "no_future_goal": 2295,
+        "already_at_goal": 68041,
+        "source_failed": 0,
+        "original": 390336
+      },
+      {
+        "seed": 1277,
+        "attempts": 320000,
+        "relabeled": 254585,
+        "relabeled_success": 17015,
+        "no_future_goal": 10543,
+        "already_at_goal": 54872,
+        "source_failed": 0,
+        "original": 385415
+      }
+    ],
+    "20000-30000": [
+      {
+        "seed": 1103,
+        "attempts": 320000,
+        "relabeled": 252806,
+        "relabeled_success": 17288,
+        "no_future_goal": 7563,
+        "already_at_goal": 59625,
+        "source_failed": 6,
+        "original": 387194
+      },
+      {
+        "seed": 1129,
+        "attempts": 320000,
+        "relabeled": 242788,
+        "relabeled_success": 19062,
+        "no_future_goal": 33581,
+        "already_at_goal": 43631,
+        "source_failed": 0,
+        "original": 397212
+      },
+      {
+        "seed": 1181,
+        "attempts": 320000,
+        "relabeled": 193089,
+        "relabeled_success": 11940,
+        "no_future_goal": 85019,
+        "already_at_goal": 41892,
+        "source_failed": 0,
+        "original": 446911
+      },
+      {
+        "seed": 1213,
+        "attempts": 320000,
+        "relabeled": 243912,
+        "relabeled_success": 22679,
+        "no_future_goal": 1483,
+        "already_at_goal": 74605,
+        "source_failed": 0,
+        "original": 396088
+      },
+      {
+        "seed": 1277,
+        "attempts": 320000,
+        "relabeled": 248175,
+        "relabeled_success": 20181,
+        "no_future_goal": 6767,
+        "already_at_goal": 65058,
+        "source_failed": 0,
+        "original": 391825
+      }
+    ]
+  },
+  "her_smooth": {
+    "0-10000": [
+      {
+        "seed": 1103,
+        "attempts": 311808,
+        "relabeled": 196351,
+        "relabeled_success": 6137,
+        "no_future_goal": 68201,
+        "already_at_goal": 47256,
+        "source_failed": 0,
+        "original": 427265
+      },
+      {
+        "seed": 1129,
+        "attempts": 311808,
+        "relabeled": 267200,
+        "relabeled_success": 7103,
+        "no_future_goal": 9879,
+        "already_at_goal": 34729,
+        "source_failed": 0,
+        "original": 356416
+      },
+      {
+        "seed": 1181,
+        "attempts": 311808,
+        "relabeled": 266094,
+        "relabeled_success": 8674,
+        "no_future_goal": 14435,
+        "already_at_goal": 31279,
+        "source_failed": 0,
+        "original": 357522
+      },
+      {
+        "seed": 1213,
+        "attempts": 311808,
+        "relabeled": 237267,
+        "relabeled_success": 8551,
+        "no_future_goal": 51470,
+        "already_at_goal": 23071,
+        "source_failed": 0,
+        "original": 386349
+      },
+      {
+        "seed": 1277,
+        "attempts": 311808,
+        "relabeled": 219013,
+        "relabeled_success": 5311,
+        "no_future_goal": 62472,
+        "already_at_goal": 30323,
+        "source_failed": 0,
+        "original": 404603
+      }
+    ],
+    "10000-20000": [
+      {
+        "seed": 1103,
+        "attempts": 320000,
+        "relabeled": 229089,
+        "relabeled_success": 9495,
+        "no_future_goal": 34473,
+        "already_at_goal": 56438,
+        "source_failed": 0,
+        "original": 410911
+      },
+      {
+        "seed": 1129,
+        "attempts": 320000,
+        "relabeled": 264384,
+        "relabeled_success": 10382,
+        "no_future_goal": 18773,
+        "already_at_goal": 36843,
+        "source_failed": 0,
+        "original": 375616
+      },
+      {
+        "seed": 1181,
+        "attempts": 320000,
+        "relabeled": 270648,
+        "relabeled_success": 11636,
+        "no_future_goal": 12495,
+        "already_at_goal": 36857,
+        "source_failed": 0,
+        "original": 369352
+      },
+      {
+        "seed": 1213,
+        "attempts": 320000,
+        "relabeled": 254268,
+        "relabeled_success": 14478,
+        "no_future_goal": 22754,
+        "already_at_goal": 42978,
+        "source_failed": 0,
+        "original": 385732
+      },
+      {
+        "seed": 1277,
+        "attempts": 320000,
+        "relabeled": 202295,
+        "relabeled_success": 8060,
+        "no_future_goal": 84641,
+        "already_at_goal": 33064,
+        "source_failed": 0,
+        "original": 437705
+      }
+    ],
+    "20000-30000": [
+      {
+        "seed": 1103,
+        "attempts": 320000,
+        "relabeled": 242948,
+        "relabeled_success": 11292,
+        "no_future_goal": 22884,
+        "already_at_goal": 54168,
+        "source_failed": 0,
+        "original": 397052
+      },
+      {
+        "seed": 1129,
+        "attempts": 320000,
+        "relabeled": 257542,
+        "relabeled_success": 11060,
+        "no_future_goal": 11589,
+        "already_at_goal": 50869,
+        "source_failed": 0,
+        "original": 382458
+      },
+      {
+        "seed": 1181,
+        "attempts": 320000,
+        "relabeled": 227065,
+        "relabeled_success": 9236,
+        "no_future_goal": 65284,
+        "already_at_goal": 27651,
+        "source_failed": 0,
+        "original": 412935
+      },
+      {
+        "seed": 1213,
+        "attempts": 320000,
+        "relabeled": 256193,
+        "relabeled_success": 16711,
+        "no_future_goal": 14315,
+        "already_at_goal": 49492,
+        "source_failed": 0,
+        "original": 383807
+      },
+      {
+        "seed": 1277,
+        "attempts": 320000,
+        "relabeled": 223545,
+        "relabeled_success": 9802,
+        "no_future_goal": 64742,
+        "already_at_goal": 31713,
+        "source_failed": 0,
+        "original": 416455
+      }
+    ]
+  },
+  "her_both": {
+    "0-10000": [
+      {
+        "seed": 1103,
+        "attempts": 311808,
+        "relabeled": 206380,
+        "relabeled_success": 5152,
+        "no_future_goal": 58991,
+        "already_at_goal": 46437,
+        "source_failed": 0,
+        "original": 417236
+      },
+      {
+        "seed": 1129,
+        "attempts": 311808,
+        "relabeled": 241388,
+        "relabeled_success": 6600,
+        "no_future_goal": 16212,
+        "already_at_goal": 54208,
+        "source_failed": 0,
+        "original": 382228
+      },
+      {
+        "seed": 1181,
+        "attempts": 311808,
+        "relabeled": 261710,
+        "relabeled_success": 8476,
+        "no_future_goal": 17536,
+        "already_at_goal": 32562,
+        "source_failed": 0,
+        "original": 361906
+      },
+      {
+        "seed": 1213,
+        "attempts": 311808,
+        "relabeled": 227010,
+        "relabeled_success": 6707,
+        "no_future_goal": 57928,
+        "already_at_goal": 26870,
+        "source_failed": 0,
+        "original": 396606
+      },
+      {
+        "seed": 1277,
+        "attempts": 311808,
+        "relabeled": 224786,
+        "relabeled_success": 4964,
+        "no_future_goal": 61350,
+        "already_at_goal": 25672,
+        "source_failed": 0,
+        "original": 398830
+      }
+    ],
+    "10000-20000": [
+      {
+        "seed": 1103,
+        "attempts": 320000,
+        "relabeled": 204428,
+        "relabeled_success": 5977,
+        "no_future_goal": 51985,
+        "already_at_goal": 63587,
+        "source_failed": 0,
+        "original": 435572
+      },
+      {
+        "seed": 1129,
+        "attempts": 320000,
+        "relabeled": 232286,
+        "relabeled_success": 10775,
+        "no_future_goal": 16412,
+        "already_at_goal": 71302,
+        "source_failed": 0,
+        "original": 407714
+      },
+      {
+        "seed": 1181,
+        "attempts": 320000,
+        "relabeled": 273514,
+        "relabeled_success": 10429,
+        "no_future_goal": 11564,
+        "already_at_goal": 34922,
+        "source_failed": 0,
+        "original": 366486
+      },
+      {
+        "seed": 1213,
+        "attempts": 320000,
+        "relabeled": 180471,
+        "relabeled_success": 5078,
+        "no_future_goal": 119598,
+        "already_at_goal": 19931,
+        "source_failed": 0,
+        "original": 459529
+      },
+      {
+        "seed": 1277,
+        "attempts": 320000,
+        "relabeled": 172929,
+        "relabeled_success": 4501,
+        "no_future_goal": 122462,
+        "already_at_goal": 24609,
+        "source_failed": 0,
+        "original": 467071
+      }
+    ],
+    "20000-30000": [
+      {
+        "seed": 1103,
+        "attempts": 320000,
+        "relabeled": 218266,
+        "relabeled_success": 9554,
+        "no_future_goal": 37396,
+        "already_at_goal": 64338,
+        "source_failed": 0,
+        "original": 421734
+      },
+      {
+        "seed": 1129,
+        "attempts": 320000,
+        "relabeled": 244752,
+        "relabeled_success": 14198,
+        "no_future_goal": 11334,
+        "already_at_goal": 63914,
+        "source_failed": 0,
+        "original": 395248
+      },
+      {
+        "seed": 1181,
+        "attempts": 320000,
+        "relabeled": 271776,
+        "relabeled_success": 12284,
+        "no_future_goal": 11169,
+        "already_at_goal": 37049,
+        "source_failed": 6,
+        "original": 368224
+      },
+      {
+        "seed": 1213,
+        "attempts": 320000,
+        "relabeled": 184407,
+        "relabeled_success": 5936,
+        "no_future_goal": 111268,
+        "already_at_goal": 24325,
+        "source_failed": 0,
+        "original": 455593
+      },
+      {
+        "seed": 1277,
+        "attempts": 320000,
+        "relabeled": 201807,
+        "relabeled_success": 6685,
+        "no_future_goal": 81778,
+        "already_at_goal": 36415,
+        "source_failed": 0,
+        "original": 438193
+      }
+    ]
+  }
+}

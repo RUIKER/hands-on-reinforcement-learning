@@ -11,6 +11,7 @@
 - [Panda 轨迹预览](demo/panda-tracking.webp)展示固定命令下七个关节的 MuJoCo 运动。
 - [下载离线动作回放](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-replay.html)，用浏览器打开。可切换七轴跟踪、用例 30104 成功及用例 30124 超时，播放并拖动到指定仿真时刻。
 - [七轴采样](results/20261117_fixed_tracking/tracking.csv)、[冻结目标与闭环验收](results/20261119_panda_policy/)、[SAC/HER 配对结果](results/20261112_paired/)和 [MCAP 录包](results/20261119_rosbag/)可作为对照证据。
+- [历史实验与诊断](benchmarks/diagnostics/README.md)包含 warm-up、精度和恢复对照的脚本与结果。
 - [WSL 预检](wsl_preflight/README.md)记录仿真、策略和依赖的版本，以及已有短测。
 
 ### 从新环境复现

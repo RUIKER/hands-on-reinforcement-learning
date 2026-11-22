@@ -1,0 +1,3901 @@
+{
+  "seeds": [
+    1103,
+    1129,
+    1181,
+    1213,
+    1277
+  ],
+  "runs": [
+    {
+      "seed": 1103,
+      "arms": {
+        "sac": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.000597956027339246,
+                  "mean_joint_path_length_rad": 0.1361511380161272,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0006228852263663824
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0026947092259805984,
+                  "mean_joint_path_length_rad": 0.2613361777145618,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0020100173523145463
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.002203137012927412,
+                  "mean_joint_path_length_rad": 0.3900252070818549,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0010849732275269302
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.003087070272572434,
+                  "mean_joint_path_length_rad": 0.17696256852536268,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.002133149431655365
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0028078680059285006,
+                  "mean_joint_path_length_rad": 0.18887712827448827,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.002130042061644172
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 0.0,
+          "first_observed_80_percent_step": null,
+          "threshold_censored_at_50000": true,
+          "test": {
+            "success_percent": 2.0833333333333335,
+            "outcomes": {
+              "success": 1,
+              "timeout": 47,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "timeout": {
+                "episode_count": 47,
+                "episodes_with_two_actions": 47,
+                "mean_action_change_per_step": 0.002775388701842707,
+                "mean_joint_path_length_rad": 0.1772289945635429,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.002098134230771138
+              },
+              "success": {
+                "episode_count": 1,
+                "episodes_with_two_actions": 1,
+                "mean_action_change_per_step": 0.007833560958859263,
+                "mean_joint_path_length_rad": 0.08067846429475191,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.003624645337742025
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 198,
+              "episodes_with_actor_pairs": 197,
+              "mean_actor_action_change_per_step": 0.27252896415411443,
+              "mean_joint_path_length_rad": 0.414349508487348,
+              "mean_velocity_change_rad_per_s_per_step": 0.032881070000483306
+            },
+            "success": {
+              "completed_episodes": 2,
+              "episodes_with_actor_pairs": 2,
+              "mean_actor_action_change_per_step": 0.3388722547749282,
+              "mean_joint_path_length_rad": 0.1739481719077544,
+              "mean_velocity_change_rad_per_s_per_step": 0.04030305573504694
+            }
+          },
+          "training_seconds": 822.7392114000395
+        },
+        "her": {
+          "validation": [
+            {
+              "success_percent": 2.0833333333333335,
+              "outcomes": {
+                "success": 1,
+                "timeout": 47,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 0.2707183186868301,
+                  "mean_joint_path_length_rad": 0.19117476841436296,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.024764840668946485
+                },
+                "success": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 0.13669536136580865,
+                  "mean_joint_path_length_rad": 0.15829464091332826,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.013196140089022475
+                }
+              }
+            },
+            {
+              "success_percent": 37.5,
+              "outcomes": {
+                "success": 18,
+                "timeout": 30,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 30,
+                  "episodes_with_two_actions": 30,
+                  "mean_action_change_per_step": 0.0049612155883597625,
+                  "mean_joint_path_length_rad": 0.1402128568633497,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0016162036996923317
+                },
+                "success": {
+                  "episode_count": 18,
+                  "episodes_with_two_actions": 18,
+                  "mean_action_change_per_step": 0.0186382588587462,
+                  "mean_joint_path_length_rad": 0.1300270939369359,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0044635248396773354
+                }
+              }
+            },
+            {
+              "success_percent": 37.5,
+              "outcomes": {
+                "success": 18,
+                "timeout": 30,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 18,
+                  "episodes_with_two_actions": 18,
+                  "mean_action_change_per_step": 0.022481978197818088,
+                  "mean_joint_path_length_rad": 0.11267584305182182,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.011564131569447739
+                },
+                "timeout": {
+                  "episode_count": 30,
+                  "episodes_with_two_actions": 30,
+                  "mean_action_change_per_step": 0.005873528033555692,
+                  "mean_joint_path_length_rad": 0.16182828364223603,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.003877053578102867
+                }
+              }
+            },
+            {
+              "success_percent": 87.5,
+              "outcomes": {
+                "success": 42,
+                "timeout": 6,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 42,
+                  "episodes_with_two_actions": 42,
+                  "mean_action_change_per_step": 0.03185355196337763,
+                  "mean_joint_path_length_rad": 0.1367870233131965,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.01615407866484783
+                },
+                "timeout": {
+                  "episode_count": 6,
+                  "episodes_with_two_actions": 6,
+                  "mean_action_change_per_step": 0.006002838177204763,
+                  "mean_joint_path_length_rad": 0.17194094615393635,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.003919653126487369
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0952726573628087,
+                  "mean_joint_path_length_rad": 0.14750285907236013,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.06522874392205841
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 53.385416666666664,
+          "first_observed_80_percent_step": 40000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.09632811535691412,
+                "mean_joint_path_length_rad": 0.14024324680628394,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.06442147092849224
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 125,
+              "episodes_with_actor_pairs": 124,
+              "mean_actor_action_change_per_step": 0.6221336668097517,
+              "mean_joint_path_length_rad": 0.3294633708791466,
+              "mean_velocity_change_rad_per_s_per_step": 0.06361319921386444
+            },
+            "success": {
+              "completed_episodes": 440,
+              "episodes_with_actor_pairs": 440,
+              "mean_actor_action_change_per_step": 0.5835456359451694,
+              "mean_joint_path_length_rad": 0.1839959619727757,
+              "mean_velocity_change_rad_per_s_per_step": 0.08503376219645455
+            }
+          },
+          "training_seconds": 836.5055676000193
+        },
+        "her_shape": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 1.8436377101678814,
+                  "mean_joint_path_length_rad": 0.2866462533434618,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.15640853771670984
+                }
+              }
+            },
+            {
+              "success_percent": 33.333333333333336,
+              "outcomes": {
+                "success": 16,
+                "timeout": 32,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 16,
+                  "episodes_with_two_actions": 16,
+                  "mean_action_change_per_step": 0.04746455682315474,
+                  "mean_joint_path_length_rad": 0.12010207952819492,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0059913525963656965
+                },
+                "timeout": {
+                  "episode_count": 32,
+                  "episodes_with_two_actions": 32,
+                  "mean_action_change_per_step": 0.007553536457731879,
+                  "mean_joint_path_length_rad": 0.21680395796184002,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0015275122777180317
+                }
+              }
+            },
+            {
+              "success_percent": 89.58333333333333,
+              "outcomes": {
+                "success": 43,
+                "timeout": 5,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 43,
+                  "episodes_with_two_actions": 43,
+                  "mean_action_change_per_step": 0.04805763659289156,
+                  "mean_joint_path_length_rad": 0.1506449997905814,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.03222873492751991
+                },
+                "timeout": {
+                  "episode_count": 5,
+                  "episodes_with_two_actions": 5,
+                  "mean_action_change_per_step": 0.00574083626104595,
+                  "mean_joint_path_length_rad": 0.17948937120818084,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.004271302901622145
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.057170072430012694,
+                  "mean_joint_path_length_rad": 0.14651133280509185,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.038665481963349284
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.1250015335880363,
+                  "mean_joint_path_length_rad": 0.15001544617245854,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.08800532194847371
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 68.22916666666666,
+          "first_observed_80_percent_step": 30000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.12570873071673305,
+                "mean_joint_path_length_rad": 0.14386409246479506,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.08581205923598209
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 98,
+              "episodes_with_actor_pairs": 97,
+              "mean_actor_action_change_per_step": 0.7117709259523917,
+              "mean_joint_path_length_rad": 0.36618673480954167,
+              "mean_velocity_change_rad_per_s_per_step": 0.07016126208194294
+            },
+            "success": {
+              "completed_episodes": 663,
+              "episodes_with_actor_pairs": 663,
+              "mean_actor_action_change_per_step": 0.5873627607442292,
+              "mean_joint_path_length_rad": 0.19276601348456399,
+              "mean_velocity_change_rad_per_s_per_step": 0.0917410527251976
+            },
+            "failure": {
+              "completed_episodes": 1,
+              "episodes_with_actor_pairs": 1,
+              "mean_actor_action_change_per_step": 0.23885004335514656,
+              "mean_joint_path_length_rad": 2.4431428559100956,
+              "mean_velocity_change_rad_per_s_per_step": 0.04263789439492495
+            }
+          },
+          "training_seconds": 837.2973540001549
+        },
+        "her_smooth": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 1.8658437770043255,
+                  "mean_joint_path_length_rad": 0.4271796969907747,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.16438874373258236
+                }
+              }
+            },
+            {
+              "success_percent": 2.0833333333333335,
+              "outcomes": {
+                "success": 1,
+                "timeout": 47,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 0.8139189226646266,
+                  "mean_joint_path_length_rad": 0.32304855521031417,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.07170896087749548
+                },
+                "success": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 1.7867656581627642,
+                  "mean_joint_path_length_rad": 0.08241366497617184,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.1577140140839789
+                }
+              }
+            },
+            {
+              "success_percent": 64.58333333333333,
+              "outcomes": {
+                "success": 31,
+                "timeout": 17,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 31,
+                  "episodes_with_two_actions": 31,
+                  "mean_action_change_per_step": 0.15945063843913532,
+                  "mean_joint_path_length_rad": 0.17107384183226437,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.028503420439279323
+                },
+                "timeout": {
+                  "episode_count": 17,
+                  "episodes_with_two_actions": 17,
+                  "mean_action_change_per_step": 0.8018074810543943,
+                  "mean_joint_path_length_rad": 0.2964503679713257,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.07497215764102184
+                }
+              }
+            },
+            {
+              "success_percent": 97.91666666666667,
+              "outcomes": {
+                "success": 47,
+                "timeout": 1,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 0.17625124583992796,
+                  "mean_joint_path_length_rad": 0.16495177961842686,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.04460864909446608
+                },
+                "timeout": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 0.00843224633353774,
+                  "mean_joint_path_length_rad": 0.12548834762699637,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.005721834099891933
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.2580125950041025,
+                  "mean_joint_path_length_rad": 0.15924905753384289,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.07837080193591565
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 53.645833333333336,
+          "first_observed_80_percent_step": 40000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.24263313084776952,
+                "mean_joint_path_length_rad": 0.15105121254475112,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.07729543122533981
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 140,
+              "episodes_with_actor_pairs": 139,
+              "mean_actor_action_change_per_step": 0.30133276626470795,
+              "mean_joint_path_length_rad": 0.5028828851632823,
+              "mean_velocity_change_rad_per_s_per_step": 0.044884896058590855
+            },
+            "success": {
+              "completed_episodes": 248,
+              "episodes_with_actor_pairs": 248,
+              "mean_actor_action_change_per_step": 0.3270569444429034,
+              "mean_joint_path_length_rad": 0.22701227465809165,
+              "mean_velocity_change_rad_per_s_per_step": 0.06707233104483255
+            }
+          },
+          "training_seconds": 835.5873771000188
+        },
+        "her_both": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.002703465210513589,
+                  "mean_joint_path_length_rad": 0.2674233654996969,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0008717317051434327
+                }
+              }
+            },
+            {
+              "success_percent": 14.583333333333334,
+              "outcomes": {
+                "success": 7,
+                "timeout": 41,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 41,
+                  "episodes_with_two_actions": 41,
+                  "mean_action_change_per_step": 0.007656590150163909,
+                  "mean_joint_path_length_rad": 0.2921780478033538,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.002117437010653662
+                },
+                "success": {
+                  "episode_count": 7,
+                  "episodes_with_two_actions": 7,
+                  "mean_action_change_per_step": 0.042323154982411335,
+                  "mean_joint_path_length_rad": 0.13243127299647,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.006307890337630426
+                }
+              }
+            },
+            {
+              "success_percent": 14.583333333333334,
+              "outcomes": {
+                "success": 7,
+                "timeout": 41,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 41,
+                  "episodes_with_two_actions": 41,
+                  "mean_action_change_per_step": 0.009741643096107144,
+                  "mean_joint_path_length_rad": 0.15153914345033445,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0036534599424959064
+                },
+                "success": {
+                  "episode_count": 7,
+                  "episodes_with_two_actions": 7,
+                  "mean_action_change_per_step": 0.06040038438197292,
+                  "mean_joint_path_length_rad": 0.1396172023530254,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.01898306029754166
+                }
+              }
+            },
+            {
+              "success_percent": 56.25,
+              "outcomes": {
+                "success": 27,
+                "timeout": 21,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 27,
+                  "episodes_with_two_actions": 27,
+                  "mean_action_change_per_step": 0.0777191808782643,
+                  "mean_joint_path_length_rad": 0.1389367468120101,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0316972448450109
+                },
+                "timeout": {
+                  "episode_count": 21,
+                  "episodes_with_two_actions": 21,
+                  "mean_action_change_per_step": 0.04205487199316083,
+                  "mean_joint_path_length_rad": 0.1822180437571177,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.006816375692000797
+                }
+              }
+            },
+            {
+              "success_percent": 89.58333333333333,
+              "outcomes": {
+                "success": 43,
+                "timeout": 5,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 43,
+                  "episodes_with_two_actions": 43,
+                  "mean_action_change_per_step": 0.03507982977207511,
+                  "mean_joint_path_length_rad": 0.1469669569913598,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.022549362877138934
+                },
+                "timeout": {
+                  "episode_count": 5,
+                  "episodes_with_two_actions": 5,
+                  "mean_action_change_per_step": 0.006077783909394977,
+                  "mean_joint_path_length_rad": 0.15549566804839282,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.005192141697103566
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 32.55208333333333,
+          "first_observed_80_percent_step": 50000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 91.66666666666667,
+            "outcomes": {
+              "success": 44,
+              "timeout": 4,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 44,
+                "episodes_with_two_actions": 44,
+                "mean_action_change_per_step": 0.03651662908314017,
+                "mean_joint_path_length_rad": 0.14027265147692694,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.02219964290190513
+              },
+              "timeout": {
+                "episode_count": 4,
+                "episodes_with_two_actions": 4,
+                "mean_action_change_per_step": 0.006083437394920749,
+                "mean_joint_path_length_rad": 0.1532998550646651,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.005083446468548591
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 152,
+              "episodes_with_actor_pairs": 151,
+              "mean_actor_action_change_per_step": 0.2395627139382312,
+              "mean_joint_path_length_rad": 0.4481572864783749,
+              "mean_velocity_change_rad_per_s_per_step": 0.03687642859028902
+            },
+            "success": {
+              "completed_episodes": 192,
+              "episodes_with_actor_pairs": 192,
+              "mean_actor_action_change_per_step": 0.3182741958617399,
+              "mean_joint_path_length_rad": 0.2086105076451105,
+              "mean_velocity_change_rad_per_s_per_step": 0.05906819700915781
+            }
+          },
+          "training_seconds": 835.6771259999368
+        }
+      }
+    },
+    {
+      "seed": 1129,
+      "arms": {
+        "sac": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0034334545343037474,
+                  "mean_joint_path_length_rad": 0.6572083083705254,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.002171848956528643
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0032250267803460835,
+                  "mean_joint_path_length_rad": 0.6080442216634617,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0027088161238846965
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0025834772775969474,
+                  "mean_joint_path_length_rad": 0.23357724974929195,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.002621604201781029
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.003998770789284807,
+                  "mean_joint_path_length_rad": 0.35003769791534417,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.004350223474062466
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.002993127004778606,
+                  "mean_joint_path_length_rad": 0.31258422050952045,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.003206437575405245
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 0.0,
+          "first_observed_80_percent_step": null,
+          "threshold_censored_at_50000": true,
+          "test": {
+            "success_percent": 0.0,
+            "outcomes": {
+              "success": 0,
+              "timeout": 48,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "timeout": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.0029709825749334676,
+                "mean_joint_path_length_rad": 0.309681643670074,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.003178426447336462
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 200,
+              "episodes_with_actor_pairs": 199,
+              "mean_actor_action_change_per_step": 0.29427318939184055,
+              "mean_joint_path_length_rad": 0.5998658152637842,
+              "mean_velocity_change_rad_per_s_per_step": 0.03676981656063266
+            }
+          },
+          "training_seconds": 821.8730476000346
+        },
+        "her": {
+          "validation": [
+            {
+              "success_percent": 4.166666666666667,
+              "outcomes": {
+                "success": 2,
+                "timeout": 46,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 46,
+                  "episodes_with_two_actions": 46,
+                  "mean_action_change_per_step": 1.0447566344164476,
+                  "mean_joint_path_length_rad": 0.2466544342615627,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.09180728646584395
+                },
+                "success": {
+                  "episode_count": 2,
+                  "episodes_with_two_actions": 2,
+                  "mean_action_change_per_step": 1.2789306596999426,
+                  "mean_joint_path_length_rad": 0.14237350097706714,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.11213739844846599
+                }
+              }
+            },
+            {
+              "success_percent": 27.083333333333332,
+              "outcomes": {
+                "success": 13,
+                "timeout": 35,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 35,
+                  "episodes_with_two_actions": 35,
+                  "mean_action_change_per_step": 0.09435542541750692,
+                  "mean_joint_path_length_rad": 0.18468189186835463,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.009141235134182427
+                },
+                "success": {
+                  "episode_count": 13,
+                  "episodes_with_two_actions": 13,
+                  "mean_action_change_per_step": 0.12869116809011044,
+                  "mean_joint_path_length_rad": 0.15262073856382943,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.023592595323053876
+                }
+              }
+            },
+            {
+              "success_percent": 31.25,
+              "outcomes": {
+                "success": 15,
+                "timeout": 33,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 33,
+                  "episodes_with_two_actions": 33,
+                  "mean_action_change_per_step": 0.0069339653709788104,
+                  "mean_joint_path_length_rad": 0.1783826477215497,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0046372522228390785
+                },
+                "success": {
+                  "episode_count": 15,
+                  "episodes_with_two_actions": 15,
+                  "mean_action_change_per_step": 0.047483176650136925,
+                  "mean_joint_path_length_rad": 0.1267960856759701,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.03201688632072849
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.06803162146481574,
+                  "mean_joint_path_length_rad": 0.14025687809016646,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.052057726947554055
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.1270764452262788,
+                  "mean_joint_path_length_rad": 0.14494328927490863,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.09076600351872692
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 52.604166666666664,
+          "first_observed_80_percent_step": 40000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.12720869361958806,
+                "mean_joint_path_length_rad": 0.13872926387726064,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.08840944067226268
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 108,
+              "episodes_with_actor_pairs": 107,
+              "mean_actor_action_change_per_step": 0.7271288626593372,
+              "mean_joint_path_length_rad": 0.3343972395129574,
+              "mean_velocity_change_rad_per_s_per_step": 0.07051541720459492
+            },
+            "success": {
+              "completed_episodes": 643,
+              "episodes_with_actor_pairs": 643,
+              "mean_actor_action_change_per_step": 0.5827614738723145,
+              "mean_joint_path_length_rad": 0.1881304878664236,
+              "mean_velocity_change_rad_per_s_per_step": 0.09467378542543943
+            }
+          },
+          "training_seconds": 835.5699964000378
+        },
+        "her_shape": {
+          "validation": [
+            {
+              "success_percent": 4.166666666666667,
+              "outcomes": {
+                "success": 2,
+                "timeout": 46,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 46,
+                  "episodes_with_two_actions": 46,
+                  "mean_action_change_per_step": 0.543063763452075,
+                  "mean_joint_path_length_rad": 0.2736601315373317,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.04614180506402585
+                },
+                "success": {
+                  "episode_count": 2,
+                  "episodes_with_two_actions": 2,
+                  "mean_action_change_per_step": 1.3726561843003013,
+                  "mean_joint_path_length_rad": 0.15900654224896488,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.11612028343944517
+                }
+              }
+            },
+            {
+              "success_percent": 35.416666666666664,
+              "outcomes": {
+                "success": 17,
+                "timeout": 31,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 17,
+                  "episodes_with_two_actions": 17,
+                  "mean_action_change_per_step": 1.202265598319856,
+                  "mean_joint_path_length_rad": 0.15724404468025954,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.10231782029693905
+                },
+                "timeout": {
+                  "episode_count": 31,
+                  "episodes_with_two_actions": 31,
+                  "mean_action_change_per_step": 1.138430560557374,
+                  "mean_joint_path_length_rad": 0.31642636387344936,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.09673080146351838
+                }
+              }
+            },
+            {
+              "success_percent": 50.0,
+              "outcomes": {
+                "success": 24,
+                "timeout": 24,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 24,
+                  "episodes_with_two_actions": 24,
+                  "mean_action_change_per_step": 0.0313981122520038,
+                  "mean_joint_path_length_rad": 0.13394850481501153,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.018058858605514556
+                },
+                "timeout": {
+                  "episode_count": 24,
+                  "episodes_with_two_actions": 24,
+                  "mean_action_change_per_step": 0.00849921973156228,
+                  "mean_joint_path_length_rad": 0.19560667132664109,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0032753129291600495
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.07352583161858035,
+                  "mean_joint_path_length_rad": 0.16075700057658165,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.04511701805780858
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.11831582650261277,
+                  "mean_joint_path_length_rad": 0.1464152648865936,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.07534280208028833
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 59.375,
+          "first_observed_80_percent_step": 40000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.1220152586659172,
+                "mean_joint_path_length_rad": 0.1394121397497153,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.07647727226601016
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 111,
+              "episodes_with_actor_pairs": 110,
+              "mean_actor_action_change_per_step": 0.8182091108966048,
+              "mean_joint_path_length_rad": 0.4677403754169088,
+              "mean_velocity_change_rad_per_s_per_step": 0.07847694979286707
+            },
+            "success": {
+              "completed_episodes": 609,
+              "episodes_with_actor_pairs": 609,
+              "mean_actor_action_change_per_step": 0.6250360447262381,
+              "mean_joint_path_length_rad": 0.18895464040478732,
+              "mean_velocity_change_rad_per_s_per_step": 0.09554590852378511
+            }
+          },
+          "training_seconds": 837.7931219998281
+        },
+        "her_smooth": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 1.9963263938143692,
+                  "mean_joint_path_length_rad": 0.4544600611304277,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.16904417900289534
+                }
+              }
+            },
+            {
+              "success_percent": 2.0833333333333335,
+              "outcomes": {
+                "success": 1,
+                "timeout": 47,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 1.8591020660625568,
+                  "mean_joint_path_length_rad": 0.33528829570232516,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.15863103458990171
+                },
+                "success": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 2.015308033403628,
+                  "mean_joint_path_length_rad": 0.10142660322084951,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.1731413755856783
+                }
+              }
+            },
+            {
+              "success_percent": 16.666666666666668,
+              "outcomes": {
+                "success": 8,
+                "timeout": 40,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 40,
+                  "episodes_with_two_actions": 40,
+                  "mean_action_change_per_step": 0.0054148514244793935,
+                  "mean_joint_path_length_rad": 0.16877301298175063,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.00317175501158511
+                },
+                "success": {
+                  "episode_count": 8,
+                  "episodes_with_two_actions": 8,
+                  "mean_action_change_per_step": 0.053070656868886824,
+                  "mean_joint_path_length_rad": 0.1441622892956108,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.03348906464451102
+                }
+              }
+            },
+            {
+              "success_percent": 33.333333333333336,
+              "outcomes": {
+                "success": 16,
+                "timeout": 32,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 16,
+                  "episodes_with_two_actions": 16,
+                  "mean_action_change_per_step": 0.04664338907362237,
+                  "mean_joint_path_length_rad": 0.15199277166538508,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.027715140198092066
+                },
+                "timeout": {
+                  "episode_count": 32,
+                  "episodes_with_two_actions": 32,
+                  "mean_action_change_per_step": 0.006874498518397805,
+                  "mean_joint_path_length_rad": 0.146317039180727,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.004344745748637175
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0634429068251441,
+                  "mean_joint_path_length_rad": 0.14260804992034262,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.040923753084114584
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 25.520833333333336,
+          "first_observed_80_percent_step": 50000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.0655741492616965,
+                "mean_joint_path_length_rad": 0.1361952331551526,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.04086278456495854
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 142,
+              "episodes_with_actor_pairs": 141,
+              "mean_actor_action_change_per_step": 0.27711775025568475,
+              "mean_joint_path_length_rad": 0.39130570300562373,
+              "mean_velocity_change_rad_per_s_per_step": 0.03899701162806295
+            },
+            "success": {
+              "completed_episodes": 264,
+              "episodes_with_actor_pairs": 264,
+              "mean_actor_action_change_per_step": 0.2603017007548863,
+              "mean_joint_path_length_rad": 0.20829155218654613,
+              "mean_velocity_change_rad_per_s_per_step": 0.05718113277167558
+            }
+          },
+          "training_seconds": 838.019205099903
+        },
+        "her_both": {
+          "validation": [
+            {
+              "success_percent": 2.0833333333333335,
+              "outcomes": {
+                "success": 1,
+                "timeout": 47,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 1.7002931675242865,
+                  "mean_joint_path_length_rad": 0.33884405819791596,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.14442490928825208
+                },
+                "success": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 1.5281952592912798,
+                  "mean_joint_path_length_rad": 0.10983641578806128,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.12931059358778932
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 2.6105826685753373,
+                  "mean_joint_path_length_rad": 0.41350263229758044,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.22447632655384311
+                }
+              }
+            },
+            {
+              "success_percent": 50.0,
+              "outcomes": {
+                "success": 24,
+                "timeout": 24,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 24,
+                  "episodes_with_two_actions": 24,
+                  "mean_action_change_per_step": 1.80231664721409,
+                  "mean_joint_path_length_rad": 0.3449788550027975,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.15363708701489495
+                },
+                "success": {
+                  "episode_count": 24,
+                  "episodes_with_two_actions": 24,
+                  "mean_action_change_per_step": 1.6495987393380724,
+                  "mean_joint_path_length_rad": 0.15164817671319689,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.14513538949714977
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.19367601365188591,
+                  "mean_joint_path_length_rad": 0.15106739314763293,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.04593814051014966
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.1334208987553524,
+                  "mean_joint_path_length_rad": 0.14316802774461543,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.08298332589782532
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 50.260416666666664,
+          "first_observed_80_percent_step": 40000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.13496675982692502,
+                "mean_joint_path_length_rad": 0.13674262699781284,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.08228427832866027
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 107,
+              "episodes_with_actor_pairs": 106,
+              "mean_actor_action_change_per_step": 0.327430309871687,
+              "mean_joint_path_length_rad": 0.3414790844165098,
+              "mean_velocity_change_rad_per_s_per_step": 0.041884861998711664
+            },
+            "success": {
+              "completed_episodes": 538,
+              "episodes_with_actor_pairs": 538,
+              "mean_actor_action_change_per_step": 0.32272366000902214,
+              "mean_joint_path_length_rad": 0.20382362522780792,
+              "mean_velocity_change_rad_per_s_per_step": 0.07452275182255855
+            }
+          },
+          "training_seconds": 838.9666746999137
+        }
+      }
+    },
+    {
+      "seed": 1181,
+      "arms": {
+        "sac": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0048549430646591665,
+                  "mean_joint_path_length_rad": 0.24764387411516212,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0018549548235241545
+                }
+              }
+            },
+            {
+              "success_percent": 10.416666666666666,
+              "outcomes": {
+                "success": 5,
+                "timeout": 43,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 43,
+                  "episodes_with_two_actions": 43,
+                  "mean_action_change_per_step": 0.006458322942928661,
+                  "mean_joint_path_length_rad": 0.09881087715102706,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.001245608239906619
+                },
+                "success": {
+                  "episode_count": 5,
+                  "episodes_with_two_actions": 5,
+                  "mean_action_change_per_step": 0.010816848370664536,
+                  "mean_joint_path_length_rad": 0.1315424903540102,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0021062296008649145
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0094584426894341,
+                  "mean_joint_path_length_rad": 0.5451623672452807,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.002816976330896259
+                }
+              }
+            },
+            {
+              "success_percent": 4.166666666666667,
+              "outcomes": {
+                "success": 2,
+                "timeout": 46,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 46,
+                  "episodes_with_two_actions": 46,
+                  "mean_action_change_per_step": 0.011825506887893108,
+                  "mean_joint_path_length_rad": 0.31546696779112765,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0022306466858624465
+                },
+                "success": {
+                  "episode_count": 2,
+                  "episodes_with_two_actions": 2,
+                  "mean_action_change_per_step": 0.028222716667222737,
+                  "mean_joint_path_length_rad": 0.1650434828530279,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0046535570425501535
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.006468864225586191,
+                  "mean_joint_path_length_rad": 0.36335197988134155,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.002176142158565797
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 3.645833333333333,
+          "first_observed_80_percent_step": null,
+          "threshold_censored_at_50000": true,
+          "test": {
+            "success_percent": 0.0,
+            "outcomes": {
+              "success": 0,
+              "timeout": 48,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "timeout": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.006477363599982493,
+                "mean_joint_path_length_rad": 0.34471633743842844,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.0021693455647915547
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 197,
+              "episodes_with_actor_pairs": 196,
+              "mean_actor_action_change_per_step": 0.4610118372244673,
+              "mean_joint_path_length_rad": 0.4811601511651788,
+              "mean_velocity_change_rad_per_s_per_step": 0.051579507464660675
+            },
+            "success": {
+              "completed_episodes": 6,
+              "episodes_with_actor_pairs": 6,
+              "mean_actor_action_change_per_step": 0.5555925895368258,
+              "mean_joint_path_length_rad": 0.1941745698414221,
+              "mean_velocity_change_rad_per_s_per_step": 0.05925373120776732
+            }
+          },
+          "training_seconds": 823.6688176000025
+        },
+        "her": {
+          "validation": [
+            {
+              "success_percent": 2.0833333333333335,
+              "outcomes": {
+                "success": 1,
+                "timeout": 47,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 0.0893656926756473,
+                  "mean_joint_path_length_rad": 0.5481353280012322,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.008838360712004976
+                },
+                "success": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 0.009367465799425979,
+                  "mean_joint_path_length_rad": 0.1041627540166515,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.001571726962585358
+                }
+              }
+            },
+            {
+              "success_percent": 4.166666666666667,
+              "outcomes": {
+                "success": 2,
+                "timeout": 46,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 46,
+                  "episodes_with_two_actions": 46,
+                  "mean_action_change_per_step": 0.009997240895925484,
+                  "mean_joint_path_length_rad": 1.157386051266436,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0063620267941775326
+                },
+                "success": {
+                  "episode_count": 2,
+                  "episodes_with_two_actions": 2,
+                  "mean_action_change_per_step": 0.009947048560764078,
+                  "mean_joint_path_length_rad": 0.11243465080698409,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0046560830022523165
+                }
+              }
+            },
+            {
+              "success_percent": 50.0,
+              "outcomes": {
+                "success": 24,
+                "timeout": 24,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 24,
+                  "episodes_with_two_actions": 24,
+                  "mean_action_change_per_step": 0.00503210496350359,
+                  "mean_joint_path_length_rad": 0.19119441632932124,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0026501612309207416
+                },
+                "success": {
+                  "episode_count": 24,
+                  "episodes_with_two_actions": 24,
+                  "mean_action_change_per_step": 0.015566757005834354,
+                  "mean_joint_path_length_rad": 0.13271575064271846,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.005647879810001137
+                }
+              }
+            },
+            {
+              "success_percent": 89.58333333333333,
+              "outcomes": {
+                "success": 43,
+                "timeout": 5,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 43,
+                  "episodes_with_two_actions": 43,
+                  "mean_action_change_per_step": 0.033862086936556825,
+                  "mean_joint_path_length_rad": 0.14929781988245244,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.018878969772075246
+                },
+                "timeout": {
+                  "episode_count": 5,
+                  "episodes_with_two_actions": 5,
+                  "mean_action_change_per_step": 0.005785354041271222,
+                  "mean_joint_path_length_rad": 0.15341831585181068,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.004119908734519717
+                }
+              }
+            },
+            {
+              "success_percent": 25.0,
+              "outcomes": {
+                "success": 12,
+                "timeout": 36,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 36,
+                  "episodes_with_two_actions": 36,
+                  "mean_action_change_per_step": 0.009800421136491202,
+                  "mean_joint_path_length_rad": 0.20557548492503663,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.004751071509750161
+                },
+                "success": {
+                  "episode_count": 12,
+                  "episodes_with_two_actions": 12,
+                  "mean_action_change_per_step": 0.039570992714386695,
+                  "mean_joint_path_length_rad": 0.15228840604695376,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.021452029114900354
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 39.322916666666664,
+          "first_observed_80_percent_step": 40000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 29.166666666666668,
+            "outcomes": {
+              "success": 14,
+              "timeout": 34,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "timeout": {
+                "episode_count": 34,
+                "episodes_with_two_actions": 34,
+                "mean_action_change_per_step": 0.009807628786686475,
+                "mean_joint_path_length_rad": 0.20088272839399954,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.004756499578995467
+              },
+              "success": {
+                "episode_count": 14,
+                "episodes_with_two_actions": 14,
+                "mean_action_change_per_step": 0.026908683081832755,
+                "mean_joint_path_length_rad": 0.14353303918323,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.012503935285764399
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 153,
+              "episodes_with_actor_pairs": 152,
+              "mean_actor_action_change_per_step": 0.6135505879796442,
+              "mean_joint_path_length_rad": 0.6149651751763822,
+              "mean_velocity_change_rad_per_s_per_step": 0.06503072608630196
+            },
+            "failure": {
+              "completed_episodes": 10,
+              "episodes_with_actor_pairs": 10,
+              "mean_actor_action_change_per_step": 0.4114682820854059,
+              "mean_joint_path_length_rad": 1.85896949243608,
+              "mean_velocity_change_rad_per_s_per_step": 0.04620145485833954
+            },
+            "success": {
+              "completed_episodes": 125,
+              "episodes_with_actor_pairs": 125,
+              "mean_actor_action_change_per_step": 0.5592710520124374,
+              "mean_joint_path_length_rad": 0.20999570257297925,
+              "mean_velocity_change_rad_per_s_per_step": 0.06518488248725961
+            }
+          },
+          "training_seconds": 833.9049639001023
+        },
+        "her_shape": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.00920335579525487,
+                  "mean_joint_path_length_rad": 1.0853345269529275,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.006275533020083681
+                }
+              }
+            },
+            {
+              "success_percent": 22.916666666666668,
+              "outcomes": {
+                "success": 11,
+                "timeout": 37,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 37,
+                  "episodes_with_two_actions": 37,
+                  "mean_action_change_per_step": 0.006237259298884528,
+                  "mean_joint_path_length_rad": 0.18428238184236,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0012051703249217514
+                },
+                "success": {
+                  "episode_count": 11,
+                  "episodes_with_two_actions": 11,
+                  "mean_action_change_per_step": 0.019273911418253152,
+                  "mean_joint_path_length_rad": 0.16806358304428198,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.003799769467128716
+                }
+              }
+            },
+            {
+              "success_percent": 77.08333333333333,
+              "outcomes": {
+                "success": 37,
+                "timeout": 11,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 37,
+                  "episodes_with_two_actions": 37,
+                  "mean_action_change_per_step": 0.03688004741588466,
+                  "mean_joint_path_length_rad": 0.137823632365245,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.022602057833445568
+                },
+                "timeout": {
+                  "episode_count": 11,
+                  "episodes_with_two_actions": 11,
+                  "mean_action_change_per_step": 0.005071565516657716,
+                  "mean_joint_path_length_rad": 0.14443639821291349,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0028187309919261113
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.09128165168858605,
+                  "mean_joint_path_length_rad": 0.14930144774650975,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.05853575035362815
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.13035853292442415,
+                  "mean_joint_path_length_rad": 0.14656083630247652,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.08754655692102974
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 62.5,
+          "first_observed_80_percent_step": 40000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.13183319551319322,
+                "mean_joint_path_length_rad": 0.13952355672987468,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.08639111871480143
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 90,
+              "episodes_with_actor_pairs": 89,
+              "mean_actor_action_change_per_step": 0.4558131559697977,
+              "mean_joint_path_length_rad": 0.6200122131486383,
+              "mean_velocity_change_rad_per_s_per_step": 0.04771616971040693
+            },
+            "success": {
+              "completed_episodes": 773,
+              "episodes_with_actor_pairs": 773,
+              "mean_actor_action_change_per_step": 0.48849391973129563,
+              "mean_joint_path_length_rad": 0.19927814330984076,
+              "mean_velocity_change_rad_per_s_per_step": 0.08506929857248967
+            }
+          },
+          "training_seconds": 835.8218182998244
+        },
+        "her_smooth": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 2.699889589445278,
+                  "mean_joint_path_length_rad": 0.5414684882559161,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.2350375789050672
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 2.0908472147500152,
+                  "mean_joint_path_length_rad": 0.855373525444014,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.22252609605445856
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 1.171919578026547,
+                  "mean_joint_path_length_rad": 0.39349599049706435,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.10409716010566694
+                }
+              }
+            },
+            {
+              "success_percent": 12.5,
+              "outcomes": {
+                "success": 6,
+                "timeout": 42,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 42,
+                  "episodes_with_two_actions": 42,
+                  "mean_action_change_per_step": 0.006806792031438955,
+                  "mean_joint_path_length_rad": 0.13859828132552962,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0022314603681999703
+                },
+                "success": {
+                  "episode_count": 6,
+                  "episodes_with_two_actions": 6,
+                  "mean_action_change_per_step": 0.034110947202129725,
+                  "mean_joint_path_length_rad": 0.11714889547313405,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.013172864646454105
+                }
+              }
+            },
+            {
+              "success_percent": 50.0,
+              "outcomes": {
+                "success": 24,
+                "timeout": 24,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 24,
+                  "episodes_with_two_actions": 24,
+                  "mean_action_change_per_step": 0.06033858907057451,
+                  "mean_joint_path_length_rad": 0.1476566630279028,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.023228973330982013
+                },
+                "timeout": {
+                  "episode_count": 24,
+                  "episodes_with_two_actions": 24,
+                  "mean_action_change_per_step": 0.020296250486654215,
+                  "mean_joint_path_length_rad": 0.17159573893617638,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.003999374557515406
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 9.375,
+          "first_observed_80_percent_step": null,
+          "threshold_censored_at_50000": true,
+          "test": {
+            "success_percent": 45.833333333333336,
+            "outcomes": {
+              "success": 22,
+              "timeout": 26,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "timeout": {
+                "episode_count": 26,
+                "episodes_with_two_actions": 26,
+                "mean_action_change_per_step": 0.03963792888846954,
+                "mean_joint_path_length_rad": 0.17297161818925058,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.006179554855647157
+              },
+              "success": {
+                "episode_count": 22,
+                "episodes_with_two_actions": 22,
+                "mean_action_change_per_step": 0.04662418638680997,
+                "mean_joint_path_length_rad": 0.14191478381667724,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.012906570822522107
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 183,
+              "episodes_with_actor_pairs": 182,
+              "mean_actor_action_change_per_step": 0.3713620030840718,
+              "mean_joint_path_length_rad": 0.5433351130144635,
+              "mean_velocity_change_rad_per_s_per_step": 0.04769648185622173
+            },
+            "success": {
+              "completed_episodes": 35,
+              "episodes_with_actor_pairs": 35,
+              "mean_actor_action_change_per_step": 0.3079031864377256,
+              "mean_joint_path_length_rad": 0.2392759624861884,
+              "mean_velocity_change_rad_per_s_per_step": 0.04584453437489076
+            }
+          },
+          "training_seconds": 835.5251640998758
+        },
+        "her_both": {
+          "validation": [
+            {
+              "success_percent": 6.25,
+              "outcomes": {
+                "success": 3,
+                "timeout": 45,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 45,
+                  "episodes_with_two_actions": 45,
+                  "mean_action_change_per_step": 2.262983407491096,
+                  "mean_joint_path_length_rad": 0.463673576425105,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.19798658161897364
+                },
+                "success": {
+                  "episode_count": 3,
+                  "episodes_with_two_actions": 3,
+                  "mean_action_change_per_step": 2.1354764419285237,
+                  "mean_joint_path_length_rad": 0.162894989876735,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.1870221409054227
+                }
+              }
+            },
+            {
+              "success_percent": 8.333333333333334,
+              "outcomes": {
+                "success": 4,
+                "timeout": 44,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 44,
+                  "episodes_with_two_actions": 44,
+                  "mean_action_change_per_step": 1.656360013883362,
+                  "mean_joint_path_length_rad": 0.3482965705742877,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.14495654895039944
+                },
+                "success": {
+                  "episode_count": 4,
+                  "episodes_with_two_actions": 4,
+                  "mean_action_change_per_step": 1.7715336689927237,
+                  "mean_joint_path_length_rad": 0.15970726949441058,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.15549855603665283
+                }
+              }
+            },
+            {
+              "success_percent": 8.333333333333334,
+              "outcomes": {
+                "success": 4,
+                "timeout": 44,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 44,
+                  "episodes_with_two_actions": 44,
+                  "mean_action_change_per_step": 0.3435401467786408,
+                  "mean_joint_path_length_rad": 0.17811060709627385,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.030768621796813656
+                },
+                "success": {
+                  "episode_count": 4,
+                  "episodes_with_two_actions": 4,
+                  "mean_action_change_per_step": 1.66659937689665,
+                  "mean_joint_path_length_rad": 0.12737082635090347,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.14530579418336675
+                }
+              }
+            },
+            {
+              "success_percent": 22.916666666666668,
+              "outcomes": {
+                "success": 11,
+                "timeout": 37,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 37,
+                  "episodes_with_two_actions": 37,
+                  "mean_action_change_per_step": 0.4790909596898823,
+                  "mean_joint_path_length_rad": 0.2153733124300211,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.04282524587444614
+                },
+                "success": {
+                  "episode_count": 11,
+                  "episodes_with_two_actions": 11,
+                  "mean_action_change_per_step": 0.06376275242055915,
+                  "mean_joint_path_length_rad": 0.12412630354140457,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.014751513248969115
+                }
+              }
+            },
+            {
+              "success_percent": 64.58333333333333,
+              "outcomes": {
+                "success": 31,
+                "timeout": 17,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 17,
+                  "episodes_with_two_actions": 17,
+                  "mean_action_change_per_step": 0.007720919940173246,
+                  "mean_joint_path_length_rad": 0.1489461451848917,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0044841736881250155
+                },
+                "success": {
+                  "episode_count": 31,
+                  "episodes_with_two_actions": 31,
+                  "mean_action_change_per_step": 0.06297228368927614,
+                  "mean_joint_path_length_rad": 0.14622702716266012,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.030252599796269663
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 18.75,
+          "first_observed_80_percent_step": null,
+          "threshold_censored_at_50000": true,
+          "test": {
+            "success_percent": 58.333333333333336,
+            "outcomes": {
+              "success": 28,
+              "timeout": 20,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 28,
+                "episodes_with_two_actions": 28,
+                "mean_action_change_per_step": 0.06170755283906835,
+                "mean_joint_path_length_rad": 0.14029471514751038,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.031309600760988175
+              },
+              "timeout": {
+                "episode_count": 20,
+                "episodes_with_two_actions": 20,
+                "mean_action_change_per_step": 0.007973050215303803,
+                "mean_joint_path_length_rad": 0.1412725035981324,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.004211222730024314
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 167,
+              "episodes_with_actor_pairs": 166,
+              "mean_actor_action_change_per_step": 0.3404913157650047,
+              "mean_joint_path_length_rad": 0.45665858647753754,
+              "mean_velocity_change_rad_per_s_per_step": 0.04701253024507848
+            },
+            "failure": {
+              "completed_episodes": 2,
+              "episodes_with_actor_pairs": 2,
+              "mean_actor_action_change_per_step": 0.3843163263052328,
+              "mean_joint_path_length_rad": 3.098949716665534,
+              "mean_velocity_change_rad_per_s_per_step": 0.07928026786273767
+            },
+            "success": {
+              "completed_episodes": 111,
+              "episodes_with_actor_pairs": 111,
+              "mean_actor_action_change_per_step": 0.30749793308441603,
+              "mean_joint_path_length_rad": 0.23648226261587696,
+              "mean_velocity_change_rad_per_s_per_step": 0.0567523779184041
+            }
+          },
+          "training_seconds": 837.5029378000181
+        }
+      }
+    },
+    {
+      "seed": 1213,
+      "arms": {
+        "sac": {
+          "validation": [
+            {
+              "success_percent": 2.0833333333333335,
+              "outcomes": {
+                "success": 1,
+                "timeout": 47,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 0.003235718304863117,
+                  "mean_joint_path_length_rad": 0.24782766012364033,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0021017203501883103
+                },
+                "success": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 0.01191345829491541,
+                  "mean_joint_path_length_rad": 0.17331770521660322,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.006266894782792653
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0040831964143810025,
+                  "mean_joint_path_length_rad": 0.7117512300651087,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.00277662784032932
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.004740553573614795,
+                  "mean_joint_path_length_rad": 1.0741778563377142,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.004561285512727435
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.003771442655234983,
+                  "mean_joint_path_length_rad": 0.6790839293680878,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.003722947950541033
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0029957992558468038,
+                  "mean_joint_path_length_rad": 0.37776575760862474,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0024512310916660193
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 0.2604166666666667,
+          "first_observed_80_percent_step": null,
+          "threshold_censored_at_50000": true,
+          "test": {
+            "success_percent": 0.0,
+            "outcomes": {
+              "success": 0,
+              "timeout": 48,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "timeout": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.002988089175289739,
+                "mean_joint_path_length_rad": 0.36962905032425974,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.002443400398940125
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 200,
+              "episodes_with_actor_pairs": 199,
+              "mean_actor_action_change_per_step": 0.3885056290316352,
+              "mean_joint_path_length_rad": 0.8333709769490323,
+              "mean_velocity_change_rad_per_s_per_step": 0.04716988147350231
+            }
+          },
+          "training_seconds": 821.9035847999621
+        },
+        "her": {
+          "validation": [
+            {
+              "success_percent": 2.0833333333333335,
+              "outcomes": {
+                "success": 1,
+                "timeout": 47,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 0.01411456368163904,
+                  "mean_joint_path_length_rad": 0.8998768789272206,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0025719133519495393
+                },
+                "success": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 0.06352748430736087,
+                  "mean_joint_path_length_rad": 0.08623834868575816,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.006591460986255329
+                }
+              }
+            },
+            {
+              "success_percent": 27.083333333333332,
+              "outcomes": {
+                "success": 13,
+                "timeout": 35,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 35,
+                  "episodes_with_two_actions": 35,
+                  "mean_action_change_per_step": 0.005725514908916003,
+                  "mean_joint_path_length_rad": 0.23325375238641985,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0033974716726080764
+                },
+                "success": {
+                  "episode_count": 13,
+                  "episodes_with_two_actions": 13,
+                  "mean_action_change_per_step": 0.034412403507924606,
+                  "mean_joint_path_length_rad": 0.16603475549214256,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.026435264190558437
+                }
+              }
+            },
+            {
+              "success_percent": 97.91666666666667,
+              "outcomes": {
+                "success": 47,
+                "timeout": 1,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 0.008167972726130492,
+                  "mean_joint_path_length_rad": 0.16807775025065083,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.003969583726565503
+                },
+                "success": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 0.03453609250152082,
+                  "mean_joint_path_length_rad": 0.14671257177287986,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.01741629130057691
+                }
+              }
+            },
+            {
+              "success_percent": 35.416666666666664,
+              "outcomes": {
+                "success": 17,
+                "timeout": 31,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 17,
+                  "episodes_with_two_actions": 17,
+                  "mean_action_change_per_step": 0.04680945763013192,
+                  "mean_joint_path_length_rad": 0.14645424322023615,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.028772854900456737
+                },
+                "timeout": {
+                  "episode_count": 31,
+                  "episodes_with_two_actions": 31,
+                  "mean_action_change_per_step": 0.006192858806649588,
+                  "mean_joint_path_length_rad": 0.1493579156108076,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.004237842131171619
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.11126137010553461,
+                  "mean_joint_path_length_rad": 0.15245596350657992,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.07348667657896495
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 52.864583333333336,
+          "first_observed_80_percent_step": 30000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.11547170532243341,
+                "mean_joint_path_length_rad": 0.14535322513402443,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.07345456513582448
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 115,
+              "episodes_with_actor_pairs": 114,
+              "mean_actor_action_change_per_step": 0.7339971162631199,
+              "mean_joint_path_length_rad": 0.4614158446061529,
+              "mean_velocity_change_rad_per_s_per_step": 0.07610655993230894
+            },
+            "success": {
+              "completed_episodes": 412,
+              "episodes_with_actor_pairs": 412,
+              "mean_actor_action_change_per_step": 0.6522107706806557,
+              "mean_joint_path_length_rad": 0.1999258194083501,
+              "mean_velocity_change_rad_per_s_per_step": 0.09037827504733342
+            }
+          },
+          "training_seconds": 835.3857980000321
+        },
+        "her_shape": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 1.549201756395963,
+                  "mean_joint_path_length_rad": 0.26128925107237855,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.13170052055163636
+                }
+              }
+            },
+            {
+              "success_percent": 27.083333333333332,
+              "outcomes": {
+                "success": 13,
+                "timeout": 35,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 13,
+                  "episodes_with_two_actions": 13,
+                  "mean_action_change_per_step": 0.02710537211886215,
+                  "mean_joint_path_length_rad": 0.15154318025791258,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.012937858612750265
+                },
+                "timeout": {
+                  "episode_count": 35,
+                  "episodes_with_two_actions": 35,
+                  "mean_action_change_per_step": 0.006523536160166017,
+                  "mean_joint_path_length_rad": 0.15796428940463678,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0029995399446619856
+                }
+              }
+            },
+            {
+              "success_percent": 54.166666666666664,
+              "outcomes": {
+                "success": 26,
+                "timeout": 22,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 26,
+                  "episodes_with_two_actions": 26,
+                  "mean_action_change_per_step": 0.047615287240872835,
+                  "mean_joint_path_length_rad": 0.13749541151810907,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.024954190406127164
+                },
+                "timeout": {
+                  "episode_count": 22,
+                  "episodes_with_two_actions": 22,
+                  "mean_action_change_per_step": 0.005254537900117691,
+                  "mean_joint_path_length_rad": 0.14775854485877019,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.003460944937936648
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.07766036964373071,
+                  "mean_joint_path_length_rad": 0.1452316794380781,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.05360500561249135
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.12108200651951655,
+                  "mean_joint_path_length_rad": 0.1450141693852855,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.07967352396218708
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 57.8125,
+          "first_observed_80_percent_step": 40000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.11867828697561891,
+                "mean_joint_path_length_rad": 0.13821754223458946,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.07726675044542784
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 97,
+              "episodes_with_actor_pairs": 96,
+              "mean_actor_action_change_per_step": 0.6857555499469148,
+              "mean_joint_path_length_rad": 0.3646103246296282,
+              "mean_velocity_change_rad_per_s_per_step": 0.06954867334813417
+            },
+            "success": {
+              "completed_episodes": 594,
+              "episodes_with_actor_pairs": 594,
+              "mean_actor_action_change_per_step": 0.6041364299866606,
+              "mean_joint_path_length_rad": 0.1902684763211288,
+              "mean_velocity_change_rad_per_s_per_step": 0.08791269037154281
+            }
+          },
+          "training_seconds": 837.9285514999647
+        },
+        "her_smooth": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 2.12610536902733,
+                  "mean_joint_path_length_rad": 0.393372537237559,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.18269290952846054
+                }
+              }
+            },
+            {
+              "success_percent": 33.333333333333336,
+              "outcomes": {
+                "success": 16,
+                "timeout": 32,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 32,
+                  "episodes_with_two_actions": 32,
+                  "mean_action_change_per_step": 0.8491545928205575,
+                  "mean_joint_path_length_rad": 0.32867986713245734,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.07343606835452841
+                },
+                "success": {
+                  "episode_count": 16,
+                  "episodes_with_two_actions": 16,
+                  "mean_action_change_per_step": 0.9787260005058457,
+                  "mean_joint_path_length_rad": 0.18252571889243002,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.08547864788947448
+                }
+              }
+            },
+            {
+              "success_percent": 37.5,
+              "outcomes": {
+                "success": 18,
+                "timeout": 30,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 18,
+                  "episodes_with_two_actions": 18,
+                  "mean_action_change_per_step": 0.024993178214991252,
+                  "mean_joint_path_length_rad": 0.1365187448505512,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.01355628147990604
+                },
+                "timeout": {
+                  "episode_count": 30,
+                  "episodes_with_two_actions": 30,
+                  "mean_action_change_per_step": 0.005695985021352846,
+                  "mean_joint_path_length_rad": 0.14406776968152563,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0031791913252022445
+                }
+              }
+            },
+            {
+              "success_percent": 93.75,
+              "outcomes": {
+                "success": 45,
+                "timeout": 3,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 45,
+                  "episodes_with_two_actions": 45,
+                  "mean_action_change_per_step": 0.06718120111820063,
+                  "mean_joint_path_length_rad": 0.14996211548859667,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.04261286202079831
+                },
+                "timeout": {
+                  "episode_count": 3,
+                  "episodes_with_two_actions": 3,
+                  "mean_action_change_per_step": 0.006266422668242289,
+                  "mean_joint_path_length_rad": 0.20311198344988807,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.006277844848969234
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.13700216781075494,
+                  "mean_joint_path_length_rad": 0.18435278207044647,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0651234950993628
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 53.645833333333336,
+          "first_observed_80_percent_step": 40000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.1313649114712924,
+                "mean_joint_path_length_rad": 0.17842993638196167,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.0636835859932169
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 120,
+              "episodes_with_actor_pairs": 119,
+              "mean_actor_action_change_per_step": 0.3384014363854536,
+              "mean_joint_path_length_rad": 0.42000328719989816,
+              "mean_velocity_change_rad_per_s_per_step": 0.04888955156002051
+            },
+            "success": {
+              "completed_episodes": 389,
+              "episodes_with_actor_pairs": 389,
+              "mean_actor_action_change_per_step": 0.30349997719417277,
+              "mean_joint_path_length_rad": 0.2058180568832223,
+              "mean_velocity_change_rad_per_s_per_step": 0.06775963811603265
+            }
+          },
+          "training_seconds": 835.0209422998596
+        },
+        "her_both": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.99920879002053,
+                  "mean_joint_path_length_rad": 1.0157689919188981,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.08688389233317335
+                }
+              }
+            },
+            {
+              "success_percent": 6.25,
+              "outcomes": {
+                "success": 3,
+                "timeout": 45,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 45,
+                  "episodes_with_two_actions": 45,
+                  "mean_action_change_per_step": 0.04335564898860111,
+                  "mean_joint_path_length_rad": 0.48222183110136013,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.005331439985462116
+                },
+                "success": {
+                  "episode_count": 3,
+                  "episodes_with_two_actions": 3,
+                  "mean_action_change_per_step": 0.04463555950654577,
+                  "mean_joint_path_length_rad": 0.18832336025691626,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.005531020506538994
+                }
+              }
+            },
+            {
+              "success_percent": 18.75,
+              "outcomes": {
+                "success": 9,
+                "timeout": 39,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 39,
+                  "episodes_with_two_actions": 39,
+                  "mean_action_change_per_step": 0.008352643403806688,
+                  "mean_joint_path_length_rad": 0.1994924645723833,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.00345252486240193
+                },
+                "success": {
+                  "episode_count": 9,
+                  "episodes_with_two_actions": 9,
+                  "mean_action_change_per_step": 0.04295371159749985,
+                  "mean_joint_path_length_rad": 0.15305515415876825,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.016593536235821684
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.05242450714672208,
+                  "mean_joint_path_length_rad": 0.14821076393715607,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.03190145875339756
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.11147643206645619,
+                  "mean_joint_path_length_rad": 0.19642289380835012,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.06717724126994608
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 43.75,
+          "first_observed_80_percent_step": 40000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.11334140897092014,
+                "mean_joint_path_length_rad": 0.1847132184251148,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.06542187626145904
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 143,
+              "episodes_with_actor_pairs": 142,
+              "mean_actor_action_change_per_step": 0.2981556723807112,
+              "mean_joint_path_length_rad": 0.6547541010207841,
+              "mean_velocity_change_rad_per_s_per_step": 0.04587067620252189
+            },
+            "success": {
+              "completed_episodes": 242,
+              "episodes_with_actor_pairs": 242,
+              "mean_actor_action_change_per_step": 0.28238033352353087,
+              "mean_joint_path_length_rad": 0.2155312245409615,
+              "mean_velocity_change_rad_per_s_per_step": 0.05866608435523869
+            }
+          },
+          "training_seconds": 834.4904529000632
+        }
+      }
+    },
+    {
+      "seed": 1277,
+      "arms": {
+        "sac": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.004368607831142507,
+                  "mean_joint_path_length_rad": 1.055661219916753,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0030591934111768248
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.003471384337696002,
+                  "mean_joint_path_length_rad": 0.5395904179056651,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0026788512777990606
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0026195546063807235,
+                  "mean_joint_path_length_rad": 0.3678038874670713,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0015951697973274578
+                }
+              }
+            },
+            {
+              "success_percent": 16.666666666666668,
+              "outcomes": {
+                "success": 8,
+                "timeout": 40,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 40,
+                  "episodes_with_two_actions": 40,
+                  "mean_action_change_per_step": 0.0017993374798332797,
+                  "mean_joint_path_length_rad": 0.13506668010684714,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0009016682355866681
+                },
+                "success": {
+                  "episode_count": 8,
+                  "episodes_with_two_actions": 8,
+                  "mean_action_change_per_step": 0.002777531998791344,
+                  "mean_joint_path_length_rad": 0.11454017440301417,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.00116823123598583
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.0051345372844100005,
+                  "mean_joint_path_length_rad": 1.727426977664778,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0061251291344303115
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 4.166666666666667,
+          "first_observed_80_percent_step": null,
+          "threshold_censored_at_50000": true,
+          "test": {
+            "success_percent": 0.0,
+            "outcomes": {
+              "success": 0,
+              "timeout": 48,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "timeout": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.0051338797766636085,
+                "mean_joint_path_length_rad": 1.7724957660841947,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.0061124547103439215
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 197,
+              "episodes_with_actor_pairs": 196,
+              "mean_actor_action_change_per_step": 0.2716142732964569,
+              "mean_joint_path_length_rad": 0.787954115583874,
+              "mean_velocity_change_rad_per_s_per_step": 0.034194649802879694
+            },
+            "success": {
+              "completed_episodes": 1,
+              "episodes_with_actor_pairs": 1,
+              "mean_actor_action_change_per_step": 0.2745863309035161,
+              "mean_joint_path_length_rad": 0.16837277542662302,
+              "mean_velocity_change_rad_per_s_per_step": 0.03522724446063701
+            },
+            "failure": {
+              "completed_episodes": 3,
+              "episodes_with_actor_pairs": 3,
+              "mean_actor_action_change_per_step": 0.04394391863190668,
+              "mean_joint_path_length_rad": 3.0637459474920967,
+              "mean_velocity_change_rad_per_s_per_step": 0.018968430275135
+            }
+          },
+          "training_seconds": 821.7247117999941
+        },
+        "her": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.01738640747729347,
+                  "mean_joint_path_length_rad": 0.223185564389125,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0019560362682129553
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.010787035736195345,
+                  "mean_joint_path_length_rad": 0.20064682420711266,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0015635439011977056
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.08325316607631288,
+                  "mean_joint_path_length_rad": 0.1510887152302502,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.05642329083170799
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.1398021677795133,
+                  "mean_joint_path_length_rad": 0.1480383545593841,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0870072716033765
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.1552714652915644,
+                  "mean_joint_path_length_rad": 0.1479522088842734,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.10432690458006263
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 62.5,
+          "first_observed_80_percent_step": 30000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.15497031925210308,
+                "mean_joint_path_length_rad": 0.140319364266679,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.1031772156705748
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 102,
+              "episodes_with_actor_pairs": 101,
+              "mean_actor_action_change_per_step": 0.5564943557026438,
+              "mean_joint_path_length_rad": 0.3602303504800762,
+              "mean_velocity_change_rad_per_s_per_step": 0.05826121108984624
+            },
+            "success": {
+              "completed_episodes": 889,
+              "episodes_with_actor_pairs": 889,
+              "mean_actor_action_change_per_step": 0.4832797047318657,
+              "mean_joint_path_length_rad": 0.185533385293987,
+              "mean_velocity_change_rad_per_s_per_step": 0.09557898195885006
+            }
+          },
+          "training_seconds": 836.4901066001039
+        },
+        "her_shape": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 1.8530800177197457,
+                  "mean_joint_path_length_rad": 0.2772935712157991,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.15636668796553305
+                }
+              }
+            },
+            {
+              "success_percent": 22.916666666666668,
+              "outcomes": {
+                "success": 11,
+                "timeout": 37,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 37,
+                  "episodes_with_two_actions": 37,
+                  "mean_action_change_per_step": 0.7239281014002618,
+                  "mean_joint_path_length_rad": 0.22333395199543554,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.06143718555973125
+                },
+                "success": {
+                  "episode_count": 11,
+                  "episodes_with_two_actions": 11,
+                  "mean_action_change_per_step": 0.07219745203101088,
+                  "mean_joint_path_length_rad": 0.1584924643977853,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.007909661907724477
+                }
+              }
+            },
+            {
+              "success_percent": 75.0,
+              "outcomes": {
+                "success": 36,
+                "timeout": 12,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 36,
+                  "episodes_with_two_actions": 36,
+                  "mean_action_change_per_step": 0.04056888758278746,
+                  "mean_joint_path_length_rad": 0.13907935674043923,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0244639769753339
+                },
+                "timeout": {
+                  "episode_count": 12,
+                  "episodes_with_two_actions": 12,
+                  "mean_action_change_per_step": 0.00590072821772724,
+                  "mean_joint_path_length_rad": 0.14550400024194385,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0032359703777335613
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.10721406681441152,
+                  "mean_joint_path_length_rad": 0.1477554773149023,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.06893406959996586
+                }
+              }
+            },
+            {
+              "success_percent": 100.0,
+              "outcomes": {
+                "success": 48,
+                "timeout": 0,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.1444590400394316,
+                  "mean_joint_path_length_rad": 0.14491306507058244,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.09567404749293171
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 61.979166666666664,
+          "first_observed_80_percent_step": 40000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 100.0,
+            "outcomes": {
+              "success": 48,
+              "timeout": 0,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 48,
+                "episodes_with_two_actions": 48,
+                "mean_action_change_per_step": 0.1473520038110405,
+                "mean_joint_path_length_rad": 0.13832399330670844,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.09322643625050081
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 99,
+              "episodes_with_actor_pairs": 98,
+              "mean_actor_action_change_per_step": 0.7569432954410776,
+              "mean_joint_path_length_rad": 0.32923384304466036,
+              "mean_velocity_change_rad_per_s_per_step": 0.07441178520948606
+            },
+            "success": {
+              "completed_episodes": 816,
+              "episodes_with_actor_pairs": 816,
+              "mean_actor_action_change_per_step": 0.5731531827198704,
+              "mean_joint_path_length_rad": 0.18569215641838366,
+              "mean_velocity_change_rad_per_s_per_step": 0.09721914777029342
+            }
+          },
+          "training_seconds": 837.1527521000244
+        },
+        "her_smooth": {
+          "validation": [
+            {
+              "success_percent": 2.0833333333333335,
+              "outcomes": {
+                "success": 1,
+                "timeout": 47,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 1.5339959453201018,
+                  "mean_joint_path_length_rad": 0.2704238221067597,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.13031271021323765
+                },
+                "success": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 1.5738487660250657,
+                  "mean_joint_path_length_rad": 0.0779135259341372,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.13411028902612485
+                }
+              }
+            },
+            {
+              "success_percent": 6.25,
+              "outcomes": {
+                "success": 3,
+                "timeout": 45,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 45,
+                  "episodes_with_two_actions": 45,
+                  "mean_action_change_per_step": 1.877396064311238,
+                  "mean_joint_path_length_rad": 0.372005607853732,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.16043402785164676
+                },
+                "success": {
+                  "episode_count": 3,
+                  "episodes_with_two_actions": 3,
+                  "mean_action_change_per_step": 1.8082088466331667,
+                  "mean_joint_path_length_rad": 0.1117561087404453,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.15505195532312388
+                }
+              }
+            },
+            {
+              "success_percent": 2.0833333333333335,
+              "outcomes": {
+                "success": 1,
+                "timeout": 47,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 0.6447003930896023,
+                  "mean_joint_path_length_rad": 0.1823493010999911,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.055653582920026146
+                },
+                "success": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 0.14723990912566565,
+                  "mean_joint_path_length_rad": 0.18598379952199257,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.014171697919999697
+                }
+              }
+            },
+            {
+              "success_percent": 68.75,
+              "outcomes": {
+                "success": 33,
+                "timeout": 15,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 33,
+                  "episodes_with_two_actions": 33,
+                  "mean_action_change_per_step": 0.05244475525424103,
+                  "mean_joint_path_length_rad": 0.14339552450027904,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.020316132343743264
+                },
+                "timeout": {
+                  "episode_count": 15,
+                  "episodes_with_two_actions": 15,
+                  "mean_action_change_per_step": 0.01530962267984628,
+                  "mean_joint_path_length_rad": 0.16295972730478586,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.00526962756809833
+                }
+              }
+            },
+            {
+              "success_percent": 97.91666666666667,
+              "outcomes": {
+                "success": 47,
+                "timeout": 1,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 0.06012813395769987,
+                  "mean_joint_path_length_rad": 0.13805093844096417,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.039801547060117785
+                },
+                "timeout": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 0.006649337447943339,
+                  "mean_joint_path_length_rad": 0.2103917564411316,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.005671679605992024
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 31.770833333333336,
+          "first_observed_80_percent_step": 50000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 95.83333333333333,
+            "outcomes": {
+              "success": 46,
+              "timeout": 2,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 46,
+                "episodes_with_two_actions": 46,
+                "mean_action_change_per_step": 0.061730305651565585,
+                "mean_joint_path_length_rad": 0.13081561644447315,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.03837203725736602
+              },
+              "timeout": {
+                "episode_count": 2,
+                "episodes_with_two_actions": 2,
+                "mean_action_change_per_step": 0.006848605351782502,
+                "mean_joint_path_length_rad": 0.18332435747700052,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.005176179991889747
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 148,
+              "episodes_with_actor_pairs": 147,
+              "mean_actor_action_change_per_step": 0.30758652782935303,
+              "mean_joint_path_length_rad": 0.5197538198349118,
+              "mean_velocity_change_rad_per_s_per_step": 0.04405595096726892
+            },
+            "success": {
+              "completed_episodes": 277,
+              "episodes_with_actor_pairs": 277,
+              "mean_actor_action_change_per_step": 0.2758037931302233,
+              "mean_joint_path_length_rad": 0.18595599843097874,
+              "mean_velocity_change_rad_per_s_per_step": 0.05587178516275213
+            }
+          },
+          "training_seconds": 835.8878565998748
+        },
+        "her_both": {
+          "validation": [
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.006984796203884648,
+                  "mean_joint_path_length_rad": 0.4211326786930304,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.001465496174035555
+                }
+              }
+            },
+            {
+              "success_percent": 0.0,
+              "outcomes": {
+                "success": 0,
+                "timeout": 48,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 48,
+                  "episodes_with_two_actions": 48,
+                  "mean_action_change_per_step": 0.008666388092686174,
+                  "mean_joint_path_length_rad": 0.4085875887865492,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0021498712328930007
+                }
+              }
+            },
+            {
+              "success_percent": 2.0833333333333335,
+              "outcomes": {
+                "success": 1,
+                "timeout": 47,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 47,
+                  "episodes_with_two_actions": 47,
+                  "mean_action_change_per_step": 0.0074686448823661974,
+                  "mean_joint_path_length_rad": 0.3131073995106521,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.0027650995887953437
+                },
+                "success": {
+                  "episode_count": 1,
+                  "episodes_with_two_actions": 1,
+                  "mean_action_change_per_step": 0.05957784598554531,
+                  "mean_joint_path_length_rad": 0.18857246297893465,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.042461907788733995
+                }
+              }
+            },
+            {
+              "success_percent": 8.333333333333334,
+              "outcomes": {
+                "success": 4,
+                "timeout": 44,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "timeout": {
+                  "episode_count": 44,
+                  "episodes_with_two_actions": 44,
+                  "mean_action_change_per_step": 0.005701010990841434,
+                  "mean_joint_path_length_rad": 0.16519582788010378,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.003938496974827938
+                },
+                "success": {
+                  "episode_count": 4,
+                  "episodes_with_two_actions": 4,
+                  "mean_action_change_per_step": 0.03580140386687726,
+                  "mean_joint_path_length_rad": 0.17920510192478242,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.031663096585015794
+                }
+              }
+            },
+            {
+              "success_percent": 93.75,
+              "outcomes": {
+                "success": 45,
+                "timeout": 3,
+                "failure": 0
+              },
+              "trajectory_metrics_by_outcome": {
+                "success": {
+                  "episode_count": 45,
+                  "episodes_with_two_actions": 45,
+                  "mean_action_change_per_step": 0.06263440818281202,
+                  "mean_joint_path_length_rad": 0.15076430921393144,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.04213529017994419
+                },
+                "timeout": {
+                  "episode_count": 3,
+                  "episodes_with_two_actions": 3,
+                  "mean_action_change_per_step": 0.009056972627469954,
+                  "mean_joint_path_length_rad": 0.17035870493495545,
+                  "mean_joint_velocity_change_rad_per_s_per_step": 0.005823339690684281
+                }
+              }
+            }
+          ],
+          "validation_auc_percent": 14.322916666666666,
+          "first_observed_80_percent_step": 50000,
+          "threshold_censored_at_50000": false,
+          "test": {
+            "success_percent": 91.66666666666667,
+            "outcomes": {
+              "success": 44,
+              "timeout": 4,
+              "failure": 0
+            },
+            "trajectory_metrics_by_outcome": {
+              "success": {
+                "episode_count": 44,
+                "episodes_with_two_actions": 44,
+                "mean_action_change_per_step": 0.0599127669150328,
+                "mean_joint_path_length_rad": 0.14447343289013811,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.03843210969273791
+              },
+              "timeout": {
+                "episode_count": 4,
+                "episodes_with_two_actions": 4,
+                "mean_action_change_per_step": 0.009366793524630867,
+                "mean_joint_path_length_rad": 0.18129764650196645,
+                "mean_joint_velocity_change_rad_per_s_per_step": 0.006308172025826949
+              }
+            }
+          },
+          "training_by_outcome": {
+            "timeout": {
+              "completed_episodes": 156,
+              "episodes_with_actor_pairs": 155,
+              "mean_actor_action_change_per_step": 0.17461657116832363,
+              "mean_joint_path_length_rad": 0.5506372696829248,
+              "mean_velocity_change_rad_per_s_per_step": 0.028839086763628115
+            },
+            "success": {
+              "completed_episodes": 172,
+              "episodes_with_actor_pairs": 172,
+              "mean_actor_action_change_per_step": 0.20387522036727662,
+              "mean_joint_path_length_rad": 0.21155457427593757,
+              "mean_velocity_change_rad_per_s_per_step": 0.04874058563847043
+            }
+          },
+          "training_seconds": 835.887369700009
+        }
+      }
+    }
+  ],
+  "baseline": {
+    "validation": {
+      "success_percent": 100.0,
+      "outcomes": {
+        "success": 48,
+        "timeout": 0,
+        "failure": 0
+      },
+      "trajectory_metrics_by_outcome": {
+        "success": {
+          "episode_count": 48,
+          "episodes_with_two_actions": 48,
+          "mean_action_change_per_step": 0.10582920972831486,
+          "mean_joint_path_length_rad": 0.14313637770654541,
+          "mean_joint_velocity_change_rad_per_s_per_step": 0.0865054601586268
+        }
+      }
+    },
+    "test": {
+      "success_percent": 100.0,
+      "outcomes": {
+        "success": 48,
+        "timeout": 0,
+        "failure": 0
+      },
+      "trajectory_metrics_by_outcome": {
+        "success": {
+          "episode_count": 48,
+          "episodes_with_two_actions": 48,
+          "mean_action_change_per_step": 0.10543980536982324,
+          "mean_joint_path_length_rad": 0.1366222367913618,
+          "mean_joint_velocity_change_rad_per_s_per_step": 0.0844353403167829
+        }
+      }
+    }
+  },
+  "primary_D_minus_A": {
+    "per_seed_percentage_points": [
+      -20.833333333333336,
+      -2.34375,
+      -20.572916666666664,
+      -9.114583333333336,
+      -48.177083333333336
+    ],
+    "mean_pp": -20.208333333333336,
+    "t95_interval_pp": [
+      -41.93387358281722,
+      1.517206916150549
+    ]
+  },
+  "B_minus_A": {
+    "per_seed_percentage_points": [
+      14.843749999999993,
+      6.770833333333336,
+      23.177083333333336,
+      4.947916666666664,
+      -0.5208333333333357
+    ],
+    "mean_pp": 9.843749999999998,
+    "t95_interval_pp": [
+      -1.6626673029360255,
+      21.350167302936022
+    ]
+  },
+  "C_minus_A": {
+    "per_seed_percentage_points": [
+      0.2604166666666714,
+      -27.08333333333333,
+      -29.947916666666664,
+      0.78125,
+      -30.729166666666664
+    ],
+    "mean_pp": -17.343749999999996,
+    "t95_interval_pp": [
+      -37.660923900302635,
+      2.9734239003026453
+    ]
+  },
+  "D_minus_B": {
+    "per_seed_percentage_points": [
+      -35.67708333333333,
+      -9.114583333333336,
+      -43.75,
+      -14.0625,
+      -47.65625
+    ],
+    "mean_pp": -30.052083333333332,
+    "t95_interval_pp": [
+      -51.761982183233954,
+      -8.342184483432707
+    ]
+  },
+  "D_minus_C": {
+    "per_seed_percentage_points": [
+      -21.093750000000007,
+      24.73958333333333,
+      9.375,
+      -9.895833333333336,
+      -17.44791666666667
+    ],
+    "mean_pp": -2.864583333333337,
+    "t95_interval_pp": [
+      -26.955177908017575,
+      21.226011241350903
+    ]
+  },
+  "A_minus_S": {
+    "per_seed_percentage_points": [
+      53.385416666666664,
+      52.604166666666664,
+      35.67708333333333,
+      52.60416666666667,
+      58.333333333333336
+    ],
+    "mean_pp": 50.520833333333336,
+    "t95_interval_pp": [
+      39.800683582649654,
+      61.24098308401702
+    ]
+  },
+  "shaping_main_effect": {
+    "per_seed_percentage_points": [
+      -3.125000000000007,
+      15.755208333333332,
+      16.276041666666668,
+      -2.4739583333333357,
+      -8.984375000000004
+    ],
+    "mean_pp": 3.489583333333331,
+    "t95_interval_pp": [
+      -11.052725920019073,
+      18.031892586685736
+    ]
+  },
+  "smoothing_main_effect": {
+    "per_seed_percentage_points": [
+      -17.70833333333333,
+      -18.098958333333332,
+      -36.84895833333333,
+      -6.640625,
+      -39.19270833333333
+    ],
+    "mean_pp": -23.697916666666664,
+    "t95_interval_pp": [
+      -40.93610674128328,
+      -6.459726592050043
+    ]
+  },
+  "interaction_D_minus_B_minus_C_plus_A": {
+    "per_seed_percentage_points": [
+      -35.9375,
+      17.968749999999993,
+      -13.802083333333336,
+      -14.84375,
+      -16.927083333333336
+    ],
+    "mean_pp": -12.708333333333336,
+    "t95_interval_pp": [
+      -36.78308646896624,
+      11.366419802299568
+    ]
+  },
+  "primary_criteria": {
+    "mean_at_least_10pp": false,
+    "at_least_four_positive": false,
+    "ci_lower_above_zero": false
+  },
+  "test_pairwise": {
+    "D_minus_her": {
+      "per_seed_percentage_points": [
+        -8.333333333333329,
+        0.0,
+        29.166666666666668,
+        0.0,
+        -8.333333333333329
+      ],
+      "mean_pp": 2.500000000000002,
+      "t95_interval_pp": [
+        -16.715989869550473,
+        21.71598986955048
+      ]
+    },
+    "D_minus_her_shape": {
+      "per_seed_percentage_points": [
+        -8.333333333333329,
+        0.0,
+        -41.666666666666664,
+        0.0,
+        -8.333333333333329
+      ],
+      "mean_pp": -11.666666666666664,
+      "t95_interval_pp": [
+        -33.11963745291339,
+        9.786304119580059
+      ]
+    },
+    "D_minus_her_smooth": {
+      "per_seed_percentage_points": [
+        -8.333333333333329,
+        0.0,
+        12.5,
+        0.0,
+        -4.166666666666657
+      ],
+      "mean_pp": 2.842170943040401e-15,
+      "t95_interval_pp": [
+        -9.677367640244132,
+        9.677367640244139
+      ]
+    }
+  }
+}

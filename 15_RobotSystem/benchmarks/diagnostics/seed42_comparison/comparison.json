@@ -1,0 +1,570 @@
+{
+  "matching_previous_training_config": true,
+  "matching_validation_protocol": true,
+  "train_goals_rad": [
+    [
+      -0.16,
+      -0.16
+    ],
+    [
+      -0.16,
+      -0.08
+    ],
+    [
+      -0.16,
+      0.08
+    ],
+    [
+      -0.16,
+      0.16
+    ],
+    [
+      -0.08,
+      -0.16
+    ],
+    [
+      -0.08,
+      -0.08
+    ],
+    [
+      -0.08,
+      0.08
+    ],
+    [
+      -0.08,
+      0.16
+    ],
+    [
+      0.08,
+      -0.16
+    ],
+    [
+      0.08,
+      -0.08
+    ],
+    [
+      0.08,
+      0.08
+    ],
+    [
+      0.08,
+      0.16
+    ],
+    [
+      0.16,
+      -0.16
+    ],
+    [
+      0.16,
+      -0.08
+    ],
+    [
+      0.16,
+      0.08
+    ],
+    [
+      0.16,
+      0.16
+    ]
+  ],
+  "validation": {
+    "sac": {
+      "outcomes_training": {
+        "timeout": 200
+      },
+      "train_goal_count": 16,
+      "successes": 0,
+      "baseline_successes": 2,
+      "cases": [
+        {
+          "seed": 101,
+          "goal_rad": [
+            0.1,
+            0.1
+          ],
+          "steps": 250,
+          "first_action": [
+            -0.9453009366989136,
+            -0.5459227561950684
+          ],
+          "best_step": 1,
+          "best_max_abs_error_rad": 0.10298734624449864,
+          "speed_at_best_rad_s": 0.15891396776173453,
+          "final_q_rad": [
+            -0.39925698963942197,
+            0.7585795820539395
+          ],
+          "final_abs_error_rad": [
+            0.499256989639422,
+            0.6585795820539395
+          ],
+          "final_abs_speed_rad_s": [
+            0.09247946329212713,
+            0.0088606516677967
+          ],
+          "position_steps": 0,
+          "low_speed_steps": 0,
+          "both_steps": 0,
+          "command_clip_steps": 0,
+          "warnings": 0,
+          "limit_violations": 0,
+          "outcome": "timeout"
+        },
+        {
+          "seed": 102,
+          "goal_rad": [
+            -0.1,
+            0.1
+          ],
+          "steps": 250,
+          "first_action": [
+            -0.850750744342804,
+            -0.4076037108898163
+          ],
+          "best_step": 1,
+          "best_max_abs_error_rad": 0.10036414052997196,
+          "speed_at_best_rad_s": 0.14297492889872343,
+          "final_q_rad": [
+            -0.27548968089811837,
+            0.5230016335288914
+          ],
+          "final_abs_error_rad": [
+            0.17548968089811837,
+            0.4230016335288914
+          ],
+          "final_abs_speed_rad_s": [
+            0.02210883959154662,
+            0.03544189368067277
+          ],
+          "position_steps": 0,
+          "low_speed_steps": 18,
+          "both_steps": 0,
+          "command_clip_steps": 0,
+          "warnings": 0,
+          "limit_violations": 0,
+          "outcome": "timeout"
+        }
+      ]
+    },
+    "sac_her": {
+      "outcomes_training": {
+        "timeout": 87,
+        "success": 930,
+        "partial": 1
+      },
+      "train_goal_count": 16,
+      "successes": 2,
+      "baseline_successes": 2,
+      "cases": [
+        {
+          "seed": 101,
+          "goal_rad": [
+            0.1,
+            0.1
+          ],
+          "steps": 16,
+          "first_action": [
+            0.8725264668464661,
+            0.9568974375724792
+          ],
+          "best_step": 11,
+          "best_max_abs_error_rad": 0.007620103708139467,
+          "speed_at_best_rad_s": 0.30915908710458884,
+          "final_q_rad": [
+            0.10896937518621709,
+            0.10073731792605337
+          ],
+          "final_abs_error_rad": [
+            0.008969375186217085,
+            0.0007373179260533602
+          ],
+          "final_abs_speed_rad_s": [
+            0.043357210339983424,
+            0.00481178161663099
+          ],
+          "position_steps": 4,
+          "low_speed_steps": 1,
+          "both_steps": 1,
+          "command_clip_steps": 0,
+          "warnings": 0,
+          "limit_violations": 0,
+          "outcome": "success"
+        },
+        {
+          "seed": 102,
+          "goal_rad": [
+            -0.1,
+            0.1
+          ],
+          "steps": 15,
+          "first_action": [
+            -0.9970086812973022,
+            0.9782857894897461
+          ],
+          "best_step": 15,
+          "best_max_abs_error_rad": 0.005167314849059232,
+          "speed_at_best_rad_s": 0.04193594918345631,
+          "final_q_rad": [
+            -0.09483268515094077,
+            0.09893495611585779
+          ],
+          "final_abs_error_rad": [
+            0.005167314849059232,
+            0.0010650438841422194
+          ],
+          "final_abs_speed_rad_s": [
+            0.03913805405764656,
+            0.04193594918345631
+          ],
+          "position_steps": 4,
+          "low_speed_steps": 1,
+          "both_steps": 1,
+          "command_clip_steps": 0,
+          "warnings": 0,
+          "limit_violations": 0,
+          "outcome": "success"
+        }
+      ]
+    }
+  },
+  "her_replay": {
+    "counts_match_training_summary": true,
+    "counts": {
+      "attempts": 1591808,
+      "relabeled": 1180298,
+      "relabeled_success": 83886,
+      "no_future_goal": 255719,
+      "already_at_goal": 155791,
+      "source_failed": 0,
+      "original": 2003318
+    },
+    "actual_training_position_steps": 3854,
+    "actual_training_low_speed_steps": 10964,
+    "eligible_positions": {
+      "samples": 10964,
+      "within_any_training_goal": 1012,
+      "per_training_goal": [
+        55,
+        64,
+        72,
+        62,
+        61,
+        54,
+        61,
+        63,
+        65,
+        73,
+        70,
+        60,
+        61,
+        57,
+        74,
+        60
+      ],
+      "position_min_rad": [
+        -0.35483028096681846,
+        -0.2844094209708001
+      ],
+      "position_max_rad": [
+        0.36790894933907736,
+        0.26219239999136373
+      ]
+    },
+    "successful_virtual_targets": {
+      "samples": 83886,
+      "within_any_training_goal": 11380,
+      "per_training_goal": [
+        522,
+        740,
+        902,
+        724,
+        859,
+        589,
+        565,
+        842,
+        603,
+        723,
+        933,
+        662,
+        671,
+        555,
+        873,
+        617
+      ],
+      "position_min_rad": [
+        -0.35483028096681846,
+        -0.2844094209708001
+      ],
+      "position_max_rad": [
+        0.36790894933907736,
+        0.26219239999136373
+      ]
+    },
+    "successful_virtual_targets_near_original_goal": 10418,
+    "windows": [
+      {
+        "steps": [
+          1,
+          10000
+        ],
+        "real_position_steps": 0,
+        "real_success_steps": 0,
+        "low_speed_steps": 3811,
+        "candidate_goal_coverage": {
+          "samples": 3811,
+          "within_any_training_goal": 32,
+          "per_training_goal": [
+            0,
+            0,
+            1,
+            4,
+            0,
+            1,
+            0,
+            0,
+            0,
+            11,
+            9,
+            0,
+            0,
+            0,
+            5,
+            1
+          ],
+          "position_min_rad": [
+            -0.35483028096681846,
+            -0.21224944493375356
+          ],
+          "position_max_rad": [
+            0.23656021888438267,
+            0.25311862173464134
+          ]
+        },
+        "replay": {
+          "attempts": 311808,
+          "relabeled": 254181,
+          "relabeled_success": 13062
+        }
+      },
+      {
+        "steps": [
+          10001,
+          20000
+        ],
+        "real_position_steps": 17,
+        "real_success_steps": 8,
+        "low_speed_steps": 2591,
+        "candidate_goal_coverage": {
+          "samples": 2591,
+          "within_any_training_goal": 40,
+          "per_training_goal": [
+            0,
+            1,
+            1,
+            11,
+            2,
+            6,
+            11,
+            0,
+            0,
+            2,
+            1,
+            3,
+            0,
+            1,
+            1,
+            0
+          ],
+          "position_min_rad": [
+            -0.3425871091091204,
+            -0.2844094209708001
+          ],
+          "position_max_rad": [
+            0.334380103988579,
+            0.26219239999136373
+          ]
+        },
+        "replay": {
+          "attempts": 320000,
+          "relabeled": 203611,
+          "relabeled_success": 13214
+        }
+      },
+      {
+        "steps": [
+          20001,
+          30000
+        ],
+        "real_position_steps": 616,
+        "real_success_steps": 147,
+        "low_speed_steps": 2435,
+        "candidate_goal_coverage": {
+          "samples": 2435,
+          "within_any_training_goal": 165,
+          "per_training_goal": [
+            7,
+            9,
+            10,
+            7,
+            14,
+            7,
+            10,
+            15,
+            8,
+            10,
+            12,
+            11,
+            11,
+            9,
+            18,
+            7
+          ],
+          "position_min_rad": [
+            -0.24804219014298431,
+            -0.18552236887166107
+          ],
+          "position_max_rad": [
+            0.36790894933907736,
+            0.18683075316274397
+          ]
+        },
+        "replay": {
+          "attempts": 320000,
+          "relabeled": 225373,
+          "relabeled_success": 16964
+        }
+      },
+      {
+        "steps": [
+          30001,
+          40000
+        ],
+        "real_position_steps": 1198,
+        "real_success_steps": 297,
+        "low_speed_steps": 1503,
+        "candidate_goal_coverage": {
+          "samples": 1503,
+          "within_any_training_goal": 297,
+          "per_training_goal": [
+            16,
+            24,
+            27,
+            14,
+            25,
+            18,
+            13,
+            19,
+            18,
+            17,
+            16,
+            14,
+            16,
+            16,
+            22,
+            22
+          ],
+          "position_min_rad": [
+            -0.20038230510314603,
+            -0.1986431080399937
+          ],
+          "position_max_rad": [
+            0.17557967359618964,
+            0.18327927819620962
+          ]
+        },
+        "replay": {
+          "attempts": 320000,
+          "relabeled": 241411,
+          "relabeled_success": 20045
+        }
+      },
+      {
+        "steps": [
+          40001,
+          50000
+        ],
+        "real_position_steps": 2023,
+        "real_success_steps": 478,
+        "low_speed_steps": 624,
+        "candidate_goal_coverage": {
+          "samples": 624,
+          "within_any_training_goal": 478,
+          "per_training_goal": [
+            32,
+            30,
+            33,
+            26,
+            20,
+            22,
+            27,
+            29,
+            39,
+            33,
+            32,
+            32,
+            34,
+            31,
+            28,
+            30
+          ],
+          "position_min_rad": [
+            -0.17527454158705674,
+            -0.1680696615455138
+          ],
+          "position_max_rad": [
+            0.17434332948936315,
+            0.17601784361027248
+          ]
+        },
+        "replay": {
+          "attempts": 320000,
+          "relabeled": 255722,
+          "relabeled_success": 20601
+        }
+      }
+    ]
+  },
+  "update_telemetry": {
+    "alpha_initial": 0.00999700091779232,
+    "alpha_min": 0.005614029709249735,
+    "alpha_max": 0.11054730415344238,
+    "alpha_final": 0.10419627279043198,
+    "entropy_final": -1.8256663084030151,
+    "max_sampled_critic_loss": 10.64277458190918,
+    "last_update": {
+      "step": 50000,
+      "update": 49744,
+      "replay_size": 50000,
+      "critic_1_loss": 0.25505638122558594,
+      "critic_2_loss": 0.2538771629333496,
+      "actor_loss": 17.186687469482422,
+      "alpha_loss": -0.3942595422267914,
+      "alpha": 0.10419627279043198,
+      "td_target_mean": -17.474483489990234,
+      "actor_entropy_estimate": -1.8256663084030151,
+      "actor_action_mean": [
+        -0.044128045439720154,
+        0.07687958329916
+      ],
+      "actor_action_std": [
+        0.6885303258895874,
+        0.5799199938774109
+      ],
+      "gradient_l2": {
+        "critic_1": 22.27578430283932,
+        "critic_2": 20.22987955086609,
+        "actor": 1.2268879190109834,
+        "log_alpha": 0.17433367669582367
+      },
+      "her": {
+        "attempts": 32,
+        "relabeled": 30,
+        "relabeled_success": 2,
+        "no_future_goal": 1,
+        "already_at_goal": 1,
+        "source_failed": 0,
+        "original": 34
+      }
+    }
+  }
+}

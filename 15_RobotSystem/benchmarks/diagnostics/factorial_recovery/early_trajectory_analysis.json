@@ -1,0 +1,1670 @@
+{
+  "protocol": "Completed actor-only episodes wholly inside each window; equal-weight mean of seed-level statistics. Steps are systematic 250-step snapshots, not random samples or full trajectories.",
+  "seeds": [
+    1103,
+    1129,
+    1181,
+    1213,
+    1277
+  ],
+  "windows": {
+    "257-10000": {
+      "her": {
+        "per_seed": [
+          {
+            "seed": 1103,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 37,
+              "success": 1
+            },
+            "success_fraction": 0.02631578947368421,
+            "mean_actor_action_delta": 0.43330433022916315,
+            "mean_joint_path_per_step": 0.0012123089969384463,
+            "mean_speed_delta_per_step": 0.04494057307306221,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.1635821279269741,
+              "command_error": 0.16099783229965062,
+              "tracking_error": 0.006546850493645953,
+              "home_distance": 0.1525805823501634,
+              "progress": -0.026146230491076648,
+              "speed": 0.039022841374944287,
+              "action_norm": 0.20836133292565742
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.05128205128205128,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.7435897435897436
+          },
+          {
+            "seed": 1129,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 37,
+              "success": 1
+            },
+            "success_fraction": 0.02631578947368421,
+            "mean_actor_action_delta": 0.7668078086265171,
+            "mean_joint_path_per_step": 0.0011749204709347613,
+            "mean_speed_delta_per_step": 0.07150658766575875,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.151265826944408,
+              "command_error": 0.15296038984059954,
+              "tracking_error": 0.00855185507846243,
+              "home_distance": 0.10700302490445442,
+              "progress": -0.005624801303382341,
+              "speed": 0.05418516883444957,
+              "action_norm": 0.41022907913877416
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.02564102564102564,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.5641025641025641
+          },
+          {
+            "seed": 1181,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 37,
+              "failure": 1
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.6175465137194749,
+            "mean_joint_path_per_step": 0.002249531851971079,
+            "mean_speed_delta_per_step": 0.0600947089391135,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.42644973445448137,
+              "command_error": 0.43311536847233284,
+              "tracking_error": 0.012432692250737712,
+              "home_distance": 0.3303401325647731,
+              "progress": -0.2828599908647378,
+              "speed": 0.1176980003044256,
+              "action_norm": 0.3563777327728577
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.8205128205128205
+          },
+          {
+            "seed": 1213,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.8899781200787731,
+            "mean_joint_path_per_step": 0.001780470011649428,
+            "mean_speed_delta_per_step": 0.08493246435630697,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.3622251014917096,
+              "command_error": 0.36653217982550057,
+              "tracking_error": 0.011414532283125157,
+              "home_distance": 0.27606607882156375,
+              "progress": -0.218635357901966,
+              "speed": 0.1002537785925182,
+              "action_norm": 0.5117857983479133
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.8205128205128205
+          },
+          {
+            "seed": 1277,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.41088446546657964,
+            "mean_joint_path_per_step": 0.0013424193728963439,
+            "mean_speed_delta_per_step": 0.04663421371409861,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.2752913579170619,
+              "command_error": 0.2745826081147103,
+              "tracking_error": 0.008627603907077463,
+              "home_distance": 0.19617309785225556,
+              "progress": -0.12554776817347216,
+              "speed": 0.058097932921034844,
+              "action_norm": 0.20271251684962174
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.8461538461538461
+          }
+        ],
+        "seed_mean_success_fraction": 0.010526315789473684,
+        "total_completed_episodes": 190,
+        "total_successes": 2,
+        "total_timeouts": 187,
+        "total_failures": 1,
+        "seed_mean_actor_action_delta": 0.6237042476241016,
+        "seed_mean_joint_path_per_step": 0.0015519301408780117,
+        "seed_mean_speed_delta_per_step": 0.06162170954966801,
+        "seed_mean_snapshot_target_error_rad": 0.275762829746927,
+        "seed_mean_snapshot_command_error_rad": 0.27763767571055875,
+        "seed_mean_snapshot_tracking_error_rad": 0.009514706802609744,
+        "seed_mean_snapshot_progress_rad": -0.131762829746927,
+        "seed_mean_snapshot_action_max": 0.3378932920069649,
+        "seed_mean_snapshot_near_goal_fraction": 0.015384615384615384,
+        "seed_mean_snapshot_far_from_home_fraction": 0.7589743589743589
+      },
+      "her_shape": {
+        "per_seed": [
+          {
+            "seed": 1103,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 36,
+              "success": 2
+            },
+            "success_fraction": 0.05263157894736842,
+            "mean_actor_action_delta": 0.6421467797936138,
+            "mean_joint_path_per_step": 0.001424001932746931,
+            "mean_speed_delta_per_step": 0.06444029078827687,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.20879526127121362,
+              "command_error": 0.21069105468211805,
+              "tracking_error": 0.007649057596983521,
+              "home_distance": 0.16901532244149603,
+              "progress": -0.07135936383531619,
+              "speed": 0.06300870014602805,
+              "action_norm": 0.3330607589047689
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.5384615384615384
+          },
+          {
+            "seed": 1129,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.7554693602105075,
+            "mean_joint_path_per_step": 0.0017659725216955695,
+            "mean_speed_delta_per_step": 0.07132894161875473,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.35901314560304415,
+              "command_error": 0.36720703782188163,
+              "tracking_error": 0.013355353184468241,
+              "home_distance": 0.2903079597019042,
+              "progress": -0.2133721199620185,
+              "speed": 0.11435083682498355,
+              "action_norm": 0.36151071074299324
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.7948717948717948
+          },
+          {
+            "seed": 1181,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.5252640475332359,
+            "mean_joint_path_per_step": 0.0026549274850244295,
+            "mean_speed_delta_per_step": 0.05273529236559574,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.4851019472649683,
+              "command_error": 0.5685261242154538,
+              "tracking_error": 0.09230843527049837,
+              "home_distance": 0.4066296396820147,
+              "progress": -0.3415122036752247,
+              "speed": 0.14397243979927735,
+              "action_norm": 0.4383902438940146
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.7692307692307693
+          },
+          {
+            "seed": 1213,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.6372855982213269,
+            "mean_joint_path_per_step": 0.0010824904731340536,
+            "mean_speed_delta_per_step": 0.06065291863124232,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.1973727766049362,
+              "command_error": 0.19666106307210857,
+              "tracking_error": 0.008785900829924016,
+              "home_distance": 0.13635123515013098,
+              "progress": -0.053783033015192605,
+              "speed": 0.05170811212432055,
+              "action_norm": 0.31779789857757396
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.6923076923076923
+          },
+          {
+            "seed": 1277,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.6547716551064671,
+            "mean_joint_path_per_step": 0.0013730944336171724,
+            "mean_speed_delta_per_step": 0.07097106667614445,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.2498727019434255,
+              "command_error": 0.2509531881352784,
+              "tracking_error": 0.008386617884372042,
+              "home_distance": 0.15188176342594445,
+              "progress": -0.10012911219983575,
+              "speed": 0.0668192333744267,
+              "action_norm": 0.381061860288565
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.7692307692307693
+          }
+        ],
+        "seed_mean_success_fraction": 0.010526315789473684,
+        "total_completed_episodes": 190,
+        "total_successes": 2,
+        "total_timeouts": 188,
+        "total_failures": 0,
+        "seed_mean_actor_action_delta": 0.6429874881730302,
+        "seed_mean_joint_path_per_step": 0.0016600973692436312,
+        "seed_mean_speed_delta_per_step": 0.06402570201600283,
+        "seed_mean_snapshot_target_error_rad": 0.30003116653751755,
+        "seed_mean_snapshot_command_error_rad": 0.3188076935853681,
+        "seed_mean_snapshot_tracking_error_rad": 0.02609707295324924,
+        "seed_mean_snapshot_progress_rad": -0.15603116653751756,
+        "seed_mean_snapshot_action_max": 0.36636429448158314,
+        "seed_mean_snapshot_near_goal_fraction": 0,
+        "seed_mean_snapshot_far_from_home_fraction": 0.7128205128205128
+      },
+      "her_smooth": {
+        "per_seed": [
+          {
+            "seed": 1103,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 37,
+              "success": 1
+            },
+            "success_fraction": 0.02631578947368421,
+            "mean_actor_action_delta": 0.18058627505124644,
+            "mean_joint_path_per_step": 0.001475772792747277,
+            "mean_speed_delta_per_step": 0.02517232156922619,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.259187631487641,
+              "command_error": 0.2617249341827208,
+              "tracking_error": 0.0097203888758317,
+              "home_distance": 0.23886388187151253,
+              "progress": -0.12175173405174357,
+              "speed": 0.07567756089181088,
+              "action_norm": 0.16489740949728826
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.05128205128205128,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.7948717948717948
+          },
+          {
+            "seed": 1129,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "success": 1,
+              "timeout": 37
+            },
+            "success_fraction": 0.02631578947368421,
+            "mean_actor_action_delta": 0.28321914109352436,
+            "mean_joint_path_per_step": 0.0016997756033961895,
+            "mean_speed_delta_per_step": 0.0391342125930711,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.15077917892482326,
+              "command_error": 0.15348502529254965,
+              "tracking_error": 0.009032094475949682,
+              "home_distance": 0.06999551738205033,
+              "progress": -0.005138153283797605,
+              "speed": 0.0836882153464615,
+              "action_norm": 0.21435490210675864
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.358974358974359
+          },
+          {
+            "seed": 1181,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.34272810249541846,
+            "mean_joint_path_per_step": 0.0015815441243266528,
+            "mean_speed_delta_per_step": 0.03982610838069954,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.3472683360423547,
+              "command_error": 0.3494036776583249,
+              "tracking_error": 0.007916529569038076,
+              "home_distance": 0.24339850962048643,
+              "progress": -0.2036785924526111,
+              "speed": 0.05641080129080208,
+              "action_norm": 0.20507177750864525
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.02564102564102564,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.9743589743589743
+          },
+          {
+            "seed": 1213,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.35091237366011957,
+            "mean_joint_path_per_step": 0.0018891963403040056,
+            "mean_speed_delta_per_step": 0.05082627223604159,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.3101048328644774,
+              "command_error": 0.3144551634724719,
+              "tracking_error": 0.011860877668474632,
+              "home_distance": 0.22693110216136653,
+              "progress": -0.16651508927473377,
+              "speed": 0.09635220860578342,
+              "action_norm": 0.28642269205789533
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.8717948717948718
+          },
+          {
+            "seed": 1277,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.13027997140835443,
+            "mean_joint_path_per_step": 0.0022101015396665783,
+            "mean_speed_delta_per_step": 0.019618495292862796,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.5000060061783408,
+              "command_error": 0.5511305320463363,
+              "tracking_error": 0.057016146530148665,
+              "home_distance": 0.41233027279787704,
+              "progress": -0.350262416434751,
+              "speed": 0.1415664749147208,
+              "action_norm": 0.23705606731142637
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.9487179487179487
+          }
+        ],
+        "seed_mean_success_fraction": 0.010526315789473684,
+        "total_completed_episodes": 190,
+        "total_successes": 2,
+        "total_timeouts": 188,
+        "total_failures": 0,
+        "seed_mean_actor_action_delta": 0.25754517274173266,
+        "seed_mean_joint_path_per_step": 0.0017712780800881406,
+        "seed_mean_speed_delta_per_step": 0.034915482014380245,
+        "seed_mean_snapshot_target_error_rad": 0.3134691970995274,
+        "seed_mean_snapshot_command_error_rad": 0.3260398665304807,
+        "seed_mean_snapshot_tracking_error_rad": 0.019109207423888552,
+        "seed_mean_snapshot_progress_rad": -0.1694691970995274,
+        "seed_mean_snapshot_action_max": 0.22156056969640278,
+        "seed_mean_snapshot_near_goal_fraction": 0.015384615384615384,
+        "seed_mean_snapshot_far_from_home_fraction": 0.7897435897435897
+      },
+      "her_both": {
+        "per_seed": [
+          {
+            "seed": 1103,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.10575588817726024,
+            "mean_joint_path_per_step": 0.0012387564608017196,
+            "mean_speed_delta_per_step": 0.016248287734455327,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.20567027542195,
+              "command_error": 0.20782364550262564,
+              "tracking_error": 0.008991752715555253,
+              "home_distance": 0.1898295456380017,
+              "progress": -0.06823437798605256,
+              "speed": 0.054328550782731085,
+              "action_norm": 0.09435700740628895
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.6923076923076923
+          },
+          {
+            "seed": 1129,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 35,
+              "success": 3
+            },
+            "success_fraction": 0.07894736842105263,
+            "mean_actor_action_delta": 0.13857033828199913,
+            "mean_joint_path_per_step": 0.00111463487062359,
+            "mean_speed_delta_per_step": 0.019659846498668768,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.1529318162880554,
+              "command_error": 0.15479236301608754,
+              "tracking_error": 0.007938226967250881,
+              "home_distance": 0.0855929489150038,
+              "progress": -0.005239508595747724,
+              "speed": 0.054794974693846595,
+              "action_norm": 0.11165214325020197
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.4358974358974359
+          },
+          {
+            "seed": 1181,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.30960861532048833,
+            "mean_joint_path_per_step": 0.0017269176692978519,
+            "mean_speed_delta_per_step": 0.03846278406428117,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.37587403711591716,
+              "command_error": 0.3777192720412419,
+              "tracking_error": 0.007805489282228966,
+              "home_distance": 0.27606249338256844,
+              "progress": -0.23228429352617355,
+              "speed": 0.0529340370801311,
+              "action_norm": 0.20725530071641754
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.8974358974358975
+          },
+          {
+            "seed": 1213,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.18304015646604943,
+            "mean_joint_path_per_step": 0.0024790053749856864,
+            "mean_speed_delta_per_step": 0.0271011900770121,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.5155223126510022,
+              "command_error": 0.5222530167803757,
+              "tracking_error": 0.011664804676717053,
+              "home_distance": 0.4318973973886635,
+              "progress": -0.37193256906125866,
+              "speed": 0.11042290252766535,
+              "action_norm": 0.17184462546776788
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.8974358974358975
+          },
+          {
+            "seed": 1277,
+            "completed_actor_episodes": 38,
+            "outcomes": {
+              "timeout": 38
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.09385436510178559,
+            "mean_joint_path_per_step": 0.002985572973331587,
+            "mean_speed_delta_per_step": 0.01565209699434472,
+            "snapshots": 39,
+            "snapshot_means": {
+              "target_error": 0.6254022688680844,
+              "command_error": 0.6413796849961839,
+              "tracking_error": 0.04699376457046338,
+              "home_distance": 0.5650388531412229,
+              "progress": -0.4756586791244946,
+              "speed": 0.18712742335971652,
+              "action_norm": 0.228181926029955
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.9230769230769231
+          }
+        ],
+        "seed_mean_success_fraction": 0.015789473684210527,
+        "total_completed_episodes": 190,
+        "total_successes": 3,
+        "total_timeouts": 187,
+        "total_failures": 0,
+        "seed_mean_actor_action_delta": 0.16616587266951655,
+        "seed_mean_joint_path_per_step": 0.001908977469808087,
+        "seed_mean_speed_delta_per_step": 0.023424841073752416,
+        "seed_mean_snapshot_target_error_rad": 0.3750801420690018,
+        "seed_mean_snapshot_command_error_rad": 0.38079359646730293,
+        "seed_mean_snapshot_tracking_error_rad": 0.016678807642443106,
+        "seed_mean_snapshot_progress_rad": -0.2306698856587454,
+        "seed_mean_snapshot_action_max": 0.16265820057412628,
+        "seed_mean_snapshot_near_goal_fraction": 0,
+        "seed_mean_snapshot_far_from_home_fraction": 0.7692307692307693
+      }
+    },
+    "10001-20000": {
+      "her": {
+        "per_seed": [
+          {
+            "seed": 1103,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 38,
+              "success": 2
+            },
+            "success_fraction": 0.05,
+            "mean_actor_action_delta": 0.8664598504908154,
+            "mean_joint_path_per_step": 0.0011197961330195734,
+            "mean_speed_delta_per_step": 0.08170208907682106,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.13665608482504332,
+              "command_error": 0.1372770818999337,
+              "tracking_error": 0.007867927316978513,
+              "home_distance": 0.14889314179387908,
+              "progress": -0.0006560848250433234,
+              "speed": 0.05165425041488648,
+              "action_norm": 0.44575121607631446
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.05,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.75
+          },
+          {
+            "seed": 1129,
+            "completed_actor_episodes": 42,
+            "outcomes": {
+              "success": 6,
+              "timeout": 36
+            },
+            "success_fraction": 0.14285714285714285,
+            "mean_actor_action_delta": 0.7708658458713155,
+            "mean_joint_path_per_step": 0.0012275140531335953,
+            "mean_speed_delta_per_step": 0.06951678182533201,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.07109258791366412,
+              "command_error": 0.06874587192549368,
+              "tracking_error": 0.007119733634662901,
+              "home_distance": 0.138927867616813,
+              "progress": 0.07690741208633589,
+              "speed": 0.05041364696224707,
+              "action_norm": 0.4333374979905784
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.2,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.9
+          },
+          {
+            "seed": 1181,
+            "completed_actor_episodes": 41,
+            "outcomes": {
+              "timeout": 30,
+              "failure": 9,
+              "success": 2
+            },
+            "success_fraction": 0.04878048780487805,
+            "mean_actor_action_delta": 0.43700165603557156,
+            "mean_joint_path_per_step": 0.005909730924574585,
+            "mean_speed_delta_per_step": 0.0474751934286288,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.4802692965012142,
+              "command_error": 0.4866645196834927,
+              "tracking_error": 0.028281034625198726,
+              "home_distance": 0.4408586149235293,
+              "progress": -0.3382692965012142,
+              "speed": 0.28382268837456265,
+              "action_norm": 0.4369499756023288
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.025,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.825
+          },
+          {
+            "seed": 1213,
+            "completed_actor_episodes": 49,
+            "outcomes": {
+              "timeout": 32,
+              "success": 17
+            },
+            "success_fraction": 0.3469387755102041,
+            "mean_actor_action_delta": 0.542035655667587,
+            "mean_joint_path_per_step": 0.0020488385969502734,
+            "mean_speed_delta_per_step": 0.05839348889222642,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.15946649385307732,
+              "command_error": 0.15962077449458004,
+              "tracking_error": 0.01269989772794438,
+              "home_distance": 0.19178113414302347,
+              "progress": -0.007466493853077303,
+              "speed": 0.10725256830481479,
+              "action_norm": 0.3268493380397558
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.15,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.85
+          },
+          {
+            "seed": 1277,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 40
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.7527933601825545,
+            "mean_joint_path_per_step": 0.0013915507843060562,
+            "mean_speed_delta_per_step": 0.07324475988254002,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.19899705719176367,
+              "command_error": 0.20341053056632996,
+              "tracking_error": 0.009291669302608377,
+              "home_distance": 0.23756084793507953,
+              "progress": -0.06299705719176366,
+              "speed": 0.06889462040958326,
+              "action_norm": 0.3271544067189097
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.025,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.9
+          }
+        ],
+        "seed_mean_success_fraction": 0.117715281234445,
+        "total_completed_episodes": 212,
+        "total_successes": 27,
+        "total_timeouts": 176,
+        "total_failures": 9,
+        "seed_mean_actor_action_delta": 0.6738312736495689,
+        "seed_mean_joint_path_per_step": 0.0023394860983968167,
+        "seed_mean_speed_delta_per_step": 0.06606646262110966,
+        "seed_mean_snapshot_target_error_rad": 0.20929630405695251,
+        "seed_mean_snapshot_command_error_rad": 0.211143755713966,
+        "seed_mean_snapshot_tracking_error_rad": 0.013052052521478579,
+        "seed_mean_snapshot_progress_rad": -0.06649630405695252,
+        "seed_mean_snapshot_action_max": 0.39400848688557744,
+        "seed_mean_snapshot_near_goal_fraction": 0.09,
+        "seed_mean_snapshot_far_from_home_fraction": 0.845
+      },
+      "her_shape": {
+        "per_seed": [
+          {
+            "seed": 1103,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 37,
+              "success": 3
+            },
+            "success_fraction": 0.075,
+            "mean_actor_action_delta": 0.8637567069439345,
+            "mean_joint_path_per_step": 0.0009815257616504016,
+            "mean_speed_delta_per_step": 0.07840222358165874,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.1220978236595006,
+              "command_error": 0.12308369889923199,
+              "tracking_error": 0.007732942918091075,
+              "home_distance": 0.051909492815361925,
+              "progress": 0.013902176340499398,
+              "speed": 0.05563589526512726,
+              "action_norm": 0.49910920187830926
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.05,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.175
+          },
+          {
+            "seed": 1129,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 39,
+              "success": 1
+            },
+            "success_fraction": 0.025,
+            "mean_actor_action_delta": 0.9137888575818772,
+            "mean_joint_path_per_step": 0.0021732464191191927,
+            "mean_speed_delta_per_step": 0.08413278772439357,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.194551229599103,
+              "command_error": 0.198724599373967,
+              "tracking_error": 0.008671683840185799,
+              "home_distance": 0.16277279401347566,
+              "progress": -0.046551229599102996,
+              "speed": 0.07507034615853234,
+              "action_norm": 0.44409983279183507
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.025,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.875
+          },
+          {
+            "seed": 1181,
+            "completed_actor_episodes": 44,
+            "outcomes": {
+              "timeout": 35,
+              "success": 9
+            },
+            "success_fraction": 0.20454545454545456,
+            "mean_actor_action_delta": 0.39297841808201606,
+            "mean_joint_path_per_step": 0.0023697043680417436,
+            "mean_speed_delta_per_step": 0.04026794038226085,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.3556943543339723,
+              "command_error": 0.455780337124061,
+              "tracking_error": 0.10606245341378825,
+              "home_distance": 0.4304427868902127,
+              "progress": -0.20769435433397226,
+              "speed": 0.1432362792158105,
+              "action_norm": 0.3380013905465603
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.075,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.85
+          },
+          {
+            "seed": 1213,
+            "completed_actor_episodes": 57,
+            "outcomes": {
+              "timeout": 24,
+              "success": 33
+            },
+            "success_fraction": 0.5789473684210527,
+            "mean_actor_action_delta": 0.6878235035490187,
+            "mean_joint_path_per_step": 0.0015492263449465445,
+            "mean_speed_delta_per_step": 0.06552026163373961,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.07286310113871883,
+              "command_error": 0.07092381638355147,
+              "tracking_error": 0.008458871193512954,
+              "home_distance": 0.10948141144296236,
+              "progress": 0.07113689886128118,
+              "speed": 0.062294607331737785,
+              "action_norm": 0.321766497194767
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.325,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.675
+          },
+          {
+            "seed": 1277,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 40
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.8679247197855907,
+            "mean_joint_path_per_step": 0.000983660365571636,
+            "mean_speed_delta_per_step": 0.07744312947367049,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.1081187616626293,
+              "command_error": 0.11097339138116963,
+              "tracking_error": 0.006370820309661765,
+              "home_distance": 0.12875769615222948,
+              "progress": 0.027881238337370703,
+              "speed": 0.03801453377728401,
+              "action_norm": 0.3870300199836493
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.05,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.775
+          }
+        ],
+        "seed_mean_success_fraction": 0.17669856459330144,
+        "total_completed_episodes": 221,
+        "total_successes": 46,
+        "total_timeouts": 175,
+        "total_failures": 0,
+        "seed_mean_actor_action_delta": 0.7452544411884874,
+        "seed_mean_joint_path_per_step": 0.0016114726518659038,
+        "seed_mean_speed_delta_per_step": 0.06915326855914465,
+        "seed_mean_snapshot_target_error_rad": 0.1706650540787848,
+        "seed_mean_snapshot_command_error_rad": 0.19189716863239623,
+        "seed_mean_snapshot_tracking_error_rad": 0.02745935433504797,
+        "seed_mean_snapshot_progress_rad": -0.028265054078784796,
+        "seed_mean_snapshot_action_max": 0.39800138847902417,
+        "seed_mean_snapshot_near_goal_fraction": 0.10500000000000001,
+        "seed_mean_snapshot_far_from_home_fraction": 0.67
+      },
+      "her_smooth": {
+        "per_seed": [
+          {
+            "seed": 1103,
+            "completed_actor_episodes": 41,
+            "outcomes": {
+              "timeout": 37,
+              "success": 4
+            },
+            "success_fraction": 0.0975609756097561,
+            "mean_actor_action_delta": 0.3066697139459291,
+            "mean_joint_path_per_step": 0.0016049807665554023,
+            "mean_speed_delta_per_step": 0.03955574111484943,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.21941355509284155,
+              "command_error": 0.220021791019735,
+              "tracking_error": 0.007871849506822313,
+              "home_distance": 0.1626057182402796,
+              "progress": -0.08141355509284154,
+              "speed": 0.079100310504492,
+              "action_norm": 0.17660866786277613
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.025,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.85
+          },
+          {
+            "seed": 1129,
+            "completed_actor_episodes": 41,
+            "outcomes": {
+              "timeout": 38,
+              "success": 3
+            },
+            "success_fraction": 0.07317073170731707,
+            "mean_actor_action_delta": 0.3589297435156479,
+            "mean_joint_path_per_step": 0.0014241794341708373,
+            "mean_speed_delta_per_step": 0.04323694923265404,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.15132305003141036,
+              "command_error": 0.1505144432214342,
+              "tracking_error": 0.005607819172843556,
+              "home_distance": 0.12652363333572028,
+              "progress": -0.00332305003141035,
+              "speed": 0.0623799008335735,
+              "action_norm": 0.2297918657169606
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.025,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.6
+          },
+          {
+            "seed": 1181,
+            "completed_actor_episodes": 41,
+            "outcomes": {
+              "timeout": 38,
+              "success": 3
+            },
+            "success_fraction": 0.07317073170731707,
+            "mean_actor_action_delta": 0.4503229277154793,
+            "mean_joint_path_per_step": 0.002620907853809716,
+            "mean_speed_delta_per_step": 0.049832859366945446,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.3997794189985216,
+              "command_error": 0.41069194722959623,
+              "tracking_error": 0.01346942606546499,
+              "home_distance": 0.38847834424037253,
+              "progress": -0.2577794189985216,
+              "speed": 0.1186721701959484,
+              "action_norm": 0.274141576791075
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.025,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.975
+          },
+          {
+            "seed": 1213,
+            "completed_actor_episodes": 45,
+            "outcomes": {
+              "timeout": 36,
+              "success": 9
+            },
+            "success_fraction": 0.2,
+            "mean_actor_action_delta": 0.32591010320040925,
+            "mean_joint_path_per_step": 0.0014878396811119404,
+            "mean_speed_delta_per_step": 0.042952468216135804,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.08957069468508183,
+              "command_error": 0.0903296887240234,
+              "tracking_error": 0.008118279387982407,
+              "home_distance": 0.13093993555421768,
+              "progress": 0.054429305314918165,
+              "speed": 0.05537539581698259,
+              "action_norm": 0.2321740871457739
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.125,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.825
+          },
+          {
+            "seed": 1277,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 40
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.3980750252325687,
+            "mean_joint_path_per_step": 0.0025721189080943454,
+            "mean_speed_delta_per_step": 0.05348247612508055,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.5463970807223101,
+              "command_error": 0.5603525609972142,
+              "tracking_error": 0.06551369925260007,
+              "home_distance": 0.4393789758620645,
+              "progress": -0.41039708072231,
+              "speed": 0.1508385650349938,
+              "action_norm": 0.3569263931147858
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 1
+          }
+        ],
+        "seed_mean_success_fraction": 0.08878048780487804,
+        "total_completed_episodes": 208,
+        "total_successes": 19,
+        "total_timeouts": 189,
+        "total_failures": 0,
+        "seed_mean_actor_action_delta": 0.36798150272200686,
+        "seed_mean_joint_path_per_step": 0.0019420053287484483,
+        "seed_mean_speed_delta_per_step": 0.04581209881113305,
+        "seed_mean_snapshot_target_error_rad": 0.2812967599060331,
+        "seed_mean_snapshot_command_error_rad": 0.2863820862384006,
+        "seed_mean_snapshot_tracking_error_rad": 0.02011621467714267,
+        "seed_mean_snapshot_progress_rad": -0.13969675990603306,
+        "seed_mean_snapshot_action_max": 0.25392851812627426,
+        "seed_mean_snapshot_near_goal_fraction": 0.04,
+        "seed_mean_snapshot_far_from_home_fraction": 0.85
+      },
+      "her_both": {
+        "per_seed": [
+          {
+            "seed": 1103,
+            "completed_actor_episodes": 41,
+            "outcomes": {
+              "timeout": 39,
+              "success": 2
+            },
+            "success_fraction": 0.04878048780487805,
+            "mean_actor_action_delta": 0.17214845067110088,
+            "mean_joint_path_per_step": 0.0022951295618447195,
+            "mean_speed_delta_per_step": 0.025566273399013094,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.40598802275873946,
+              "command_error": 0.4547733172422306,
+              "tracking_error": 0.0596914642037047,
+              "home_distance": 0.3947167488057819,
+              "progress": -0.26998802275873945,
+              "speed": 0.12885197799484166,
+              "action_norm": 0.24580251729790353
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.025,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.875
+          },
+          {
+            "seed": 1129,
+            "completed_actor_episodes": 39,
+            "outcomes": {
+              "timeout": 39
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.3939423339907027,
+            "mean_joint_path_per_step": 0.0011604087063521924,
+            "mean_speed_delta_per_step": 0.04569695798316248,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.1325212359546059,
+              "command_error": 0.13571803448194503,
+              "tracking_error": 0.007826169665028445,
+              "home_distance": 0.13154067285818954,
+              "progress": 0.015478764045394094,
+              "speed": 0.04675813173338913,
+              "action_norm": 0.24237979379050473
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.075,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.75
+          },
+          {
+            "seed": 1181,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 40
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.3863856061264596,
+            "mean_joint_path_per_step": 0.0018611454239993123,
+            "mean_speed_delta_per_step": 0.04916526343121182,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.41184891944114504,
+              "command_error": 0.41697860277313636,
+              "tracking_error": 0.009535716564686054,
+              "home_distance": 0.35381944149905287,
+              "progress": -0.26784891944114503,
+              "speed": 0.07777699723698271,
+              "action_norm": 0.3256667692323737
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.85
+          },
+          {
+            "seed": 1213,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 38,
+              "success": 2
+            },
+            "success_fraction": 0.05,
+            "mean_actor_action_delta": 0.3152321027639038,
+            "mean_joint_path_per_step": 0.0032804758707766276,
+            "mean_speed_delta_per_step": 0.044163871383323255,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.27864878206151045,
+              "command_error": 0.28633899468489143,
+              "tracking_error": 0.0163796673481546,
+              "home_distance": 0.21988602694836193,
+              "progress": -0.13664878206151043,
+              "speed": 0.12972129683687275,
+              "action_norm": 0.2573829981720432
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.475
+          },
+          {
+            "seed": 1277,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 39,
+              "success": 1
+            },
+            "success_fraction": 0.025,
+            "mean_actor_action_delta": 0.14482927386622796,
+            "mean_joint_path_per_step": 0.0022110399548093827,
+            "mean_speed_delta_per_step": 0.02472181807389981,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.374087397377516,
+              "command_error": 0.4004359767844509,
+              "tracking_error": 0.05672743906504059,
+              "home_distance": 0.31650497083781914,
+              "progress": -0.238087397377516,
+              "speed": 0.10713035556064565,
+              "action_norm": 0.20356538084838297
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.025,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.725
+          }
+        ],
+        "seed_mean_success_fraction": 0.02475609756097561,
+        "total_completed_episodes": 200,
+        "total_successes": 5,
+        "total_timeouts": 195,
+        "total_failures": 0,
+        "seed_mean_actor_action_delta": 0.282507553483679,
+        "seed_mean_joint_path_per_step": 0.002161639903556447,
+        "seed_mean_speed_delta_per_step": 0.03786283685412209,
+        "seed_mean_snapshot_target_error_rad": 0.3206188715187034,
+        "seed_mean_snapshot_command_error_rad": 0.33884898519333084,
+        "seed_mean_snapshot_tracking_error_rad": 0.030032091369322878,
+        "seed_mean_snapshot_progress_rad": -0.17941887151870337,
+        "seed_mean_snapshot_action_max": 0.25495949186824163,
+        "seed_mean_snapshot_near_goal_fraction": 0.025,
+        "seed_mean_snapshot_far_from_home_fraction": 0.735
+      }
+    },
+    "20001-30000": {
+      "her": {
+        "per_seed": [
+          {
+            "seed": 1103,
+            "completed_actor_episodes": 62,
+            "outcomes": {
+              "timeout": 24,
+              "success": 38
+            },
+            "success_fraction": 0.6129032258064516,
+            "mean_actor_action_delta": 0.4766648330268535,
+            "mean_joint_path_per_step": 0.0020979562759053665,
+            "mean_speed_delta_per_step": 0.05528409619746543,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.0421197129805082,
+              "command_error": 0.038829273737814106,
+              "tracking_error": 0.009117424349586366,
+              "home_distance": 0.1430934072725949,
+              "progress": 0.1058802870194918,
+              "speed": 0.0702066482313915,
+              "action_norm": 0.2704582201316953
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.325,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.85
+          },
+          {
+            "seed": 1129,
+            "completed_actor_episodes": 98,
+            "outcomes": {
+              "timeout": 22,
+              "success": 76
+            },
+            "success_fraction": 0.7755102040816326,
+            "mean_actor_action_delta": 0.563034717641893,
+            "mean_joint_path_per_step": 0.003786408162215808,
+            "mean_speed_delta_per_step": 0.07210565124721219,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.032442210886210444,
+              "command_error": 0.029816436467772007,
+              "tracking_error": 0.01103423657158408,
+              "home_distance": 0.1441775141526738,
+              "progress": 0.11555778911378956,
+              "speed": 0.09495458385065325,
+              "action_norm": 0.28503807811066506
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.65,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.9
+          },
+          {
+            "seed": 1181,
+            "completed_actor_episodes": 47,
+            "outcomes": {
+              "timeout": 34,
+              "success": 13
+            },
+            "success_fraction": 0.2765957446808511,
+            "mean_actor_action_delta": 0.5586255597256283,
+            "mean_joint_path_per_step": 0.0016687806956291924,
+            "mean_speed_delta_per_step": 0.05946121270162038,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.09284576935321216,
+              "command_error": 0.0943686758578544,
+              "tracking_error": 0.009039277706585356,
+              "home_distance": 0.15622585002659609,
+              "progress": 0.05515423064678784,
+              "speed": 0.06467715361893392,
+              "action_norm": 0.3438180427066982
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.175,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.85
+          },
+          {
+            "seed": 1213,
+            "completed_actor_episodes": 75,
+            "outcomes": {
+              "timeout": 22,
+              "success": 53
+            },
+            "success_fraction": 0.7066666666666667,
+            "mean_actor_action_delta": 0.671973788767757,
+            "mean_joint_path_per_step": 0.0028587873106139102,
+            "mean_speed_delta_per_step": 0.07784354670713141,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.03230093111142424,
+              "command_error": 0.029577324753876838,
+              "tracking_error": 0.010139915187084549,
+              "home_distance": 0.12435820338345059,
+              "progress": 0.10169906888857576,
+              "speed": 0.07111713456233665,
+              "action_norm": 0.38487002057954667
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.575,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.7
+          },
+          {
+            "seed": 1277,
+            "completed_actor_episodes": 125,
+            "outcomes": {
+              "timeout": 22,
+              "success": 103
+            },
+            "success_fraction": 0.824,
+            "mean_actor_action_delta": 0.4603885884717867,
+            "mean_joint_path_per_step": 0.004525440928479306,
+            "mean_speed_delta_per_step": 0.06650568849232047,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.06760121595221859,
+              "command_error": 0.062061160812594655,
+              "tracking_error": 0.01278707512624534,
+              "home_distance": 0.1428053076376311,
+              "progress": 0.07839878404778142,
+              "speed": 0.11116684124108053,
+              "action_norm": 0.30847428711131214
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.325,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.75
+          }
+        ],
+        "seed_mean_success_fraction": 0.6391351682471204,
+        "total_completed_episodes": 407,
+        "total_successes": 283,
+        "total_timeouts": 124,
+        "total_failures": 0,
+        "seed_mean_actor_action_delta": 0.5461374975267836,
+        "seed_mean_joint_path_per_step": 0.0029874746745687164,
+        "seed_mean_speed_delta_per_step": 0.06624003906914998,
+        "seed_mean_snapshot_target_error_rad": 0.05346196805671473,
+        "seed_mean_snapshot_command_error_rad": 0.0509305743259824,
+        "seed_mean_snapshot_tracking_error_rad": 0.010423585788217138,
+        "seed_mean_snapshot_progress_rad": 0.09133803194328527,
+        "seed_mean_snapshot_action_max": 0.3185317297279835,
+        "seed_mean_snapshot_near_goal_fraction": 0.41,
+        "seed_mean_snapshot_far_from_home_fraction": 0.8099999999999999
+      },
+      "her_shape": {
+        "per_seed": [
+          {
+            "seed": 1103,
+            "completed_actor_episodes": 89,
+            "outcomes": {
+              "timeout": 19,
+              "success": 69,
+              "failure": 1
+            },
+            "success_fraction": 0.7752808988764045,
+            "mean_actor_action_delta": 0.6096835660400864,
+            "mean_joint_path_per_step": 0.003595680342163972,
+            "mean_speed_delta_per_step": 0.07306299497601992,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.0627257551804068,
+              "command_error": 0.05701951412784456,
+              "tracking_error": 0.013904683915116131,
+              "home_distance": 0.11007677513640543,
+              "progress": 0.0772742448195932,
+              "speed": 0.12642871216171012,
+              "action_norm": 0.37523526307195426
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.375,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.675
+          },
+          {
+            "seed": 1129,
+            "completed_actor_episodes": 61,
+            "outcomes": {
+              "success": 32,
+              "timeout": 29
+            },
+            "success_fraction": 0.5245901639344263,
+            "mean_actor_action_delta": 0.7210586500809824,
+            "mean_joint_path_per_step": 0.0021631487376822297,
+            "mean_speed_delta_per_step": 0.07452361717299107,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.04491558370326064,
+              "command_error": 0.04430109108853151,
+              "tracking_error": 0.007732925632400885,
+              "home_distance": 0.11916439250169485,
+              "progress": 0.09308441629673936,
+              "speed": 0.07323206038597325,
+              "action_norm": 0.356110405549407
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.375,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.775
+          },
+          {
+            "seed": 1181,
+            "completed_actor_episodes": 114,
+            "outcomes": {
+              "timeout": 14,
+              "success": 100
+            },
+            "success_fraction": 0.8771929824561403,
+            "mean_actor_action_delta": 0.4358639804012036,
+            "mean_joint_path_per_step": 0.004293580173948467,
+            "mean_speed_delta_per_step": 0.0597657137936578,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.04501393732952147,
+              "command_error": 0.039676134814223586,
+              "tracking_error": 0.01330798536292437,
+              "home_distance": 0.14323270188594106,
+              "progress": 0.10498606267047852,
+              "speed": 0.11809095643418663,
+              "action_norm": 0.3318926410749555
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.525,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.85
+          },
+          {
+            "seed": 1213,
+            "completed_actor_episodes": 134,
+            "outcomes": {
+              "success": 124,
+              "timeout": 10
+            },
+            "success_fraction": 0.9253731343283582,
+            "mean_actor_action_delta": 0.5882142021166358,
+            "mean_joint_path_per_step": 0.0037880453885220434,
+            "mean_speed_delta_per_step": 0.07458046255412512,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.039506717623740785,
+              "command_error": 0.03550637027530865,
+              "tracking_error": 0.011488789469265013,
+              "home_distance": 0.12984683480304188,
+              "progress": 0.10849328237625921,
+              "speed": 0.09971784029547506,
+              "action_norm": 0.35334108284441756
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.625,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.75
+          },
+          {
+            "seed": 1277,
+            "completed_actor_episodes": 123,
+            "outcomes": {
+              "timeout": 19,
+              "success": 104
+            },
+            "success_fraction": 0.8455284552845529,
+            "mean_actor_action_delta": 0.6555813901747946,
+            "mean_joint_path_per_step": 0.004081311423061215,
+            "mean_speed_delta_per_step": 0.08173908922010126,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.04229963936420682,
+              "command_error": 0.03746408799955989,
+              "tracking_error": 0.013803350231092195,
+              "home_distance": 0.1498745144171376,
+              "progress": 0.10970036063579318,
+              "speed": 0.1273021803603205,
+              "action_norm": 0.40788242090493443
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.55,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.875
+          }
+        ],
+        "seed_mean_success_fraction": 0.7895931269759764,
+        "total_completed_episodes": 521,
+        "total_successes": 429,
+        "total_timeouts": 91,
+        "total_failures": 1,
+        "seed_mean_actor_action_delta": 0.6020803577627405,
+        "seed_mean_joint_path_per_step": 0.0035843532130755856,
+        "seed_mean_speed_delta_per_step": 0.07273437554337903,
+        "seed_mean_snapshot_target_error_rad": 0.0468923266402273,
+        "seed_mean_snapshot_command_error_rad": 0.04279343966109364,
+        "seed_mean_snapshot_tracking_error_rad": 0.01204754692215972,
+        "seed_mean_snapshot_progress_rad": 0.0987076733597727,
+        "seed_mean_snapshot_action_max": 0.3648923626891337,
+        "seed_mean_snapshot_near_goal_fraction": 0.49,
+        "seed_mean_snapshot_far_from_home_fraction": 0.785
+      },
+      "her_smooth": {
+        "per_seed": [
+          {
+            "seed": 1103,
+            "completed_actor_episodes": 48,
+            "outcomes": {
+              "timeout": 36,
+              "success": 12
+            },
+            "success_fraction": 0.25,
+            "mean_actor_action_delta": 0.36200657224317156,
+            "mean_joint_path_per_step": 0.003339650531426022,
+            "mean_speed_delta_per_step": 0.059930954316101265,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.2248272786660348,
+              "command_error": 0.22221273409509884,
+              "tracking_error": 0.016056587317700204,
+              "home_distance": 0.23834065917585975,
+              "progress": -0.0868272786660348,
+              "speed": 0.12901874619399503,
+              "action_norm": 0.300631924546775
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.025,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.925
+          },
+          {
+            "seed": 1129,
+            "completed_actor_episodes": 44,
+            "outcomes": {
+              "timeout": 36,
+              "success": 8
+            },
+            "success_fraction": 0.18181818181818182,
+            "mean_actor_action_delta": 0.21891105460289786,
+            "mean_joint_path_per_step": 0.0017859075263769062,
+            "mean_speed_delta_per_step": 0.03427606547987385,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.09406370194287984,
+              "command_error": 0.09364787637946459,
+              "tracking_error": 0.007429857786526754,
+              "home_distance": 0.11699758627824154,
+              "progress": 0.04793629805712016,
+              "speed": 0.08489053320515656,
+              "action_norm": 0.15498146220689563
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.1,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.775
+          },
+          {
+            "seed": 1181,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 38,
+              "success": 2
+            },
+            "success_fraction": 0.05,
+            "mean_actor_action_delta": 0.3591798761709683,
+            "mean_joint_path_per_step": 0.0031706340452296606,
+            "mean_speed_delta_per_step": 0.04735411682791252,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.24432969711209326,
+              "command_error": 0.25615583012931004,
+              "tracking_error": 0.01706009796742179,
+              "home_distance": 0.2052378889902232,
+              "progress": -0.09632969711209324,
+              "speed": 0.1407606044934051,
+              "action_norm": 0.30775587271135196
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.025,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.9
+          },
+          {
+            "seed": 1213,
+            "completed_actor_episodes": 65,
+            "outcomes": {
+              "timeout": 25,
+              "success": 40
+            },
+            "success_fraction": 0.6153846153846154,
+            "mean_actor_action_delta": 0.31557793943417783,
+            "mean_joint_path_per_step": 0.0024832335410797505,
+            "mean_speed_delta_per_step": 0.050325709743778736,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.04279394971805797,
+              "command_error": 0.04200203042313715,
+              "tracking_error": 0.008616992247621599,
+              "home_distance": 0.1270293382322526,
+              "progress": 0.09720605028194203,
+              "speed": 0.06051775702875062,
+              "action_norm": 0.22513804999510334
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.55,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.775
+          },
+          {
+            "seed": 1277,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 40
+            },
+            "success_fraction": 0.0,
+            "mean_actor_action_delta": 0.38842415275906883,
+            "mean_joint_path_per_step": 0.0016532806952475779,
+            "mean_speed_delta_per_step": 0.05428205180170678,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.2118802722229409,
+              "command_error": 0.2103898037730768,
+              "tracking_error": 0.009081783846108759,
+              "home_distance": 0.23304743467241035,
+              "progress": -0.0638802722229409,
+              "speed": 0.06555692538165106,
+              "action_norm": 0.2809624281415879
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.025,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.95
+          }
+        ],
+        "seed_mean_success_fraction": 0.21944055944055946,
+        "total_completed_episodes": 237,
+        "total_successes": 62,
+        "total_timeouts": 175,
+        "total_failures": 0,
+        "seed_mean_actor_action_delta": 0.3288199190420569,
+        "seed_mean_joint_path_per_step": 0.0024865412678719834,
+        "seed_mean_speed_delta_per_step": 0.04923377963387463,
+        "seed_mean_snapshot_target_error_rad": 0.16357897993240136,
+        "seed_mean_snapshot_command_error_rad": 0.1648816549600175,
+        "seed_mean_snapshot_tracking_error_rad": 0.011649063833075821,
+        "seed_mean_snapshot_progress_rad": -0.020378979932401352,
+        "seed_mean_snapshot_action_max": 0.2538939475203428,
+        "seed_mean_snapshot_near_goal_fraction": 0.14500000000000002,
+        "seed_mean_snapshot_far_from_home_fraction": 0.865
+      },
+      "her_both": {
+        "per_seed": [
+          {
+            "seed": 1103,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 37,
+              "success": 3
+            },
+            "success_fraction": 0.075,
+            "mean_actor_action_delta": 0.29302280547586507,
+            "mean_joint_path_per_step": 0.0015151422935698311,
+            "mean_speed_delta_per_step": 0.044465307863441834,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.16177352313435556,
+              "command_error": 0.15903875476043577,
+              "tracking_error": 0.0063506539630048976,
+              "home_distance": 0.1452101946095618,
+              "progress": -0.021773523134355547,
+              "speed": 0.047799116890026576,
+              "action_norm": 0.21381216992966323
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.15,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.925
+          },
+          {
+            "seed": 1129,
+            "completed_actor_episodes": 77,
+            "outcomes": {
+              "timeout": 21,
+              "success": 56
+            },
+            "success_fraction": 0.7272727272727273,
+            "mean_actor_action_delta": 0.4368320830933502,
+            "mean_joint_path_per_step": 0.0026781279217974146,
+            "mean_speed_delta_per_step": 0.05801544767344081,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.06362333298175317,
+              "command_error": 0.06027944468809576,
+              "tracking_error": 0.01080226204642342,
+              "home_distance": 0.13671352819101,
+              "progress": 0.07837666701824683,
+              "speed": 0.10604366693396272,
+              "action_norm": 0.3559527311201654
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.3,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.7
+          },
+          {
+            "seed": 1181,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 37,
+              "failure": 2,
+              "success": 1
+            },
+            "success_fraction": 0.025,
+            "mean_actor_action_delta": 0.32390883772578427,
+            "mean_joint_path_per_step": 0.0024514980284281117,
+            "mean_speed_delta_per_step": 0.04599754146768555,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.2304116018698764,
+              "command_error": 0.2318767164060085,
+              "tracking_error": 0.008356730946959726,
+              "home_distance": 0.2750880957440728,
+              "progress": -0.08441160186987638,
+              "speed": 0.0661459007710274,
+              "action_norm": 0.27010940927287147
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.025,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.9
+          },
+          {
+            "seed": 1213,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 39,
+              "success": 1
+            },
+            "success_fraction": 0.025,
+            "mean_actor_action_delta": 0.34851883160035013,
+            "mean_joint_path_per_step": 0.0022155887772722887,
+            "mean_speed_delta_per_step": 0.05447752977780928,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.16408554711208445,
+              "command_error": 0.1722428890028085,
+              "tracking_error": 0.010623437061297354,
+              "home_distance": 0.1894437037587739,
+              "progress": -0.032085547112084445,
+              "speed": 0.0902765126261585,
+              "action_norm": 0.24460027510655952
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0.1,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.95
+          },
+          {
+            "seed": 1277,
+            "completed_actor_episodes": 40,
+            "outcomes": {
+              "timeout": 38,
+              "success": 2
+            },
+            "success_fraction": 0.05,
+            "mean_actor_action_delta": 0.2302249949514978,
+            "mean_joint_path_per_step": 0.0019617818680322755,
+            "mean_speed_delta_per_step": 0.035146565040328766,
+            "snapshots": 40,
+            "snapshot_means": {
+              "target_error": 0.1928121877073113,
+              "command_error": 0.18996565133215712,
+              "tracking_error": 0.008375987801404645,
+              "home_distance": 0.1920896139921862,
+              "progress": -0.0468121877073113,
+              "speed": 0.0704318599186279,
+              "action_norm": 0.18164644512737818
+            },
+            "snapshot_fraction_max_goal_error_lt_0_03": 0,
+            "snapshot_fraction_max_home_distance_ge_0_08": 0.8
+          }
+        ],
+        "seed_mean_success_fraction": 0.18045454545454545,
+        "total_completed_episodes": 237,
+        "total_successes": 63,
+        "total_timeouts": 172,
+        "total_failures": 2,
+        "seed_mean_actor_action_delta": 0.3265015105693695,
+        "seed_mean_joint_path_per_step": 0.0021644277778199842,
+        "seed_mean_speed_delta_per_step": 0.047620478364541245,
+        "seed_mean_snapshot_target_error_rad": 0.16254123856107616,
+        "seed_mean_snapshot_command_error_rad": 0.16268069123790113,
+        "seed_mean_snapshot_tracking_error_rad": 0.008901814363818008,
+        "seed_mean_snapshot_progress_rad": -0.021341238561076167,
+        "seed_mean_snapshot_action_max": 0.25322420611132757,
+        "seed_mean_snapshot_near_goal_fraction": 0.11499999999999999,
+        "seed_mean_snapshot_far_from_home_fraction": 0.855
+      }
+    }
+  }
+}

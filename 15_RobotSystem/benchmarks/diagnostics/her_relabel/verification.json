@@ -1,0 +1,15 @@
+{
+  "sparse_checkpoint_and_logs_match_previous_audit": true,
+  "her_per_update_counts_match_summary": true,
+  "her_real_successes": 0,
+  "her_real_timeouts": 1,
+  "her_replay_counts": {
+    "attempts": 2048,
+    "relabeled": 1857,
+    "relabeled_success": 41,
+    "no_future_goal": 164,
+    "already_at_goal": 27,
+    "source_failed": 0,
+    "original": 2239
+  }
+}

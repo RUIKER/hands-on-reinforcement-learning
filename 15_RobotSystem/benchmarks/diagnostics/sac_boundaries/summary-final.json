@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "training_updates": 0,
+  "seed": 42,
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "mujoco": "3.17.0",
+  "torch": "2.10.0+cpu",
+  "scene_sha256": "c7aba97eb836f3b01a6a1d0442a8c401ce360c64471772cf0f8271c1a8328373",
+  "source_sha256": {
+    "hands-on-reinforcement-learning\\15_RobotSystem\\panda_reach.py": "261fc533f4e513aebfc213519d724b086fb07b8e6cdc773fa43819e3abc8103a",
+    "hands-on-reinforcement-learning\\15_RobotSystem\\panda_two_joint_env.py": "9e4e56ff9abb4b7c66914a26a601f541e6bae02c53b1ba9da7adfccf8cf3a8e7",
+    "hands-on-reinforcement-learning\\15_RobotSystem\\panda_sac_smoke.py": "d97de310f24ba6ff7c19bada510644ff137f60317ee98298a102562b2cec1a61",
+    "hands-on-reinforcement-learning\\11_SAC\\Pendulum\\agents.py": "333109484208e329c97f784eda9ca91974b6f996b78cb9bf0254be10ef5a08b9"
+  },
+  "validation_position_baseline": [
+    {
+      "seed": 101,
+      "goal_rad": [
+        0.1,
+        0.1
+      ],
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.1,
+        0.1,
+        0.0,
+        0.0
+      ],
+      "return": -17.0,
+      "steps": 18,
+      "outcome": "success",
+      "final_abs_error_rad": [
+        0.003765532073919553,
+        0.0035648108386565625
+      ],
+      "final_abs_speed_rad_s": [
+        0.039950830019906944,
+        0.04118937702660646
+      ],
+      "command_clip_steps": 0,
+      "physics_warning": false,
+      "actual_limit_violation": false
+    },
+    {
+      "seed": 102,
+      "goal_rad": [
+        -0.1,
+        0.1
+      ],
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.1,
+        0.1,
+        0.0,
+        0.0
+      ],
+      "return": -17.0,
+      "steps": 18,
+      "outcome": "success",
+      "final_abs_error_rad": [
+        0.0037491548374296163,
+        0.003580191115433118
+      ],
+      "final_abs_speed_rad_s": [
+        0.03985382758829676,
+        0.04110008138804129
+      ],
+      "command_clip_steps": 0,
+      "physics_warning": false,
+      "actual_limit_violation": false
+    }
+  ],
+  "non_success_probes": [
+    {
+      "command_rad": [
+        0.0,
+        0.0
+      ],
+      "reward": -1.0,
+      "max_error_rad": 0.09999623474667063
+    },
+    {
+      "command_rad": [
+        0.02,
+        0.02
+      ],
+      "reward": -1.0,
+      "max_error_rad": 0.09638211081174827
+    }
+  ],
+  "passing_through_goal": {
+    "q_rad": [
+      0.003617889188251732,
+      0.0036999729084321795
+    ],
+    "abs_max_speed_rad_s": 0.22157495720116288,
+    "reward": -1.0
+  },
+  "timeout_preserved_next_observation": [
+    0.003617889188251732,
+    0.0036999729084321795,
+    0.1670029624642929,
+    0.22157495720116288,
+    0.1,
+    0.1,
+    0.02,
+    0.02
+  ],
+  "observation_after_reset": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.1,
+    0.1,
+    0.0,
+    0.0
+  ],
+  "action_rate_limit_applied_rad": [
+    0.02,
+    -0.02
+  ],
+  "position_limit_applied_rad": [
+    0.009999999999999787,
+    0.0
+  ],
+  "joint_limit_failure": true,
+  "target_cases": [
+    "success",
+    "timeout",
+    "physical_failure"
+  ],
+  "target_done_mask": [
+    1.0,
+    0.0,
+    1.0
+  ],
+  "td_targets_fixed_critics": [
+    0.0,
+    0.9849501848220825,
+    -1.0
+  ]
+}

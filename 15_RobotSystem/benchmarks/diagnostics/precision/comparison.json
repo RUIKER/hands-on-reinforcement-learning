@@ -1,0 +1,3939 @@
+{
+  "historic_actor_reproduced": true,
+  "trajectories_match_before_switch": true,
+  "regression": {
+    "count": 24,
+    "actor_successes": 14,
+    "handoff_successes": 24,
+    "recovered_timeouts": 10,
+    "regressions": 0,
+    "handoff_count": 17,
+    "original_timeout_median_best_error_rad": 0.012162952268125082,
+    "handoff_on_same_cases_median_best_error_rad": 0.004489741102988994,
+    "cases": [
+      {
+        "case_id": 30101,
+        "actor": {
+          "seed": 30101,
+          "goal_rad": [
+            0.104,
+            0.06
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.104,
+            0.06,
+            0.0,
+            0.0
+          ],
+          "return": -41.0,
+          "steps": 42,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.009999325676316687,
+            0.005862634384883707
+          ],
+          "final_abs_speed_rad_s": [
+            0.0028484464629879515,
+            0.001683537417498761
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009999325676316687,
+          "final_max_axis_error_rad": 0.009999325676316687
+        },
+        "handoff": {
+          "seed": 30101,
+          "goal_rad": [
+            0.104,
+            0.06
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.104,
+            0.06,
+            0.0,
+            0.0
+          ],
+          "return": -31.0,
+          "steps": 32,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004579520724804387,
+            0.0025003586284430557
+          ],
+          "final_abs_speed_rad_s": [
+            0.04862757511787674,
+            0.04952379045711998
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 28,
+          "best_max_axis_error_rad": 0.004579520724804387,
+          "final_max_axis_error_rad": 0.004579520724804387
+        }
+      },
+      {
+        "case_id": 30102,
+        "actor": {
+          "seed": 30102,
+          "goal_rad": [
+            0.058,
+            0.064
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.058,
+            0.064,
+            0.0,
+            0.0
+          ],
+          "return": -27.0,
+          "steps": 28,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.005760234500925554,
+            0.009903064262880533
+          ],
+          "final_abs_speed_rad_s": [
+            0.0022324866125973107,
+            0.010233430054876017
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009903064262880533,
+          "final_max_axis_error_rad": 0.009903064262880533
+        },
+        "handoff": {
+          "seed": 30102,
+          "goal_rad": [
+            0.058,
+            0.064
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.058,
+            0.064,
+            0.0,
+            0.0
+          ],
+          "return": -30.0,
+          "steps": 31,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0014559269044550419,
+            0.0027845695739953102
+          ],
+          "final_abs_speed_rad_s": [
+            0.015420094815537341,
+            0.04676836573080012
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 25,
+          "best_max_axis_error_rad": 0.0017954835234849711,
+          "final_max_axis_error_rad": 0.0027845695739953102
+        }
+      },
+      {
+        "case_id": 30103,
+        "actor": {
+          "seed": 30103,
+          "goal_rad": [
+            0.148,
+            0.123
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.148,
+            0.123,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.01053715399259525,
+            0.010224000025634672
+          ],
+          "final_abs_speed_rad_s": [
+            6.388072524015279e-08,
+            1.3419682493587359e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.010535071205159369,
+          "final_max_axis_error_rad": 0.01053715399259525
+        },
+        "handoff": {
+          "seed": 30103,
+          "goal_rad": [
+            0.148,
+            0.123
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.148,
+            0.123,
+            0.0,
+            0.0
+          ],
+          "return": -33.0,
+          "steps": 34,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.002721360173233406,
+            0.00378295720392427
+          ],
+          "final_abs_speed_rad_s": [
+            0.02895654406325912,
+            0.04070103397303142
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 27,
+          "best_max_axis_error_rad": 0.003359308883980866,
+          "final_max_axis_error_rad": 0.00378295720392427
+        }
+      },
+      {
+        "case_id": 30104,
+        "actor": {
+          "seed": 30104,
+          "goal_rad": [
+            0.045,
+            0.04
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.045,
+            0.04,
+            0.0,
+            0.0
+          ],
+          "return": -15.0,
+          "steps": 16,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.008922689205320522,
+            0.009918679919259744
+          ],
+          "final_abs_speed_rad_s": [
+            0.025188834893918082,
+            0.020862054873014426
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009918679919259744,
+          "final_max_axis_error_rad": 0.009918679919259744
+        },
+        "handoff": {
+          "seed": 30104,
+          "goal_rad": [
+            0.045,
+            0.04
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.045,
+            0.04,
+            0.0,
+            0.0
+          ],
+          "return": -15.0,
+          "steps": 16,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.008922689205320522,
+            0.009918679919259744
+          ],
+          "final_abs_speed_rad_s": [
+            0.025188834893918082,
+            0.020862054873014426
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009918679919259744,
+          "final_max_axis_error_rad": 0.009918679919259744
+        }
+      },
+      {
+        "case_id": 30105,
+        "actor": {
+          "seed": 30105,
+          "goal_rad": [
+            0.05,
+            0.086
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.05,
+            0.086,
+            0.0,
+            0.0
+          ],
+          "return": -47.0,
+          "steps": 48,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004480549694558807,
+            0.009976540194789732
+          ],
+          "final_abs_speed_rad_s": [
+            0.0017072528229648458,
+            0.0035736668768623896
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009976540194789732,
+          "final_max_axis_error_rad": 0.009976540194789732
+        },
+        "handoff": {
+          "seed": 30105,
+          "goal_rad": [
+            0.05,
+            0.086
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.05,
+            0.086,
+            0.0,
+            0.0
+          ],
+          "return": -38.0,
+          "steps": 39,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0006933863378026581,
+            0.003436654915386639
+          ],
+          "final_abs_speed_rad_s": [
+            0.0073370040647493424,
+            0.04150328000884303
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 32,
+          "best_max_axis_error_rad": 0.0012998424206883477,
+          "final_max_axis_error_rad": 0.003436654915386639
+        }
+      },
+      {
+        "case_id": 30106,
+        "actor": {
+          "seed": 30106,
+          "goal_rad": [
+            0.042,
+            0.134
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.042,
+            0.134,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.003151361034764988,
+            0.01236689510013804
+          ],
+          "final_abs_speed_rad_s": [
+            3.5464566523986446e-09,
+            4.6103319126575565e-10
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.01236689510013804,
+          "final_max_axis_error_rad": 0.01236689510013804
+        },
+        "handoff": {
+          "seed": 30106,
+          "goal_rad": [
+            0.042,
+            0.134
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.042,
+            0.134,
+            0.0,
+            0.0
+          ],
+          "return": -44.0,
+          "steps": 45,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.00019479000965879484,
+            0.003844127654765772
+          ],
+          "final_abs_speed_rad_s": [
+            0.0020404251261237853,
+            0.04091973716081017
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 37,
+          "best_max_axis_error_rad": 0.0004300711611816832,
+          "final_max_axis_error_rad": 0.003844127654765772
+        }
+      },
+      {
+        "case_id": 30107,
+        "actor": {
+          "seed": 30107,
+          "goal_rad": [
+            -0.097,
+            0.049
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.097,
+            0.049,
+            0.0,
+            0.0
+          ],
+          "return": -39.0,
+          "steps": 40,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0043328550363397195,
+            0.00989432206666644
+          ],
+          "final_abs_speed_rad_s": [
+            0.006793105244095578,
+            0.005980277649610546
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.00989432206666644,
+          "final_max_axis_error_rad": 0.00989432206666644
+        },
+        "handoff": {
+          "seed": 30107,
+          "goal_rad": [
+            -0.097,
+            0.049
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.097,
+            0.049,
+            0.0,
+            0.0
+          ],
+          "return": -38.0,
+          "steps": 39,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0014196420072528498,
+            0.0026280370255418184
+          ],
+          "final_abs_speed_rad_s": [
+            0.015116462500796976,
+            0.04723580200615071
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 33,
+          "best_max_axis_error_rad": 0.001752699360080684,
+          "final_max_axis_error_rad": 0.0026280370255418184
+        }
+      },
+      {
+        "case_id": 30108,
+        "actor": {
+          "seed": 30108,
+          "goal_rad": [
+            -0.059,
+            0.13
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.059,
+            0.13,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.0033828444178947426,
+            0.01337181705353041
+          ],
+          "final_abs_speed_rad_s": [
+            1.5234486050936143e-08,
+            1.4810946574163292e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.01337181705353041,
+          "final_max_axis_error_rad": 0.01337181705353041
+        },
+        "handoff": {
+          "seed": 30108,
+          "goal_rad": [
+            -0.059,
+            0.13
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.059,
+            0.13,
+            0.0,
+            0.0
+          ],
+          "return": -42.0,
+          "steps": 43,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0009062869155821926,
+            0.0037050760038163377
+          ],
+          "final_abs_speed_rad_s": [
+            0.009701268160828546,
+            0.04212986222478784
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 35,
+          "best_max_axis_error_rad": 0.001621088738644888,
+          "final_max_axis_error_rad": 0.0037050760038163377
+        }
+      },
+      {
+        "case_id": 30109,
+        "actor": {
+          "seed": 30109,
+          "goal_rad": [
+            -0.144,
+            0.041
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.144,
+            0.041,
+            0.0,
+            0.0
+          ],
+          "return": -38.0,
+          "steps": 39,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.00755712320782459,
+            0.009954467791201793
+          ],
+          "final_abs_speed_rad_s": [
+            0.006929685939730873,
+            0.0035641534518471743
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009954467791201793,
+          "final_max_axis_error_rad": 0.009954467791201793
+        },
+        "handoff": {
+          "seed": 30109,
+          "goal_rad": [
+            -0.144,
+            0.041
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.144,
+            0.041,
+            0.0,
+            0.0
+          ],
+          "return": -37.0,
+          "steps": 38,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0022267228992340626,
+            0.0026878180339625773
+          ],
+          "final_abs_speed_rad_s": [
+            0.023672670024081226,
+            0.04591527178850887
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 32,
+          "best_max_axis_error_rad": 0.0026878180339625773,
+          "final_max_axis_error_rad": 0.0026878180339625773
+        }
+      },
+      {
+        "case_id": 30110,
+        "actor": {
+          "seed": 30110,
+          "goal_rad": [
+            -0.125,
+            0.149
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.125,
+            0.149,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.007697779952839309,
+            0.014636013285919985
+          ],
+          "final_abs_speed_rad_s": [
+            1.6711279484404934e-08,
+            2.3744662981047218e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.014636012954738598,
+          "final_max_axis_error_rad": 0.014636013285919985
+        },
+        "handoff": {
+          "seed": 30110,
+          "goal_rad": [
+            -0.125,
+            0.149
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.125,
+            0.149,
+            0.0,
+            0.0
+          ],
+          "return": -40.0,
+          "steps": 41,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0017058282234286293,
+            0.0035734606828238535
+          ],
+          "final_abs_speed_rad_s": [
+            0.01824691118521627,
+            0.045048092638094596
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 33,
+          "best_max_axis_error_rad": 0.00257883512121454,
+          "final_max_axis_error_rad": 0.0035734606828238535
+        }
+      },
+      {
+        "case_id": 30111,
+        "actor": {
+          "seed": 30111,
+          "goal_rad": [
+            -0.054,
+            0.099
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.054,
+            0.099,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.0019139711812554902,
+            0.011073830091596182
+          ],
+          "final_abs_speed_rad_s": [
+            2.406107527797939e-08,
+            1.4941250165062245e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.011073829909302918,
+          "final_max_axis_error_rad": 0.011073830091596182
+        },
+        "handoff": {
+          "seed": 30111,
+          "goal_rad": [
+            -0.054,
+            0.099
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.054,
+            0.099,
+            0.0,
+            0.0
+          ],
+          "return": -39.0,
+          "steps": 40,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0009272614836731627,
+            0.0030173071134331347
+          ],
+          "final_abs_speed_rad_s": [
+            0.00991510946867944,
+            0.04714182672782334
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 33,
+          "best_max_axis_error_rad": 0.0014159745211198352,
+          "final_max_axis_error_rad": 0.0030173071134331347
+        }
+      },
+      {
+        "case_id": 30112,
+        "actor": {
+          "seed": 30112,
+          "goal_rad": [
+            -0.102,
+            0.072
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.102,
+            0.072,
+            0.0,
+            0.0
+          ],
+          "return": -61.0,
+          "steps": 62,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.003976799623497118,
+            0.009978964492507132
+          ],
+          "final_abs_speed_rad_s": [
+            0.0010668266477733815,
+            0.0013419183648895466
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009978964492507132,
+          "final_max_axis_error_rad": 0.009978964492507132
+        },
+        "handoff": {
+          "seed": 30112,
+          "goal_rad": [
+            -0.102,
+            0.072
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.102,
+            0.072,
+            0.0,
+            0.0
+          ],
+          "return": -39.0,
+          "steps": 40,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0013418433023332926,
+            0.0033017247256884874
+          ],
+          "final_abs_speed_rad_s": [
+            0.014300847043265282,
+            0.04183539197240708
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 33,
+          "best_max_axis_error_rad": 0.0020462111122807464,
+          "final_max_axis_error_rad": 0.0033017247256884874
+        }
+      },
+      {
+        "case_id": 30113,
+        "actor": {
+          "seed": 30113,
+          "goal_rad": [
+            -0.154,
+            -0.133
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.154,
+            -0.133,
+            0.0,
+            0.0
+          ],
+          "return": -31.0,
+          "steps": 32,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0019317979573467703,
+            0.009814264680900409
+          ],
+          "final_abs_speed_rad_s": [
+            0.0015777711308234824,
+            0.03716003071796502
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009814264680900409,
+          "final_max_axis_error_rad": 0.009814264680900409
+        },
+        "handoff": {
+          "seed": 30113,
+          "goal_rad": [
+            -0.154,
+            -0.133
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.154,
+            -0.133,
+            0.0,
+            0.0
+          ],
+          "return": -31.0,
+          "steps": 32,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0019317979573467703,
+            0.009814264680900409
+          ],
+          "final_abs_speed_rad_s": [
+            0.0015777711308234824,
+            0.03716003071796502
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009814264680900409,
+          "final_max_axis_error_rad": 0.009814264680900409
+        }
+      },
+      {
+        "case_id": 30114,
+        "actor": {
+          "seed": 30114,
+          "goal_rad": [
+            -0.041,
+            -0.094
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.041,
+            -0.094,
+            0.0,
+            0.0
+          ],
+          "return": -26.0,
+          "steps": 27,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.007861995945079185,
+            0.009514178976359297
+          ],
+          "final_abs_speed_rad_s": [
+            0.008880062864990662,
+            0.036391624133899264
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009514178976359297,
+          "final_max_axis_error_rad": 0.009514178976359297
+        },
+        "handoff": {
+          "seed": 30114,
+          "goal_rad": [
+            -0.041,
+            -0.094
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.041,
+            -0.094,
+            0.0,
+            0.0
+          ],
+          "return": -26.0,
+          "steps": 27,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.007861995945079185,
+            0.009514178976359297
+          ],
+          "final_abs_speed_rad_s": [
+            0.008880062864990662,
+            0.036391624133899264
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009514178976359297,
+          "final_max_axis_error_rad": 0.009514178976359297
+        }
+      },
+      {
+        "case_id": 30115,
+        "actor": {
+          "seed": 30115,
+          "goal_rad": [
+            -0.076,
+            -0.057
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.076,
+            -0.057,
+            0.0,
+            0.0
+          ],
+          "return": -17.0,
+          "steps": 18,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0028778290674093265,
+            0.006131790957415242
+          ],
+          "final_abs_speed_rad_s": [
+            0.033648030623063124,
+            0.04471155384914816
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.006131790957415242,
+          "final_max_axis_error_rad": 0.006131790957415242
+        },
+        "handoff": {
+          "seed": 30115,
+          "goal_rad": [
+            -0.076,
+            -0.057
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.076,
+            -0.057,
+            0.0,
+            0.0
+          ],
+          "return": -17.0,
+          "steps": 18,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0028778290674093265,
+            0.006131790957415242
+          ],
+          "final_abs_speed_rad_s": [
+            0.033648030623063124,
+            0.04471155384914816
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.006131790957415242,
+          "final_max_axis_error_rad": 0.006131790957415242
+        }
+      },
+      {
+        "case_id": 30116,
+        "actor": {
+          "seed": 30116,
+          "goal_rad": [
+            -0.074,
+            -0.114
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.074,
+            -0.114,
+            0.0,
+            0.0
+          ],
+          "return": -28.0,
+          "steps": 29,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.005276049471429858,
+            0.009529391387498073
+          ],
+          "final_abs_speed_rad_s": [
+            0.0075286176102465395,
+            0.03869407060376226
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009529391387498073,
+          "final_max_axis_error_rad": 0.009529391387498073
+        },
+        "handoff": {
+          "seed": 30116,
+          "goal_rad": [
+            -0.074,
+            -0.114
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.074,
+            -0.114,
+            0.0,
+            0.0
+          ],
+          "return": -28.0,
+          "steps": 29,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.005276049471429858,
+            0.009529391387498073
+          ],
+          "final_abs_speed_rad_s": [
+            0.0075286176102465395,
+            0.03869407060376226
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009529391387498073,
+          "final_max_axis_error_rad": 0.009529391387498073
+        }
+      },
+      {
+        "case_id": 30117,
+        "actor": {
+          "seed": 30117,
+          "goal_rad": [
+            -0.108,
+            -0.09
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.108,
+            -0.09,
+            0.0,
+            0.0
+          ],
+          "return": -22.0,
+          "steps": 23,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0016006960003262655,
+            0.008819336035269784
+          ],
+          "final_abs_speed_rad_s": [
+            0.01602343654273105,
+            0.049326646215369266
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.008819336035269784,
+          "final_max_axis_error_rad": 0.008819336035269784
+        },
+        "handoff": {
+          "seed": 30117,
+          "goal_rad": [
+            -0.108,
+            -0.09
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.108,
+            -0.09,
+            0.0,
+            0.0
+          ],
+          "return": -22.0,
+          "steps": 23,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0016006960003262655,
+            0.008819336035269784
+          ],
+          "final_abs_speed_rad_s": [
+            0.01602343654273105,
+            0.049326646215369266
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.008819336035269784,
+          "final_max_axis_error_rad": 0.008819336035269784
+        }
+      },
+      {
+        "case_id": 30118,
+        "actor": {
+          "seed": 30118,
+          "goal_rad": [
+            -0.103,
+            -0.065
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.103,
+            -0.065,
+            0.0,
+            0.0
+          ],
+          "return": -18.0,
+          "steps": 19,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.006109744551380941,
+            0.005737590984937348
+          ],
+          "final_abs_speed_rad_s": [
+            0.039709902109443584,
+            0.0486563995933426
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.006109744551380941,
+          "final_max_axis_error_rad": 0.006109744551380941
+        },
+        "handoff": {
+          "seed": 30118,
+          "goal_rad": [
+            -0.103,
+            -0.065
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.103,
+            -0.065,
+            0.0,
+            0.0
+          ],
+          "return": -18.0,
+          "steps": 19,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.006109744551380941,
+            0.005737590984937348
+          ],
+          "final_abs_speed_rad_s": [
+            0.039709902109443584,
+            0.0486563995933426
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.006109744551380941,
+          "final_max_axis_error_rad": 0.006109744551380941
+        }
+      },
+      {
+        "case_id": 30119,
+        "actor": {
+          "seed": 30119,
+          "goal_rad": [
+            0.053,
+            -0.128
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.053,
+            -0.128,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.011727321809878337,
+            0.004800053796284315
+          ],
+          "final_abs_speed_rad_s": [
+            1.1192550650342356e-08,
+            9.809089540896429e-09
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.011727321809878337,
+          "final_max_axis_error_rad": 0.011727321809878337
+        },
+        "handoff": {
+          "seed": 30119,
+          "goal_rad": [
+            0.053,
+            -0.128
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.053,
+            -0.128,
+            0.0,
+            0.0
+          ],
+          "return": -51.0,
+          "steps": 52,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004271694895360736,
+            0.006405548190928881
+          ],
+          "final_abs_speed_rad_s": [
+            0.044940127862425586,
+            0.010009893672657172
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 47,
+          "best_max_axis_error_rad": 0.006405548190928881,
+          "final_max_axis_error_rad": 0.006405548190928881
+        }
+      },
+      {
+        "case_id": 30120,
+        "actor": {
+          "seed": 30120,
+          "goal_rad": [
+            0.08,
+            -0.102
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.08,
+            -0.102,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.013445153663639894,
+            0.004491784269131507
+          ],
+          "final_abs_speed_rad_s": [
+            2.918614172671185e-08,
+            1.9054551043308887e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.013445153663639894,
+          "final_max_axis_error_rad": 0.013445153663639894
+        },
+        "handoff": {
+          "seed": 30120,
+          "goal_rad": [
+            0.08,
+            -0.102
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.08,
+            -0.102,
+            0.0,
+            0.0
+          ],
+          "return": -50.0,
+          "steps": 51,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.003915482478774587,
+            0.006352508289931197
+          ],
+          "final_abs_speed_rad_s": [
+            0.04124026819116095,
+            0.0069286387682562615
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 45,
+          "best_max_axis_error_rad": 0.006352508289931197,
+          "final_max_axis_error_rad": 0.006352508289931197
+        }
+      },
+      {
+        "case_id": 30121,
+        "actor": {
+          "seed": 30121,
+          "goal_rad": [
+            0.04,
+            -0.154
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.04,
+            -0.154,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.010994107469872904,
+            0.00539852036473959
+          ],
+          "final_abs_speed_rad_s": [
+            2.8359396394207046e-08,
+            1.1298465230851062e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.010994107469872904,
+          "final_max_axis_error_rad": 0.010994107469872904
+        },
+        "handoff": {
+          "seed": 30121,
+          "goal_rad": [
+            0.04,
+            -0.154
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.04,
+            -0.154,
+            0.0,
+            0.0
+          ],
+          "return": -53.0,
+          "steps": 54,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004053030542229975,
+            0.006424821887792642
+          ],
+          "final_abs_speed_rad_s": [
+            0.04257990596668295,
+            0.012759620232042948
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 49,
+          "best_max_axis_error_rad": 0.006424821887792642,
+          "final_max_axis_error_rad": 0.006424821887792642
+        }
+      },
+      {
+        "case_id": 30122,
+        "actor": {
+          "seed": 30122,
+          "goal_rad": [
+            0.082,
+            -0.045
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.082,
+            -0.045,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.011959010045122426,
+            0.0010825920457531515
+          ],
+          "final_abs_speed_rad_s": [
+            1.4657775202466159e-08,
+            7.20745114083044e-09
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.011959009436112125,
+          "final_max_axis_error_rad": 0.011959010045122426
+        },
+        "handoff": {
+          "seed": 30122,
+          "goal_rad": [
+            0.082,
+            -0.045
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.082,
+            -0.045,
+            0.0,
+            0.0
+          ],
+          "return": -42.0,
+          "steps": 43,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004356113868887582,
+            0.0057333258743329715
+          ],
+          "final_abs_speed_rad_s": [
+            0.0460300671289074,
+            0.005128342936732504
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 38,
+          "best_max_axis_error_rad": 0.0056201733219971226,
+          "final_max_axis_error_rad": 0.0057333258743329715
+        }
+      },
+      {
+        "case_id": 30123,
+        "actor": {
+          "seed": 30123,
+          "goal_rad": [
+            0.05,
+            -0.048
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.05,
+            -0.048,
+            0.0,
+            0.0
+          ],
+          "return": -97.0,
+          "steps": 98,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.00999949194242667,
+            0.0007998139044049363
+          ],
+          "final_abs_speed_rad_s": [
+            0.00013615225155481456,
+            0.00019492769999396976
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.00999949194242667,
+          "final_max_axis_error_rad": 0.00999949194242667
+        },
+        "handoff": {
+          "seed": 30123,
+          "goal_rad": [
+            0.05,
+            -0.048
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.05,
+            -0.048,
+            0.0,
+            0.0
+          ],
+          "return": -39.0,
+          "steps": 40,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0046512053568993905,
+            0.0055863793364984565
+          ],
+          "final_abs_speed_rad_s": [
+            0.04915291494467788,
+            0.00645098944313517
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 36,
+          "best_max_axis_error_rad": 0.0055863793364984565,
+          "final_max_axis_error_rad": 0.0055863793364984565
+        }
+      },
+      {
+        "case_id": 30124,
+        "actor": {
+          "seed": 30124,
+          "goal_rad": [
+            0.139,
+            -0.155
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.139,
+            -0.155,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.01910900054808591,
+            0.008994667294828257
+          ],
+          "final_abs_speed_rad_s": [
+            4.5071375416054695e-09,
+            1.8992845093987504e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.01910900054808591,
+          "final_max_axis_error_rad": 0.01910900054808591
+        },
+        "handoff": {
+          "seed": 30124,
+          "goal_rad": [
+            0.139,
+            -0.155
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.139,
+            -0.155,
+            0.0,
+            0.0
+          ],
+          "return": -57.0,
+          "steps": 58,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004207872898256276,
+            0.006705730485287165
+          ],
+          "final_abs_speed_rad_s": [
+            0.04418565141793816,
+            0.01590389840893882
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 51,
+          "best_max_axis_error_rad": 0.006705730485287165,
+          "final_max_axis_error_rad": 0.006705730485287165
+        }
+      }
+    ]
+  },
+  "fresh": {
+    "count": 24,
+    "actor_successes": 9,
+    "handoff_successes": 24,
+    "recovered_timeouts": 15,
+    "regressions": 0,
+    "handoff_count": 18,
+    "original_timeout_median_best_error_rad": 0.013666475099834124,
+    "handoff_on_same_cases_median_best_error_rad": 0.004054859777392006,
+    "cases": [
+      {
+        "case_id": 30201,
+        "actor": {
+          "seed": 30201,
+          "goal_rad": [
+            0.044,
+            0.157
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.044,
+            0.157,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.00265138937253432,
+            0.013914422439933322
+          ],
+          "final_abs_speed_rad_s": [
+            2.8990550023653154e-08,
+            2.4674918896208012e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.013914422439933322,
+          "final_max_axis_error_rad": 0.013914422439933322
+        },
+        "handoff": {
+          "seed": 30201,
+          "goal_rad": [
+            0.044,
+            0.157
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.044,
+            0.157,
+            0.0,
+            0.0
+          ],
+          "return": -46.0,
+          "steps": 47,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0001066866022811086,
+            0.003683940660454632
+          ],
+          "final_abs_speed_rad_s": [
+            0.0010995498499269023,
+            0.04444083315333155
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 39,
+          "best_max_axis_error_rad": 0.00019665888332225795,
+          "final_max_axis_error_rad": 0.003683940660454632
+        }
+      },
+      {
+        "case_id": 30202,
+        "actor": {
+          "seed": 30202,
+          "goal_rad": [
+            0.124,
+            0.114
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.124,
+            0.114,
+            0.0,
+            0.0
+          ],
+          "return": -70.0,
+          "steps": 71,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.009137844744193394,
+            0.009999022768345078
+          ],
+          "final_abs_speed_rad_s": [
+            0.00011362105936464768,
+            0.0002472813850438563
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009999022768345078,
+          "final_max_axis_error_rad": 0.009999022768345078
+        },
+        "handoff": {
+          "seed": 30202,
+          "goal_rad": [
+            0.124,
+            0.114
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.124,
+            0.114,
+            0.0,
+            0.0
+          ],
+          "return": -31.0,
+          "steps": 32,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.002296302346756457,
+            0.00344290850015809
+          ],
+          "final_abs_speed_rad_s": [
+            0.024407129124796683,
+            0.04368387111699716
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 25,
+          "best_max_axis_error_rad": 0.0028339589384690222,
+          "final_max_axis_error_rad": 0.00344290850015809
+        }
+      },
+      {
+        "case_id": 30203,
+        "actor": {
+          "seed": 30203,
+          "goal_rad": [
+            0.094,
+            0.123
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.094,
+            0.123,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.006923972924480576,
+            0.010936777613917911
+          ],
+          "final_abs_speed_rad_s": [
+            1.7759647766679972e-08,
+            2.226208119187854e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.010936777613917911,
+          "final_max_axis_error_rad": 0.010936777613917911
+        },
+        "handoff": {
+          "seed": 30203,
+          "goal_rad": [
+            0.094,
+            0.123
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.094,
+            0.123,
+            0.0,
+            0.0
+          ],
+          "return": -39.0,
+          "steps": 40,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0011270868839124148,
+            0.0032306508757419805
+          ],
+          "final_abs_speed_rad_s": [
+            0.011970764440429446,
+            0.0467243391209005
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 33,
+          "best_max_axis_error_rad": 0.0017161985125449114,
+          "final_max_axis_error_rad": 0.0032306508757419805
+        }
+      },
+      {
+        "case_id": 30204,
+        "actor": {
+          "seed": 30204,
+          "goal_rad": [
+            0.151,
+            0.057
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.151,
+            0.057,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.012939614005410993,
+            0.005357794327675872
+          ],
+          "final_abs_speed_rad_s": [
+            4.554749101722501e-08,
+            2.1817552081126695e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.012939614005410993,
+          "final_max_axis_error_rad": 0.012939614005410993
+        },
+        "handoff": {
+          "seed": 30204,
+          "goal_rad": [
+            0.151,
+            0.057
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.151,
+            0.057,
+            0.0,
+            0.0
+          ],
+          "return": -40.0,
+          "steps": 41,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.003891064917333209,
+            0.004815438351065161
+          ],
+          "final_abs_speed_rad_s": [
+            0.04132020546510822,
+            0.024089316327568916
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 35,
+          "best_max_axis_error_rad": 0.004801233106453473,
+          "final_max_axis_error_rad": 0.004815438351065161
+        }
+      },
+      {
+        "case_id": 30205,
+        "actor": {
+          "seed": 30205,
+          "goal_rad": [
+            0.066,
+            0.128
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.066,
+            0.128,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.004917988918589716,
+            0.011643693248643824
+          ],
+          "final_abs_speed_rad_s": [
+            9.317108208019312e-09,
+            1.0968154355689047e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.011643693248643824,
+          "final_max_axis_error_rad": 0.011643693248643824
+        },
+        "handoff": {
+          "seed": 30205,
+          "goal_rad": [
+            0.066,
+            0.128
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.066,
+            0.128,
+            0.0,
+            0.0
+          ],
+          "return": -42.0,
+          "steps": 43,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0006320369008209897,
+            0.003098815470471722
+          ],
+          "final_abs_speed_rad_s": [
+            0.0066955712598253244,
+            0.04855951360023483
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 36,
+          "best_max_axis_error_rad": 0.0009613405984444517,
+          "final_max_axis_error_rad": 0.003098815470471722
+        }
+      },
+      {
+        "case_id": 30206,
+        "actor": {
+          "seed": 30206,
+          "goal_rad": [
+            0.133,
+            0.091
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.133,
+            0.091,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.01051152207075752,
+            0.008155396210112437
+          ],
+          "final_abs_speed_rad_s": [
+            8.627143832690297e-09,
+            1.0042246516559156e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.010511521829284332,
+          "final_max_axis_error_rad": 0.01051152207075752
+        },
+        "handoff": {
+          "seed": 30206,
+          "goal_rad": [
+            0.133,
+            0.091
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.133,
+            0.091,
+            0.0,
+            0.0
+          ],
+          "return": -33.0,
+          "steps": 34,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004054859777392006,
+            0.0028826261729142655
+          ],
+          "final_abs_speed_rad_s": [
+            0.043117192096203794,
+            0.04793443002847483
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 29,
+          "best_max_axis_error_rad": 0.004054859777392006,
+          "final_max_axis_error_rad": 0.004054859777392006
+        }
+      },
+      {
+        "case_id": 30207,
+        "actor": {
+          "seed": 30207,
+          "goal_rad": [
+            -0.118,
+            0.124
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.118,
+            0.124,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.006407815247657461,
+            0.013026093538786296
+          ],
+          "final_abs_speed_rad_s": [
+            1.0241058657312972e-08,
+            4.996933389573096e-09
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.013026093330678168,
+          "final_max_axis_error_rad": 0.013026093538786296
+        },
+        "handoff": {
+          "seed": 30207,
+          "goal_rad": [
+            -0.118,
+            0.124
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.118,
+            0.124,
+            0.0,
+            0.0
+          ],
+          "return": -39.0,
+          "steps": 40,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0015495547816800764,
+            0.0037024776510773683
+          ],
+          "final_abs_speed_rad_s": [
+            0.016552236531285455,
+            0.041691936869120795
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 32,
+          "best_max_axis_error_rad": 0.0023652355411365317,
+          "final_max_axis_error_rad": 0.0037024776510773683
+        }
+      },
+      {
+        "case_id": 30208,
+        "actor": {
+          "seed": 30208,
+          "goal_rad": [
+            -0.101,
+            0.156
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.101,
+            0.156,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.006595883399702296,
+            0.015072200446311163
+          ],
+          "final_abs_speed_rad_s": [
+            2.986692331977477e-09,
+            2.7334671221480488e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.01507220006697918,
+          "final_max_axis_error_rad": 0.015072200446311163
+        },
+        "handoff": {
+          "seed": 30208,
+          "goal_rad": [
+            -0.101,
+            0.156
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.101,
+            0.156,
+            0.0,
+            0.0
+          ],
+          "return": -42.0,
+          "steps": 43,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0014471784076923594,
+            0.0035478170058265424
+          ],
+          "final_abs_speed_rad_s": [
+            0.01549426818990171,
+            0.045861499270834535
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 35,
+          "best_max_axis_error_rad": 0.0022111113614574907,
+          "final_max_axis_error_rad": 0.0035478170058265424
+        }
+      },
+      {
+        "case_id": 30209,
+        "actor": {
+          "seed": 30209,
+          "goal_rad": [
+            -0.129,
+            0.096
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.129,
+            0.096,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.00603502489469325,
+            0.011247588730337849
+          ],
+          "final_abs_speed_rad_s": [
+            4.730198385259625e-08,
+            2.922932366652382e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.0112475883321006,
+          "final_max_axis_error_rad": 0.011247588730337849
+        },
+        "handoff": {
+          "seed": 30209,
+          "goal_rad": [
+            -0.129,
+            0.096
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.129,
+            0.096,
+            0.0,
+            0.0
+          ],
+          "return": -39.0,
+          "steps": 40,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.001816887025213293,
+            0.003133394269887166
+          ],
+          "final_abs_speed_rad_s": [
+            0.01938092187989498,
+            0.0456469865665681
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 33,
+          "best_max_axis_error_rad": 0.002243982214411938,
+          "final_max_axis_error_rad": 0.003133394269887166
+        }
+      },
+      {
+        "case_id": 30210,
+        "actor": {
+          "seed": 30210,
+          "goal_rad": [
+            -0.049,
+            0.076
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.049,
+            0.076,
+            0.0,
+            0.0
+          ],
+          "return": -58.0,
+          "steps": 59,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0011882879987740805,
+            0.009980575834332886
+          ],
+          "final_abs_speed_rad_s": [
+            0.001464155697076777,
+            0.0020767995928848318
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009980575834332886,
+          "final_max_axis_error_rad": 0.009980575834332886
+        },
+        "handoff": {
+          "seed": 30210,
+          "goal_rad": [
+            -0.049,
+            0.076
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.049,
+            0.076,
+            0.0,
+            0.0
+          ],
+          "return": -38.0,
+          "steps": 39,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0007498206884328854,
+            0.0031770351590247464
+          ],
+          "final_abs_speed_rad_s": [
+            0.008011812989640212,
+            0.04351497526800791
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 32,
+          "best_max_axis_error_rad": 0.001144661341744957,
+          "final_max_axis_error_rad": 0.0031770351590247464
+        }
+      },
+      {
+        "case_id": 30211,
+        "actor": {
+          "seed": 30211,
+          "goal_rad": [
+            -0.084,
+            0.133
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.084,
+            0.133,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.0048892689464740124,
+            0.013666475293550528
+          ],
+          "final_abs_speed_rad_s": [
+            2.0470821161566675e-08,
+            1.2607452062344222e-09
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.013666475099834124,
+          "final_max_axis_error_rad": 0.013666475293550528
+        },
+        "handoff": {
+          "seed": 30211,
+          "goal_rad": [
+            -0.084,
+            0.133
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.084,
+            0.133,
+            0.0,
+            0.0
+          ],
+          "return": -41.0,
+          "steps": 42,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0011967902192370206,
+            0.003662473641802416
+          ],
+          "final_abs_speed_rad_s": [
+            0.012801148922609522,
+            0.042831550701945185
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 34,
+          "best_max_axis_error_rad": 0.0018278109886931265,
+          "final_max_axis_error_rad": 0.003662473641802416
+        }
+      },
+      {
+        "case_id": 30212,
+        "actor": {
+          "seed": 30212,
+          "goal_rad": [
+            -0.074,
+            0.042
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.074,
+            0.042,
+            0.0,
+            0.0
+          ],
+          "return": -35.0,
+          "steps": 36,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0032634984063913963,
+            0.009872482134644457
+          ],
+          "final_abs_speed_rad_s": [
+            0.009033807463446822,
+            0.008617062884908936
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009872482134644457,
+          "final_max_axis_error_rad": 0.009872482134644457
+        },
+        "handoff": {
+          "seed": 30212,
+          "goal_rad": [
+            -0.074,
+            0.042
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.074,
+            0.042,
+            0.0,
+            0.0
+          ],
+          "return": -37.0,
+          "steps": 38,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0010491302234528765,
+            0.0026547582714517085
+          ],
+          "final_abs_speed_rad_s": [
+            0.011176170297214983,
+            0.04634255883499187
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 32,
+          "best_max_axis_error_rad": 0.0015995275101376716,
+          "final_max_axis_error_rad": 0.0026547582714517085
+        }
+      },
+      {
+        "case_id": 30213,
+        "actor": {
+          "seed": 30213,
+          "goal_rad": [
+            -0.134,
+            -0.053
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.134,
+            -0.053,
+            0.0,
+            0.0
+          ],
+          "return": -20.0,
+          "steps": 21,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.009678288323029277,
+            0.0013547412126560937
+          ],
+          "final_abs_speed_rad_s": [
+            0.03774472558644563,
+            0.03667765523743032
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009678288323029277,
+          "final_max_axis_error_rad": 0.009678288323029277
+        },
+        "handoff": {
+          "seed": 30213,
+          "goal_rad": [
+            -0.134,
+            -0.053
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.134,
+            -0.053,
+            0.0,
+            0.0
+          ],
+          "return": -20.0,
+          "steps": 21,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.009678288323029277,
+            0.0013547412126560937
+          ],
+          "final_abs_speed_rad_s": [
+            0.03774472558644563,
+            0.03667765523743032
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009678288323029277,
+          "final_max_axis_error_rad": 0.009678288323029277
+        }
+      },
+      {
+        "case_id": 30214,
+        "actor": {
+          "seed": 30214,
+          "goal_rad": [
+            -0.049,
+            -0.141
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.049,
+            -0.141,
+            0.0,
+            0.0
+          ],
+          "return": -34.0,
+          "steps": 35,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.008009838724517451,
+            0.009605236803223366
+          ],
+          "final_abs_speed_rad_s": [
+            0.012968086517572456,
+            0.029563671891546607
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009605236803223366,
+          "final_max_axis_error_rad": 0.009605236803223366
+        },
+        "handoff": {
+          "seed": 30214,
+          "goal_rad": [
+            -0.049,
+            -0.141
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.049,
+            -0.141,
+            0.0,
+            0.0
+          ],
+          "return": -34.0,
+          "steps": 35,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.008009838724517451,
+            0.009605236803223366
+          ],
+          "final_abs_speed_rad_s": [
+            0.012968086517572456,
+            0.029563671891546607
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009605236803223366,
+          "final_max_axis_error_rad": 0.009605236803223366
+        }
+      },
+      {
+        "case_id": 30215,
+        "actor": {
+          "seed": 30215,
+          "goal_rad": [
+            -0.05,
+            -0.116
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.05,
+            -0.116,
+            0.0,
+            0.0
+          ],
+          "return": -29.0,
+          "steps": 30,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.007765109728940664,
+            0.009977105901359112
+          ],
+          "final_abs_speed_rad_s": [
+            0.01138042184977834,
+            0.03559295026565277
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009977105901359112,
+          "final_max_axis_error_rad": 0.009977105901359112
+        },
+        "handoff": {
+          "seed": 30215,
+          "goal_rad": [
+            -0.05,
+            -0.116
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.05,
+            -0.116,
+            0.0,
+            0.0
+          ],
+          "return": -29.0,
+          "steps": 30,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.007765109728940664,
+            0.009977105901359112
+          ],
+          "final_abs_speed_rad_s": [
+            0.01138042184977834,
+            0.03559295026565277
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009977105901359112,
+          "final_max_axis_error_rad": 0.009977105901359112
+        }
+      },
+      {
+        "case_id": 30216,
+        "actor": {
+          "seed": 30216,
+          "goal_rad": [
+            -0.07,
+            -0.139
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.07,
+            -0.139,
+            0.0,
+            0.0
+          ],
+          "return": -33.0,
+          "steps": 34,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.006179500797830986,
+            0.009368632247840042
+          ],
+          "final_abs_speed_rad_s": [
+            0.011708735787076659,
+            0.032697469670335974
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009368632247840042,
+          "final_max_axis_error_rad": 0.009368632247840042
+        },
+        "handoff": {
+          "seed": 30216,
+          "goal_rad": [
+            -0.07,
+            -0.139
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.07,
+            -0.139,
+            0.0,
+            0.0
+          ],
+          "return": -33.0,
+          "steps": 34,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.006179500797830986,
+            0.009368632247840042
+          ],
+          "final_abs_speed_rad_s": [
+            0.011708735787076659,
+            0.032697469670335974
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009368632247840042,
+          "final_max_axis_error_rad": 0.009368632247840042
+        }
+      },
+      {
+        "case_id": 30217,
+        "actor": {
+          "seed": 30217,
+          "goal_rad": [
+            -0.127,
+            -0.111
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.127,
+            -0.111,
+            0.0,
+            0.0
+          ],
+          "return": -26.0,
+          "steps": 27,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0010032623527021223,
+            0.009805903519886042
+          ],
+          "final_abs_speed_rad_s": [
+            0.005078389727648311,
+            0.044256255051209135
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009805903519886042,
+          "final_max_axis_error_rad": 0.009805903519886042
+        },
+        "handoff": {
+          "seed": 30217,
+          "goal_rad": [
+            -0.127,
+            -0.111
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.127,
+            -0.111,
+            0.0,
+            0.0
+          ],
+          "return": -26.0,
+          "steps": 27,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.0010032623527021223,
+            0.009805903519886042
+          ],
+          "final_abs_speed_rad_s": [
+            0.005078389727648311,
+            0.044256255051209135
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.009805903519886042,
+          "final_max_axis_error_rad": 0.009805903519886042
+        }
+      },
+      {
+        "case_id": 30218,
+        "actor": {
+          "seed": 30218,
+          "goal_rad": [
+            -0.136,
+            -0.089
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.136,
+            -0.089,
+            0.0,
+            0.0
+          ],
+          "return": -23.0,
+          "steps": 24,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004814639463820325,
+            0.00754717036718329
+          ],
+          "final_abs_speed_rad_s": [
+            0.019048417223879788,
+            0.04528001469816442
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.00754717036718329,
+          "final_max_axis_error_rad": 0.00754717036718329
+        },
+        "handoff": {
+          "seed": 30218,
+          "goal_rad": [
+            -0.136,
+            -0.089
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.136,
+            -0.089,
+            0.0,
+            0.0
+          ],
+          "return": -23.0,
+          "steps": 24,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004814639463820325,
+            0.00754717036718329
+          ],
+          "final_abs_speed_rad_s": [
+            0.019048417223879788,
+            0.04528001469816442
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.00754717036718329,
+          "final_max_axis_error_rad": 0.00754717036718329
+        }
+      },
+      {
+        "case_id": 30219,
+        "actor": {
+          "seed": 30219,
+          "goal_rad": [
+            0.055,
+            -0.083
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.055,
+            -0.083,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.011122859858753185,
+            0.002767814263390775
+          ],
+          "final_abs_speed_rad_s": [
+            1.1969999649311888e-08,
+            1.1955263764026999e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.011122859858753185,
+          "final_max_axis_error_rad": 0.011122859858753185
+        },
+        "handoff": {
+          "seed": 30219,
+          "goal_rad": [
+            0.055,
+            -0.083
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.055,
+            -0.083,
+            0.0,
+            0.0
+          ],
+          "return": -47.0,
+          "steps": 48,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004080224142205005,
+            0.006050851081054187
+          ],
+          "final_abs_speed_rad_s": [
+            0.043028156674462824,
+            0.0018525557969134164
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 43,
+          "best_max_axis_error_rad": 0.006050851081054187,
+          "final_max_axis_error_rad": 0.006050851081054187
+        }
+      },
+      {
+        "case_id": 30220,
+        "actor": {
+          "seed": 30220,
+          "goal_rad": [
+            0.115,
+            -0.141
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.115,
+            -0.141,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.016975077063314498,
+            0.007570215600364999
+          ],
+          "final_abs_speed_rad_s": [
+            3.0579672006359154e-08,
+            1.3198244801311586e-09
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.016975077063314498,
+          "final_max_axis_error_rad": 0.016975077063314498
+        },
+        "handoff": {
+          "seed": 30220,
+          "goal_rad": [
+            0.115,
+            -0.141
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.115,
+            -0.141,
+            0.0,
+            0.0
+          ],
+          "return": -55.0,
+          "steps": 56,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004736643836941376,
+            0.006777957811164248
+          ],
+          "final_abs_speed_rad_s": [
+            0.04978931283053116,
+            0.01532212049739073
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 50,
+          "best_max_axis_error_rad": 0.006777957811164248,
+          "final_max_axis_error_rad": 0.006777957811164248
+        }
+      },
+      {
+        "case_id": 30221,
+        "actor": {
+          "seed": 30221,
+          "goal_rad": [
+            0.112,
+            -0.071
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.112,
+            -0.071,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.014966667449106824,
+            0.0034900367356619916
+          ],
+          "final_abs_speed_rad_s": [
+            1.530200668001278e-08,
+            1.1933865529799233e-08
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.014966667218438492,
+          "final_max_axis_error_rad": 0.014966667449106824
+        },
+        "handoff": {
+          "seed": 30221,
+          "goal_rad": [
+            0.112,
+            -0.071
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.112,
+            -0.071,
+            0.0,
+            0.0
+          ],
+          "return": -47.0,
+          "steps": 48,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004272586864187966,
+            0.006264452611124058
+          ],
+          "final_abs_speed_rad_s": [
+            0.04507681334653387,
+            0.003049088585748057
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 42,
+          "best_max_axis_error_rad": 0.006264452611124058,
+          "final_max_axis_error_rad": 0.006264452611124058
+        }
+      },
+      {
+        "case_id": 30222,
+        "actor": {
+          "seed": 30222,
+          "goal_rad": [
+            0.111,
+            -0.101
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.111,
+            -0.101,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.01577240073045942,
+            0.005306300789088489
+          ],
+          "final_abs_speed_rad_s": [
+            1.5428948555062982e-08,
+            5.873316465905626e-09
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.01577240073045942,
+          "final_max_axis_error_rad": 0.01577240073045942
+        },
+        "handoff": {
+          "seed": 30222,
+          "goal_rad": [
+            0.111,
+            -0.101
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.111,
+            -0.101,
+            0.0,
+            0.0
+          ],
+          "return": -51.0,
+          "steps": 52,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004459371666667045,
+            0.006512232312942887
+          ],
+          "final_abs_speed_rad_s": [
+            0.04697383672095636,
+            0.008572898615614671
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 46,
+          "best_max_axis_error_rad": 0.006512232312942887,
+          "final_max_axis_error_rad": 0.006512232312942887
+        }
+      },
+      {
+        "case_id": 30223,
+        "actor": {
+          "seed": 30223,
+          "goal_rad": [
+            0.076,
+            -0.136
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.076,
+            -0.136,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.013783093315828512,
+            0.0060476214962595365
+          ],
+          "final_abs_speed_rad_s": [
+            1.0292941569106073e-08,
+            3.0755626464096987e-09
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.013783093315828512,
+          "final_max_axis_error_rad": 0.013783093315828512
+        },
+        "handoff": {
+          "seed": 30223,
+          "goal_rad": [
+            0.076,
+            -0.136
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.076,
+            -0.136,
+            0.0,
+            0.0
+          ],
+          "return": -53.0,
+          "steps": 54,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.003974700559202071,
+            0.006474545944521015
+          ],
+          "final_abs_speed_rad_s": [
+            0.04178812595779812,
+            0.011532858178788413
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 48,
+          "best_max_axis_error_rad": 0.006474545944521015,
+          "final_max_axis_error_rad": 0.006474545944521015
+        }
+      },
+      {
+        "case_id": 30224,
+        "actor": {
+          "seed": 30224,
+          "goal_rad": [
+            0.138,
+            -0.075
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.138,
+            -0.075,
+            0.0,
+            0.0
+          ],
+          "return": -250.0,
+          "steps": 250,
+          "outcome": "timeout",
+          "final_abs_error_rad": [
+            0.016777456132191795,
+            0.00415937094848752
+          ],
+          "final_abs_speed_rad_s": [
+            1.181939111051088e-08,
+            1.1144575217431986e-09
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": null,
+          "best_max_axis_error_rad": 0.01677745595543073,
+          "final_max_axis_error_rad": 0.016777456132191795
+        },
+        "handoff": {
+          "seed": 30224,
+          "goal_rad": [
+            0.138,
+            -0.075
+          ],
+          "initial_observation": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.138,
+            -0.075,
+            0.0,
+            0.0
+          ],
+          "return": -49.0,
+          "steps": 50,
+          "outcome": "success",
+          "final_abs_error_rad": [
+            0.004700096352135447,
+            0.006370521012685745
+          ],
+          "final_abs_speed_rad_s": [
+            0.049578040656234834,
+            0.0045791564733917425
+          ],
+          "command_clip_steps": 0,
+          "physics_warning": false,
+          "actual_limit_violation": false,
+          "handoff_step": 44,
+          "best_max_axis_error_rad": 0.006370521012685745,
+          "final_max_axis_error_rad": 0.006370521012685745
+        }
+      }
+    ]
+  },
+  "early_training_demo_feasibility": {
+    "successes": 16,
+    "goals": 16,
+    "steps": 326,
+    "cases": [
+      {
+        "seed": 40001,
+        "goal_rad": [
+          -0.16,
+          -0.16
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.16,
+          -0.16,
+          0.0,
+          0.0
+        ],
+        "return": -21.0,
+        "steps": 22,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.0039339888005546775,
+          0.008865484826849707
+        ],
+        "final_abs_speed_rad_s": [
+          0.04114777713642741,
+          0.03961476471456395
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40002,
+        "goal_rad": [
+          -0.16,
+          -0.08
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.16,
+          -0.08,
+          0.0,
+          0.0
+        ],
+        "return": -21.0,
+        "steps": 22,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.003903358230203352,
+          0.006976450904902995
+        ],
+        "final_abs_speed_rad_s": [
+          0.0410214240759342,
+          0.011472597853748922
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40003,
+        "goal_rad": [
+          -0.16,
+          0.08
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.16,
+          0.08,
+          0.0,
+          0.0
+        ],
+        "return": -21.0,
+        "steps": 22,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.0038262047080134254,
+          0.006079307078433752
+        ],
+        "final_abs_speed_rad_s": [
+          0.040580029268615515,
+          0.012316595092041421
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40004,
+        "goal_rad": [
+          -0.16,
+          0.16
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.16,
+          0.16,
+          0.0,
+          0.0
+        ],
+        "return": -21.0,
+        "steps": 22,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.0037960194405297354,
+          0.004077917479548776
+        ],
+        "final_abs_speed_rad_s": [
+          0.04045230716337643,
+          0.040345498203627046
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40005,
+        "goal_rad": [
+          -0.08,
+          -0.16
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.08,
+          -0.16,
+          0.0,
+          0.0
+        ],
+        "return": -20.0,
+        "steps": 21,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.0014610654309553661,
+          0.009720060773598549
+        ],
+        "final_abs_speed_rad_s": [
+          0.0152407140007388,
+          0.04890171584967783
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40006,
+        "goal_rad": [
+          -0.08,
+          -0.08
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.08,
+          -0.08,
+          0.0,
+          0.0
+        ],
+        "return": -15.0,
+        "steps": 16,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.004090124860494981,
+          0.009692736797435875
+        ],
+        "final_abs_speed_rad_s": [
+          0.04300868088944069,
+          0.04086685694648599
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40007,
+        "goal_rad": [
+          -0.08,
+          0.08
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.08,
+          0.08,
+          0.0,
+          0.0
+        ],
+        "return": -15.0,
+        "steps": 16,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.004037482812188173,
+          0.0030411473791170374
+        ],
+        "final_abs_speed_rad_s": [
+          0.04289213593233012,
+          0.04536588778591169
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40008,
+        "goal_rad": [
+          -0.08,
+          0.16
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.08,
+          0.16,
+          0.0,
+          0.0
+        ],
+        "return": -21.0,
+        "steps": 22,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.001131941123283936,
+          0.0040623618506874515
+        ],
+        "final_abs_speed_rad_s": [
+          0.01207437292927962,
+          0.04048442140773668
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40009,
+        "goal_rad": [
+          0.08,
+          -0.16
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.08,
+          -0.16,
+          0.0,
+          0.0
+        ],
+        "return": -20.0,
+        "steps": 21,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.0014390621851650132,
+          0.009711920688430131
+        ],
+        "final_abs_speed_rad_s": [
+          0.015107534025175956,
+          0.04884456197896384
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40010,
+        "goal_rad": [
+          0.08,
+          -0.08
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.08,
+          -0.08,
+          0.0,
+          0.0
+        ],
+        "return": -15.0,
+        "steps": 16,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.004076261931674166,
+          0.009679037653550424
+        ],
+        "final_abs_speed_rad_s": [
+          0.04294364430522964,
+          0.04080868400154507
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40011,
+        "goal_rad": [
+          0.08,
+          0.08
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.08,
+          0.08,
+          0.0,
+          0.0
+        ],
+        "return": -15.0,
+        "steps": 16,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.004053106837439313,
+          0.003026639800131431
+        ],
+        "final_abs_speed_rad_s": [
+          0.04297071334352582,
+          0.045437934901633587
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40012,
+        "goal_rad": [
+          0.08,
+          0.16
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.08,
+          0.16,
+          0.0,
+          0.0
+        ],
+        "return": -21.0,
+        "steps": 22,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.001150636336662389,
+          0.004055862735696608
+        ],
+        "final_abs_speed_rad_s": [
+          0.01220195188096,
+          0.040533100710531844
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40013,
+        "goal_rad": [
+          0.16,
+          -0.16
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.16,
+          -0.16,
+          0.0,
+          0.0
+        ],
+        "return": -21.0,
+        "steps": 22,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.003914554204156151,
+          0.008846093991730725
+        ],
+        "final_abs_speed_rad_s": [
+          0.04102221614352031,
+          0.03949024336672748
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40014,
+        "goal_rad": [
+          0.16,
+          -0.08
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.16,
+          -0.08,
+          0.0,
+          0.0
+        ],
+        "return": -21.0,
+        "steps": 22,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.0038967698267629025,
+          0.0069570856696829775
+        ],
+        "final_abs_speed_rad_s": [
+          0.040973427019353505,
+          0.011346579332688697
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40015,
+        "goal_rad": [
+          0.16,
+          0.08
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.16,
+          0.08,
+          0.0,
+          0.0
+        ],
+        "return": -21.0,
+        "steps": 22,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.0038333911512282715,
+          0.006060734638999227
+        ],
+        "final_abs_speed_rad_s": [
+          0.04063400918750939,
+          0.012439926282346705
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      },
+      {
+        "seed": 40016,
+        "goal_rad": [
+          0.16,
+          0.16
+        ],
+        "initial_observation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.16,
+          0.16,
+          0.0,
+          0.0
+        ],
+        "return": -21.0,
+        "steps": 22,
+        "outcome": "success",
+        "final_abs_error_rad": [
+          0.003814705119678935,
+          0.004060066832575038
+        ],
+        "final_abs_speed_rad_s": [
+          0.04057991541811984,
+          0.040464356538564034
+        ],
+        "command_clip_steps": 0,
+        "physics_warning": false,
+        "actual_limit_violation": false
+      }
+    ]
+  }
+}

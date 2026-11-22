@@ -1,0 +1,837 @@
+{
+  "training": {
+    "random": {
+      "sources_by_step": {
+        "warmup": 256,
+        "actor": 49744
+      },
+      "total_outcomes_by_source": {
+        "warmup": {
+          "timeout": 1
+        },
+        "mixed": {
+          "timeout": 1
+        },
+        "actor": {
+          "timeout": 111,
+          "success": 408,
+          "partial": 1
+        }
+      },
+      "demonstration_episodes": [],
+      "random_only_episodes": [
+        {
+          "start_step": 1,
+          "end_step": 250,
+          "outcome": "timeout",
+          "sources": {
+            "warmup": 250
+          },
+          "goal_rad": [
+            0.08,
+            -0.16
+          ]
+        }
+      ],
+      "mixed_episodes": [
+        {
+          "start_step": 251,
+          "end_step": 500,
+          "outcome": "timeout",
+          "sources": {
+            "warmup": 6,
+            "actor": 244
+          },
+          "goal_rad": [
+            0.08,
+            0.08
+          ]
+        }
+      ],
+      "early_actor_episode_count": 38,
+      "early_actor_outcomes": {
+        "timeout": 37,
+        "success": 1
+      },
+      "early_actor_timeout_fraction": 0.9736842105263158,
+      "first_actor_only_success_step": 9862,
+      "first_actor_only_success_within_early_window": 9862,
+      "episode_in_progress_at_early_cutoff": {
+        "start_step": 9863,
+        "end_step": 10112,
+        "outcome": "timeout",
+        "sources": {
+          "actor": 250
+        },
+        "goal_rad": [
+          -0.08,
+          0.16
+        ],
+        "class": "actor"
+      },
+      "last_100_completed_actor_outcomes": {
+        "success": 100
+      },
+      "runtime_s": 175.5534155999776
+    },
+    "demo": {
+      "sources_by_step": {
+        "demonstration": 152,
+        "warmup": 104,
+        "actor": 49744
+      },
+      "total_outcomes_by_source": {
+        "demonstration": {
+          "success": 8
+        },
+        "mixed": {
+          "timeout": 1
+        },
+        "actor": {
+          "timeout": 104,
+          "success": 370,
+          "partial": 1
+        }
+      },
+      "demonstration_episodes": [
+        {
+          "start_step": 1,
+          "end_step": 22,
+          "outcome": "success",
+          "sources": {
+            "demonstration": 22
+          },
+          "goal_rad": [
+            -0.16,
+            -0.16
+          ]
+        },
+        {
+          "start_step": 23,
+          "end_step": 44,
+          "outcome": "success",
+          "sources": {
+            "demonstration": 22
+          },
+          "goal_rad": [
+            -0.16,
+            0.16
+          ]
+        },
+        {
+          "start_step": 45,
+          "end_step": 60,
+          "outcome": "success",
+          "sources": {
+            "demonstration": 16
+          },
+          "goal_rad": [
+            -0.08,
+            -0.08
+          ]
+        },
+        {
+          "start_step": 61,
+          "end_step": 76,
+          "outcome": "success",
+          "sources": {
+            "demonstration": 16
+          },
+          "goal_rad": [
+            -0.08,
+            0.08
+          ]
+        },
+        {
+          "start_step": 77,
+          "end_step": 92,
+          "outcome": "success",
+          "sources": {
+            "demonstration": 16
+          },
+          "goal_rad": [
+            0.08,
+            -0.08
+          ]
+        },
+        {
+          "start_step": 93,
+          "end_step": 108,
+          "outcome": "success",
+          "sources": {
+            "demonstration": 16
+          },
+          "goal_rad": [
+            0.08,
+            0.08
+          ]
+        },
+        {
+          "start_step": 109,
+          "end_step": 130,
+          "outcome": "success",
+          "sources": {
+            "demonstration": 22
+          },
+          "goal_rad": [
+            0.16,
+            -0.16
+          ]
+        },
+        {
+          "start_step": 131,
+          "end_step": 152,
+          "outcome": "success",
+          "sources": {
+            "demonstration": 22
+          },
+          "goal_rad": [
+            0.16,
+            0.16
+          ]
+        }
+      ],
+      "random_only_episodes": [],
+      "mixed_episodes": [
+        {
+          "start_step": 153,
+          "end_step": 402,
+          "outcome": "timeout",
+          "sources": {
+            "warmup": 104,
+            "actor": 146
+          },
+          "goal_rad": [
+            0.08,
+            -0.16
+          ]
+        }
+      ],
+      "early_actor_episode_count": 38,
+      "early_actor_outcomes": {
+        "timeout": 38
+      },
+      "early_actor_timeout_fraction": 1.0,
+      "first_actor_only_success_step": 14898,
+      "first_actor_only_success_within_early_window": null,
+      "episode_in_progress_at_early_cutoff": {
+        "start_step": 9903,
+        "end_step": 10152,
+        "outcome": "timeout",
+        "sources": {
+          "actor": 250
+        },
+        "goal_rad": [
+          0.08,
+          -0.16
+        ],
+        "class": "actor"
+      },
+      "last_100_completed_actor_outcomes": {
+        "success": 100
+      },
+      "runtime_s": 183.83409450016916
+    }
+  },
+  "evaluation": {
+    "random": {
+      "outcomes": {
+        "timeout": 15,
+        "success": 9
+      },
+      "cases": [
+        {
+          "case_id": 30201,
+          "goal_rad": [
+            0.044,
+            0.157
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.013914422439933322,
+          "final_max_axis_error_rad": 0.013914422439933322,
+          "final_max_axis_speed_rad_s": 2.8990550023653154e-08
+        },
+        {
+          "case_id": 30202,
+          "goal_rad": [
+            0.124,
+            0.114
+          ],
+          "outcome": "success",
+          "steps": 71,
+          "min_max_axis_error_rad": 0.009999022768345078,
+          "final_max_axis_error_rad": 0.009999022768345078,
+          "final_max_axis_speed_rad_s": 0.0002472813850438563
+        },
+        {
+          "case_id": 30203,
+          "goal_rad": [
+            0.094,
+            0.123
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.010936777613917911,
+          "final_max_axis_error_rad": 0.010936777613917911,
+          "final_max_axis_speed_rad_s": 2.226208119187854e-08
+        },
+        {
+          "case_id": 30204,
+          "goal_rad": [
+            0.151,
+            0.057
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.012939614005410993,
+          "final_max_axis_error_rad": 0.012939614005410993,
+          "final_max_axis_speed_rad_s": 4.554749101722501e-08
+        },
+        {
+          "case_id": 30205,
+          "goal_rad": [
+            0.066,
+            0.128
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.011643693248643824,
+          "final_max_axis_error_rad": 0.011643693248643824,
+          "final_max_axis_speed_rad_s": 1.0968154355689047e-08
+        },
+        {
+          "case_id": 30206,
+          "goal_rad": [
+            0.133,
+            0.091
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.010511521829284332,
+          "final_max_axis_error_rad": 0.01051152207075752,
+          "final_max_axis_speed_rad_s": 1.0042246516559156e-08
+        },
+        {
+          "case_id": 30207,
+          "goal_rad": [
+            -0.118,
+            0.124
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.013026093330678168,
+          "final_max_axis_error_rad": 0.013026093538786296,
+          "final_max_axis_speed_rad_s": 1.0241058657312972e-08
+        },
+        {
+          "case_id": 30208,
+          "goal_rad": [
+            -0.101,
+            0.156
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.01507220006697918,
+          "final_max_axis_error_rad": 0.015072200446311163,
+          "final_max_axis_speed_rad_s": 2.7334671221480488e-08
+        },
+        {
+          "case_id": 30209,
+          "goal_rad": [
+            -0.129,
+            0.096
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.0112475883321006,
+          "final_max_axis_error_rad": 0.011247588730337849,
+          "final_max_axis_speed_rad_s": 4.730198385259625e-08
+        },
+        {
+          "case_id": 30210,
+          "goal_rad": [
+            -0.049,
+            0.076
+          ],
+          "outcome": "success",
+          "steps": 59,
+          "min_max_axis_error_rad": 0.009980575834332886,
+          "final_max_axis_error_rad": 0.009980575834332886,
+          "final_max_axis_speed_rad_s": 0.0020767995928848318
+        },
+        {
+          "case_id": 30211,
+          "goal_rad": [
+            -0.084,
+            0.133
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.013666475099834124,
+          "final_max_axis_error_rad": 0.013666475293550528,
+          "final_max_axis_speed_rad_s": 2.0470821161566675e-08
+        },
+        {
+          "case_id": 30212,
+          "goal_rad": [
+            -0.074,
+            0.042
+          ],
+          "outcome": "success",
+          "steps": 36,
+          "min_max_axis_error_rad": 0.009872482134644457,
+          "final_max_axis_error_rad": 0.009872482134644457,
+          "final_max_axis_speed_rad_s": 0.009033807463446822
+        },
+        {
+          "case_id": 30213,
+          "goal_rad": [
+            -0.134,
+            -0.053
+          ],
+          "outcome": "success",
+          "steps": 21,
+          "min_max_axis_error_rad": 0.009678288323029277,
+          "final_max_axis_error_rad": 0.009678288323029277,
+          "final_max_axis_speed_rad_s": 0.03774472558644563
+        },
+        {
+          "case_id": 30214,
+          "goal_rad": [
+            -0.049,
+            -0.141
+          ],
+          "outcome": "success",
+          "steps": 35,
+          "min_max_axis_error_rad": 0.009605236803223366,
+          "final_max_axis_error_rad": 0.009605236803223366,
+          "final_max_axis_speed_rad_s": 0.029563671891546607
+        },
+        {
+          "case_id": 30215,
+          "goal_rad": [
+            -0.05,
+            -0.116
+          ],
+          "outcome": "success",
+          "steps": 30,
+          "min_max_axis_error_rad": 0.009977105901359112,
+          "final_max_axis_error_rad": 0.009977105901359112,
+          "final_max_axis_speed_rad_s": 0.03559295026565277
+        },
+        {
+          "case_id": 30216,
+          "goal_rad": [
+            -0.07,
+            -0.139
+          ],
+          "outcome": "success",
+          "steps": 34,
+          "min_max_axis_error_rad": 0.009368632247840042,
+          "final_max_axis_error_rad": 0.009368632247840042,
+          "final_max_axis_speed_rad_s": 0.032697469670335974
+        },
+        {
+          "case_id": 30217,
+          "goal_rad": [
+            -0.127,
+            -0.111
+          ],
+          "outcome": "success",
+          "steps": 27,
+          "min_max_axis_error_rad": 0.009805903519886042,
+          "final_max_axis_error_rad": 0.009805903519886042,
+          "final_max_axis_speed_rad_s": 0.044256255051209135
+        },
+        {
+          "case_id": 30218,
+          "goal_rad": [
+            -0.136,
+            -0.089
+          ],
+          "outcome": "success",
+          "steps": 24,
+          "min_max_axis_error_rad": 0.00754717036718329,
+          "final_max_axis_error_rad": 0.00754717036718329,
+          "final_max_axis_speed_rad_s": 0.04528001469816442
+        },
+        {
+          "case_id": 30219,
+          "goal_rad": [
+            0.055,
+            -0.083
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.011122859858753185,
+          "final_max_axis_error_rad": 0.011122859858753185,
+          "final_max_axis_speed_rad_s": 1.1969999649311888e-08
+        },
+        {
+          "case_id": 30220,
+          "goal_rad": [
+            0.115,
+            -0.141
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.016975077063314498,
+          "final_max_axis_error_rad": 0.016975077063314498,
+          "final_max_axis_speed_rad_s": 3.0579672006359154e-08
+        },
+        {
+          "case_id": 30221,
+          "goal_rad": [
+            0.112,
+            -0.071
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.014966667218438492,
+          "final_max_axis_error_rad": 0.014966667449106824,
+          "final_max_axis_speed_rad_s": 1.530200668001278e-08
+        },
+        {
+          "case_id": 30222,
+          "goal_rad": [
+            0.111,
+            -0.101
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.01577240073045942,
+          "final_max_axis_error_rad": 0.01577240073045942,
+          "final_max_axis_speed_rad_s": 1.5428948555062982e-08
+        },
+        {
+          "case_id": 30223,
+          "goal_rad": [
+            0.076,
+            -0.136
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.013783093315828512,
+          "final_max_axis_error_rad": 0.013783093315828512,
+          "final_max_axis_speed_rad_s": 1.0292941569106073e-08
+        },
+        {
+          "case_id": 30224,
+          "goal_rad": [
+            0.138,
+            -0.075
+          ],
+          "outcome": "timeout",
+          "steps": 250,
+          "min_max_axis_error_rad": 0.01677745595543073,
+          "final_max_axis_error_rad": 0.016777456132191795,
+          "final_max_axis_speed_rad_s": 1.181939111051088e-08
+        }
+      ],
+      "mean_success_steps": 37.44444444444444,
+      "baseline_successes": 24,
+      "median_best_error_rad": 0.011185224095426893
+    },
+    "demo": {
+      "outcomes": {
+        "success": 24
+      },
+      "cases": [
+        {
+          "case_id": 30201,
+          "goal_rad": [
+            0.044,
+            0.157
+          ],
+          "outcome": "success",
+          "steps": 33,
+          "min_max_axis_error_rad": 0.001548165612617558,
+          "final_max_axis_error_rad": 0.0021471121333093424,
+          "final_max_axis_speed_rad_s": 0.048725527470730924
+        },
+        {
+          "case_id": 30202,
+          "goal_rad": [
+            0.124,
+            0.114
+          ],
+          "outcome": "success",
+          "steps": 31,
+          "min_max_axis_error_rad": 0.001990102015513348,
+          "final_max_axis_error_rad": 0.0038938976414956278,
+          "final_max_axis_speed_rad_s": 0.04705146007971426
+        },
+        {
+          "case_id": 30203,
+          "goal_rad": [
+            0.094,
+            0.123
+          ],
+          "outcome": "success",
+          "steps": 31,
+          "min_max_axis_error_rad": 0.0023200636328997437,
+          "final_max_axis_error_rad": 0.004063680955049276,
+          "final_max_axis_speed_rad_s": 0.04767661235792491
+        },
+        {
+          "case_id": 30204,
+          "goal_rad": [
+            0.151,
+            0.057
+          ],
+          "outcome": "success",
+          "steps": 29,
+          "min_max_axis_error_rad": 0.002392993092668272,
+          "final_max_axis_error_rad": 0.0029372945886477625,
+          "final_max_axis_speed_rad_s": 0.04587223370391345
+        },
+        {
+          "case_id": 30205,
+          "goal_rad": [
+            0.066,
+            0.128
+          ],
+          "outcome": "success",
+          "steps": 31,
+          "min_max_axis_error_rad": 0.0024052832770384003,
+          "final_max_axis_error_rad": 0.003634112077537055,
+          "final_max_axis_speed_rad_s": 0.048055094223025265
+        },
+        {
+          "case_id": 30206,
+          "goal_rad": [
+            0.133,
+            0.091
+          ],
+          "outcome": "success",
+          "steps": 29,
+          "min_max_axis_error_rad": 0.0023345708110705243,
+          "final_max_axis_error_rad": 0.0029826917091133193,
+          "final_max_axis_speed_rad_s": 0.04998468545960511
+        },
+        {
+          "case_id": 30207,
+          "goal_rad": [
+            -0.118,
+            0.124
+          ],
+          "outcome": "success",
+          "steps": 14,
+          "min_max_axis_error_rad": 0.005686254557422818,
+          "final_max_axis_error_rad": 0.005686254557422818,
+          "final_max_axis_speed_rad_s": 0.04979305631912265
+        },
+        {
+          "case_id": 30208,
+          "goal_rad": [
+            -0.101,
+            0.156
+          ],
+          "outcome": "success",
+          "steps": 20,
+          "min_max_axis_error_rad": 0.007393666629175705,
+          "final_max_axis_error_rad": 0.007393666629175705,
+          "final_max_axis_speed_rad_s": 0.046662233602262335
+        },
+        {
+          "case_id": 30209,
+          "goal_rad": [
+            -0.129,
+            0.096
+          ],
+          "outcome": "success",
+          "steps": 20,
+          "min_max_axis_error_rad": 0.007217674988879499,
+          "final_max_axis_error_rad": 0.007217674988879499,
+          "final_max_axis_speed_rad_s": 0.04919448834964931
+        },
+        {
+          "case_id": 30210,
+          "goal_rad": [
+            -0.049,
+            0.076
+          ],
+          "outcome": "success",
+          "steps": 14,
+          "min_max_axis_error_rad": 0.0019321125803799244,
+          "final_max_axis_error_rad": 0.0019321125803799244,
+          "final_max_axis_speed_rad_s": 0.04780509552588573
+        },
+        {
+          "case_id": 30211,
+          "goal_rad": [
+            -0.084,
+            0.133
+          ],
+          "outcome": "success",
+          "steps": 19,
+          "min_max_axis_error_rad": 0.005924731320254575,
+          "final_max_axis_error_rad": 0.005924731320254575,
+          "final_max_axis_speed_rad_s": 0.044715835158511935
+        },
+        {
+          "case_id": 30212,
+          "goal_rad": [
+            -0.074,
+            0.042
+          ],
+          "outcome": "success",
+          "steps": 16,
+          "min_max_axis_error_rad": 0.00755487774759292,
+          "final_max_axis_error_rad": 0.00755487774759292,
+          "final_max_axis_speed_rad_s": 0.04760423552626023
+        },
+        {
+          "case_id": 30213,
+          "goal_rad": [
+            -0.134,
+            -0.053
+          ],
+          "outcome": "success",
+          "steps": 27,
+          "min_max_axis_error_rad": 0.0091978206036675,
+          "final_max_axis_error_rad": 0.0091978206036675,
+          "final_max_axis_speed_rad_s": 0.04686499120835865
+        },
+        {
+          "case_id": 30214,
+          "goal_rad": [
+            -0.049,
+            -0.141
+          ],
+          "outcome": "success",
+          "steps": 28,
+          "min_max_axis_error_rad": 0.008011728955881044,
+          "final_max_axis_error_rad": 0.008011728955881044,
+          "final_max_axis_speed_rad_s": 0.04749702616127651
+        },
+        {
+          "case_id": 30215,
+          "goal_rad": [
+            -0.05,
+            -0.116
+          ],
+          "outcome": "success",
+          "steps": 25,
+          "min_max_axis_error_rad": 0.009839162203013799,
+          "final_max_axis_error_rad": 0.009839162203013799,
+          "final_max_axis_speed_rad_s": 0.04998889166568134
+        },
+        {
+          "case_id": 30216,
+          "goal_rad": [
+            -0.07,
+            -0.139
+          ],
+          "outcome": "success",
+          "steps": 29,
+          "min_max_axis_error_rad": 0.007512394698385286,
+          "final_max_axis_error_rad": 0.007512394698385286,
+          "final_max_axis_speed_rad_s": 0.04631542695287919
+        },
+        {
+          "case_id": 30217,
+          "goal_rad": [
+            -0.127,
+            -0.111
+          ],
+          "outcome": "success",
+          "steps": 30,
+          "min_max_axis_error_rad": 0.00718275380244314,
+          "final_max_axis_error_rad": 0.00718275380244314,
+          "final_max_axis_speed_rad_s": 0.04593781533716807
+        },
+        {
+          "case_id": 30218,
+          "goal_rad": [
+            -0.136,
+            -0.089
+          ],
+          "outcome": "success",
+          "steps": 29,
+          "min_max_axis_error_rad": 0.008156640507621049,
+          "final_max_axis_error_rad": 0.008156640507621049,
+          "final_max_axis_speed_rad_s": 0.046900559157250964
+        },
+        {
+          "case_id": 30219,
+          "goal_rad": [
+            0.055,
+            -0.083
+          ],
+          "outcome": "success",
+          "steps": 14,
+          "min_max_axis_error_rad": 0.009742565091197142,
+          "final_max_axis_error_rad": 0.009742565091197142,
+          "final_max_axis_speed_rad_s": 0.04300247584287504
+        },
+        {
+          "case_id": 30220,
+          "goal_rad": [
+            0.115,
+            -0.141
+          ],
+          "outcome": "success",
+          "steps": 18,
+          "min_max_axis_error_rad": 0.0077203877888918915,
+          "final_max_axis_error_rad": 0.0077203877888918915,
+          "final_max_axis_speed_rad_s": 0.048379770192676516
+        },
+        {
+          "case_id": 30221,
+          "goal_rad": [
+            0.112,
+            -0.071
+          ],
+          "outcome": "success",
+          "steps": 20,
+          "min_max_axis_error_rad": 0.003515087157856825,
+          "final_max_axis_error_rad": 0.003515087157856825,
+          "final_max_axis_speed_rad_s": 0.0447396858792713
+        },
+        {
+          "case_id": 30222,
+          "goal_rad": [
+            0.111,
+            -0.101
+          ],
+          "outcome": "success",
+          "steps": 17,
+          "min_max_axis_error_rad": 0.005674091745917376,
+          "final_max_axis_error_rad": 0.005674091745917376,
+          "final_max_axis_speed_rad_s": 0.049797664887487346
+        },
+        {
+          "case_id": 30223,
+          "goal_rad": [
+            0.076,
+            -0.136
+          ],
+          "outcome": "success",
+          "steps": 18,
+          "min_max_axis_error_rad": 0.009523738703002632,
+          "final_max_axis_error_rad": 0.009523738703002632,
+          "final_max_axis_speed_rad_s": 0.047839392266958033
+        },
+        {
+          "case_id": 30224,
+          "goal_rad": [
+            0.138,
+            -0.075
+          ],
+          "outcome": "success",
+          "steps": 22,
+          "min_max_axis_error_rad": 0.005635767584606488,
+          "final_max_axis_error_rad": 0.005635767584606488,
+          "final_max_axis_speed_rad_s": 0.0489293693546854
+        }
+      ],
+      "mean_success_steps": 23.5,
+      "baseline_successes": 24,
+      "median_best_error_rad": 0.006553742561348858
+    }
+  },
+  "training_config_matches_control": true,
+  "historical_actor_eval_reproduced": true
+}

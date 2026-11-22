@@ -1,0 +1,4401 @@
+{
+  "protocol_sha256": "436c7030462c1174e75b625b7c8f53e91481ced93861f94f3df55c50521c0795",
+  "training_device": "cuda",
+  "evaluation_device": "cpu",
+  "versions": {
+    "numpy": "2.5.4",
+    "torch": "2.10.0+cu130",
+    "torch_cuda": "13.0",
+    "mujoco": "3.17.0",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "baseline": {
+    "validation": {
+      "outcomes": {
+        "success": 48
+      },
+      "by_outcome": {
+        "success": {
+          "episodes": 48,
+          "physics_warning_episodes": 0,
+          "limit_violation_episodes": 0,
+          "nonfinite_final_episodes": 0,
+          "nonfinite_step_rows": 0,
+          "steps": 900,
+          "episodes_with_smoothness": 48,
+          "mean_action_change_per_step": 0.10582920972831486
+        }
+      },
+      "cases_with_nonfinite_steps": 0
+    },
+    "test": {
+      "outcomes": {
+        "success": 48
+      },
+      "by_outcome": {
+        "success": {
+          "episodes": 48,
+          "physics_warning_episodes": 0,
+          "limit_violation_episodes": 0,
+          "nonfinite_final_episodes": 0,
+          "nonfinite_step_rows": 0,
+          "steps": 888,
+          "episodes_with_smoothness": 48,
+          "mean_action_change_per_step": 0.10543980536982324
+        }
+      },
+      "cases_with_nonfinite_steps": 0
+    }
+  },
+  "runs": [
+    {
+      "seed": 1103,
+      "arm": "sac",
+      "training": {
+        "outcomes": {
+          "timeout": 198,
+          "success": 2
+        },
+        "completed_episodes": 200,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 181,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 2,
+            "episodes_with_pairs": 2,
+            "mean_action_change_per_step": 0.3388722547749282,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 198,
+            "episodes_with_pairs": 197,
+            "mean_action_change_per_step": 0.27252896415411443,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.000597956027339246
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0026947092259805984
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.002203137012927412
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.003087070272572434
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0028078680059285006
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "timeout": 47,
+          "success": 1
+        },
+        "by_outcome": {
+          "timeout": {
+            "episodes": 47,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 11750,
+            "episodes_with_smoothness": 47,
+            "mean_action_change_per_step": 0.002775388701842707
+          },
+          "success": {
+            "episodes": 1,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 52,
+            "episodes_with_smoothness": 1,
+            "mean_action_change_per_step": 0.007833560958859263
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1103,
+      "arm": "her",
+      "training": {
+        "outcomes": {
+          "timeout": 125,
+          "success": 440
+        },
+        "completed_episodes": 565,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 22,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 440,
+            "episodes_with_pairs": 440,
+            "mean_action_change_per_step": 0.5835456359451694,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 125,
+            "episodes_with_pairs": 124,
+            "mean_action_change_per_step": 0.6221336668097517,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 47,
+            "success": 1
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11750,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 0.2707183186868301
+            },
+            "success": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 192,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 0.13669536136580865
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 30,
+            "success": 18
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 30,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 7500,
+              "episodes_with_smoothness": 30,
+              "mean_action_change_per_step": 0.0049612155883597625
+            },
+            "success": {
+              "episodes": 18,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1573,
+              "episodes_with_smoothness": 18,
+              "mean_action_change_per_step": 0.0186382588587462
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "success": 18,
+            "timeout": 30
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 18,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1577,
+              "episodes_with_smoothness": 18,
+              "mean_action_change_per_step": 0.022481978197818088
+            },
+            "timeout": {
+              "episodes": 30,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 7500,
+              "episodes_with_smoothness": 30,
+              "mean_action_change_per_step": 0.005873528033555692
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 42,
+            "timeout": 6
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 42,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 2026,
+              "episodes_with_smoothness": 42,
+              "mean_action_change_per_step": 0.03185355196337763
+            },
+            "timeout": {
+              "episodes": 6,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1500,
+              "episodes_with_smoothness": 6,
+              "mean_action_change_per_step": 0.006002838177204763
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1049,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0952726573628087
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 1020,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.09632811535691412
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1103,
+      "arm": "her_shape",
+      "training": {
+        "outcomes": {
+          "timeout": 98,
+          "success": 663,
+          "failure": 1
+        },
+        "completed_episodes": 762,
+        "failure_rate": 0.0013123359580052493,
+        "unlogged_partial_steps": 10,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 663,
+            "episodes_with_pairs": 663,
+            "mean_action_change_per_step": 0.5873627607442292,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 98,
+            "episodes_with_pairs": 97,
+            "mean_action_change_per_step": 0.7117709259523917,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 1,
+            "episodes_with_pairs": 1,
+            "mean_action_change_per_step": 0.23885004335514656,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 1.8436377101678814
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "success": 16,
+            "timeout": 32
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 16,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1337,
+              "episodes_with_smoothness": 16,
+              "mean_action_change_per_step": 0.04746455682315474
+            },
+            "timeout": {
+              "episodes": 32,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 8000,
+              "episodes_with_smoothness": 32,
+              "mean_action_change_per_step": 0.007553536457731879
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "success": 43,
+            "timeout": 5
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 43,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1761,
+              "episodes_with_smoothness": 43,
+              "mean_action_change_per_step": 0.04805763659289156
+            },
+            "timeout": {
+              "episodes": 5,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1250,
+              "episodes_with_smoothness": 5,
+              "mean_action_change_per_step": 0.00574083626104595
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1522,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.057170072430012694
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 822,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.1250015335880363
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 814,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.12570873071673305
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1103,
+      "arm": "her_smooth",
+      "training": {
+        "outcomes": {
+          "timeout": 140,
+          "success": 248
+        },
+        "completed_episodes": 388,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 7,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 248,
+            "episodes_with_pairs": 248,
+            "mean_action_change_per_step": 0.3270569444429034,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 140,
+            "episodes_with_pairs": 139,
+            "mean_action_change_per_step": 0.30133276626470795,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 1.8658437770043255
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 47,
+            "success": 1
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11750,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 0.8139189226646266
+            },
+            "success": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 36,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 1.7867656581627642
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "success": 31,
+            "timeout": 17
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 31,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 2183,
+              "episodes_with_smoothness": 31,
+              "mean_action_change_per_step": 0.15945063843913532
+            },
+            "timeout": {
+              "episodes": 17,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 4250,
+              "episodes_with_smoothness": 17,
+              "mean_action_change_per_step": 0.8018074810543943
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 47,
+            "timeout": 1
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 2333,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 0.17625124583992796
+            },
+            "timeout": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 250,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 0.00843224633353774
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1176,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.2580125950041025
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 1141,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.24263313084776952
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1103,
+      "arm": "her_both",
+      "training": {
+        "outcomes": {
+          "timeout": 152,
+          "success": 192
+        },
+        "completed_episodes": 344,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 87,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 192,
+            "episodes_with_pairs": 192,
+            "mean_action_change_per_step": 0.3182741958617399,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 152,
+            "episodes_with_pairs": 151,
+            "mean_action_change_per_step": 0.2395627139382312,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.002703465210513589
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 41,
+            "success": 7
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 41,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 10250,
+              "episodes_with_smoothness": 41,
+              "mean_action_change_per_step": 0.007656590150163909
+            },
+            "success": {
+              "episodes": 7,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 646,
+              "episodes_with_smoothness": 7,
+              "mean_action_change_per_step": 0.042323154982411335
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 41,
+            "success": 7
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 41,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 10250,
+              "episodes_with_smoothness": 41,
+              "mean_action_change_per_step": 0.009741643096107144
+            },
+            "success": {
+              "episodes": 7,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 338,
+              "episodes_with_smoothness": 7,
+              "mean_action_change_per_step": 0.06040038438197292
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 27,
+            "timeout": 21
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 27,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 914,
+              "episodes_with_smoothness": 27,
+              "mean_action_change_per_step": 0.0777191808782643
+            },
+            "timeout": {
+              "episodes": 21,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 5250,
+              "episodes_with_smoothness": 21,
+              "mean_action_change_per_step": 0.04205487199316083
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 43,
+            "timeout": 5
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 43,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 2101,
+              "episodes_with_smoothness": 43,
+              "mean_action_change_per_step": 0.03507982977207511
+            },
+            "timeout": {
+              "episodes": 5,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1250,
+              "episodes_with_smoothness": 5,
+              "mean_action_change_per_step": 0.006077783909394977
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 44,
+          "timeout": 4
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 44,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 2117,
+            "episodes_with_smoothness": 44,
+            "mean_action_change_per_step": 0.03651662908314017
+          },
+          "timeout": {
+            "episodes": 4,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 1000,
+            "episodes_with_smoothness": 4,
+            "mean_action_change_per_step": 0.006083437394920749
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1129,
+      "arm": "sac",
+      "training": {
+        "outcomes": {
+          "timeout": 200
+        },
+        "completed_episodes": 200,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 0,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 200,
+            "episodes_with_pairs": 199,
+            "mean_action_change_per_step": 0.29427318939184055,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0034334545343037474
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0032250267803460835
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0025834772775969474
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.003998770789284807
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.002993127004778606
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "timeout": 48
+        },
+        "by_outcome": {
+          "timeout": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 12000,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.0029709825749334676
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1129,
+      "arm": "her",
+      "training": {
+        "outcomes": {
+          "timeout": 108,
+          "success": 643
+        },
+        "completed_episodes": 751,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 3,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 643,
+            "episodes_with_pairs": 643,
+            "mean_action_change_per_step": 0.5827614738723145,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 108,
+            "episodes_with_pairs": 107,
+            "mean_action_change_per_step": 0.7271288626593372,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 46,
+            "success": 2
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 46,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11500,
+              "episodes_with_smoothness": 46,
+              "mean_action_change_per_step": 1.0447566344164476
+            },
+            "success": {
+              "episodes": 2,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 202,
+              "episodes_with_smoothness": 2,
+              "mean_action_change_per_step": 1.2789306596999426
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 35,
+            "success": 13
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 35,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 8750,
+              "episodes_with_smoothness": 35,
+              "mean_action_change_per_step": 0.09435542541750692
+            },
+            "success": {
+              "episodes": 13,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 815,
+              "episodes_with_smoothness": 13,
+              "mean_action_change_per_step": 0.12869116809011044
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 33,
+            "success": 15
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 33,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 8250,
+              "episodes_with_smoothness": 33,
+              "mean_action_change_per_step": 0.0069339653709788104
+            },
+            "success": {
+              "episodes": 15,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 523,
+              "episodes_with_smoothness": 15,
+              "mean_action_change_per_step": 0.047483176650136925
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1185,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.06803162146481574
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 834,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.1270764452262788
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 826,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.12720869361958806
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1129,
+      "arm": "her_shape",
+      "training": {
+        "outcomes": {
+          "timeout": 111,
+          "success": 609
+        },
+        "completed_episodes": 720,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 1,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 609,
+            "episodes_with_pairs": 609,
+            "mean_action_change_per_step": 0.6250360447262381,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 111,
+            "episodes_with_pairs": 110,
+            "mean_action_change_per_step": 0.8182091108966048,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 46,
+            "success": 2
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 46,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11500,
+              "episodes_with_smoothness": 46,
+              "mean_action_change_per_step": 0.543063763452075
+            },
+            "success": {
+              "episodes": 2,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 244,
+              "episodes_with_smoothness": 2,
+              "mean_action_change_per_step": 1.3726561843003013
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "success": 17,
+            "timeout": 31
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 17,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 2245,
+              "episodes_with_smoothness": 17,
+              "mean_action_change_per_step": 1.202265598319856
+            },
+            "timeout": {
+              "episodes": 31,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 7750,
+              "episodes_with_smoothness": 31,
+              "mean_action_change_per_step": 1.138430560557374
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "success": 24,
+            "timeout": 24
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 24,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1375,
+              "episodes_with_smoothness": 24,
+              "mean_action_change_per_step": 0.0313981122520038
+            },
+            "timeout": {
+              "episodes": 24,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 6000,
+              "episodes_with_smoothness": 24,
+              "mean_action_change_per_step": 0.00849921973156228
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1502,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.07352583161858035
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1035,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.11831582650261277
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 994,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.1220152586659172
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1129,
+      "arm": "her_smooth",
+      "training": {
+        "outcomes": {
+          "timeout": 142,
+          "success": 264
+        },
+        "completed_episodes": 406,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 12,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 264,
+            "episodes_with_pairs": 264,
+            "mean_action_change_per_step": 0.2603017007548863,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 142,
+            "episodes_with_pairs": 141,
+            "mean_action_change_per_step": 0.27711775025568475,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 1.9963263938143692
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 47,
+            "success": 1
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11750,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 1.8591020660625568
+            },
+            "success": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 64,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 2.015308033403628
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 40,
+            "success": 8
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 40,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 10000,
+              "episodes_with_smoothness": 40,
+              "mean_action_change_per_step": 0.0054148514244793935
+            },
+            "success": {
+              "episodes": 8,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 278,
+              "episodes_with_smoothness": 8,
+              "mean_action_change_per_step": 0.053070656868886824
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 16,
+            "timeout": 32
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 16,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 599,
+              "episodes_with_smoothness": 16,
+              "mean_action_change_per_step": 0.04664338907362237
+            },
+            "timeout": {
+              "episodes": 32,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 8000,
+              "episodes_with_smoothness": 32,
+              "mean_action_change_per_step": 0.006874498518397805
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1440,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0634429068251441
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 1364,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.0655741492616965
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1129,
+      "arm": "her_both",
+      "training": {
+        "outcomes": {
+          "timeout": 107,
+          "success": 538
+        },
+        "completed_episodes": 645,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 7,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 538,
+            "episodes_with_pairs": 538,
+            "mean_action_change_per_step": 0.32272366000902214,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 107,
+            "episodes_with_pairs": 106,
+            "mean_action_change_per_step": 0.327430309871687,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 47,
+            "success": 1
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11750,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 1.7002931675242865
+            },
+            "success": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 64,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 1.5281952592912798
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 2.6105826685753373
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 24,
+            "success": 24
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 24,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 6000,
+              "episodes_with_smoothness": 24,
+              "mean_action_change_per_step": 1.80231664721409
+            },
+            "success": {
+              "episodes": 24,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1342,
+              "episodes_with_smoothness": 24,
+              "mean_action_change_per_step": 1.6495987393380724
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1613,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.19367601365188591
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 885,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.1334208987553524
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 862,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.13496675982692502
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1181,
+      "arm": "sac",
+      "training": {
+        "outcomes": {
+          "timeout": 197,
+          "success": 6
+        },
+        "completed_episodes": 203,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 120,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 6,
+            "episodes_with_pairs": 6,
+            "mean_action_change_per_step": 0.5555925895368258,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 197,
+            "episodes_with_pairs": 196,
+            "mean_action_change_per_step": 0.4610118372244673,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0048549430646591665
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 43,
+            "success": 5
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 43,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 10750,
+              "episodes_with_smoothness": 43,
+              "mean_action_change_per_step": 0.006458322942928661
+            },
+            "success": {
+              "episodes": 5,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 671,
+              "episodes_with_smoothness": 5,
+              "mean_action_change_per_step": 0.010816848370664536
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0094584426894341
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "timeout": 46,
+            "success": 2
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 46,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11500,
+              "episodes_with_smoothness": 46,
+              "mean_action_change_per_step": 0.011825506887893108
+            },
+            "success": {
+              "episodes": 2,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 209,
+              "episodes_with_smoothness": 2,
+              "mean_action_change_per_step": 0.028222716667222737
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.006468864225586191
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "timeout": 48
+        },
+        "by_outcome": {
+          "timeout": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 12000,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.006477363599982493
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1181,
+      "arm": "her",
+      "training": {
+        "outcomes": {
+          "timeout": 153,
+          "failure": 10,
+          "success": 125
+        },
+        "completed_episodes": 288,
+        "failure_rate": 0.034722222222222224,
+        "unlogged_partial_steps": 19,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 125,
+            "episodes_with_pairs": 125,
+            "mean_action_change_per_step": 0.5592710520124374,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 153,
+            "episodes_with_pairs": 152,
+            "mean_action_change_per_step": 0.6135505879796442,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 10,
+            "episodes_with_pairs": 10,
+            "mean_action_change_per_step": 0.4114682820854059,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 47,
+            "success": 1
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11750,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 0.0893656926756473
+            },
+            "success": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 169,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 0.009367465799425979
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 46,
+            "success": 2
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 46,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11500,
+              "episodes_with_smoothness": 46,
+              "mean_action_change_per_step": 0.009997240895925484
+            },
+            "success": {
+              "episodes": 2,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 258,
+              "episodes_with_smoothness": 2,
+              "mean_action_change_per_step": 0.009947048560764078
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 24,
+            "success": 24
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 24,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 6000,
+              "episodes_with_smoothness": 24,
+              "mean_action_change_per_step": 0.00503210496350359
+            },
+            "success": {
+              "episodes": 24,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 2101,
+              "episodes_with_smoothness": 24,
+              "mean_action_change_per_step": 0.015566757005834354
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 43,
+            "timeout": 5
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 43,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 2591,
+              "episodes_with_smoothness": 43,
+              "mean_action_change_per_step": 0.033862086936556825
+            },
+            "timeout": {
+              "episodes": 5,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1250,
+              "episodes_with_smoothness": 5,
+              "mean_action_change_per_step": 0.005785354041271222
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "timeout": 36,
+            "success": 12
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 36,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 9000,
+              "episodes_with_smoothness": 36,
+              "mean_action_change_per_step": 0.009800421136491202
+            },
+            "success": {
+              "episodes": 12,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1133,
+              "episodes_with_smoothness": 12,
+              "mean_action_change_per_step": 0.039570992714386695
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "timeout": 34,
+          "success": 14
+        },
+        "by_outcome": {
+          "timeout": {
+            "episodes": 34,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 8500,
+            "episodes_with_smoothness": 34,
+            "mean_action_change_per_step": 0.009807628786686475
+          },
+          "success": {
+            "episodes": 14,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 1241,
+            "episodes_with_smoothness": 14,
+            "mean_action_change_per_step": 0.026908683081832755
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1181,
+      "arm": "her_shape",
+      "training": {
+        "outcomes": {
+          "timeout": 90,
+          "success": 773
+        },
+        "completed_episodes": 863,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 16,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 773,
+            "episodes_with_pairs": 773,
+            "mean_action_change_per_step": 0.48849391973129563,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 90,
+            "episodes_with_pairs": 89,
+            "mean_action_change_per_step": 0.4558131559697977,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.00920335579525487
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 37,
+            "success": 11
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 37,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 9250,
+              "episodes_with_smoothness": 37,
+              "mean_action_change_per_step": 0.006237259298884528
+            },
+            "success": {
+              "episodes": 11,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1058,
+              "episodes_with_smoothness": 11,
+              "mean_action_change_per_step": 0.019273911418253152
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "success": 37,
+            "timeout": 11
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 37,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1429,
+              "episodes_with_smoothness": 37,
+              "mean_action_change_per_step": 0.03688004741588466
+            },
+            "timeout": {
+              "episodes": 11,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 2750,
+              "episodes_with_smoothness": 11,
+              "mean_action_change_per_step": 0.005071565516657716
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1092,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.09128165168858605
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 819,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.13035853292442415
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 800,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.13183319551319322
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1181,
+      "arm": "her_smooth",
+      "training": {
+        "outcomes": {
+          "timeout": 183,
+          "success": 35
+        },
+        "completed_episodes": 218,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 105,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 35,
+            "episodes_with_pairs": 35,
+            "mean_action_change_per_step": 0.3079031864377256,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 183,
+            "episodes_with_pairs": 182,
+            "mean_action_change_per_step": 0.3713620030840718,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 2.699889589445278
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 2.0908472147500152
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 1.171919578026547
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "timeout": 42,
+            "success": 6
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 42,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 10500,
+              "episodes_with_smoothness": 42,
+              "mean_action_change_per_step": 0.006806792031438955
+            },
+            "success": {
+              "episodes": 6,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 430,
+              "episodes_with_smoothness": 6,
+              "mean_action_change_per_step": 0.034110947202129725
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 24,
+            "timeout": 24
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 24,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1755,
+              "episodes_with_smoothness": 24,
+              "mean_action_change_per_step": 0.06033858907057451
+            },
+            "timeout": {
+              "episodes": 24,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 6000,
+              "episodes_with_smoothness": 24,
+              "mean_action_change_per_step": 0.020296250486654215
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "timeout": 26,
+          "success": 22
+        },
+        "by_outcome": {
+          "timeout": {
+            "episodes": 26,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 6500,
+            "episodes_with_smoothness": 26,
+            "mean_action_change_per_step": 0.03963792888846954
+          },
+          "success": {
+            "episodes": 22,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 2030,
+            "episodes_with_smoothness": 22,
+            "mean_action_change_per_step": 0.04662418638680997
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1181,
+      "arm": "her_both",
+      "training": {
+        "outcomes": {
+          "timeout": 167,
+          "failure": 2,
+          "success": 111
+        },
+        "completed_episodes": 280,
+        "failure_rate": 0.007142857142857143,
+        "unlogged_partial_steps": 33,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 111,
+            "episodes_with_pairs": 111,
+            "mean_action_change_per_step": 0.30749793308441603,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 167,
+            "episodes_with_pairs": 166,
+            "mean_action_change_per_step": 0.3404913157650047,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 2,
+            "episodes_with_pairs": 2,
+            "mean_action_change_per_step": 0.3843163263052328,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 45,
+            "success": 3
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 45,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11250,
+              "episodes_with_smoothness": 45,
+              "mean_action_change_per_step": 2.262983407491096
+            },
+            "success": {
+              "episodes": 3,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 272,
+              "episodes_with_smoothness": 3,
+              "mean_action_change_per_step": 2.1354764419285237
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 44,
+            "success": 4
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 44,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11000,
+              "episodes_with_smoothness": 44,
+              "mean_action_change_per_step": 1.656360013883362
+            },
+            "success": {
+              "episodes": 4,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 464,
+              "episodes_with_smoothness": 4,
+              "mean_action_change_per_step": 1.7715336689927237
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 44,
+            "success": 4
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 44,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11000,
+              "episodes_with_smoothness": 44,
+              "mean_action_change_per_step": 0.3435401467786408
+            },
+            "success": {
+              "episodes": 4,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 228,
+              "episodes_with_smoothness": 4,
+              "mean_action_change_per_step": 1.66659937689665
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "timeout": 37,
+            "success": 11
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 37,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 9250,
+              "episodes_with_smoothness": 37,
+              "mean_action_change_per_step": 0.4790909596898823
+            },
+            "success": {
+              "episodes": 11,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 613,
+              "episodes_with_smoothness": 11,
+              "mean_action_change_per_step": 0.06376275242055915
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "timeout": 17,
+            "success": 31
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 17,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 4250,
+              "episodes_with_smoothness": 17,
+              "mean_action_change_per_step": 0.007720919940173246
+            },
+            "success": {
+              "episodes": 31,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1226,
+              "episodes_with_smoothness": 31,
+              "mean_action_change_per_step": 0.06297228368927614
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 28,
+          "timeout": 20
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 28,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 1024,
+            "episodes_with_smoothness": 28,
+            "mean_action_change_per_step": 0.06170755283906835
+          },
+          "timeout": {
+            "episodes": 20,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 5000,
+            "episodes_with_smoothness": 20,
+            "mean_action_change_per_step": 0.007973050215303803
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1213,
+      "arm": "sac",
+      "training": {
+        "outcomes": {
+          "timeout": 200
+        },
+        "completed_episodes": 200,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 0,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 200,
+            "episodes_with_pairs": 199,
+            "mean_action_change_per_step": 0.3885056290316352,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 47,
+            "success": 1
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11750,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 0.003235718304863117
+            },
+            "success": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 70,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 0.01191345829491541
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0040831964143810025
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.004740553573614795
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.003771442655234983
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0029957992558468038
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "timeout": 48
+        },
+        "by_outcome": {
+          "timeout": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 12000,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.002988089175289739
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1213,
+      "arm": "her",
+      "training": {
+        "outcomes": {
+          "timeout": 115,
+          "success": 412
+        },
+        "completed_episodes": 527,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 4,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 412,
+            "episodes_with_pairs": 412,
+            "mean_action_change_per_step": 0.6522107706806557,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 115,
+            "episodes_with_pairs": 114,
+            "mean_action_change_per_step": 0.7339971162631199,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 47,
+            "success": 1
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11750,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 0.01411456368163904
+            },
+            "success": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 109,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 0.06352748430736087
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 35,
+            "success": 13
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 35,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 8750,
+              "episodes_with_smoothness": 35,
+              "mean_action_change_per_step": 0.005725514908916003
+            },
+            "success": {
+              "episodes": 13,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 593,
+              "episodes_with_smoothness": 13,
+              "mean_action_change_per_step": 0.034412403507924606
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 1,
+            "success": 47
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 250,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 0.008167972726130492
+            },
+            "success": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 3483,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 0.03453609250152082
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 17,
+            "timeout": 31
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 17,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 639,
+              "episodes_with_smoothness": 17,
+              "mean_action_change_per_step": 0.04680945763013192
+            },
+            "timeout": {
+              "episodes": 31,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 7750,
+              "episodes_with_smoothness": 31,
+              "mean_action_change_per_step": 0.006192858806649588
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1035,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.11126137010553461
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 1001,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.11547170532243341
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1213,
+      "arm": "her_shape",
+      "training": {
+        "outcomes": {
+          "timeout": 97,
+          "success": 594
+        },
+        "completed_episodes": 691,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 2,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 594,
+            "episodes_with_pairs": 594,
+            "mean_action_change_per_step": 0.6041364299866606,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 97,
+            "episodes_with_pairs": 96,
+            "mean_action_change_per_step": 0.6857555499469148,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 1.549201756395963
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "success": 13,
+            "timeout": 35
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 13,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 891,
+              "episodes_with_smoothness": 13,
+              "mean_action_change_per_step": 0.02710537211886215
+            },
+            "timeout": {
+              "episodes": 35,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 8750,
+              "episodes_with_smoothness": 35,
+              "mean_action_change_per_step": 0.006523536160166017
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "success": 26,
+            "timeout": 22
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 26,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1038,
+              "episodes_with_smoothness": 26,
+              "mean_action_change_per_step": 0.047615287240872835
+            },
+            "timeout": {
+              "episodes": 22,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 5500,
+              "episodes_with_smoothness": 22,
+              "mean_action_change_per_step": 0.005254537900117691
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1244,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.07766036964373071
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 917,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.12108200651951655
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 905,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.11867828697561891
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1213,
+      "arm": "her_smooth",
+      "training": {
+        "outcomes": {
+          "timeout": 120,
+          "success": 389
+        },
+        "completed_episodes": 509,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 31,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 389,
+            "episodes_with_pairs": 389,
+            "mean_action_change_per_step": 0.30349997719417277,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 120,
+            "episodes_with_pairs": 119,
+            "mean_action_change_per_step": 0.3384014363854536,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 2.12610536902733
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 32,
+            "success": 16
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 32,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 8000,
+              "episodes_with_smoothness": 32,
+              "mean_action_change_per_step": 0.8491545928205575
+            },
+            "success": {
+              "episodes": 16,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 2183,
+              "episodes_with_smoothness": 16,
+              "mean_action_change_per_step": 0.9787260005058457
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "success": 18,
+            "timeout": 30
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 18,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1427,
+              "episodes_with_smoothness": 18,
+              "mean_action_change_per_step": 0.024993178214991252
+            },
+            "timeout": {
+              "episodes": 30,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 7500,
+              "episodes_with_smoothness": 30,
+              "mean_action_change_per_step": 0.005695985021352846
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 45,
+            "timeout": 3
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 45,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1449,
+              "episodes_with_smoothness": 45,
+              "mean_action_change_per_step": 0.06718120111820063
+            },
+            "timeout": {
+              "episodes": 3,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 750,
+              "episodes_with_smoothness": 3,
+              "mean_action_change_per_step": 0.006266422668242289
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1409,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.13700216781075494
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 1384,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.1313649114712924
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1213,
+      "arm": "her_both",
+      "training": {
+        "outcomes": {
+          "timeout": 143,
+          "success": 242
+        },
+        "completed_episodes": 385,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 0,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 242,
+            "episodes_with_pairs": 242,
+            "mean_action_change_per_step": 0.28238033352353087,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 143,
+            "episodes_with_pairs": 142,
+            "mean_action_change_per_step": 0.2981556723807112,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.99920879002053
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 45,
+            "success": 3
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 45,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11250,
+              "episodes_with_smoothness": 45,
+              "mean_action_change_per_step": 0.04335564898860111
+            },
+            "success": {
+              "episodes": 3,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 413,
+              "episodes_with_smoothness": 3,
+              "mean_action_change_per_step": 0.04463555950654577
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 39,
+            "success": 9
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 39,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 9750,
+              "episodes_with_smoothness": 39,
+              "mean_action_change_per_step": 0.008352643403806688
+            },
+            "success": {
+              "episodes": 9,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 383,
+              "episodes_with_smoothness": 9,
+              "mean_action_change_per_step": 0.04295371159749985
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1682,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.05242450714672208
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1361,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.11147643206645619
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 1322,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.11334140897092014
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1277,
+      "arm": "sac",
+      "training": {
+        "outcomes": {
+          "timeout": 197,
+          "success": 1,
+          "failure": 3
+        },
+        "completed_episodes": 201,
+        "failure_rate": 0.014925373134328358,
+        "unlogged_partial_steps": 134,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 1,
+            "episodes_with_pairs": 1,
+            "mean_action_change_per_step": 0.2745863309035161,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 197,
+            "episodes_with_pairs": 196,
+            "mean_action_change_per_step": 0.2716142732964569,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 3,
+            "episodes_with_pairs": 3,
+            "mean_action_change_per_step": 0.04394391863190668,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.004368607831142507
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.003471384337696002
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0026195546063807235
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "timeout": 40,
+            "success": 8
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 40,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 10000,
+              "episodes_with_smoothness": 40,
+              "mean_action_change_per_step": 0.0017993374798332797
+            },
+            "success": {
+              "episodes": 8,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1386,
+              "episodes_with_smoothness": 8,
+              "mean_action_change_per_step": 0.002777531998791344
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.0051345372844100005
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "timeout": 48
+        },
+        "by_outcome": {
+          "timeout": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 12000,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.0051338797766636085
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1277,
+      "arm": "her",
+      "training": {
+        "outcomes": {
+          "timeout": 102,
+          "success": 889
+        },
+        "completed_episodes": 991,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 4,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 889,
+            "episodes_with_pairs": 889,
+            "mean_action_change_per_step": 0.4832797047318657,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 102,
+            "episodes_with_pairs": 101,
+            "mean_action_change_per_step": 0.5564943557026438,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.01738640747729347
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.010787035736195345
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1133,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.08325316607631288
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 840,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.1398021677795133
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 755,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.1552714652915644
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 732,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.15497031925210308
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1277,
+      "arm": "her_shape",
+      "training": {
+        "outcomes": {
+          "timeout": 99,
+          "success": 816
+        },
+        "completed_episodes": 915,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 14,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 816,
+            "episodes_with_pairs": 816,
+            "mean_action_change_per_step": 0.5731531827198704,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 99,
+            "episodes_with_pairs": 98,
+            "mean_action_change_per_step": 0.7569432954410776,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 1.8530800177197457
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 37,
+            "success": 11
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 37,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 9250,
+              "episodes_with_smoothness": 37,
+              "mean_action_change_per_step": 0.7239281014002618
+            },
+            "success": {
+              "episodes": 11,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1644,
+              "episodes_with_smoothness": 11,
+              "mean_action_change_per_step": 0.07219745203101088
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "success": 36,
+            "timeout": 12
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 36,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1375,
+              "episodes_with_smoothness": 36,
+              "mean_action_change_per_step": 0.04056888758278746
+            },
+            "timeout": {
+              "episodes": 12,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 3000,
+              "episodes_with_smoothness": 12,
+              "mean_action_change_per_step": 0.00590072821772724
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 984,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.10721406681441152
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 48
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 787,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.1444590400394316
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 48
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 48,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 772,
+            "episodes_with_smoothness": 48,
+            "mean_action_change_per_step": 0.1473520038110405
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1277,
+      "arm": "her_smooth",
+      "training": {
+        "outcomes": {
+          "timeout": 148,
+          "success": 277
+        },
+        "completed_episodes": 425,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 34,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 277,
+            "episodes_with_pairs": 277,
+            "mean_action_change_per_step": 0.2758037931302233,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 148,
+            "episodes_with_pairs": 147,
+            "mean_action_change_per_step": 0.30758652782935303,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 47,
+            "success": 1
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11750,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 1.5339959453201018
+            },
+            "success": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 70,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 1.5738487660250657
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 45,
+            "success": 3
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 45,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11250,
+              "episodes_with_smoothness": 45,
+              "mean_action_change_per_step": 1.877396064311238
+            },
+            "success": {
+              "episodes": 3,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 270,
+              "episodes_with_smoothness": 3,
+              "mean_action_change_per_step": 1.8082088466331667
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 47,
+            "success": 1
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11750,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 0.6447003930896023
+            },
+            "success": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 126,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 0.14723990912566565
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "success": 33,
+            "timeout": 15
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 33,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1480,
+              "episodes_with_smoothness": 33,
+              "mean_action_change_per_step": 0.05244475525424103
+            },
+            "timeout": {
+              "episodes": 15,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 3750,
+              "episodes_with_smoothness": 15,
+              "mean_action_change_per_step": 0.01530962267984628
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 47,
+            "timeout": 1
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1349,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 0.06012813395769987
+            },
+            "timeout": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 250,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 0.006649337447943339
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 46,
+          "timeout": 2
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 46,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 1300,
+            "episodes_with_smoothness": 46,
+            "mean_action_change_per_step": 0.061730305651565585
+          },
+          "timeout": {
+            "episodes": 2,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 500,
+            "episodes_with_smoothness": 2,
+            "mean_action_change_per_step": 0.006848605351782502
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    },
+    {
+      "seed": 1277,
+      "arm": "her_both",
+      "training": {
+        "outcomes": {
+          "timeout": 156,
+          "success": 172
+        },
+        "completed_episodes": 328,
+        "failure_rate": 0.0,
+        "unlogged_partial_steps": 72,
+        "actor_smoothness_by_outcome": {
+          "success": {
+            "episodes": 172,
+            "episodes_with_pairs": 172,
+            "mean_action_change_per_step": 0.20387522036727662,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "timeout": {
+            "episodes": 156,
+            "episodes_with_pairs": 155,
+            "mean_action_change_per_step": 0.17461657116832363,
+            "note": "actor-only; excludes warmup actions"
+          },
+          "failure": {
+            "episodes": 0,
+            "episodes_with_pairs": 0,
+            "mean_action_change_per_step": null,
+            "note": "actor-only; excludes warmup actions"
+          }
+        }
+      },
+      "validation": {
+        "10000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.006984796203884648
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "20000": {
+          "outcomes": {
+            "timeout": 48
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 48,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 12000,
+              "episodes_with_smoothness": 48,
+              "mean_action_change_per_step": 0.008666388092686174
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "30000": {
+          "outcomes": {
+            "timeout": 47,
+            "success": 1
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 47,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11750,
+              "episodes_with_smoothness": 47,
+              "mean_action_change_per_step": 0.0074686448823661974
+            },
+            "success": {
+              "episodes": 1,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 29,
+              "episodes_with_smoothness": 1,
+              "mean_action_change_per_step": 0.05957784598554531
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "40000": {
+          "outcomes": {
+            "timeout": 44,
+            "success": 4
+          },
+          "by_outcome": {
+            "timeout": {
+              "episodes": 44,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 11000,
+              "episodes_with_smoothness": 44,
+              "mean_action_change_per_step": 0.005701010990841434
+            },
+            "success": {
+              "episodes": 4,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 148,
+              "episodes_with_smoothness": 4,
+              "mean_action_change_per_step": 0.03580140386687726
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        },
+        "50000": {
+          "outcomes": {
+            "success": 45,
+            "timeout": 3
+          },
+          "by_outcome": {
+            "success": {
+              "episodes": 45,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 1395,
+              "episodes_with_smoothness": 45,
+              "mean_action_change_per_step": 0.06263440818281202
+            },
+            "timeout": {
+              "episodes": 3,
+              "physics_warning_episodes": 0,
+              "limit_violation_episodes": 0,
+              "nonfinite_final_episodes": 0,
+              "nonfinite_step_rows": 0,
+              "steps": 750,
+              "episodes_with_smoothness": 3,
+              "mean_action_change_per_step": 0.009056972627469954
+            }
+          },
+          "cases_with_nonfinite_steps": 0
+        }
+      },
+      "test": {
+        "outcomes": {
+          "success": 44,
+          "timeout": 4
+        },
+        "by_outcome": {
+          "success": {
+            "episodes": 44,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 1377,
+            "episodes_with_smoothness": 44,
+            "mean_action_change_per_step": 0.0599127669150328
+          },
+          "timeout": {
+            "episodes": 4,
+            "physics_warning_episodes": 0,
+            "limit_violation_episodes": 0,
+            "nonfinite_final_episodes": 0,
+            "nonfinite_step_rows": 0,
+            "steps": 1000,
+            "episodes_with_smoothness": 4,
+            "mean_action_change_per_step": 0.009366793524630867
+          }
+        },
+        "cases_with_nonfinite_steps": 0
+      }
+    }
+  ],
+  "warnings": [],
+  "status": "PASS"
+}
