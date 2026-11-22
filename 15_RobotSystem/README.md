@@ -1,5 +1,43 @@
 # Panda 机械臂仿真与策略验证
 
+## 七轴末端位置到达
+
+七轴任务见 [环境与训练代码](panda_ee_reach.py)、[面试问答](Panda七轴末端到达_面试问答.md) 和 [末端轨迹回放生成器](render_ee_replay.py)。任务在 `link0` 坐标系中控制 `hand` 原点的三维位置。每 20 ms 输出七个关节位置目标增量，每轴最多 0.02 rad。观测包括七轴位置、速度、伺服目标，以及末端位置、末端线速度和目标位置，总共 30 维。距离小于 0.02 m 且末端速度小于 0.03 m/s 为成功。仿真失败终止，250 步为时间截断。
+
+固定目标生成种子 61122，采样 home 附近的三维偏移并用位置 IK 检查收敛，前 80 个用于训练，后 24 个留出测试。SAC 与 SAC + HER 共用训练种子、目标集合和网络配置。HER 从同一回合当前或未来有效末端位置采样，并重新计算目标、奖励和终止。对照基线使用阻尼最小二乘 IK 计算关节角，再以相同增量限制执行。实验记录成功、超时和异常，不推断随机初态、障碍或实机表现。
+
+使用上游固定模型和装有 MuJoCo、NumPy、PyTorch 的 Python，训练两个单种子策略并评估，输出目录必须不存在。
+
+```bash
+python 15_RobotSystem/panda_ee_reach.py "$PANDA_SCENE" runs/panda-ee-seed43 --steps 50000 --seed 43
+```
+
+目录中 `goals.json` 是冻结目标，`sac/actor.npz` 与 `sac_her/actor.npz` 是确定性评估所用权重。运行下面的命令会用这两份权重重新生成目录中的评估和逐步轨迹。
+
+```bash
+python 15_RobotSystem/panda_ee_reach.py "$PANDA_SCENE" runs/panda-ee-seed43 --evaluate-only
+```
+
+回放还需 Pillow 和可用的 MuJoCo 渲染后端。
+
+```bash
+python 15_RobotSystem/render_ee_replay.py "$PANDA_SCENE" runs/panda-ee-seed43 runs/panda-ee-seed43/replay.html
+```
+
+回放自动选择三种方法表现最有差异的同一测试目标。曲线为真实记录的末端 XY 投影，Z 和三维误差单独显示。详细评估口径和结果随实验记录保存。
+
+### 2026-11-22 单种子首次对照
+
+在 Windows CPU、MuJoCo 3.17.0、PyTorch 2.10.0+cpu 上，以 seed 43 各训练 50,000 步。两组耗时分别约 188 秒与 214 秒，均完成 49,744 次更新。保存的 [协议、24 个目标、权重与逐步轨迹](results/20261122_seven_axis_reach/) 可使用 `--evaluate-only` 重评估。冻结目标按 IK 收敛筛选，起点均为 home。
+
+| 方法 | 成功 | 超时 | 仿真失败 | 最终距离中位数 |
+| --- | ---: | ---: | ---: | ---: |
+| IK 位置控制 | 24/24 | 0/24 | 0/24 | 0.77 cm |
+| SAC | 0/24 | 0/24 | 24/24 | 119.77 cm |
+| SAC + HER | 0/24 | 24/24 | 0/24 | 47.03 cm |
+
+复查显示 SAC 24 例均发生第二关节超过模型限位及 0.001 rad 容差，未出现物理告警。HER 训练共 1,585,800 次有效重标记，其中 4,000 次为虚拟成功；这个计数以训练采样次数为单位，可能重复采样同一转移。结果说明首个单种子策略尚未完成七轴到达任务，训练样本、目标分布及固定初态限制了结论范围。独立目标结果及 [同一目标的离线回放](demo/panda-ee-replay.html) 如实呈现失败与超时。
+
 用 MuJoCo 原生 Python API 加载 `scene.xml`，从 `home` 关键帧重置并验证单关节指令能改变模拟状态。模型来自 [MuJoCo Menagerie 固定提交](https://github.com/google-deepmind/mujoco_menagerie/tree/98a70c569c4c1b6da467a20012f766ee1f8dc521/franka_emika_panda)，模型的 Apache-2.0 许可证随上游目录保留。
 
 轨迹误差、位置基线和超时案例见 [仿真验证笔记](经验总结.md)。

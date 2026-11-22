@@ -1,0 +1,1072 @@
+{
+  "seed": 43,
+  "steps": 50000,
+  "updates": 49744,
+  "seconds": 214.18127080006525,
+  "episodes": {
+    "timeout": 165,
+    "failure": 46
+  },
+  "her_counts": {
+    "relabeled": 1585800,
+    "relabeled_success": 4000,
+    "already_at_goal": 5333
+  },
+  "history": [
+    {
+      "step": 250,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 500,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 750,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 1000,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 1250,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 1500,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 1750,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 2000,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 2250,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 2500,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 2750,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 3000,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 3250,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 3500,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 3750,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 4000,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 4250,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 4500,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 4750,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 5000,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 5250,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 5500,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 5750,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 6000,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 6250,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 6500,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 6750,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 7000,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 7203,
+      "outcome": "failure",
+      "episode_steps": 203
+    },
+    {
+      "step": 7448,
+      "outcome": "failure",
+      "episode_steps": 245
+    },
+    {
+      "step": 7697,
+      "outcome": "failure",
+      "episode_steps": 249
+    },
+    {
+      "step": 7947,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 8197,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 8447,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 8697,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 8947,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 9197,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 9447,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 9697,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 9947,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 10197,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 10447,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 10697,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 10947,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 11197,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 11447,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 11697,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 11947,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 12197,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 12438,
+      "outcome": "failure",
+      "episode_steps": 241
+    },
+    {
+      "step": 12688,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 12796,
+      "outcome": "failure",
+      "episode_steps": 108
+    },
+    {
+      "step": 12941,
+      "outcome": "failure",
+      "episode_steps": 145
+    },
+    {
+      "step": 13191,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 13395,
+      "outcome": "failure",
+      "episode_steps": 204
+    },
+    {
+      "step": 13645,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 13895,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 14145,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 14395,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 14645,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 14895,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 15145,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 15375,
+      "outcome": "failure",
+      "episode_steps": 230
+    },
+    {
+      "step": 15625,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 15875,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 16125,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 16375,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 16625,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 16875,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 17125,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 17375,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 17625,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 17875,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 18125,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 18375,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 18521,
+      "outcome": "failure",
+      "episode_steps": 146
+    },
+    {
+      "step": 18771,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 19021,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 19271,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 19521,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 19771,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 20021,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 20271,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 20521,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 20771,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 21021,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 21271,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 21521,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 21771,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 22021,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 22271,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 22521,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 22771,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 23021,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 23271,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 23521,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 23771,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 24021,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 24271,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 24521,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 24771,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 25021,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 25271,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 25521,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 25771,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 26020,
+      "outcome": "failure",
+      "episode_steps": 249
+    },
+    {
+      "step": 26270,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 26520,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 26770,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 27020,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 27204,
+      "outcome": "failure",
+      "episode_steps": 184
+    },
+    {
+      "step": 27454,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 27704,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 27954,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 28204,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 28454,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 28643,
+      "outcome": "failure",
+      "episode_steps": 189
+    },
+    {
+      "step": 28893,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 29143,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 29393,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 29643,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 29893,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 30143,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 30393,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 30643,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 30893,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 31143,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 31393,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 31643,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 31893,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 32143,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 32393,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 32643,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 32893,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 33143,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 33393,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 33643,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 33893,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 34143,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 34393,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 34643,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 34893,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 35143,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 35393,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 35643,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 35893,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 36004,
+      "outcome": "failure",
+      "episode_steps": 111
+    },
+    {
+      "step": 36162,
+      "outcome": "failure",
+      "episode_steps": 158
+    },
+    {
+      "step": 36299,
+      "outcome": "failure",
+      "episode_steps": 137
+    },
+    {
+      "step": 36532,
+      "outcome": "failure",
+      "episode_steps": 233
+    },
+    {
+      "step": 36782,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 37032,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 37282,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 37522,
+      "outcome": "failure",
+      "episode_steps": 240
+    },
+    {
+      "step": 37633,
+      "outcome": "failure",
+      "episode_steps": 111
+    },
+    {
+      "step": 37756,
+      "outcome": "failure",
+      "episode_steps": 123
+    },
+    {
+      "step": 38006,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 38113,
+      "outcome": "failure",
+      "episode_steps": 107
+    },
+    {
+      "step": 38363,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 38500,
+      "outcome": "failure",
+      "episode_steps": 137
+    },
+    {
+      "step": 38750,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 38965,
+      "outcome": "failure",
+      "episode_steps": 215
+    },
+    {
+      "step": 39074,
+      "outcome": "failure",
+      "episode_steps": 109
+    },
+    {
+      "step": 39223,
+      "outcome": "failure",
+      "episode_steps": 149
+    },
+    {
+      "step": 39465,
+      "outcome": "failure",
+      "episode_steps": 242
+    },
+    {
+      "step": 39602,
+      "outcome": "failure",
+      "episode_steps": 137
+    },
+    {
+      "step": 39821,
+      "outcome": "failure",
+      "episode_steps": 219
+    },
+    {
+      "step": 40071,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 40249,
+      "outcome": "failure",
+      "episode_steps": 178
+    },
+    {
+      "step": 40390,
+      "outcome": "failure",
+      "episode_steps": 141
+    },
+    {
+      "step": 40619,
+      "outcome": "failure",
+      "episode_steps": 229
+    },
+    {
+      "step": 40857,
+      "outcome": "failure",
+      "episode_steps": 238
+    },
+    {
+      "step": 41107,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 41297,
+      "outcome": "failure",
+      "episode_steps": 190
+    },
+    {
+      "step": 41547,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 41797,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 42047,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 42297,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 42547,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 42797,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 43047,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 43276,
+      "outcome": "failure",
+      "episode_steps": 229
+    },
+    {
+      "step": 43526,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 43776,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 44026,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 44220,
+      "outcome": "failure",
+      "episode_steps": 194
+    },
+    {
+      "step": 44385,
+      "outcome": "failure",
+      "episode_steps": 165
+    },
+    {
+      "step": 44523,
+      "outcome": "failure",
+      "episode_steps": 138
+    },
+    {
+      "step": 44676,
+      "outcome": "failure",
+      "episode_steps": 153
+    },
+    {
+      "step": 44890,
+      "outcome": "failure",
+      "episode_steps": 214
+    },
+    {
+      "step": 45140,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 45340,
+      "outcome": "failure",
+      "episode_steps": 200
+    },
+    {
+      "step": 45590,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 45740,
+      "outcome": "failure",
+      "episode_steps": 150
+    },
+    {
+      "step": 45910,
+      "outcome": "failure",
+      "episode_steps": 170
+    },
+    {
+      "step": 46091,
+      "outcome": "failure",
+      "episode_steps": 181
+    },
+    {
+      "step": 46341,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 46591,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 46841,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 47091,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 47341,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 47591,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 47840,
+      "outcome": "failure",
+      "episode_steps": 249
+    },
+    {
+      "step": 48090,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 48340,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 48576,
+      "outcome": "failure",
+      "episode_steps": 236
+    },
+    {
+      "step": 48826,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 49034,
+      "outcome": "failure",
+      "episode_steps": 208
+    },
+    {
+      "step": 49284,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 49534,
+      "outcome": "timeout",
+      "episode_steps": 250
+    },
+    {
+      "step": 49760,
+      "outcome": "failure",
+      "episode_steps": 226
+    }
+  ]
+}
