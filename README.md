@@ -4,7 +4,7 @@
 
 ## Panda 七轴机械臂如何到达目标并停稳
 
-**任务。** 在 MuJoCo 中从固定 home 出发，控制 Panda 的手部原点到达三维目标。验收要求同一步内位置误差小于 20 mm、速度小于 30 mm/s。原先直接输出七个关节增量，同一批 24 个目标上 IK 全部达标，SAC 全部因第二关节越限失败，SAC+HER 全部超时。[初版逐目标结果](15_RobotSystem/results/20261122_seven_axis_reach/evaluation.json)
+在一次注入 40 ms 指令延迟的仿真中，七轴 Panda 的手已经到了目标旁边，只差 6.20 mm，控制器却一直等到 5 秒超时。看最后一步的速度才明白，它仍以 136.60 mm/s 运动。这个项目的验收要求是，距目标小于 20 mm 的同时，速度也低于 30 mm/s。原先直接输出七个关节增量，同一批 24 个目标上 IK 全部达标，SAC 全部因第二关节越限失败，SAC+HER 全部超时。[初版逐目标结果](15_RobotSystem/results/20261122_seven_axis_reach/evaluation.json)
 
 **策略改造。** 旧奖励使提前越限的回报高于持续尝试。我把动作为七轴增量的策略改成输出三维末端位移，以阻尼最小二乘和限位余量生成七轴指令。在 80 个目标上采集反馈控制示范，用 PyTorch 预训练 Actor 后分别启用和关闭 HER 做 SAC 微调，重标时按新目标重算奖励和终止标志。[MuJoCo 环境与 NumPy 运动学](15_RobotSystem/panda_ee_env.py) · [示范与训练](15_RobotSystem/panda_cartesian_reach.py) · [配对实验](15_RobotSystem/panda_cartesian_paired.py)
 
@@ -14,7 +14,7 @@
 
 ![同一个三维目标下的七轴机械臂运动与末端轨迹](15_RobotSystem/demo/panda-cartesian.webp)
 
-[下载七轴交互回放，在浏览器打开](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-cartesian-replay.html) · [七轴项目与复现命令](15_RobotSystem/README.md) · [二轴与七轴项目对照](15_RobotSystem/二轴与七轴项目对照.md) · [面试问答](15_RobotSystem/Panda七轴末端到达_面试问答.md)
+[下载七轴交互回放，在浏览器打开](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-cartesian-replay.html) · [七轴项目与复现命令](15_RobotSystem/README.md) · [二轴与七轴项目对照](15_RobotSystem/二轴与七轴项目对照.md) · [九十秒项目故事与 64 道逐题问答](15_RobotSystem/Panda七轴末端到达_面试问答.md)
 
 ## 项目重点
 
