@@ -4,6 +4,7 @@ import argparse
 import base64
 import csv
 from io import BytesIO
+from itertools import groupby
 import json
 from pathlib import Path
 
@@ -31,6 +32,27 @@ def fixed_trajectory(path, model):
         states.append(pose)
         series.append([float(row["sample_time_s"]), pose[addresses[0]], float(row["target_j1_rad"]), None])
     return states, series
+
+
+def waypoint_trajectory(path, model):
+    joints = [f"joint{axis}" for axis in range(1, 8)]
+    addresses = [model.jnt_qposadr[model.joint(name).id] for name in joints]
+    home = model.key("home").qpos.copy()
+    frames = []
+    series = []
+    with path.open(encoding="utf-8", newline="") as stream:
+        for time, rows in groupby(csv.DictReader(stream), key=lambda row: float(row["relative_s"])):
+            entries = list(rows)
+            by_joint = {row["joint"]: row for row in entries}
+            if len(entries) != len(joints) or set(by_joint) != set(joints):
+                raise ValueError(f"Expected one state for each of the seven joints at {time} s")
+            pose = home.copy()
+            pose[addresses] = [float(by_joint[name]["actual_rad"]) for name in joints]
+            frames.append(pose)
+            series.append([time, pose[addresses[0]], float(by_joint[joints[0]]["reference_rad"]), None])
+    if len(series) < 2 or any(a[0] >= b[0] for a, b in zip(series, series[1:])):
+        raise ValueError("Expected increasing sample times")
+    return frames, series
 
 
 def policy_trajectory(path, scene):
@@ -85,23 +107,38 @@ def generate(scene, results, output, assets):
     timeout = policy_trajectory(policy / "30124-ros2.jsonl", scene)
     clips = []
     specs = [
-        ("七轴跟踪", "固定轨迹 · 位置控制", "跟踪完成", tracking, 3),
-        ("策略成功", "SAC + HER · ROS 2 · 用例 30104", "第 16 步成功", success, 1),
-        ("策略超时", "SAC + HER · ROS 2 · 用例 30124", "第 250 步超时", timeout, 5),
+        ("两轴固定跟踪", "固定轨迹 · 位置控制", "跟踪完成", "位置命令",
+         "只改变前两轴的目标角，其余轴保持初始目标。拖到 0.80 s 可看到第一轴的跟踪滞后。",
+         tracking, 3),
+        ("策略成功", "SAC + HER · ROS 2 · 用例 30104", "第 16 步成功", "位置命令",
+         "两轴位置误差均小于 0.01 rad，速度绝对值均小于 0.05 rad/s。此回合第 16 步达标。",
+         success, 1),
+        ("策略超时", "SAC + HER · ROS 2 · 用例 30124", "第 250 步超时", "位置命令",
+         "第 250 步时，第一轴实测角贴近位置命令，距任务目标约 0.01911 rad，超过 0.01 rad 容差。",
+         timeout, 5),
     ]
-    for title, subtitle, outcome, (states, series), stride in specs:
+    waypoint_path = results / "20261122_multi_waypoint/tracking.csv"
+    if waypoint_path.is_file():
+        specs.insert(
+            0,
+            ("七轴多航点", "ROS 2 · C++ 发布 · MuJoCo 执行", "稳态检查通过", "轨迹参考",
+             "七轴依次经过两个中间点和终点，部分关节中途反向。曲线的时间零点为接收轨迹指令。",
+             waypoint_trajectory(waypoint_path, model), 2),
+        )
+    for clip_index, (title, subtitle, outcome, reference, detail, (states, series), stride) in enumerate(specs):
         frames = list(render_frames(model, states, stride))
         clips.append({
-            "title": title, "subtitle": subtitle, "outcome": outcome,
+            "title": title, "subtitle": subtitle, "outcome": outcome, "reference": reference,
+            "detail": detail,
             "samples": [[None if value is None else round(float(value), 8) for value in row] for row in series],
             "frames": [[index, webp_data(image)] for index, image in frames],
         })
-        if assets and title == "七轴跟踪":
+        if assets and clip_index == 0:
             assets.mkdir(parents=True, exist_ok=True)
             images = [image for _, image in frames]
             images[0].save(
                 assets / "panda-tracking.webp", save_all=True, append_images=images[1:],
-                duration=[180] * (len(images) - 1) + [750], loop=0, quality=78, method=4,
+                duration=[100] * (len(images) - 1) + [750], loop=0, quality=78, method=4,
             )
     template = (HERE / "replay_template.html").read_text(encoding="utf-8")
     data = json.dumps(clips, ensure_ascii=False, separators=(",", ":"))

@@ -39,13 +39,13 @@ canvas{display:block;width:100%;height:180px}.readout{margin-top:12px;display:gr
 <div class="indicator"><h2>第一轴角度 · rad</h2><strong id="outcome"></strong></div>
 <div class="legend">
 <span style="--color:var(--actual)">实测</span>
-<span style="--color:var(--command)">位置命令</span>
+<span id="reference-legend" style="--color:var(--command)">位置命令</span>
 <span id="goal-legend" style="--color:var(--goal)">任务目标</span>
 </div>
 <canvas id="chart" role="img" aria-label="第一轴实测角、位置命令与任务目标随仿真时间变化"></canvas>
 <dl class="readout">
 <div><dt>实测</dt><dd id="q"></dd></div>
-<div><dt>命令</dt><dd id="ctrl"></dd></div>
+<div><dt id="reference-label">命令</dt><dd id="ctrl"></dd></div>
 <div><dt id="err-label">跟踪差值</dt><dd id="error"></dd></div>
 </dl>
 </section>
@@ -65,14 +65,10 @@ const clips = JSON.parse(get('data').textContent);
 const elements = {
     nav: get('cases'), pose: get('pose'), scenario: get('scenario'), outcome: get('outcome'),
     chart: get('chart'), legend: get('goal-legend'), q: get('q'), ctrl: get('ctrl'),
+    referenceLegend: get('reference-legend'), referenceLabel: get('reference-label'),
     error: get('error'), errorLabel: get('err-label'), detail: get('detail'),
     play: get('play'), speed: get('speed'), timeline: get('timeline'), clock: get('clock'),
 };
-const detail = [
-    '七个关节按固定轨迹运动。橙线是第一轴执行器命令，绿线是关节实测。拖到 0.80 s 可看到第一轴的跟踪滞后。',
-    '双关节位置误差均小于 0.01 rad，且速度绝对值均小于 0.05 rad/s。此回合第 16 步达标。',
-    '第 250 步时第一轴紧跟位置命令，但命令离任务目标还有约 0.01911 rad，超过 0.01 rad 容差。',
-];
 let selected = 0;
 let index = 0;
 let playback = 0;
@@ -155,10 +151,12 @@ function select(i) {
     [...elements.nav.children].forEach((button, n) => button.setAttribute('aria-pressed', n === i));
     elements.scenario.textContent = clip.subtitle;
     elements.outcome.textContent = clip.outcome;
-    elements.outcome.classList.toggle('timeout', i === 2);
-    elements.legend.hidden = i === 0;
+    elements.outcome.classList.toggle('timeout', clip.outcome.endsWith('超时'));
+    elements.legend.hidden = clip.samples[0][3] === null;
+    elements.referenceLegend.textContent = clip.reference;
+    elements.referenceLabel.textContent = clip.reference;
     elements.timeline.max = clip.samples.length - 1;
-    elements.detail.textContent = detail[i];
+    elements.detail.textContent = clip.detail;
     show(0);
 }
 

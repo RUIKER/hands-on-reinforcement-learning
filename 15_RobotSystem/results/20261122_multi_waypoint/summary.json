@@ -1,0 +1,71 @@
+{
+  "result": "PASS",
+  "steady_max_abs_limit_rad": 0.05,
+  "run_count": 1,
+  "worst_active_rmse_rad": 0.04432449994514164,
+  "worst_active_peak_abs_rad": 0.07341418187202642,
+  "worst_steady_abs_rad": 0.011374840567740518,
+  "state_receive_hz_range": [
+    50.00990192893009,
+    50.00990192893009
+  ],
+  "runs": [
+    {
+      "case": "multi_waypoint",
+      "repeat": 1,
+      "acceptance_sim_ns": 3240000000,
+      "sample_count": 80,
+      "heartbeat_count": 28,
+      "waypoint_times_ns": [
+        0,
+        400000000,
+        800000000,
+        1200000000
+      ],
+      "waypoint_positions_rad": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          -1.57079,
+          0.0,
+          1.57079,
+          -0.7853
+        ],
+        [
+          -0.18,
+          0.12,
+          -0.1,
+          -1.4,
+          -0.08,
+          1.45,
+          -0.9
+        ],
+        [
+          0.12,
+          -0.15,
+          0.15,
+          -1.7,
+          0.1,
+          1.72,
+          -0.7
+        ],
+        [
+          0.0,
+          -0.03,
+          0.05,
+          -1.5,
+          0.0,
+          1.6,
+          -0.8
+        ]
+      ],
+      "state_receive_hz": 50.00990192893009,
+      "state_interval_p50_ms": 20.004177,
+      "state_interval_p95_ms": 20.5284145,
+      "state_interval_p99_ms": 20.71085884,
+      "worst_steady_abs_rad": 0.011374840567740518
+    }
+  ],
+  "capture": "single repetition of the existing ROS 2 multi_waypoint profile"
+}

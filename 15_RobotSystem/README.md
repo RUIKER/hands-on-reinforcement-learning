@@ -8,8 +8,8 @@
 
 ## 展示与复现入口
 
-- [Panda 轨迹预览](demo/panda-tracking.webp)展示固定命令下七个关节的 MuJoCo 运动。
-- [下载离线动作回放](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-replay.html)，用浏览器打开。可切换七轴跟踪、用例 30104 成功及用例 30124 超时，播放并拖动到指定仿真时刻。
+- [Panda 轨迹预览](demo/panda-tracking.webp)展示 ROS 2 七轴多航点的实测仿真运动。
+- [下载离线动作回放](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-replay.html)，用浏览器打开。可切换七轴多航点、两轴固定跟踪、用例 30104 成功和用例 30124 超时，播放并拖动到指定仿真时刻。
 - [七轴采样](results/20261117_fixed_tracking/tracking.csv)、[冻结目标与闭环验收](results/20261119_panda_policy/)、[SAC/HER 配对结果](results/20261112_paired/)和 [MCAP 录包](results/20261119_rosbag/)可作为对照证据。
 - [历史实验与诊断](benchmarks/diagnostics/README.md)包含 warm-up、精度和恢复对照的脚本与结果。
 - [WSL 预检](wsl_preflight/README.md)记录仿真、策略和依赖的版本，以及已有短测。
@@ -574,6 +574,10 @@ python "$project/ros2_smoke/plot_tracking.py" "$out"
 输出包括 `configuration.json`、`summary.json`、63 行七轴指标的 `joint_metrics.csv`，以及各次运行的 MCAP、日志和 `tracking.csv`。绘图脚本为每组生成一张 `tracking.png`。
 
 2026-11-07 在本机 WSL 2、ROS2 Lyrical、MuJoCo 3.17.0、NumPy 2.5.4 上完成九次。最大稳态绝对误差为 0.01137 rad，运动段最差单轴 RMSE 为 0.04432 rad，最大瞬时误差为 0.07341 rad。状态接收频率为 49.98–50.04 Hz，各次 P99 接收间隔最高为 21.19 ms。三组重复运行的最大位置差为 `8.07e-9 rad`。本轮实测文件在 `<本机路径>`。
+### 面试演示用的七轴多航点回放
+
+2026-11-22 复跑上述 multi_waypoint 一次。七轴均改变目标角，关节从 home 经两个中间点到终点，轨迹时长 1.2 s。另记录 0.4 s 以检查跟踪后的稳定性。MCAP 的七轴状态用于渲染，图中第一轴的轨迹参考按消息中的航点和时间插值。此次只运行一次，最大稳态绝对误差 0.01137 rad，低于协议的 0.05 rad。 [MCAP 与采样](results/20261122_multi_waypoint/) · [单次摘要](results/20261122_multi_waypoint/summary.json)
+
 ## 2026-11-14 动作延迟设计与训练执行接口检查
 
 [延迟对照实验设计](动作延迟对照实验设计.md) 规定 0、20、40 ms 动作 FIFO、已有策略及队列感知的传统控制对照、独立目标集、保持成功、超调、安全和成本指标。正式实验的持续评估、强基线、目标集生成器及 runner 尚未完成，不存在可直接运行的完整正式对照命令或可信耗时；当前仅列出旧评估器的诊断命令。设计不预设 RL 优于传统控制，也不代表真实硬件延迟。

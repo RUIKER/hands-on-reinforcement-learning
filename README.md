@@ -4,9 +4,9 @@
 
 ## Panda 机械臂仿真与策略验证
 
-Panda 项目覆盖七轴位置跟踪、数值 IK、两轴 SAC/HER 对照和 ROS 2 闭环。面试可先看动作预览，再打开离线回放，切换固定轨迹、策略成功及策略超时三个用例。
+Panda 项目覆盖七轴位置跟踪、数值 IK、两轴 SAC/HER 对照和 ROS 2 闭环。面试可先展示七轴多航点协调运动。离线回放还包括固定跟踪、策略成功和策略超时。
 
-![Panda 七轴固定轨迹回放](15_RobotSystem/demo/panda-tracking.webp)
+![Panda ROS 2 七轴多航点轨迹回放](15_RobotSystem/demo/panda-tracking.webp)
 
 - [离线交互回放](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-replay.html)下载后在浏览器打开。
 - [Panda 工程与复现说明](15_RobotSystem/README.md)包含运行入口、公开日志和评估协议。
