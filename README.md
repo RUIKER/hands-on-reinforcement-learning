@@ -4,12 +4,14 @@
 
 ## Panda 机械臂仿真与策略验证
 
-Panda 项目覆盖七轴位置跟踪、数值 IK、两轴 SAC/HER 对照和 ROS 2 闭环。面试可先展示七轴多航点协调运动。离线回放还包括固定跟踪、策略成功和策略超时。
+Panda 七轴末端到达项目结合 MuJoCo、行为克隆、SAC 与 HER。策略输出三维末端位移，阻尼雅可比将其转换为七轴关节位置增量。单个训练种子在固定 home 初态下通过用于诊断的原 24 个目标，以及新生成的 48 个留出目标。目标经过 IK 可解性筛选，成功要求末端位置误差小于 2 cm 且速度小于 3 cm/s。
 
-![Panda ROS 2 七轴多航点轨迹回放](15_RobotSystem/demo/panda-tracking.webp)
+![Panda 七轴末端到达仿真回放](15_RobotSystem/demo/panda-cartesian.webp)
 
-- [离线交互回放](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-replay.html)下载后在浏览器打开。
-- [Panda 工程与复现说明](15_RobotSystem/README.md)包含运行入口、公开日志和评估协议。
+- [下载七轴末端到达交互回放](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-cartesian-replay.html)，在浏览器打开，切换改进策略、行为克隆、反馈控制与旧策略。
+- [评估协议与复现](15_RobotSystem/README.md)记录目标、训练配置、权重和逐步轨迹。反馈控制和仅行为克隆也通过 72/72，当前对照尚不能单独证明 SAC + HER 微调提高成功率。
+- [七轴项目面试问答](15_RobotSystem/Panda七轴末端到达_面试问答.md)涵盖奖励漏洞、动作映射和实验边界。
+- [ROS 2 轨迹与两轴策略回放](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-replay.html)保留七轴多航点与两轴闭环结果。
 - [WSL 仿真与后训练预检](15_RobotSystem/wsl_preflight/README.md)包含 LIBERO、ACT 与 REACT 的隔离检查。
 
 ## 项目重点

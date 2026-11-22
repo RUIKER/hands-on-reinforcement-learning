@@ -8,7 +8,7 @@
 
 策略输出三维末端位移，由阻尼最小二乘雅可比映射到七轴关节指令。按比例限速保持每轴 0.02 rad 的增量上限，并在位置指令上留 0.05 rad 的关节边界余量。成功依然要求末端距离小于 0.02 m、速度小于 0.03 m/s。每回合从同一 home 开始，最多 250 步。设计参考 [FetchReach 官方任务](https://robotics.farama.org/v1.4.1/envs/fetch/reach/) 和 [Nair 等人的示范学习论文](https://arxiv.org/abs/1709.10089)。
 
-使用原 80 个训练目标收集 160 条示范轨迹，共 3,750 条转移。seed 43 用 2,400 次行为克隆更新预训练，再做 12,000 步 SAC + HER 在线微调，保留行为克隆正则。测试集为原来 24 个冻结目标及按 seed 61123 生成的 48 个新目标。新目标距训练目标、原测试目标和彼此至少 1 cm，仍属于 home 附近的同类工作空间。
+使用原 80 个训练目标收集 160 条示范轨迹，共 3,750 条转移。seed 43 用 2,400 次行为克隆更新预训练，再做 12,000 步 SAC + HER 在线微调，保留行为克隆正则。评估使用参与过旧策略失败分析的原 24 个目标，以及按 seed 61123 生成的 48 个新留出目标。新目标距训练目标、原测试目标和彼此至少 1 cm，经 IK 收敛筛选，属于 home 附近的同类工作空间。
 
 | 方法 | 原 24 个目标 | 新 48 个目标 | 平均步数（原／新） |
 | --- | ---: | ---: | ---: |
@@ -75,6 +75,8 @@ python 15_RobotSystem/render_ee_replay.py "$PANDA_SCENE" runs/panda-ee-seed43 ru
 
 ## 展示与复现入口
 
+- [七轴末端到达交互回放](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-cartesian-replay.html)下载后在浏览器打开，比较改进策略、仅行为克隆、反馈控制及旧策略。
+- [新版评估协议与轨迹](results/20261122_cartesian_reach/)保存 24 个原诊断目标、48 个新留出目标、单种子权重和逐步轨迹。[面试问答](Panda七轴末端到达_面试问答.md)解释结果及其适用范围。
 - [Panda 轨迹预览](demo/panda-tracking.webp)展示 ROS 2 七轴多航点的实测仿真运动。
 - [下载离线动作回放](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-replay.html)，用浏览器打开。可切换七轴多航点、两轴固定跟踪、用例 30104 成功和用例 30124 超时，播放并拖动到指定仿真时刻。
 - [七轴采样](results/20261117_fixed_tracking/tracking.csv)、[冻结目标与闭环验收](results/20261119_panda_policy/)、[SAC/HER 配对结果](results/20261112_paired/)和 [MCAP 录包](results/20261119_rosbag/)可作为对照证据。
