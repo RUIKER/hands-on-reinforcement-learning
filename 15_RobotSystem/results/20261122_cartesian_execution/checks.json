@@ -1,0 +1,103 @@
+{
+  "seed": 43,
+  "mujoco": "3.17.0",
+  "torch": "2.10.0+cpu",
+  "input_sha256": {
+    "goals.json": "0fa193bdb087decf8166ab2c5d355984c532f8cf63a8ea4c40b73fddfa4b5cb1",
+    "bc.npz": "03a149bfad190bec136fcd1cb6ac155ea3c65f964380a3e3c9c4e0af9d34b467",
+    "sac_her_bc.npz": "fa6eb7dce16ed01ffcb6d5f959f670f07bfa06afcd878ef2b4254a6739bd5644",
+    "evaluation.json": "6dcda62e96330ed7bab1b8bc5a740feec28b25c184ce50e747789465ae59e792"
+  },
+  "model_sha256": {
+    "scene.xml": "c7aba97eb836f3b01a6a1d0442a8c401ce360c64471772cf0f8271c1a8328373",
+    "panda.xml": "8619f39a4c30fc90258ef0828eeb5e3a15347066139baa09c3cbeb9c485a6f96"
+  },
+  "delay_steps": [
+    0,
+    1,
+    2
+  ],
+  "fixed_physics_dt_s": 0.002,
+  "fixed_control_dt_s": 0.02,
+  "command_hold": {
+    "physics_steps_per_command": 10,
+    "commands": 4,
+    "max_abs_q_difference_rad": 0.0,
+    "max_abs_velocity_difference_rad_s": 0.0,
+    "elapsed_sim_s": 0.08000000000000006
+  },
+  "boundary_samples": {
+    "transition_from_home": {
+      "goal_m": [
+        0.4816237131157034,
+        0.019695780745073693,
+        0.6985005887814513
+      ],
+      "actor_features": [
+        -0.7287576491603198,
+        0.19695780745073693,
+        0.7399815929386211,
+        -0.7287576491603198,
+        0.19695780745073693,
+        0.7399815929386211,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalized_replay_action": [
+        1.0,
+        -0.5,
+        0.25
+      ],
+      "requested_cartesian_delta_m": [
+        0.008,
+        -0.004,
+        0.002
+      ],
+      "applied_joint_setpoint_delta_rad": [
+        -0.0031433862016085946,
+        0.016466371962696423,
+        -0.0031433862016085946,
+        0.020000000000000018,
+        -0.0006065723900490284,
+        0.016509520986480064,
+        0.0
+      ],
+      "actual_joint_delta_rad": [
+        -0.00041114406171477636,
+        0.0034648104018467165,
+        -0.00036733055502750586,
+        0.0027691161093141847,
+        -0.00013145654910420577,
+        0.00287910566875893,
+        -2.1040202644595496e-06
+      ],
+      "actual_hand_delta_m": [
+        0.0013849221627278974,
+        -0.00044640277922773956,
+        -0.0003625130811321098
+      ],
+      "distance_reward": -0.8231080798774892,
+      "terminal": false,
+      "truncated": false
+    },
+    "timeout_step": 250,
+    "timeout_bootstrap_mask": 1,
+    "injected_joint2_failure_bootstrap_mask": 0,
+    "failure_reward": -100.99999999999991,
+    "failure_draws_in_her_slot": 18,
+    "strict_distance_and_speed_edges_passed": true
+  },
+  "her_sample_audit": {
+    "relabeled": 1582,
+    "relabeled_success": 85,
+    "draws": 3200
+  }
+}

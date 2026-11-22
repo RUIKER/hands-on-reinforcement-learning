@@ -2,17 +2,19 @@
 
 从表格型控制到连续动作策略，使用 Python、Gymnasium 和 PyTorch 实现并分析强化学习算法。项目以《动手学强化学习》等公开资料为起点，覆盖算法组件拆分、固定种子评估、失败案例诊断、消融实验，以及经典控制与模仿学习对照。
 
-## Panda 机械臂仿真与策略验证
+## Panda 七轴机械臂如何到达目标并停稳
 
-Panda 七轴末端到达项目结合 MuJoCo、行为克隆、SAC 与 HER。策略输出三维末端位移，阻尼雅可比将其转换为七轴关节位置增量。单个训练种子在固定 home 初态下通过用于诊断的原 24 个目标，以及新生成的 48 个留出目标。目标经过 IK 可解性筛选，成功要求末端位置误差小于 2 cm 且速度小于 3 cm/s。
+**任务。** 在 MuJoCo 中从固定 home 出发，控制 Panda 的手部原点到达三维目标。验收要求同一步内位置误差小于 20 mm、速度小于 30 mm/s。原先直接输出七个关节增量，同一批 24 个目标上 IK 全部达标，SAC 全部因第二关节越限失败，SAC+HER 全部超时。[初版逐目标结果](15_RobotSystem/results/20261122_seven_axis_reach/evaluation.json)
 
-![Panda 七轴末端到达仿真回放](15_RobotSystem/demo/panda-cartesian.webp)
+**策略改造。** 旧奖励使提前越限的回报高于持续尝试。我把动作为七轴增量的策略改成输出三维末端位移，以阻尼最小二乘和限位余量生成七轴指令。在 80 个目标上采集反馈控制示范，用 PyTorch 预训练 Actor 后分别启用和关闭 HER 做 SAC 微调，重标时按新目标重算奖励和终止标志。[MuJoCo 环境与 NumPy 运动学](15_RobotSystem/panda_ee_env.py) · [示范与训练](15_RobotSystem/panda_cartesian_reach.py) · [配对实验](15_RobotSystem/panda_cartesian_paired.py)
 
-- [下载七轴末端到达交互回放](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-cartesian-replay.html)，在浏览器打开，切换改进策略、行为克隆、反馈控制与旧策略。
-- [评估协议与复现](15_RobotSystem/README.md)记录目标、训练配置、权重和逐步轨迹。反馈控制和仅行为克隆也通过 72/72，当前对照尚不能单独证明 SAC + HER 微调提高成功率。
-- [七轴项目面试问答](15_RobotSystem/Panda七轴末端到达_面试问答.md)涵盖奖励漏洞、动作映射和实验边界。
-- [ROS 2 轨迹与两轴策略回放](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-replay.html)保留七轴多航点与两轴闭环结果。
-- [WSL 仿真与后训练预检](15_RobotSystem/wsl_preflight/README.md)包含 LIBERO、ACT 与 REACT 的隔离检查。
+**评测结果。** 原先失败的 24 个目标全部达标。三个训练种子重复评估相同的 48 个留出目标，行为克隆、行为克隆后加 SAC、再加入 HER 三种方法各通过 144/144 回合。三种子的 SAC+HER 末端误差中位数为 7.54 mm。仅行为克隆已达到该任务的成功率上限。[逐种子结果](15_RobotSystem/results/20261122_cartesian_paired/summary.json)
+
+**执行改进。** 给动作加入两个控制周期（40 ms）的固定延迟，同一策略在 48 个目标上仅通过 2 个。在发出新动作前，先将队列内两条在途命令按运动学映射到预计指令位姿，保持实测位置和速度不变。同一份权重恢复到 48/48，另取 48 个新目标，补偿前后同样为 2/48 和 48/48。WSL 的 ROS 2 名义闭环另行核对了 1,616 个动作步和 1,688 条 MCAP 状态。[延迟补偿与逐目标结果](15_RobotSystem/results/20261122_cartesian_execution/compensation.json) · [ROS 2 录包与验收](15_RobotSystem/results/20261122_cartesian_ros2/)
+
+![同一个三维目标下的七轴机械臂运动与末端轨迹](15_RobotSystem/demo/panda-cartesian.webp)
+
+[下载七轴交互回放，在浏览器打开](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-cartesian-replay.html) · [七轴项目与复现命令](15_RobotSystem/README.md) · [二轴与七轴项目对照](15_RobotSystem/二轴与七轴项目对照.md) · [面试问答](15_RobotSystem/Panda七轴末端到达_面试问答.md)
 
 ## 项目重点
 

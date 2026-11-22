@@ -1,0 +1,174 @@
+{
+  "cartesian_feedback": {
+    "0": {
+      "frozen": {
+        "n": 24,
+        "outcomes": {
+          "success": 24
+        },
+        "mean_steps_including_timeouts": 22.833333333333332,
+        "median_final_error_m": 0.007469590894054418
+      },
+      "fresh": {
+        "n": 48,
+        "outcomes": {
+          "success": 48
+        },
+        "mean_steps_including_timeouts": 22.229166666666668,
+        "median_final_error_m": 0.007566883792302737
+      }
+    },
+    "1": {
+      "frozen": {
+        "n": 24,
+        "outcomes": {
+          "success": 24
+        },
+        "mean_steps_including_timeouts": 23.0,
+        "median_final_error_m": 0.007242787280992254
+      },
+      "fresh": {
+        "n": 48,
+        "outcomes": {
+          "success": 48
+        },
+        "mean_steps_including_timeouts": 23.083333333333332,
+        "median_final_error_m": 0.00793940940842177
+      }
+    },
+    "2": {
+      "frozen": {
+        "n": 24,
+        "outcomes": {
+          "timeout": 23,
+          "success": 1
+        },
+        "mean_steps_including_timeouts": 240.41666666666666,
+        "median_final_error_m": 0.00891509558642287
+      },
+      "fresh": {
+        "n": 48,
+        "outcomes": {
+          "timeout": 45,
+          "success": 3
+        },
+        "mean_steps_including_timeouts": 235.52083333333334,
+        "median_final_error_m": 0.007452910672666397
+      }
+    }
+  },
+  "bc": {
+    "0": {
+      "frozen": {
+        "n": 24,
+        "outcomes": {
+          "success": 24
+        },
+        "mean_steps_including_timeouts": 22.083333333333332,
+        "median_final_error_m": 0.007631012246010862
+      },
+      "fresh": {
+        "n": 48,
+        "outcomes": {
+          "success": 48
+        },
+        "mean_steps_including_timeouts": 21.5625,
+        "median_final_error_m": 0.007280155484291163
+      }
+    },
+    "1": {
+      "frozen": {
+        "n": 24,
+        "outcomes": {
+          "success": 24
+        },
+        "mean_steps_including_timeouts": 22.208333333333332,
+        "median_final_error_m": 0.007642372108606522
+      },
+      "fresh": {
+        "n": 48,
+        "outcomes": {
+          "success": 48
+        },
+        "mean_steps_including_timeouts": 21.729166666666668,
+        "median_final_error_m": 0.007301820024431364
+      }
+    },
+    "2": {
+      "frozen": {
+        "n": 24,
+        "outcomes": {
+          "success": 24
+        },
+        "mean_steps_including_timeouts": 23.75,
+        "median_final_error_m": 0.007528631621456502
+      },
+      "fresh": {
+        "n": 48,
+        "outcomes": {
+          "success": 48
+        },
+        "mean_steps_including_timeouts": 22.833333333333332,
+        "median_final_error_m": 0.007456007865244816
+      }
+    }
+  },
+  "sac_her_bc": {
+    "0": {
+      "frozen": {
+        "n": 24,
+        "outcomes": {
+          "success": 24
+        },
+        "mean_steps_including_timeouts": 22.833333333333332,
+        "median_final_error_m": 0.007473130209695994
+      },
+      "fresh": {
+        "n": 48,
+        "outcomes": {
+          "success": 48
+        },
+        "mean_steps_including_timeouts": 22.25,
+        "median_final_error_m": 0.007565396310284007
+      }
+    },
+    "1": {
+      "frozen": {
+        "n": 24,
+        "outcomes": {
+          "success": 24
+        },
+        "mean_steps_including_timeouts": 23.125,
+        "median_final_error_m": 0.007594852658744237
+      },
+      "fresh": {
+        "n": 48,
+        "outcomes": {
+          "success": 48
+        },
+        "mean_steps_including_timeouts": 22.5625,
+        "median_final_error_m": 0.007788074518476679
+      }
+    },
+    "2": {
+      "frozen": {
+        "n": 24,
+        "outcomes": {
+          "timeout": 23,
+          "success": 1
+        },
+        "mean_steps_including_timeouts": 240.45833333333334,
+        "median_final_error_m": 0.006342606544982971
+      },
+      "fresh": {
+        "n": 48,
+        "outcomes": {
+          "timeout": 46,
+          "success": 2
+        },
+        "mean_steps_including_timeouts": 240.5625,
+        "median_final_error_m": 0.006498782391573533
+      }
+    }
+  }
+}

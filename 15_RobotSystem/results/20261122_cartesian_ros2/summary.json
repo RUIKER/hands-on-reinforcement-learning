@@ -1,0 +1,468 @@
+{
+  "status": "PASS",
+  "ros_distro": "lyrical",
+  "mujoco": "3.17.0",
+  "numpy": "2.5.4",
+  "policy": "sac_her_bc",
+  "training_seed": 43,
+  "actor_sha256": "fa6eb7dce16ed01ffcb6d5f959f670f07bfa06afcd878ef2b4254a6739bd5644",
+  "goals_sha256": "0fa193bdb087decf8166ab2c5d355984c532f8cf63a8ea4c40b73fddfa4b5cb1",
+  "model_xml_sha256": {
+    "scene.xml": "c7aba97eb836f3b01a6a1d0442a8c401ce360c64471772cf0f8271c1a8328373",
+    "panda.xml": "8619f39a4c30fc90258ef0828eeb5e3a15347066139baa09c3cbeb9c485a6f96"
+  },
+  "matched_control_steps": 1616,
+  "exact_fields": [
+    "33-state observation",
+    "simulation time",
+    "reward",
+    "terminated",
+    "truncated",
+    "outcome"
+  ],
+  "rejected": [
+    "stale episode",
+    "duplicate step",
+    "skipped step",
+    "step after episode"
+  ],
+  "matched_bag_messages": 1688,
+  "topic": "/panda_cartesian/joint_states",
+  "saved_pytorch_max_abs_joint_rad": 2.2240136399176436e-09,
+  "saved_pytorch_max_abs_xyz_m": 1.921931148951561e-09,
+  "saved_pytorch_atol": 1e-05,
+  "cases": [
+    {
+      "split": "frozen",
+      "index": 0,
+      "steps": 23,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 1,
+      "steps": 24,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 2,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 3,
+      "steps": 19,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 4,
+      "steps": 23,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 5,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 6,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 7,
+      "steps": 22,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 8,
+      "steps": 19,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 9,
+      "steps": 23,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 10,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 11,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 12,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 13,
+      "steps": 24,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 14,
+      "steps": 23,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 15,
+      "steps": 17,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 16,
+      "steps": 18,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 17,
+      "steps": 22,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 18,
+      "steps": 16,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 19,
+      "steps": 24,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 20,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 21,
+      "steps": 27,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 22,
+      "steps": 28,
+      "outcome": "success"
+    },
+    {
+      "split": "frozen",
+      "index": 23,
+      "steps": 21,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 0,
+      "steps": 24,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 1,
+      "steps": 26,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 2,
+      "steps": 23,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 3,
+      "steps": 21,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 4,
+      "steps": 17,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 5,
+      "steps": 17,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 6,
+      "steps": 22,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 7,
+      "steps": 22,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 8,
+      "steps": 19,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 9,
+      "steps": 24,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 10,
+      "steps": 27,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 11,
+      "steps": 20,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 12,
+      "steps": 21,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 13,
+      "steps": 23,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 14,
+      "steps": 23,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 15,
+      "steps": 27,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 16,
+      "steps": 20,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 17,
+      "steps": 19,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 18,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 19,
+      "steps": 23,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 20,
+      "steps": 24,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 21,
+      "steps": 20,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 22,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 23,
+      "steps": 20,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 24,
+      "steps": 21,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 25,
+      "steps": 18,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 26,
+      "steps": 20,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 27,
+      "steps": 24,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 28,
+      "steps": 24,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 29,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 30,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 31,
+      "steps": 21,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 32,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 33,
+      "steps": 19,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 34,
+      "steps": 26,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 35,
+      "steps": 21,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 36,
+      "steps": 17,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 37,
+      "steps": 17,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 38,
+      "steps": 23,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 39,
+      "steps": 25,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 40,
+      "steps": 23,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 41,
+      "steps": 23,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 42,
+      "steps": 24,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 43,
+      "steps": 22,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 44,
+      "steps": 20,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 45,
+      "steps": 21,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 46,
+      "steps": 27,
+      "outcome": "success"
+    },
+    {
+      "split": "fresh",
+      "index": 47,
+      "steps": 25,
+      "outcome": "success"
+    }
+  ]
+}

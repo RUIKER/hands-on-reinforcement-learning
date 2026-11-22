@@ -1,0 +1,124 @@
+{
+  "success": 0,
+  "eval_episodes": 24,
+  "median_final_error_mm": 289.42005155050003,
+  "warmup_dynamics_sha256": "316838b2991c20d46b4635515895e46bfd910d7198a04e70de55865dc809eb36",
+  "her_draws": {
+    "relabeled": 40617,
+    "relabeled_success": 242,
+    "already_at_goal": 343
+  },
+  "warmup_or_crossing_completed_episodes": {
+    "timeout": 2
+  },
+  "fully_autonomous_completed_episodes": {
+    "timeout": 4
+  },
+  "first_fully_autonomous_success_step": null,
+  "training_snapshots": [
+    {
+      "environment_step": 257,
+      "critic_1_loss": 0.2870270907878876,
+      "critic_2_loss": 0.5275716781616211,
+      "actor_loss": 0.1344282627105713,
+      "alpha_loss": -23.07533073425293,
+      "alpha": 0.00999700091779232,
+      "td_target_mean": -0.6180646419525146,
+      "actor_entropy_estimate": 2.010744333267212,
+      "actor_action_mean": [
+        -0.10652124136686325,
+        -0.03717848286032677,
+        0.1853499412536621
+      ],
+      "actor_action_std": [
+        0.6004554629325867,
+        0.5918565392494202,
+        0.5907825827598572
+      ],
+      "gradient_l2": {
+        "critic_1": 1.2433617121003957,
+        "critic_2": 1.662435438445708,
+        "actor": 0.0374982852545368,
+        "log_alpha": 5.010744571685791
+      }
+    },
+    {
+      "environment_step": 512,
+      "critic_1_loss": 0.018095731735229492,
+      "critic_2_loss": 0.025510210543870926,
+      "actor_loss": 1.211671233177185,
+      "alpha_loss": -15.647838592529297,
+      "alpha": 0.009307087399065495,
+      "td_target_mean": -1.2285553216934204,
+      "actor_entropy_estimate": 0.34588754177093506,
+      "actor_action_mean": [
+        0.25273606181144714,
+        -0.20991817116737366,
+        0.21689116954803467
+      ],
+      "actor_action_std": [
+        0.5062779784202576,
+        0.46777665615081787,
+        0.40862688422203064
+      ],
+      "gradient_l2": {
+        "critic_1": 0.09252685605894566,
+        "critic_2": 0.12043132128239187,
+        "actor": 0.04190377038429771,
+        "log_alpha": 3.3458874225616455
+      }
+    },
+    {
+      "environment_step": 1024,
+      "critic_1_loss": 0.004409448709338903,
+      "critic_2_loss": 0.004935296252369881,
+      "actor_loss": 2.4406349658966064,
+      "alpha_loss": -15.312227249145508,
+      "alpha": 0.008198978379368782,
+      "td_target_mean": -2.451868772506714,
+      "actor_entropy_estimate": 0.18772944808006287,
+      "actor_action_mean": [
+        0.11202902346849442,
+        -0.14784501492977142,
+        0.15770970284938812
+      ],
+      "actor_action_std": [
+        0.43613630533218384,
+        0.3727293610572815,
+        0.4069870412349701
+      ],
+      "gradient_l2": {
+        "critic_1": 0.1327277002566906,
+        "critic_2": 0.18313427446944172,
+        "actor": 0.0459527978860742,
+        "log_alpha": 3.187729597091675
+      }
+    },
+    {
+      "environment_step": 1536,
+      "critic_1_loss": 0.02800389751791954,
+      "critic_2_loss": 0.024665467441082,
+      "actor_loss": 3.532838821411133,
+      "alpha_loss": -14.551692008972168,
+      "alpha": 0.007174474187195301,
+      "td_target_mean": -3.5479588508605957,
+      "actor_entropy_estimate": -0.052504099905490875,
+      "actor_action_mean": [
+        0.019535746425390244,
+        -0.2732172906398773,
+        0.09903690963983536
+      ],
+      "actor_action_std": [
+        0.4666527509689331,
+        0.3092469274997711,
+        0.3618318736553192
+      ],
+      "gradient_l2": {
+        "critic_1": 0.3019625876423938,
+        "critic_2": 0.30987693326428095,
+        "actor": 0.07402961632349468,
+        "log_alpha": 2.947495937347412
+      }
+    }
+  ]
+}

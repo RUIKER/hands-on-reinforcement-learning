@@ -1,0 +1,9 @@
+# End-effector goal expressed in link0 coordinates.
+float64[3] goal_m
+---
+bool accepted
+string reason
+uint64 episode
+string model_digest
+# q, dq, joint setpoint (7 each), measured xyz, velocity, goal, commanded xyz (3 each).
+float64[33] observation

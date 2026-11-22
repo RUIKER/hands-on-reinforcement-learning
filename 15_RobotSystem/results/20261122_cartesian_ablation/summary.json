@@ -1,0 +1,83 @@
+{
+  "42": {
+    "sparse_raw": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 62.330514092501346
+    },
+    "sparse_ema": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 161.5388464114247
+    },
+    "dense_raw": {
+      "success": 24,
+      "eval_episodes": 24,
+      "median_final_error_mm": 2.9473418370424325
+    },
+    "dense_ema": {
+      "success": 8,
+      "eval_episodes": 24,
+      "median_final_error_mm": 24.349183444105762
+    },
+    "dense_teacher_warmup": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 1147.4432259984833
+    }
+  },
+  "43": {
+    "sparse_raw": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 344.29026107988796
+    },
+    "sparse_ema": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 752.3444875231908
+    },
+    "dense_raw": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 289.42005155050003
+    },
+    "dense_ema": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 530.284108944171
+    },
+    "dense_teacher_warmup": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 1068.027344389745
+    }
+  },
+  "44": {
+    "sparse_raw": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 127.04513190610277
+    },
+    "sparse_ema": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 731.4223874134377
+    },
+    "dense_raw": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 606.9765192548948
+    },
+    "dense_ema": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 424.6503796311873
+    },
+    "dense_teacher_warmup": {
+      "success": 0,
+      "eval_episodes": 24,
+      "median_final_error_mm": 1206.587678047618
+    }
+  }
+}

@@ -1,0 +1,15 @@
+uint64 episode
+uint32 step
+# Normalized XYZ displacements. Unit magnitude maps to 8 mm per component.
+float64[3] action
+---
+bool accepted
+string reason
+uint64 episode
+uint32 step
+float64 sim_time_s
+float64[33] observation
+float64 reward
+bool terminated
+bool truncated
+string outcome

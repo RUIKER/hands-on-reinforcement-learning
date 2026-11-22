@@ -13,65 +13,16 @@ import numpy as np
 import torch
 from torch.nn import functional as F
 
-from panda_ee_reach import CONFIG_7, Environment, LIMIT, Replay, SAC
+from panda_ee_env import (ACTION_SCALE, FAILURE_REWARD, JOINT_MARGIN, CartesianEnvironment,
+                          distance_reward, features)
+from panda_ee_reach import CONFIG_7, Replay, SAC
 
 
-ACTION_SCALE = 0.008
-JOINT_MARGIN = 0.05
-DAMPING = 0.02
 FRESH_SEED = 61123
-PANDA_HOME = np.array([0., 0., 0., -1.57079, 0., 1.57079, -0.7853])
 CLONING_UPDATES = 2400
 CLONING_WEIGHT = 20.
 CONFIG = dict(CONFIG_7, state_dim=16, hidden_dim=64, action_low=[-1.] * 3,
               action_high=[1.] * 3, target_entropy=-3.)
-# All non-failure unshaped rewards lie in [-1, 0].
-FAILURE_REWARD = -1.0 - 1.0 / (1.0 - CONFIG['gamma'])
-
-
-def distance_reward(state, goal, reached):
-    return 0. if reached else -float(np.clip(np.linalg.norm(state[21:24] - goal) / .13, .01, 1.))
-
-
-class CartesianEnvironment(Environment):
-    def __init__(self, scene):
-        super().__init__(scene)
-        if not np.isclose(self.model.opt.timestep, .002) or not np.allclose(self.ik.home, PANDA_HOME):
-            raise ValueError('Expected the pinned Panda model home pose and 2 ms physics timestep')
-
-    def observation(self):
-        state = super().observation()
-        # Track the Cartesian location of the held joint setpoint as well as
-        # the measured hand. This lets the policy stop advancing the command
-        # while the physical servo is still approaching it.
-        command_position, _ = self.ik.position(state[14:21])
-        return np.r_[state, command_position]
-
-    def step(self, action):
-        action = np.asarray(action, dtype=float)
-        if action.shape != (3,) or not np.isfinite(action).all() or np.any(np.abs(action) > 1.000001):
-            raise ValueError('Expected three finite normalized Cartesian actions')
-        # IK.position has updated joint geometry at the current setpoint.
-        mujoco.mj_jacBody(self.model, self.ik.data, self.ik.jacobian, None, self.ik.hand)
-        rotation = self.ik.data.xmat[self.ik.base].reshape(3, 3)
-        jac = rotation.T @ self.ik.jacobian[:, self.dadr]
-        delta = jac.T @ np.linalg.solve(jac @ jac.T + DAMPING**2 * np.eye(3),
-                                       ACTION_SCALE * action)
-        delta *= min(1., LIMIT / max(np.max(np.abs(delta)), 1e-12))
-        command = self.data.ctrl[self.act]
-        target = np.clip(command + delta, self.ik.lower + JOINT_MARGIN, self.ik.upper - JOINT_MARGIN)
-        state, _, terminal, timeout, outcome = super().step((target - command) / LIMIT)
-        reward = (FAILURE_REWARD if outcome == 'failure'
-                  else distance_reward(state, self.goal, outcome == 'success'))
-        return state, reward, terminal, timeout, outcome
-
-
-def features(state):
-    state = np.asarray(state)
-    return np.concatenate(((state[..., 27:30] - state[..., 30:33]) / .10,
-                           (state[..., 27:30] - state[..., 21:24]) / .10,
-                           state[..., 24:27] / .5,
-                           state[..., 14:21] - PANDA_HOME), axis=-1)
 
 
 def teacher(state):
@@ -84,12 +35,12 @@ def infer(agent, state):
         return agent.actor.deterministic_action(torch.as_tensor(features(state), dtype=torch.float32)).numpy()
 
 
-def train(env, goals, seed, steps):
+def train(env, goals, seed, steps, *, use_her=True):
     torch.manual_seed(seed)
     random.seed(seed)
     rng = np.random.default_rng(seed)
     agent = SAC(**CONFIG)
-    replay = Replay(True, seed + 1, relabel_reward=distance_reward)
+    replay = Replay(use_her, seed + 1, relabel_reward=distance_reward)
     demonstrations = []
     demo_states = []
     demo_outcomes = Counter()
@@ -108,6 +59,8 @@ def train(env, goals, seed, steps):
 
     inputs = torch.as_tensor(np.asarray(demo_states), dtype=torch.float32)
     labels = torch.as_tensor(np.asarray(demonstrations), dtype=torch.float32)
+    demo_digest = sha256(inputs.numpy().tobytes())
+    demo_digest.update(labels.numpy().tobytes())
 
     def cloning_loss(actor):
         indices = rng.integers(len(inputs), size=128)
@@ -138,12 +91,13 @@ def train(env, goals, seed, steps):
             outcomes[outcome] += 1
             state = env.reset(goals[rng.integers(len(goals))])
     return pretrained, agent, {'demo_transitions': len(inputs), 'demo_outcomes': dict(demo_outcomes),
+                               'bc_examples_sha256': demo_digest.hexdigest(),
                                'online_steps': steps, 'online_outcomes': dict(outcomes),
                                'her': dict(replay.counts)}
 
 
-def fresh_goals(env, excluded):
-    rng = np.random.default_rng(FRESH_SEED)
+def fresh_goals(env, excluded, *, seed=FRESH_SEED):
+    rng = np.random.default_rng(seed)
     home = env.reset(np.zeros(3))[21:24]
     goals = []
     for _ in range(10000):
@@ -160,7 +114,7 @@ def fresh_goals(env, excluded):
     raise RuntimeError('Could not sample 48 independent goals')
 
 
-def evaluate(env, cases, policies):
+def evaluate(env, cases, policies, *, record_traces=True):
     report = {}
     traces = {}
     for name, policy in policies.items():
@@ -171,8 +125,9 @@ def evaluate(env, cases, policies):
                 state = env.reset(goal)
                 path = []
                 while True:
-                    path.append({'q': state[:7].tolist(), 'xyz': state[21:24].tolist(),
-                                 'time': round(env.steps * .02, 8)})
+                    if record_traces:
+                        path.append({'q': state[:7].tolist(), 'xyz': state[21:24].tolist(),
+                                     'time': round(env.steps * .02, 8)})
                     if env.done:
                         break
                     state, _, _, _, outcome = env.step(policy(state))

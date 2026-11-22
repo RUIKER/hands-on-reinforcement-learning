@@ -1,0 +1,146 @@
+[
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.16426399477569015,
+    "final_speed_m_s": 0.00747349062677453
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.1630597218212629,
+    "final_speed_m_s": 0.014654091255871578
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.22181546228312257,
+    "final_speed_m_s": 0.056745088721191564
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.1445526900425695,
+    "final_speed_m_s": 0.014087969156039257
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.17780077088643403,
+    "final_speed_m_s": 0.04336345662821067
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.5140195416688216,
+    "final_speed_m_s": 0.20873408271320837
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.14660551948529896,
+    "final_speed_m_s": 0.003912596592607954
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.16174780263034658,
+    "final_speed_m_s": 0.006756121899734375
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.16881727405752006,
+    "final_speed_m_s": 0.03141988887374556
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.5077558497208561,
+    "final_speed_m_s": 0.317694507396721
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.16845859014573822,
+    "final_speed_m_s": 0.01960002215605332
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.41202107218889056,
+    "final_speed_m_s": 0.13959707501410848
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.1591368378079234,
+    "final_speed_m_s": 0.00944906374573846
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.14773418283286094,
+    "final_speed_m_s": 0.010160564785922211
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.14723951231793103,
+    "final_speed_m_s": 0.015455311258641732
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.14690402629635696,
+    "final_speed_m_s": 0.013200542160669057
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.1456621516750996,
+    "final_speed_m_s": 0.007378747375242158
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.134590366831006,
+    "final_speed_m_s": 0.014084880845815089
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.14883976298027,
+    "final_speed_m_s": 0.011815901329802437
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.28545463276265837,
+    "final_speed_m_s": 0.23532103221031633
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.16132989019250282,
+    "final_speed_m_s": 0.009146540208151635
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.16851484033091751,
+    "final_speed_m_s": 0.02522267671887575
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.1576890206861319,
+    "final_speed_m_s": 0.008483394680460455
+  },
+  {
+    "outcome": "timeout",
+    "steps": 250,
+    "final_error_m": 0.14789160774647286,
+    "final_speed_m_s": 0.01252395131568302
+  }
+]

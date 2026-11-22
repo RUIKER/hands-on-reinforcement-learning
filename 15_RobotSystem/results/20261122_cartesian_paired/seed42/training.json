@@ -1,0 +1,30 @@
+{
+  "bc_sac": {
+    "demo_transitions": 3749,
+    "demo_outcomes": {
+      "success": 160
+    },
+    "bc_examples_sha256": "e53234ad73d001d55697556e1d255a43fce39f86efc25f59b19c61ead3b6673c",
+    "online_steps": 12000,
+    "online_outcomes": {
+      "success": 488
+    },
+    "her": {}
+  },
+  "bc_sac_her": {
+    "demo_transitions": 3749,
+    "demo_outcomes": {
+      "success": 160
+    },
+    "bc_examples_sha256": "e53234ad73d001d55697556e1d255a43fce39f86efc25f59b19c61ead3b6673c",
+    "online_steps": 12000,
+    "online_outcomes": {
+      "success": 490
+    },
+    "her": {
+      "relabeled": 380816,
+      "relabeled_success": 15766,
+      "already_at_goal": 3184
+    }
+  }
+}

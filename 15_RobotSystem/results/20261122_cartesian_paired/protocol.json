@@ -1,0 +1,57 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "steps_per_online_arm": 12000,
+  "goals_repo_path": "15_RobotSystem/results/20261122_cartesian_reach/goals.json",
+  "goals_sha256": "0fa193bdb087decf8166ab2c5d355984c532f8cf63a8ea4c40b73fddfa4b5cb1",
+  "unique_goals": {
+    "frozen": 24,
+    "fresh": 48,
+    "train": 80
+  },
+  "model_sha256": {
+    "scene.xml": "c7aba97eb836f3b01a6a1d0442a8c401ce360c64471772cf0f8271c1a8328373",
+    "panda.xml": "8619f39a4c30fc90258ef0828eeb5e3a15347066139baa09c3cbeb9c485a6f96"
+  },
+  "initial_state": "home",
+  "horizon_steps": 250,
+  "physics_steps_per_action": 10,
+  "action_period_s": 0.02,
+  "distance_lt_m": 0.02,
+  "speed_lt_m_s": 0.03,
+  "cloning_updates": 2400,
+  "online_actor_cloning_weight": 20.0,
+  "online_batch_size": 64,
+  "her_candidate_fraction": 0.5,
+  "actor_critic_config": {
+    "state_dim": 16,
+    "hidden_dim": 64,
+    "action_low": [
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "action_high": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "actor_lr": 0.0003,
+    "critic_lr": 0.0003,
+    "alpha_lr": 0.0003,
+    "target_entropy": -3.0,
+    "tau": 0.005,
+    "gamma": 0.99,
+    "reward_shift": 0.0,
+    "reward_scale": 1.0,
+    "device": "cpu"
+  },
+  "pairing": "Noisy demonstrations and actor initialization vary across seeds. Within each seed, the script checks identical BC inputs, labels and pretrained weights. Both online arms retain the same BC regularizer. Only HER sampling is toggled.",
+  "evaluation": "Each saved actor is reloaded and evaluated deterministically. Episode order matches goals.json within each split; seeds repeat the same goals.",
+  "mujoco": "3.17.0",
+  "torch": "2.10.0+cpu",
+  "numpy": "2.5.4"
+}

@@ -1,0 +1,76 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "arms_reward_current_weight_warmup": {
+    "sparse_raw": [
+      "sparse",
+      1.0,
+      "random"
+    ],
+    "sparse_ema": [
+      "sparse",
+      0.5,
+      "random"
+    ],
+    "dense_raw": [
+      "dense",
+      1.0,
+      "random"
+    ],
+    "dense_ema": [
+      "dense",
+      0.5,
+      "random"
+    ],
+    "dense_teacher_warmup": [
+      "dense",
+      1.0,
+      "teacher"
+    ]
+  },
+  "environment_steps": 1536,
+  "warmup_steps": 256,
+  "updates": 1280,
+  "sac": {
+    "state_dim": 16,
+    "hidden_dim": 64,
+    "action_low": [
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "action_high": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "actor_lr": 0.0003,
+    "critic_lr": 0.0003,
+    "alpha_lr": 0.0003,
+    "target_entropy": -3.0,
+    "tau": 0.005,
+    "gamma": 0.99,
+    "reward_shift": 0.0,
+    "reward_scale": 1.0,
+    "device": "cpu"
+  },
+  "batch_size": 64,
+  "her_attempted_fraction": 0.5,
+  "true_failure_reward": -100.99999999999991,
+  "cloning_updates": 0,
+  "cloning_regularizer": 0,
+  "initial_state": "home",
+  "evaluation": "First-hit position and speed, original 24 diagnostic goals, deterministic actor without smoothing. No selection or early stopping. 48 fresh goals unused.",
+  "behavior_ema": "Training only, after warm-up. Previous applied normalized action, zero at episode reset. Replay stores the actual smoothed action. A warm-up episode may continue into actor control.",
+  "demo_warmup": "First 256 steps driven by the Cartesian feedback teacher, stored in replay. No supervised loss or online demonstration regularizer in any arm.",
+  "goals_sha256": "0fa193bdb087decf8166ab2c5d355984c532f8cf63a8ea4c40b73fddfa4b5cb1",
+  "model_sha256": {
+    "scene.xml": "c7aba97eb836f3b01a6a1d0442a8c401ce360c64471772cf0f8271c1a8328373",
+    "panda.xml": "8619f39a4c30fc90258ef0828eeb5e3a15347066139baa09c3cbeb9c485a6f96"
+  },
+  "mujoco": "3.17.0",
+  "torch": "2.10.0+cpu"
+}

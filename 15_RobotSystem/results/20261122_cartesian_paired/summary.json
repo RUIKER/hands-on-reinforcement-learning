@@ -1,0 +1,228 @@
+{
+  "by_seed": {
+    "42": {
+      "bc": {
+        "frozen": {
+          "episodes": 24,
+          "outcomes": {
+            "success": 24
+          },
+          "median_final_error_mm": 7.938605473031669,
+          "mean_steps": 22.125
+        },
+        "fresh": {
+          "episodes": 48,
+          "outcomes": {
+            "success": 48
+          },
+          "median_final_error_mm": 7.56085119487209,
+          "mean_steps": 21.770833333333332
+        }
+      },
+      "bc_sac": {
+        "frozen": {
+          "episodes": 24,
+          "outcomes": {
+            "success": 24
+          },
+          "median_final_error_mm": 7.4609094430940335,
+          "mean_steps": 22.791666666666668
+        },
+        "fresh": {
+          "episodes": 48,
+          "outcomes": {
+            "success": 48
+          },
+          "median_final_error_mm": 7.533158349479593,
+          "mean_steps": 22.208333333333332
+        }
+      },
+      "bc_sac_her": {
+        "frozen": {
+          "episodes": 24,
+          "outcomes": {
+            "success": 24
+          },
+          "median_final_error_mm": 7.415759757678439,
+          "mean_steps": 22.875
+        },
+        "fresh": {
+          "episodes": 48,
+          "outcomes": {
+            "success": 48
+          },
+          "median_final_error_mm": 7.521343355509039,
+          "mean_steps": 22.25
+        }
+      }
+    },
+    "43": {
+      "bc": {
+        "frozen": {
+          "episodes": 24,
+          "outcomes": {
+            "success": 24
+          },
+          "median_final_error_mm": 7.6310122460108625,
+          "mean_steps": 22.083333333333332
+        },
+        "fresh": {
+          "episodes": 48,
+          "outcomes": {
+            "success": 48
+          },
+          "median_final_error_mm": 7.280155484291162,
+          "mean_steps": 21.5625
+        }
+      },
+      "bc_sac": {
+        "frozen": {
+          "episodes": 24,
+          "outcomes": {
+            "success": 24
+          },
+          "median_final_error_mm": 7.508722523965438,
+          "mean_steps": 22.791666666666668
+        },
+        "fresh": {
+          "episodes": 48,
+          "outcomes": {
+            "success": 48
+          },
+          "median_final_error_mm": 7.580488713236201,
+          "mean_steps": 22.208333333333332
+        }
+      },
+      "bc_sac_her": {
+        "frozen": {
+          "episodes": 24,
+          "outcomes": {
+            "success": 24
+          },
+          "median_final_error_mm": 7.473130209695994,
+          "mean_steps": 22.833333333333332
+        },
+        "fresh": {
+          "episodes": 48,
+          "outcomes": {
+            "success": 48
+          },
+          "median_final_error_mm": 7.565396310284007,
+          "mean_steps": 22.25
+        }
+      }
+    },
+    "44": {
+      "bc": {
+        "frozen": {
+          "episodes": 24,
+          "outcomes": {
+            "success": 24
+          },
+          "median_final_error_mm": 7.941129788566691,
+          "mean_steps": 21.791666666666668
+        },
+        "fresh": {
+          "episodes": 48,
+          "outcomes": {
+            "success": 48
+          },
+          "median_final_error_mm": 7.600342637416102,
+          "mean_steps": 21.25
+        }
+      },
+      "bc_sac": {
+        "frozen": {
+          "episodes": 24,
+          "outcomes": {
+            "success": 24
+          },
+          "median_final_error_mm": 7.507933095610018,
+          "mean_steps": 22.791666666666668
+        },
+        "fresh": {
+          "episodes": 48,
+          "outcomes": {
+            "success": 48
+          },
+          "median_final_error_mm": 7.553589438800881,
+          "mean_steps": 22.25
+        }
+      },
+      "bc_sac_her": {
+        "frozen": {
+          "episodes": 24,
+          "outcomes": {
+            "success": 24
+          },
+          "median_final_error_mm": 7.43688156238737,
+          "mean_steps": 22.833333333333332
+        },
+        "fresh": {
+          "episodes": 48,
+          "outcomes": {
+            "success": 48
+          },
+          "median_final_error_mm": 7.546731543410294,
+          "mean_steps": 22.229166666666668
+        }
+      }
+    }
+  },
+  "pooled": {
+    "bc": {
+      "frozen": {
+        "episodes": 72,
+        "outcomes": {
+          "success": 72
+        },
+        "median_final_error_mm": 7.825020561358372,
+        "mean_steps": 22
+      },
+      "fresh": {
+        "episodes": 144,
+        "outcomes": {
+          "success": 144
+        },
+        "median_final_error_mm": 7.533396519722466,
+        "mean_steps": 21.52777777777778
+      }
+    },
+    "bc_sac": {
+      "frozen": {
+        "episodes": 72,
+        "outcomes": {
+          "success": 72
+        },
+        "median_final_error_mm": 7.483693691790217,
+        "mean_steps": 22.791666666666668
+      },
+      "fresh": {
+        "episodes": 144,
+        "outcomes": {
+          "success": 144
+        },
+        "median_final_error_mm": 7.571175247447151,
+        "mean_steps": 22.22222222222222
+      }
+    },
+    "bc_sac_her": {
+      "frozen": {
+        "episodes": 72,
+        "outcomes": {
+          "success": 72
+        },
+        "median_final_error_mm": 7.464311970316647,
+        "mean_steps": 22.84722222222222
+      },
+      "fresh": {
+        "episodes": 144,
+        "outcomes": {
+          "success": 144
+        },
+        "median_final_error_mm": 7.5403534564612995,
+        "mean_steps": 22.243055555555557
+      }
+    }
+  }
+}

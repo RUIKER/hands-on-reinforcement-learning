@@ -2,6 +2,37 @@
 
 ## 七轴末端位置到达
 
+### 从失败策略到可复现的七轴闭环
+
+在 `link0` 坐标系控制 `hand` 原点的三维位置。任务要求末端进入 20 mm 球内且线速度低于 30 mm/s。首版在同一批 24 个目标上，IK 达标 24 次，直接输出七轴关节增量的 SAC 和 SAC+HER 都是 0 次。复查回报与逐步日志后，将策略改为预测三维位移，由 50 Hz 差分运动学控制器执行，并用反馈控制示范预训练。下表记录哪些改动接受了独立对照。[原版评估](results/20261122_seven_axis_reach/evaluation.json) · [七轴环境](panda_ee_env.py)
+
+| 技术问题 | 对照与实现 | 实测结论 |
+| --- | --- | --- |
+| 提高成功率的因素是什么 | 每个种子在同一批示范上预训练，固定初始权重与 12,000 步预算，只切换 HER。另测仅行为克隆（BC）的初始权重。 | 42、43、44 三个种子中，BC、BC+SAC、BC+SAC+HER 均在每个种子的 48 个留出目标上全数通过。合并 144 回合的末端误差中位数分别为 7.53、7.57、7.54 mm。[原始结果](results/20261122_cartesian_paired/summary.json) |
+| 动作延迟会造成什么失效 | 固定 seed 43 权重，分别注入 0、20、40 ms 的命令延迟。根据已知延迟和自己发出的待执行命令，前推七轴指令及对应末端位姿，再推理。传感器实测值照常输入。 | 无补偿在同一批 48 个目标上依次通过 48、48、2 个。40 ms 时补偿后通过 48 个。另取与先前各集间隔至少 1 cm 的 48 个目标复核，仍从 2/48 提高到 48/48，补偿后误差中位数 7.38 mm。[代码](panda_delay_compensation.py) · [逐例数据](results/20261122_cartesian_execution/compensation.json) |
+| 仿真部署是否改变策略行为 | 在 WSL 把策略与 MuJoCo 拆为两个 ROS 2 进程，按回合号和步号同步推进，读回七轴 JointState 的 MCAP。 | 名义条件下 72/72 达标。与同一 NumPy Actor 直接运行相比，1,616 步的 33 维观测、奖励、仿真时间和结束标记逐步相同。1,688 条关节记录与离线状态逐条一致。另与保存的 PyTorch 轨迹比较，最大关节差 2.23×10⁻⁹ rad。[ROS 2 代码](panda_cartesian_ros2.py) · [录包与检查结果](results/20261122_cartesian_ros2/) |
+| 如何验证奖励、预热和恢复机制 | 用 3 个种子、5 组、每组 1,536 步检查稀疏/距离奖励、探索动作平滑、随机/示范预热。另对旧七维策略设置停滞后切换 IK 的对照。 | 短预算下距离奖励、无平滑组在三个种子依次通过 24、0、0 个诊断目标。旧 SAC+HER 在两个目标集共超时 72 次，启用 IK 接管后 72/72，所有成功均发生在接管后。[短预算实验](results/20261122_cartesian_ablation/summary.json) · [接管对照](results/20261122_cartesian_diagnostics/ik_recovery.json) |
+
+![固定 40 ms 延迟下，未补偿与补偿的 48 个新目标最终位置误差和速度](demo/panda-stop-delay.png)
+
+图中每个点对应独立确认集中的一个目标。未补偿时，48 个回合结束时的位置误差均已小于 20 mm，其中 46 个仍快于 30 mm/s。补偿后，48 个回合均落在绿色验收区。[绘图脚本](plot_delay_compensation.py) · [二轴与七轴逐项对照](二轴与七轴项目对照.md) · [七轴交互回放](demo/panda-cartesian-replay.html) · [面试问答](Panda七轴末端到达_面试问答.md)
+
+从仓库根目录设置 `PANDA_SCENE` 指向固定模型的 `scene.xml`。以下入口分别用于重评权重、复跑诊断和生成新的 ROS 2 录包。输出使用新目录。
+
+```bash
+p=15_RobotSystem
+runs=$p/results
+python "$p/panda_cartesian_paired.py" "$PANDA_SCENE" "$runs/20261122_cartesian_paired" --verify
+python "$p/check_cartesian_execution.py" "$PANDA_SCENE" "$runs/20261122_cartesian_reach" runs/execution
+python "$p/panda_delay_compensation.py" "$PANDA_SCENE" "$runs/20261122_cartesian_reach" runs/execution/delay_cases.json runs/compensation.json
+python "$p/panda_reach_recovery.py" "$PANDA_SCENE" "$runs/20261122_seven_axis_reach" "$runs/20261122_cartesian_reach" runs/recovery.json
+# 完整训练配对及短预算消融
+python "$p/panda_cartesian_paired.py" "$PANDA_SCENE" runs/paired
+python "$p/panda_cartesian_ablation.py" "$PANDA_SCENE" runs/ablation
+# 在装有 ROS 2 Lyrical、colcon、rosbag2 MCAP 和 MuJoCo 的 WSL 环境中运行
+bash "$p/run_cartesian_ros2_check.sh" "$PANDA_SCENE" runs/ros2 "$ROS_PYTHON_VENV/bin/python"
+```
+
 ### 笛卡尔控制与示范学习
 
 复查旧奖励发现，失败只扣 1 分且立即终止，沿途每步也扣 1 分。在折扣率 0.99 下，首步失败回报为 −1，250 步全部超时约为 −91.9。这个目标函数会让早退比持续尝试更划算。新版使用距离稠密奖励，每步非失败奖励在 [−1, 0]，失败奖励 −101，超时继续 bootstrap。HER 按新目标重新计算距离奖励和成功终止标志。

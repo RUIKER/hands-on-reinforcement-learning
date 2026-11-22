@@ -1,0 +1,1621 @@
+{
+  "actor_sha256": "c8ebfa2efa38e6fb6265c0c63fa56ef23139a45e327308d8f5e8ddb57f6850bd",
+  "goals_sha256": "0fa193bdb087decf8166ab2c5d355984c532f8cf63a8ea4c40b73fddfa4b5cb1",
+  "scene_sha256": "c7aba97eb836f3b01a6a1d0442a8c401ce360c64471772cf0f8271c1a8328373",
+  "patience_steps": 25,
+  "minimum_progress_m": 0.001,
+  "archived_frozen_actor_reproduced": true,
+  "identical_actor_prefixes": true,
+  "summary": {
+    "frozen": {
+      "actor": {
+        "timeout": 24
+      },
+      "actor_then_ik": {
+        "success": 24
+      },
+      "handoffs": 24,
+      "median_handoff_step": 25.0
+    },
+    "fresh": {
+      "actor": {
+        "timeout": 48
+      },
+      "actor_then_ik": {
+        "success": 48
+      },
+      "handoffs": 48,
+      "median_handoff_step": 25.0
+    }
+  },
+  "cases": {
+    "frozen": [
+      {
+        "goal_index": 0,
+        "goal_link0_m": [
+          0.4816237131157034,
+          0.019695780745073693,
+          0.6985005887814513
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.42902180251281635,
+          "final_speed_m_s": 0.12949043273566577
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 60,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.0036303235535550668,
+          "final_speed_m_s": 0.02951255262292577
+        }
+      },
+      {
+        "goal_index": 1,
+        "goal_link0_m": [
+          0.4885067614705146,
+          0.08659373820538771,
+          0.6462657109040976
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5985019685710985,
+          "final_speed_m_s": 0.3162499099103201
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 85,
+          "handoff_after_steps": 37,
+          "final_error_m": 0.0037330734462445404,
+          "final_speed_m_s": 0.02446824266081703
+        }
+      },
+      {
+        "goal_index": 2,
+        "goal_link0_m": [
+          0.6211639725370921,
+          0.07480695511972915,
+          0.6594785853946765
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5937738389587925,
+          "final_speed_m_s": 0.1850789181041521
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 79,
+          "handoff_after_steps": 35,
+          "final_error_m": 0.010273686850741164,
+          "final_speed_m_s": 0.02933561599189307
+        }
+      },
+      {
+        "goal_index": 3,
+        "goal_link0_m": [
+          0.5890801618131852,
+          -0.056436992768064576,
+          0.6266370237437393
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.4732079428627406,
+          "final_speed_m_s": 0.05156640447578073
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 56,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.007395731394931415,
+          "final_speed_m_s": 0.02709613429311843
+        }
+      },
+      {
+        "goal_index": 4,
+        "goal_link0_m": [
+          0.47854093207146864,
+          0.06083167406351517,
+          0.6052421795750532
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5834043935817992,
+          "final_speed_m_s": 0.2551308055245698
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 82,
+          "handoff_after_steps": 32,
+          "final_error_m": 0.0033486625810325325,
+          "final_speed_m_s": 0.02642803954320301
+        }
+      },
+      {
+        "goal_index": 5,
+        "goal_link0_m": [
+          0.496179828313426,
+          -0.004245915975773951,
+          0.5486339617440195
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.567341388834365,
+          "final_speed_m_s": 0.1384518184577462
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 73,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.0036254258982229945,
+          "final_speed_m_s": 0.026300947164014796
+        }
+      },
+      {
+        "goal_index": 6,
+        "goal_link0_m": [
+          0.45816362709022584,
+          -0.007008544110138071,
+          0.6381578268689978
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.4579882312548102,
+          "final_speed_m_s": 0.11958034090320087
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 70,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.003053603417961087,
+          "final_speed_m_s": 0.0263764619847947
+        }
+      },
+      {
+        "goal_index": 7,
+        "goal_link0_m": [
+          0.5106933696396648,
+          0.0737870852162307,
+          0.6585935247320281
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5616123425514005,
+          "final_speed_m_s": 0.252314698965715
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 80,
+          "handoff_after_steps": 36,
+          "final_error_m": 0.004018171331203799,
+          "final_speed_m_s": 0.02520199959657682
+        }
+      },
+      {
+        "goal_index": 8,
+        "goal_link0_m": [
+          0.5758360699125363,
+          -0.004212671409219618,
+          0.567034275388146
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5723606081330259,
+          "final_speed_m_s": 0.10859437011430426
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 62,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.0050675953432700255,
+          "final_speed_m_s": 0.025807896411129398
+        }
+      },
+      {
+        "goal_index": 9,
+        "goal_link0_m": [
+          0.5887382894002877,
+          -0.04667272582055215,
+          0.544754097107088
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5702665020322042,
+          "final_speed_m_s": 0.07309214847031985
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 61,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.005069018876090863,
+          "final_speed_m_s": 0.02931849964999169
+        }
+      },
+      {
+        "goal_index": 10,
+        "goal_link0_m": [
+          0.49809314743603833,
+          0.09987927242003156,
+          0.6407705375856946
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.6380609707701508,
+          "final_speed_m_s": 0.36402226336339233
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 85,
+          "handoff_after_steps": 38,
+          "final_error_m": 0.003679959767592595,
+          "final_speed_m_s": 0.02761026689127075
+        }
+      },
+      {
+        "goal_index": 11,
+        "goal_link0_m": [
+          0.629225882086372,
+          0.08810084395376591,
+          0.6013015635028215
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.678111927713361,
+          "final_speed_m_s": 0.2333652338143645
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 76,
+          "handoff_after_steps": 34,
+          "final_error_m": 0.01008515661528437,
+          "final_speed_m_s": 0.027205984106772645
+        }
+      },
+      {
+        "goal_index": 12,
+        "goal_link0_m": [
+          0.569832648960677,
+          -0.05478332232389924,
+          0.7179387099205146
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.3697645721661184,
+          "final_speed_m_s": 0.03586304083992533
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 60,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.008803171000547443,
+          "final_speed_m_s": 0.02440237285042036
+        }
+      },
+      {
+        "goal_index": 13,
+        "goal_link0_m": [
+          0.48880036101884744,
+          -0.08304553764331138,
+          0.6861244276065149
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.34729675344163463,
+          "final_speed_m_s": 0.02847336620869503
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 61,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.003980225158292346,
+          "final_speed_m_s": 0.027178172628721155
+        }
+      },
+      {
+        "goal_index": 14,
+        "goal_link0_m": [
+          0.6186313622437716,
+          -0.055637829024484886,
+          0.6506684674368781
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.46385303372452613,
+          "final_speed_m_s": 0.04207888100168824
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 62,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.009786719451015568,
+          "final_speed_m_s": 0.024823982799698805
+        }
+      },
+      {
+        "goal_index": 15,
+        "goal_link0_m": [
+          0.5575189919999611,
+          -0.04764930441644493,
+          0.6472066608664254
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.442111400469851,
+          "final_speed_m_s": 0.05789488522442724
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 57,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.004875811868220961,
+          "final_speed_m_s": 0.02734765418920685
+        }
+      },
+      {
+        "goal_index": 16,
+        "goal_link0_m": [
+          0.5043119217239881,
+          -0.01620770358612482,
+          0.6306765560629549
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.46731424299014285,
+          "final_speed_m_s": 0.09776077720846081
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 66,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.0038909387156197375,
+          "final_speed_m_s": 0.025270437307475472
+        }
+      },
+      {
+        "goal_index": 17,
+        "goal_link0_m": [
+          0.4961871400880583,
+          -0.058376917369178605,
+          0.6059090540685927
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.4610043308317788,
+          "final_speed_m_s": 0.0706080606476839
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 69,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.0038519605527545585,
+          "final_speed_m_s": 0.024336752607230134
+        }
+      },
+      {
+        "goal_index": 18,
+        "goal_link0_m": [
+          0.5464370352528255,
+          -0.039712011738092225,
+          0.6545767277770858
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.43557174828756334,
+          "final_speed_m_s": 0.06251171415601242
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 58,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.004609449352361352,
+          "final_speed_m_s": 0.026211522996898794
+        }
+      },
+      {
+        "goal_index": 19,
+        "goal_link0_m": [
+          0.4779486132159157,
+          0.05573858962406511,
+          0.5973120885143716
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5824337742241479,
+          "final_speed_m_s": 0.2449650188676222
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 81,
+          "handoff_after_steps": 31,
+          "final_error_m": 0.0032609961843409045,
+          "final_speed_m_s": 0.027341556555403712
+        }
+      },
+      {
+        "goal_index": 20,
+        "goal_link0_m": [
+          0.572831446338713,
+          -0.037602960842474525,
+          0.7198989412411488
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.3819087589527299,
+          "final_speed_m_s": 0.04467355462724478
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 60,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.008978315888354042,
+          "final_speed_m_s": 0.02597251089310248
+        }
+      },
+      {
+        "goal_index": 21,
+        "goal_link0_m": [
+          0.6246779330146519,
+          0.06972588651743375,
+          0.6826981025536006
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5647537122748589,
+          "final_speed_m_s": 0.16566942821900837
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 81,
+          "handoff_after_steps": 35,
+          "final_error_m": 0.010406430239170443,
+          "final_speed_m_s": 0.028162601954945316
+        }
+      },
+      {
+        "goal_index": 22,
+        "goal_link0_m": [
+          0.6041111612934604,
+          -0.03087447824688204,
+          0.7212785615603958
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.40200616942264855,
+          "final_speed_m_s": 0.044957828725660724
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 64,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.009856899946415356,
+          "final_speed_m_s": 0.02641687078474704
+        }
+      },
+      {
+        "goal_index": 23,
+        "goal_link0_m": [
+          0.5323222539463871,
+          -0.07259757958195229,
+          0.6714096957239156
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.38770386545814567,
+          "final_speed_m_s": 0.03899566046809641
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 58,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.004768608124689601,
+          "final_speed_m_s": 0.025512590017178666
+        }
+      }
+    ],
+    "fresh": [
+      {
+        "goal_index": 0,
+        "goal_link0_m": [
+          0.5514616060290817,
+          0.01331073604192265,
+          0.5277025450267641
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.6233132604620112,
+          "final_speed_m_s": 0.15158677786888916
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 71,
+          "handoff_after_steps": 27,
+          "final_error_m": 0.0045241474074791555,
+          "final_speed_m_s": 0.027766445373953907
+        }
+      },
+      {
+        "goal_index": 1,
+        "goal_link0_m": [
+          0.6460463752648324,
+          -0.07410459695549548,
+          0.5923259207505468
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5273961842130137,
+          "final_speed_m_s": 0.03605476878598344
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 63,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.01044716352682309,
+          "final_speed_m_s": 0.02571760218729389
+        }
+      },
+      {
+        "goal_index": 2,
+        "goal_link0_m": [
+          0.6049731747387466,
+          0.061226215441109066,
+          0.6583669401939993
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.565285941165126,
+          "final_speed_m_s": 0.1650705765536686
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 74,
+          "handoff_after_steps": 33,
+          "final_error_m": 0.009437765974750337,
+          "final_speed_m_s": 0.02521491169992758
+        }
+      },
+      {
+        "goal_index": 3,
+        "goal_link0_m": [
+          0.48681526615908155,
+          -0.055316908517649345,
+          0.6360172682232405
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.42720613478655195,
+          "final_speed_m_s": 0.06583260369300843
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 67,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.003547360358615207,
+          "final_speed_m_s": 0.02676856541275112
+        }
+      },
+      {
+        "goal_index": 4,
+        "goal_link0_m": [
+          0.5174978027404911,
+          -0.03664695863822619,
+          0.6494014044346177
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.43322934994468504,
+          "final_speed_m_s": 0.07134212080382418
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 62,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.0038715580585796834,
+          "final_speed_m_s": 0.029036289910286263
+        }
+      },
+      {
+        "goal_index": 5,
+        "goal_link0_m": [
+          0.5171394888477908,
+          0.03677744498321919,
+          0.6257767178127691
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5335487782838004,
+          "final_speed_m_s": 0.17007712297603184
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 73,
+          "handoff_after_steps": 30,
+          "final_error_m": 0.003905545169434617,
+          "final_speed_m_s": 0.027565511438494814
+        }
+      },
+      {
+        "goal_index": 6,
+        "goal_link0_m": [
+          0.48217118493019373,
+          -0.06090559957273805,
+          0.6470580219376397
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.41001464665416537,
+          "final_speed_m_s": 0.06127404560888304
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 66,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.0033546801337893794,
+          "final_speed_m_s": 0.029042894892337065
+        }
+      },
+      {
+        "goal_index": 7,
+        "goal_link0_m": [
+          0.47453698286606366,
+          0.032298625958085275,
+          0.6468881097593856
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.49633051207883166,
+          "final_speed_m_s": 0.17430191659717065
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 72,
+          "handoff_after_steps": 28,
+          "final_error_m": 0.003067754667113984,
+          "final_speed_m_s": 0.029711413443715803
+        }
+      },
+      {
+        "goal_index": 8,
+        "goal_link0_m": [
+          0.5193834358199189,
+          -0.02405738387303666,
+          0.6823587965762794
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.4084606457988029,
+          "final_speed_m_s": 0.07339381108261724
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 58,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.00400922546315664,
+          "final_speed_m_s": 0.02809038854449169
+        }
+      },
+      {
+        "goal_index": 9,
+        "goal_link0_m": [
+          0.5527476449343081,
+          0.09656372050176903,
+          0.6620888017743316
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.6183811579360013,
+          "final_speed_m_s": 0.29481664600177043
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 76,
+          "handoff_after_steps": 38,
+          "final_error_m": 0.005711256479105955,
+          "final_speed_m_s": 0.02862817159633355
+        }
+      },
+      {
+        "goal_index": 10,
+        "goal_link0_m": [
+          0.4707704365459505,
+          -0.07623459005193492,
+          0.5622966173731367
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.495858355053468,
+          "final_speed_m_s": 0.07102433919114255
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 74,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.0030590033797065386,
+          "final_speed_m_s": 0.02928004785546287
+        }
+      },
+      {
+        "goal_index": 11,
+        "goal_link0_m": [
+          0.5799965814982269,
+          0.06305217034231783,
+          0.6009165372557457
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.616112242340171,
+          "final_speed_m_s": 0.20025733674476534
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 69,
+          "handoff_after_steps": 32,
+          "final_error_m": 0.004923793804945413,
+          "final_speed_m_s": 0.029259596191566522
+        }
+      },
+      {
+        "goal_index": 12,
+        "goal_link0_m": [
+          0.6200636897870148,
+          0.016645266669094577,
+          0.5906968226799246
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5859245275113848,
+          "final_speed_m_s": 0.11423294363885281
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 63,
+          "handoff_after_steps": 28,
+          "final_error_m": 0.009031457451777332,
+          "final_speed_m_s": 0.026090468077441486
+        }
+      },
+      {
+        "goal_index": 13,
+        "goal_link0_m": [
+          0.517317013328602,
+          0.0173476676418389,
+          0.7066426521044911
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.4266986060964157,
+          "final_speed_m_s": 0.11086703304110354
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 54,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.004101351756898106,
+          "final_speed_m_s": 0.024837456119157962
+        }
+      },
+      {
+        "goal_index": 14,
+        "goal_link0_m": [
+          0.5377458073620639,
+          -0.058658099064046176,
+          0.7131179350247313
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.35731195714170055,
+          "final_speed_m_s": 0.03688807958979126
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 55,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.007542871392257595,
+          "final_speed_m_s": 0.02686317727678792
+        }
+      },
+      {
+        "goal_index": 15,
+        "goal_link0_m": [
+          0.6282014255477074,
+          -0.08629533590416388,
+          0.6647733920370622
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.4341360845414081,
+          "final_speed_m_s": 0.024823408994128934
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 64,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.010486617481329927,
+          "final_speed_m_s": 0.028298559352268906
+        }
+      },
+      {
+        "goal_index": 16,
+        "goal_link0_m": [
+          0.5309793332223465,
+          0.060751839208016106,
+          0.6110390353572506
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5876919980531256,
+          "final_speed_m_s": 0.218550713033844
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 76,
+          "handoff_after_steps": 32,
+          "final_error_m": 0.004413032822405704,
+          "final_speed_m_s": 0.024601787997420924
+        }
+      },
+      {
+        "goal_index": 17,
+        "goal_link0_m": [
+          0.4999949532700877,
+          -0.019664460421911903,
+          0.6216753544190672
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.47312447217475184,
+          "final_speed_m_s": 0.09770827364904595
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 67,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.0036867591982378462,
+          "final_speed_m_s": 0.02684855673935152
+        }
+      },
+      {
+        "goal_index": 18,
+        "goal_link0_m": [
+          0.5861942377524991,
+          -0.08199928827940697,
+          0.6807519835079759
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.3930360863965706,
+          "final_speed_m_s": 0.02613628665173583
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 60,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.009039604876463074,
+          "final_speed_m_s": 0.02470143965103055
+        }
+      },
+      {
+        "goal_index": 19,
+        "goal_link0_m": [
+          0.5489745109666933,
+          -0.08614261211641883,
+          0.6813355270424245
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.3692265789094859,
+          "final_speed_m_s": 0.024477060533507344
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 56,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.0067643401857731865,
+          "final_speed_m_s": 0.026320603370990344
+        }
+      },
+      {
+        "goal_index": 20,
+        "goal_link0_m": [
+          0.6355934440476045,
+          -0.06174068774143635,
+          0.6297565210520262
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.4918562744825727,
+          "final_speed_m_s": 0.040372176706105926
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 63,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.010306068456716597,
+          "final_speed_m_s": 0.026307258814632445
+        }
+      },
+      {
+        "goal_index": 21,
+        "goal_link0_m": [
+          0.6131660931441502,
+          -0.03193080769099273,
+          0.5959397791589093
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5354175391362006,
+          "final_speed_m_s": 0.06897150663918046
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 57,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.008649783636812161,
+          "final_speed_m_s": 0.027473204029930507
+        }
+      },
+      {
+        "goal_index": 22,
+        "goal_link0_m": [
+          0.6482255540229142,
+          -0.046956147998393385,
+          0.6103401737205982
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5287484462762724,
+          "final_speed_m_s": 0.05145747684546641
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 63,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.010791628910545047,
+          "final_speed_m_s": 0.029665990622108163
+        }
+      },
+      {
+        "goal_index": 23,
+        "goal_link0_m": [
+          0.529644054206224,
+          -0.02162264903650024,
+          0.5704623976814083
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5376988327291622,
+          "final_speed_m_s": 0.1025099413784878
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 68,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.00438123317485815,
+          "final_speed_m_s": 0.02452204324953682
+        }
+      },
+      {
+        "goal_index": 24,
+        "goal_link0_m": [
+          0.5368687068941912,
+          0.06343680892472789,
+          0.5766588965722312
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.6291941296462603,
+          "final_speed_m_s": 0.23484448816275558
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 77,
+          "handoff_after_steps": 32,
+          "final_error_m": 0.004122125662287704,
+          "final_speed_m_s": 0.02991776281807193
+        }
+      },
+      {
+        "goal_index": 25,
+        "goal_link0_m": [
+          0.5962030654313675,
+          0.02458107255051159,
+          0.5872083899393573
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5873676959762133,
+          "final_speed_m_s": 0.1325611522793546
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 64,
+          "handoff_after_steps": 29,
+          "final_error_m": 0.005721680229755322,
+          "final_speed_m_s": 0.024925981046927375
+        }
+      },
+      {
+        "goal_index": 26,
+        "goal_link0_m": [
+          0.5037884514048517,
+          0.03530433165365793,
+          0.5893488801584608
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5667903501350926,
+          "final_speed_m_s": 0.18612789890268963
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 76,
+          "handoff_after_steps": 29,
+          "final_error_m": 0.0037208261700179906,
+          "final_speed_m_s": 0.026260277235413104
+        }
+      },
+      {
+        "goal_index": 27,
+        "goal_link0_m": [
+          0.5786187578977497,
+          -0.09288486098567937,
+          0.5553499446971472
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5208876358576396,
+          "final_speed_m_s": 0.04252108580100212
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 62,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.005453244070536172,
+          "final_speed_m_s": 0.0243740270302224
+        }
+      },
+      {
+        "goal_index": 28,
+        "goal_link0_m": [
+          0.5677343885014509,
+          -0.09226648790478598,
+          0.6116257187330605
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.4557856608400246,
+          "final_speed_m_s": 0.034014952429020015
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 59,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.005380860389652478,
+          "final_speed_m_s": 0.025628331134404575
+        }
+      },
+      {
+        "goal_index": 29,
+        "goal_link0_m": [
+          0.6213297015346547,
+          -0.09546906519328027,
+          0.6187866300464824
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.4703848272356809,
+          "final_speed_m_s": 0.02799562587024969
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 61,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.009931369359664233,
+          "final_speed_m_s": 0.02713085812432081
+        }
+      },
+      {
+        "goal_index": 30,
+        "goal_link0_m": [
+          0.5415338347023649,
+          0.04847058607620605,
+          0.7243530204513592
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.4600104274756425,
+          "final_speed_m_s": 0.1460315708997249
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 71,
+          "handoff_after_steps": 34,
+          "final_error_m": 0.00782908870784759,
+          "final_speed_m_s": 0.02577015034924391
+        }
+      },
+      {
+        "goal_index": 31,
+        "goal_link0_m": [
+          0.5966561766176144,
+          -0.06643699487125694,
+          0.5764837408248686
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5250864909311426,
+          "final_speed_m_s": 0.053356433770244203
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 58,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.006060475828023796,
+          "final_speed_m_s": 0.024577214167054665
+        }
+      },
+      {
+        "goal_index": 32,
+        "goal_link0_m": [
+          0.6236861924913206,
+          -0.028988351146074925,
+          0.5329513253054676
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.6096968085874921,
+          "final_speed_m_s": 0.0820546367899841
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 57,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.007066521691587761,
+          "final_speed_m_s": 0.025796388365527917
+        }
+      },
+      {
+        "goal_index": 33,
+        "goal_link0_m": [
+          0.598400684618756,
+          -0.022197319739830232,
+          0.5758648546808792
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5575225758861798,
+          "final_speed_m_s": 0.08454020357858477
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 57,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.005391454150027173,
+          "final_speed_m_s": 0.02949730111104027
+        }
+      },
+      {
+        "goal_index": 34,
+        "goal_link0_m": [
+          0.5090477211754558,
+          0.013800012298823466,
+          0.5341437674336089
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.6039930445092936,
+          "final_speed_m_s": 0.16549088023498792
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 76,
+          "handoff_after_steps": 27,
+          "final_error_m": 0.0038759777041844977,
+          "final_speed_m_s": 0.026047507703367893
+        }
+      },
+      {
+        "goal_index": 35,
+        "goal_link0_m": [
+          0.5945823209540003,
+          0.07406218536621653,
+          0.6194194230088418
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.6214437480913051,
+          "final_speed_m_s": 0.21097436240116596
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 71,
+          "handoff_after_steps": 34,
+          "final_error_m": 0.008095389594554164,
+          "final_speed_m_s": 0.027723453169725697
+        }
+      },
+      {
+        "goal_index": 36,
+        "goal_link0_m": [
+          0.5241453250638041,
+          0.029320942491224605,
+          0.6690232699627612
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.4815477260912748,
+          "final_speed_m_s": 0.13965807253733814
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 66,
+          "handoff_after_steps": 29,
+          "final_error_m": 0.00385606412445099,
+          "final_speed_m_s": 0.02902149173198912
+        }
+      },
+      {
+        "goal_index": 37,
+        "goal_link0_m": [
+          0.5499689254885368,
+          0.04751998835333676,
+          0.645512975199289
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5375799878019561,
+          "final_speed_m_s": 0.16841155884105796
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 70,
+          "handoff_after_steps": 32,
+          "final_error_m": 0.00447551493443531,
+          "final_speed_m_s": 0.026850433610507176
+        }
+      },
+      {
+        "goal_index": 38,
+        "goal_link0_m": [
+          0.583522875483584,
+          0.07848359465008503,
+          0.5643675724026549
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.6818326120162044,
+          "final_speed_m_s": 0.24938755766945647
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 73,
+          "handoff_after_steps": 33,
+          "final_error_m": 0.0050395084581301135,
+          "final_speed_m_s": 0.02835104707006921
+        }
+      },
+      {
+        "goal_index": 39,
+        "goal_link0_m": [
+          0.6461574992314563,
+          0.048849960551263255,
+          0.5966543546223905
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.6282054820035545,
+          "final_speed_m_s": 0.14724924670403755
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 73,
+          "handoff_after_steps": 31,
+          "final_error_m": 0.010389550606097529,
+          "final_speed_m_s": 0.025554094289194047
+        }
+      },
+      {
+        "goal_index": 40,
+        "goal_link0_m": [
+          0.5605190541793903,
+          0.005496820600611227,
+          0.5341920433353635
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.611678339266005,
+          "final_speed_m_s": 0.13418901608595696
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 70,
+          "handoff_after_steps": 27,
+          "final_error_m": 0.004916599914548075,
+          "final_speed_m_s": 0.02520293290100743
+        }
+      },
+      {
+        "goal_index": 41,
+        "goal_link0_m": [
+          0.6018549032963623,
+          0.037733101625128024,
+          0.6875939267735317
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5033436901700056,
+          "final_speed_m_s": 0.11832216977321033
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 72,
+          "handoff_after_steps": 31,
+          "final_error_m": 0.009491381844228106,
+          "final_speed_m_s": 0.025037865129108713
+        }
+      },
+      {
+        "goal_index": 42,
+        "goal_link0_m": [
+          0.6244010235549855,
+          0.07677076935679694,
+          0.5840264635003486
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.6723010454057285,
+          "final_speed_m_s": 0.21271978205946138
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 72,
+          "handoff_after_steps": 33,
+          "final_error_m": 0.00973907890593678,
+          "final_speed_m_s": 0.029527800250895443
+        }
+      },
+      {
+        "goal_index": 43,
+        "goal_link0_m": [
+          0.5536770378274369,
+          0.07141888113451136,
+          0.6901182521615257
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5367149528673947,
+          "final_speed_m_s": 0.2049034601359369
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 73,
+          "handoff_after_steps": 36,
+          "final_error_m": 0.007458123406391741,
+          "final_speed_m_s": 0.02851846374877183
+        }
+      },
+      {
+        "goal_index": 44,
+        "goal_link0_m": [
+          0.5749735923739535,
+          -0.007621784513197533,
+          0.683341064305103
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.4441532242621528,
+          "final_speed_m_s": 0.07716083023528768
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 57,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.00852906219940564,
+          "final_speed_m_s": 0.026162275850399357
+        }
+      },
+      {
+        "goal_index": 45,
+        "goal_link0_m": [
+          0.6232598772746419,
+          -0.004949657269058966,
+          0.6286925024780592
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5271930739705014,
+          "final_speed_m_s": 0.08176071680392961
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 61,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.00970908780586355,
+          "final_speed_m_s": 0.024782093724133012
+        }
+      },
+      {
+        "goal_index": 46,
+        "goal_link0_m": [
+          0.5127956196170413,
+          -0.024837123761310018,
+          0.5249123302514624
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.5816401823585076,
+          "final_speed_m_s": 0.11661973497654678
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 72,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.003674555937168251,
+          "final_speed_m_s": 0.029848736806743263
+        }
+      },
+      {
+        "goal_index": 47,
+        "goal_link0_m": [
+          0.502038328624839,
+          -0.0743781710110343,
+          0.7161842626582511
+        ],
+        "actor": {
+          "outcome": "timeout",
+          "steps": 250,
+          "handoff_after_steps": null,
+          "final_error_m": 0.325111026962283,
+          "final_speed_m_s": 0.028570985508738933
+        },
+        "actor_then_ik": {
+          "outcome": "success",
+          "steps": 56,
+          "handoff_after_steps": 25,
+          "final_error_m": 0.005497484696593153,
+          "final_speed_m_s": 0.02438223030365762
+        }
+      }
+    ]
+  }
+}
