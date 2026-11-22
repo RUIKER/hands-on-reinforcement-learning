@@ -5,3 +5,8 @@
 *.py text eol=lf
 *.md text eol=lf
 .gitignore text eol=lf
+# These frozen inputs were hashed with CRLF in the archived training protocols.
+15_RobotSystem/results/20261122_seven_axis_reach/goals.json text eol=crlf
+15_RobotSystem/results/20261122_cartesian_reach/goals.json text eol=crlf
+15_RobotSystem/results/20261122_cartesian_reach/evaluation.json text eol=crlf
+15_RobotSystem/results/20261122_cartesian_execution/delay_cases.json text eol=crlf
