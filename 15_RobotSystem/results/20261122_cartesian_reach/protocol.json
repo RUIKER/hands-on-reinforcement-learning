@@ -1,0 +1,55 @@
+{
+  "training_seed": 43,
+  "fresh_goal_seed": 61123,
+  "action_scale_m": 0.008,
+  "joint_margin_rad": 0.05,
+  "failure_reward": -100.99999999999991,
+  "source_goals_sha256": "4cadafbee5c4b10f5c1da93c52cb5027fa683ed8d518c89a122d05e97aefcf3c",
+  "model_sha256": {
+    "scene.xml": "c7aba97eb836f3b01a6a1d0442a8c401ce360c64471772cf0f8271c1a8328373",
+    "panda.xml": "8619f39a4c30fc90258ef0828eeb5e3a15347066139baa09c3cbeb9c485a6f96"
+  },
+  "cloning_updates": 2400,
+  "cloning_weight": 20.0,
+  "actor_critic_config": {
+    "state_dim": 16,
+    "hidden_dim": 64,
+    "action_low": [
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "action_high": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "actor_lr": 0.0003,
+    "critic_lr": 0.0003,
+    "alpha_lr": 0.0003,
+    "target_entropy": -3.0,
+    "tau": 0.005,
+    "gamma": 0.99,
+    "reward_shift": 0.0,
+    "reward_scale": 1.0,
+    "device": "cpu"
+  },
+  "mujoco": "3.17.0",
+  "torch": "2.10.0+cpu",
+  "training": {
+    "demo_transitions": 3750,
+    "demo_outcomes": {
+      "success": 160
+    },
+    "online_steps": 12000,
+    "online_outcomes": {
+      "success": 481
+    },
+    "her": {
+      "relabeled": 381028,
+      "relabeled_success": 15746,
+      "already_at_goal": 2972
+    },
+    "seconds": 59.439296499826014
+  }
+}

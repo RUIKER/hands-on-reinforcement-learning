@@ -81,12 +81,13 @@ class Environment:
 
 
 class Replay:
-    def __init__(self, her, seed):
+    def __init__(self, her, seed, relabel_reward=None):
         self.buffer = deque(maxlen=100000)
         self.her = her
         self.rng = random.Random(seed)
         self.episode = []
         self.counts = Counter()
+        self.relabel_reward = relabel_reward
 
     def add(self, state, action, reward, nxt, terminal, truncated, failed):
         step = len(self.episode)
@@ -108,7 +109,10 @@ class Replay:
                         state, nxt = state.copy(), nxt.copy()
                         state[27:30] = nxt[27:30] = goal
                         terminal = success(nxt, goal)
-                        reward = 0. if terminal else -1.
+                        if self.relabel_reward is None:
+                            reward = 0. if terminal else -1.
+                        else:
+                            reward = self.relabel_reward(nxt, goal, terminal)
                         self.counts['relabeled'] += 1
                         self.counts['relabeled_success'] += int(terminal)
                     else:

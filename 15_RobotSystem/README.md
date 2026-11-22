@@ -2,6 +2,35 @@
 
 ## 七轴末端位置到达
 
+### 笛卡尔控制与示范学习
+
+复查旧奖励发现，失败只扣 1 分且立即终止，沿途每步也扣 1 分。在折扣率 0.99 下，首步失败回报为 −1，250 步全部超时约为 −91.9。这个目标函数会让早退比持续尝试更划算。新版使用距离稠密奖励，每步非失败奖励在 [−1, 0]，失败奖励 −101，超时继续 bootstrap。HER 按新目标重新计算距离奖励和成功终止标志。
+
+策略输出三维末端位移，由阻尼最小二乘雅可比映射到七轴关节指令。按比例限速保持每轴 0.02 rad 的增量上限，并在位置指令上留 0.05 rad 的关节边界余量。成功依然要求末端距离小于 0.02 m、速度小于 0.03 m/s。每回合从同一 home 开始，最多 250 步。设计参考 [FetchReach 官方任务](https://robotics.farama.org/v1.4.1/envs/fetch/reach/) 和 [Nair 等人的示范学习论文](https://arxiv.org/abs/1709.10089)。
+
+使用原 80 个训练目标收集 160 条示范轨迹，共 3,750 条转移。seed 43 用 2,400 次行为克隆更新预训练，再做 12,000 步 SAC + HER 在线微调，保留行为克隆正则。测试集为原来 24 个冻结目标及按 seed 61123 生成的 48 个新目标。新目标距训练目标、原测试目标和彼此至少 1 cm，仍属于 home 附近的同类工作空间。
+
+| 方法 | 原 24 个目标 | 新 48 个目标 | 平均步数（原／新） |
+| --- | ---: | ---: | ---: |
+| 笛卡尔反馈控制 | 24/24 | 48/48 | 22.83／22.23 |
+| 仅行为克隆 | 24/24 | 48/48 | 22.08／21.56 |
+| 示范预训练 + SAC + HER | 24/24 | 48/48 | 22.83／22.25 |
+
+新策略在两批目标上的最终距离中位数约为 0.75 cm 和 0.76 cm。三种方法在当前协议中均通过全部测试。行为克隆已达到 72/72，SAC + HER 微调在这次单种子评估中未提高成功率。
+
+[离线轨迹回放](demo/panda-cartesian-replay.html)在同一个冻结目标上展示新版、仅行为克隆、反馈控制及旧方案。[实验数据](results/20261122_cartesian_reach/)包含冻结坐标、权重、逐步轨迹和评估摘要。
+
+```bash
+original=15_RobotSystem/results/20261122_seven_axis_reach
+saved=15_RobotSystem/results/20261122_cartesian_reach
+python 15_RobotSystem/panda_cartesian_reach.py "$PANDA_SCENE" "$original/goals.json" runs/cartesian-recheck --weights "$saved"
+# 重新训练 seed 43 时运行下列命令，原机器耗时约 1 分钟
+python 15_RobotSystem/panda_cartesian_reach.py "$PANDA_SCENE" "$original/goals.json" runs/cartesian-train --seed 43 --steps 12000
+python 15_RobotSystem/render_ee_replay.py "$PANDA_SCENE" "$saved" runs/cartesian-replay.html --split frozen --legacy "$original"
+```
+
+### 原始七维动作对照
+
 七轴任务见 [环境与训练代码](panda_ee_reach.py)、[面试问答](Panda七轴末端到达_面试问答.md) 和 [末端轨迹回放生成器](render_ee_replay.py)。任务在 `link0` 坐标系中控制 `hand` 原点的三维位置。每 20 ms 输出七个关节位置目标增量，每轴最多 0.02 rad。观测包括七轴位置、速度、伺服目标，以及末端位置、末端线速度和目标位置，总共 30 维。距离小于 0.02 m 且末端速度小于 0.03 m/s 为成功。仿真失败终止，250 步为时间截断。
 
 固定目标生成种子 61122，采样 home 附近的三维偏移并用位置 IK 检查收敛，前 80 个用于训练，后 24 个留出测试。SAC 与 SAC + HER 共用训练种子、目标集合和网络配置。HER 从同一回合当前或未来有效末端位置采样，并重新计算目标、奖励和终止。对照基线使用阻尼最小二乘 IK 计算关节角，再以相同增量限制执行。实验记录成功、超时和异常，不推断随机初态、障碍或实机表现。

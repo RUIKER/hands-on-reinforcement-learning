@@ -91,7 +91,7 @@ class SAC:
             target_param.data.mul_(1 - self.tau)
             target_param.data.add_(self.tau * online_param.data)
 
-    def update(self, batch, *, diagnostics=False):
+    def update(self, batch, *, diagnostics=False, actor_regularizer=None):
         # 一个 batch 中的形状通常为：
         # states [B, state_dim]，actions [B, action_dim]，rewards/dones [B, 1]。
         states, actions, rewards, next_states, dones = batch
@@ -127,6 +127,8 @@ class SAC:
         # actor 同时希望 Q 值高、log_prob 小（熵高）。
         alpha = self.log_alpha.exp().detach()
         actor_loss = (alpha * log_probs - new_q).mean()
+        if actor_regularizer is not None:
+            actor_loss = actor_loss + actor_regularizer(self.actor)
         self.actor_optimizer.zero_grad()
         actor_loss.backward()
         if diagnostics:
