@@ -1,0 +1,16 @@
+{
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "device": "NVIDIA GeForce RTX 5060 Ti",
+  "seed": 0,
+  "batch": "replay",
+  "chunk_shape": [
+    2,
+    4,
+    7
+  ],
+  "loss": 102.02226257324219,
+  "parameter_update": true,
+  "checkpoint_reload": true,
+  "peak_allocated_mib": 237.01318359375
+}

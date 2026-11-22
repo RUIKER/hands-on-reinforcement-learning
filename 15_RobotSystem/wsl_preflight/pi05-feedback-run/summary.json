@@ -1,0 +1,14 @@
+{
+  "policy": "openpi pi05_libero",
+  "task_id": 0,
+  "initial_state_index": 0,
+  "noise_seed": 0,
+  "executed_actions": 5,
+  "eef_displacement_m": 0.025757230969176897,
+  "first_action_max_delta": 0.7554756682128905,
+  "next_five_max_delta": 0.7554756682128905,
+  "whole_chunk_max_delta": 0.7554756682128905,
+  "first_prediction_s": 19.607770455011632,
+  "stale_prediction_s": 0.3960558919934556,
+  "fresh_prediction_s": 0.1933575120056048
+}

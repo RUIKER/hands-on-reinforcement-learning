@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panda 动作回放</title>
+<style>
+:root{color-scheme:dark;--bg:#11191e;--panel:#1b272e;--ink:#f0f4f4;--muted:#a5b8bf;--border:#3a4b52;--actual:#69e2c2;--command:#f6c574;--goal:#c0aaff}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,"Microsoft YaHei",sans-serif}
+main{max-width:1120px;margin:auto;padding:24px 24px 30px} h1,h2,p{margin:0}h1{font-size:clamp(28px,5vw,47px);letter-spacing:-.04em}h2{font-size:18px}
+header{margin-bottom:18px}.intro,.caption,output{color:var(--muted)}
+nav,.controls,.legend,.indicator{display:flex;flex-wrap:wrap;align-items:center;gap:10px}nav{margin-bottom:16px}
+button,select{border:1px solid var(--border);border-radius:6px;padding:8px 13px;background:var(--panel);color:var(--ink);font:inherit;cursor:pointer}
+button[aria-pressed=true],#play{background:var(--actual);color:#112521;border-color:var(--actual);font-weight:600}
+:focus-visible{outline:2px solid var(--goal);outline-offset:3px}
+.stage{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px}
+.view{background:var(--panel);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+#pose{width:100%;aspect-ratio:8/5;display:block;object-fit:cover}.caption{padding:10px 12px}
+.bench{padding:16px}.indicator{justify-content:space-between;align-items:baseline}
+#outcome{color:var(--actual)}#outcome.timeout{color:var(--command)}
+.legend{font-size:14px;color:var(--muted);margin:16px 0 5px}.legend span::before{content:"";display:inline-block;width:12px;height:3px;vertical-align:middle;margin-right:6px;background:var(--color)}
+canvas{display:block;width:100%;height:180px}.readout{margin-top:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.readout div{border-top:1px solid var(--border);padding-top:8px}.readout dt{color:var(--muted);font-size:13px}.readout dd{margin:0;font-variant-numeric:tabular-nums;font-size:15px}
+.controls{margin-top:16px}#timeline{accent-color:var(--actual);flex:1;min-width:90px}output{min-width:65px;text-align:right;font-variant-numeric:tabular-nums}
+#detail{color:var(--muted);margin-top:14px;max-width:900px}
+@media(max-width:760px){main{padding:18px 14px}.stage{grid-template-columns:1fr}.bench{padding:12px}.controls{gap:8px}canvas{height:160px}}
+</style>
+</head>
+<body>
+<main>
+<header><h1>Panda 动作回放</h1><p class="intro">MuJoCo 仿真 · 记录轨迹与执行结果</p></header>
+<nav aria-label="演示场景" id="cases"></nav>
+<div class="stage">
+<section class="view">
+<img id="pose" alt="Panda 机械臂当前回放姿态" width="640" height="400">
+<p class="caption" id="scenario"></p>
+</section>
+<section class="view bench" aria-label="第一关节轨迹">
+<div class="indicator"><h2>第一轴角度 · rad</h2><strong id="outcome"></strong></div>
+<div class="legend">
+<span style="--color:var(--actual)">实测</span>
+<span style="--color:var(--command)">位置命令</span>
+<span id="goal-legend" style="--color:var(--goal)">任务目标</span>
+</div>
+<canvas id="chart" role="img" aria-label="第一轴实测角、位置命令与任务目标随仿真时间变化"></canvas>
+<dl class="readout">
+<div><dt>实测</dt><dd id="q"></dd></div>
+<div><dt>命令</dt><dd id="ctrl"></dd></div>
+<div><dt id="err-label">跟踪差值</dt><dd id="error"></dd></div>
+</dl>
+</section>
+</div>
+<div class="controls">
+<button type="button" id="play">播放</button>
+<label for="speed">速度</label><select id="speed"><option value=".25">0.25×</option><option value=".5" selected>0.5×</option><option value="1">1×</option></select>
+<input id="timeline" type="range" min="0" value="0" aria-label="回放进度">
+<output id="clock" for="timeline"></output>
+</div>
+<p id="detail"></p>
+</main>
+<script type="application/json" id="data">__PANDA_REPLAY_DATA__</script>
+<script>
+const get = id => document.getElementById(id);
+const clips = JSON.parse(get('data').textContent);
+const elements = {
+    nav: get('cases'), pose: get('pose'), scenario: get('scenario'), outcome: get('outcome'),
+    chart: get('chart'), legend: get('goal-legend'), q: get('q'), ctrl: get('ctrl'),
+    error: get('error'), errorLabel: get('err-label'), detail: get('detail'),
+    play: get('play'), speed: get('speed'), timeline: get('timeline'), clock: get('clock'),
+};
+const detail = [
+    '七个关节按固定轨迹运动。橙线是第一轴执行器命令，绿线是关节实测。拖到 0.80 s 可看到第一轴的跟踪滞后。',
+    '双关节位置误差均小于 0.01 rad，且速度绝对值均小于 0.05 rad/s。此回合第 16 步达标。',
+    '第 250 步时第一轴紧跟位置命令，但命令离任务目标还有约 0.01911 rad，超过 0.01 rad 容差。',
+];
+let selected = 0;
+let index = 0;
+let playback = 0;
+let lastFrame = -1;
+
+function draw(clip) {
+    const {chart} = elements;
+    const rect = chart.getBoundingClientRect();
+    const ctx = chart.getContext('2d');
+    const ratio = window.devicePixelRatio || 1;
+    chart.width = Math.round(rect.width * ratio);
+    chart.height = Math.round(rect.height * ratio);
+    ctx.scale(ratio, ratio);
+    const [w, h] = [rect.width, rect.height];
+    const [left, right, top, bottom] = [49, w - 10, 12, h - 23];
+    const rows = clip.samples;
+    const times = rows.at(-1)[0];
+    const values = rows.flatMap(row => row.slice(1).filter(v => v !== null));
+    const min = Math.min(...values), max = Math.max(...values), pad = (max - min) * .08;
+    const px = t => left + (right - left) * t / times;
+    const py = v => bottom - (bottom - top) * (v - min + pad) / (max - min + 2 * pad);
+    ctx.font = '12px system-ui';
+    ctx.fillStyle = '#a5b8bf';
+    ctx.strokeStyle = '#3a4b52';
+    ctx.lineWidth = 1;
+    for (let i = 0; i < 4; i++) {
+        const v = min + (max - min) * i / 3;
+        const y = py(v);
+        ctx.beginPath(); ctx.moveTo(left, y); ctx.lineTo(right, y); ctx.stroke();
+        ctx.fillText(v.toFixed(3), 1, y + 4);
+    }
+    ctx.fillText('0.00 s', left, h - 4);
+    ctx.textAlign = 'right';
+    ctx.fillText(times.toFixed(2) + ' s', right, h - 4);
+    ctx.textAlign = 'left';
+    const lines = [[3, '#c0aaff', [5, 4]], [2, '#f6c574', [3, 3]], [1, '#69e2c2', []]];
+    for (const [col, color, dash] of lines) {
+        if (rows[0][col] === null) continue;
+        ctx.strokeStyle = color; ctx.lineWidth = 1.8; ctx.setLineDash(dash); ctx.beginPath();
+        rows.forEach((row, i) => i ? ctx.lineTo(px(row[0]), py(row[col])) : ctx.moveTo(px(row[0]), py(row[col])));
+        ctx.stroke();
+    }
+    ctx.setLineDash([]);
+    const x = px(rows[index][0]);
+    ctx.lineWidth = 1; ctx.strokeStyle = '#e5f0f3';
+    ctx.beginPath(); ctx.moveTo(x, top); ctx.lineTo(x, bottom); ctx.stroke();
+    ctx.fillStyle = '#69e2c2';
+    ctx.beginPath(); ctx.arc(x, py(rows[index][1]), 4, 0, 2 * Math.PI); ctx.fill();
+}
+
+function show(step) {
+    index = step;
+    const clip = clips[selected];
+    const [time, q, command, goal] = clip.samples[index];
+    const frame = clip.frames.findLast(entry => entry[0] <= index);
+    if (frame[0] !== lastFrame) {
+        elements.pose.src = frame[1];
+        lastFrame = frame[0];
+    }
+    elements.timeline.value = index;
+    elements.clock.value = time.toFixed(2) + ' s';
+    elements.q.textContent = q.toFixed(5);
+    elements.ctrl.textContent = command.toFixed(5);
+    elements.errorLabel.textContent = goal === null ? '跟踪差值' : '距任务目标';
+    elements.error.textContent = (goal === null ? q - command : Math.abs(goal - q)).toFixed(5);
+    draw(clip);
+}
+
+function stop() {
+    cancelAnimationFrame(playback);
+    playback = 0;
+    elements.play.textContent = '播放';
+}
+
+function select(i) {
+    stop();
+    selected = i;
+    lastFrame = -1;
+    const clip = clips[i];
+    [...elements.nav.children].forEach((button, n) => button.setAttribute('aria-pressed', n === i));
+    elements.scenario.textContent = clip.subtitle;
+    elements.outcome.textContent = clip.outcome;
+    elements.outcome.classList.toggle('timeout', i === 2);
+    elements.legend.hidden = i === 0;
+    elements.timeline.max = clip.samples.length - 1;
+    elements.detail.textContent = detail[i];
+    show(0);
+}
+
+clips.forEach((clip, i) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = clip.title;
+    button.addEventListener('click', () => select(i));
+    elements.nav.appendChild(button);
+});
+elements.timeline.addEventListener('input', () => { stop(); show(Number(elements.timeline.value)); });
+elements.play.addEventListener('click', () => {
+    if (playback) { stop(); return; }
+    const rows = clips[selected].samples;
+    if (index === rows.length - 1) show(0);
+    const offset = rows[index][0];
+    const speed = Number(elements.speed.value);
+    let start;
+    const tick = now => {
+        start ??= now;
+        const time = offset + (now - start) / 1000 * speed;
+        let next = index;
+        while (next + 1 < rows.length && rows[next + 1][0] <= time) next++;
+        if (next !== index) show(next);
+        if (next + 1 === rows.length) stop();
+        else playback = requestAnimationFrame(tick);
+    };
+    elements.play.textContent = '暂停';
+    playback = requestAnimationFrame(tick);
+});
+new ResizeObserver(() => draw(clips[selected])).observe(elements.chart);
+select(0);
+</script>
+</body>
+</html>

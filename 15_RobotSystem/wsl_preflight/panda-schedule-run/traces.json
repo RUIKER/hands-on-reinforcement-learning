@@ -1,0 +1,8628 @@
+[
+  [
+    {
+      "tick": 0,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.02,
+      "position_rad": [
+        0.003617889188251732,
+        0.0036999729084321795
+      ],
+      "velocity_rad_s": [
+        0.1670029624642929,
+        0.22157495720116288
+      ],
+      "command_rad": [
+        0.02,
+        0.02
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 1,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.010284467062166026,
+        0.01074766909528523
+      ],
+      "velocity_rad_s": [
+        0.3071146120654168,
+        0.36856189949801943
+      ],
+      "command_rad": [
+        0.04,
+        0.04
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 2,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.019999999999999997,
+        0.019999999999999997
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.019008871949038823,
+        0.020362100282147615
+      ],
+      "velocity_rad_s": [
+        0.422489226994931,
+        0.4838861412876006
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 3,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 6.938893903907228e-18,
+      "position_rad": [
+        0.029830559520009087,
+        0.032022576062383824
+      ],
+      "velocity_rad_s": [
+        0.5189047873565451,
+        0.5764101599249172
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 4,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.042373431472753964,
+        0.04532916438059355
+      ],
+      "velocity_rad_s": [
+        0.5975428159146856,
+        0.6509516834701488
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 5,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.05318902124522325,
+        0.05719569574578198
+      ],
+      "velocity_rad_s": [
+        0.49433645160274986,
+        0.5435394133671032
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 6,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.062035185868975246,
+        0.06690525339801028
+      ],
+      "velocity_rad_s": [
+        0.4022398992138411,
+        0.44047610698983647
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 7,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.06922089914555693,
+        0.07474774086521602
+      ],
+      "velocity_rad_s": [
+        0.32645622403271696,
+        0.35521862037705854
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 8,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07505047430687924,
+        0.08106914983449379
+      ],
+      "velocity_rad_s": [
+        0.2647790214113129,
+        0.28626384923743536
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 9,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07977782066873981,
+        0.08616336009267417
+      ],
+      "velocity_rad_s": [
+        0.2146870483909725,
+        0.2306951099892387
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 10,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.083610376109553,
+        0.09026892292791207
+      ],
+      "velocity_rad_s": [
+        0.17403511102291389,
+        0.18593325619210865
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 11,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08671696062847457,
+        0.09357808407506896
+      ],
+      "velocity_rad_s": [
+        0.14105981152488298,
+        0.14987361523480192
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 12,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08923477901493773,
+        0.09624562273664963
+      ],
+      "velocity_rad_s": [
+        0.11432078620307698,
+        0.12082006308098797
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 13,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09127524749356733,
+        0.09839616120944795
+      ],
+      "velocity_rad_s": [
+        0.09264425950195349,
+        0.09740805786490042
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 14,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09292878410159769,
+        0.1001300608026216
+      ],
+      "velocity_rad_s": [
+        0.07507511108137557,
+        0.07853975688050215
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 15,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.0942687308132258,
+        0.10152816061741117
+      ],
+      "velocity_rad_s": [
+        0.06083700549477737,
+        0.06333162777333592
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 16,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09535455655339241,
+        0.10265558602971682
+      ],
+      "velocity_rad_s": [
+        0.04929946955603479,
+        0.05107240833047655
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 17,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09623446792608045,
+        0.10356481083865657
+      ],
+      "velocity_rad_s": [
+        0.039950830019906944,
+        0.04118937702660646
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "success"
+    }
+  ],
+  [
+    {
+      "tick": 0,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.02,
+      "position_rad": [
+        0.003617889188251732,
+        0.0036999729084321795
+      ],
+      "velocity_rad_s": [
+        0.1670029624642929,
+        0.22157495720116288
+      ],
+      "command_rad": [
+        0.02,
+        0.02
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 1,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.010284467062166026,
+        0.01074766909528523
+      ],
+      "velocity_rad_s": [
+        0.3071146120654168,
+        0.36856189949801943
+      ],
+      "command_rad": [
+        0.04,
+        0.04
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 2,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.019999999999999997,
+        0.019999999999999997
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.019008871949038823,
+        0.020362100282147615
+      ],
+      "velocity_rad_s": [
+        0.422489226994931,
+        0.4838861412876006
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 3,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 6.938893903907228e-18,
+      "position_rad": [
+        0.029830559520009087,
+        0.032022576062383824
+      ],
+      "velocity_rad_s": [
+        0.5189047873565451,
+        0.5764101599249172
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 4,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.042373431472753964,
+        0.04532916438059355
+      ],
+      "velocity_rad_s": [
+        0.5975428159146856,
+        0.6509516834701488
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 5,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.05318902124522325,
+        0.05719569574578198
+      ],
+      "velocity_rad_s": [
+        0.49433645160274986,
+        0.5435394133671032
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 6,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.062035185868975246,
+        0.06690525339801028
+      ],
+      "velocity_rad_s": [
+        0.4022398992138411,
+        0.44047610698983647
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 7,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.06922089914555693,
+        0.07474774086521602
+      ],
+      "velocity_rad_s": [
+        0.32645622403271696,
+        0.35521862037705854
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 8,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07505047430687924,
+        0.08106914983449379
+      ],
+      "velocity_rad_s": [
+        0.2647790214113129,
+        0.28626384923743536
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 9,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07977782066873981,
+        0.08616336009267417
+      ],
+      "velocity_rad_s": [
+        0.2146870483909725,
+        0.2306951099892387
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 10,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.083610376109553,
+        0.09026892292791207
+      ],
+      "velocity_rad_s": [
+        0.17403511102291389,
+        0.18593325619210865
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 11,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08671696062847457,
+        0.09357808407506896
+      ],
+      "velocity_rad_s": [
+        0.14105981152488298,
+        0.14987361523480192
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 12,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08923477901493773,
+        0.09624562273664963
+      ],
+      "velocity_rad_s": [
+        0.11432078620307698,
+        0.12082006308098797
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 13,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09127524749356733,
+        0.09839616120944795
+      ],
+      "velocity_rad_s": [
+        0.09264425950195349,
+        0.09740805786490042
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 14,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09292878410159769,
+        0.1001300608026216
+      ],
+      "velocity_rad_s": [
+        0.07507511108137557,
+        0.07853975688050215
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 15,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.0942687308132258,
+        0.10152816061741117
+      ],
+      "velocity_rad_s": [
+        0.06083700549477737,
+        0.06333162777333592
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 16,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09535455655339241,
+        0.10265558602971682
+      ],
+      "velocity_rad_s": [
+        0.04929946955603479,
+        0.05107240833047655
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 17,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09623446792608045,
+        0.10356481083865657
+      ],
+      "velocity_rad_s": [
+        0.039950830019906944,
+        0.04118937702660646
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "success"
+    }
+  ],
+  [
+    {
+      "tick": 0,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.02,
+      "position_rad": [
+        0.003617889188251732,
+        0.0036999729084321795
+      ],
+      "velocity_rad_s": [
+        0.1670029624642929,
+        0.22157495720116288
+      ],
+      "command_rad": [
+        0.02,
+        0.02
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 1,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.010284467062166026,
+        0.01074766909528523
+      ],
+      "velocity_rad_s": [
+        0.3071146120654168,
+        0.36856189949801943
+      ],
+      "command_rad": [
+        0.04,
+        0.04
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 2,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.019999999999999997,
+        0.019999999999999997
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.019008871949038823,
+        0.020362100282147615
+      ],
+      "velocity_rad_s": [
+        0.422489226994931,
+        0.4838861412876006
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 3,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 6.938893903907228e-18,
+      "position_rad": [
+        0.029830559520009087,
+        0.032022576062383824
+      ],
+      "velocity_rad_s": [
+        0.5189047873565451,
+        0.5764101599249172
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 4,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.042373431472753964,
+        0.04532916438059355
+      ],
+      "velocity_rad_s": [
+        0.5975428159146856,
+        0.6509516834701488
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 5,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.05318902124522325,
+        0.05719569574578198
+      ],
+      "velocity_rad_s": [
+        0.49433645160274986,
+        0.5435394133671032
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 6,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.062035185868975246,
+        0.06690525339801028
+      ],
+      "velocity_rad_s": [
+        0.4022398992138411,
+        0.44047610698983647
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 7,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.06922089914555693,
+        0.07474774086521602
+      ],
+      "velocity_rad_s": [
+        0.32645622403271696,
+        0.35521862037705854
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 8,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.07157742890852876,
+        0.0783770264087365
+      ],
+      "velocity_rad_s": [
+        0.09790979753153178,
+        0.11910663265112806
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 9,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.06974429766664518,
+        0.0775403449478759
+      ],
+      "velocity_rad_s": [
+        -0.0944000470663442,
+        -0.08824827015171534
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 10,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.06443648485660108,
+        0.07296523376042043
+      ],
+      "velocity_rad_s": [
+        -0.25117209136806223,
+        -0.2571868549625562
+      ],
+      "command_rad": [
+        0.039999999999999994,
+        0.039999999999999994
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 11,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.05671917144920723,
+        0.0653208352416983
+      ],
+      "velocity_rad_s": [
+        -0.37887004169026023,
+        -0.39400138304158533
+      ],
+      "command_rad": [
+        0.019999999999999993,
+        0.019999999999999993
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 12,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.04667990356644421,
+        0.05527891362330139
+      ],
+      "velocity_rad_s": [
+        -0.4848803084428613,
+        -0.5032383940355253
+      ],
+      "command_rad": [
+        -6.938893903907228e-18,
+        -6.938893903907228e-18
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 13,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.034740073783890345,
+        0.04326985857584832
+      ],
+      "velocity_rad_s": [
+        -0.5709235313728525,
+        -0.5916765387308756
+      ],
+      "command_rad": [
+        -0.020000000000000007,
+        -0.020000000000000007
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 14,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.021259708923747782,
+        0.029672236219591593
+      ],
+      "velocity_rad_s": [
+        -0.6404750357594275,
+        -0.6629146174991587
+      ],
+      "command_rad": [
+        -0.04000000000000001,
+        -0.04000000000000001
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 15,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.009999999999999995
+      ],
+      "increment_jump_rad": 0.010000000000000005,
+      "position_rad": [
+        0.0065408704086338115,
+        0.016209698710829012
+      ],
+      "velocity_rad_s": [
+        -0.6963036460228614,
+        -0.6366447425990389
+      ],
+      "command_rad": [
+        -0.06000000000000001,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 16,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        -0.01999999999999999,
+        0.0
+      ],
+      "increment_jump_rad": 0.009999999999999995,
+      "position_rad": [
+        -0.009172761658573355,
+        0.004711537092609644
+      ],
+      "velocity_rad_s": [
+        -0.7411362194403862,
+        -0.5239619301188202
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 17,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.01999999999999999,
+      "position_rad": [
+        -0.022533894863746327,
+        -0.004635429417260958
+      ],
+      "velocity_rad_s": [
+        -0.6091532083287151,
+        -0.42392829187096936
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 18,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.0334147069367429,
+        -0.0121888506697063
+      ],
+      "velocity_rad_s": [
+        -0.49408456337777396,
+        -0.34240441597095417
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 19,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.042231100087903845,
+        -0.018288540966376648
+      ],
+      "velocity_rad_s": [
+        -0.4001978033477403,
+        -0.2764730565155359
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 20,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.0493725337661491,
+        -0.023213277397105957
+      ],
+      "velocity_rad_s": [
+        -0.3242016134454185,
+        -0.22320219968752572
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 21,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.05515877722532326,
+        -0.027188870580534853
+      ],
+      "velocity_rad_s": [
+        -0.2627174562456719,
+        -0.18017586630140706
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 22,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.059848393044657826,
+        -0.03039796046762941
+      ],
+      "velocity_rad_s": [
+        -0.21295381232153582,
+        -0.1454329456605183
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 23,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06365021162915488,
+        -0.032988181994222515
+      ],
+      "velocity_rad_s": [
+        -0.17265833359531593,
+        -0.11738424638786184
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 24,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06673299468034789,
+        -0.03507881784155861
+      ],
+      "velocity_rad_s": [
+        -0.1400168743189307,
+        -0.09474315745014777
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 25,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06923321646773088,
+        -0.03676620729468769
+      ],
+      "velocity_rad_s": [
+        -0.11356688836189845,
+        -0.07646891603555583
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 26,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07126130634633641,
+        -0.03812813729834415
+      ],
+      "velocity_rad_s": [
+        -0.09212801920784887,
+        -0.06172020369097868
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 27,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07290666332972823,
+        -0.03922740207582605
+      ],
+      "velocity_rad_s": [
+        -0.07474677217395377,
+        -0.04981728413162719
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 28,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07424169093270941,
+        -0.040114685289199904
+      ],
+      "velocity_rad_s": [
+        -0.06065232157663081,
+        -0.04021118881335149
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 29,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07532504837194992,
+        -0.04083089149050433
+      ],
+      "velocity_rad_s": [
+        -0.04922112070957108,
+        -0.032458691572348645
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "success"
+    }
+  ],
+  [
+    {
+      "tick": 0,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.02,
+      "position_rad": [
+        0.003617889188251732,
+        0.0036999729084321795
+      ],
+      "velocity_rad_s": [
+        0.1670029624642929,
+        0.22157495720116288
+      ],
+      "command_rad": [
+        0.02,
+        0.02
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 1,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.010284467062166026,
+        0.01074766909528523
+      ],
+      "velocity_rad_s": [
+        0.3071146120654168,
+        0.36856189949801943
+      ],
+      "command_rad": [
+        0.04,
+        0.04
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 2,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.019999999999999997,
+        0.019999999999999997
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.019008871949038823,
+        0.020362100282147615
+      ],
+      "velocity_rad_s": [
+        0.422489226994931,
+        0.4838861412876006
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 3,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 6.938893903907228e-18,
+      "position_rad": [
+        0.029830559520009087,
+        0.032022576062383824
+      ],
+      "velocity_rad_s": [
+        0.5189047873565451,
+        0.5764101599249172
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 4,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.042373431472753964,
+        0.04532916438059355
+      ],
+      "velocity_rad_s": [
+        0.5975428159146856,
+        0.6509516834701488
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 5,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.05318902124522325,
+        0.05719569574578198
+      ],
+      "velocity_rad_s": [
+        0.49433645160274986,
+        0.5435394133671032
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 6,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.062035185868975246,
+        0.06690525339801028
+      ],
+      "velocity_rad_s": [
+        0.4022398992138411,
+        0.44047610698983647
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 7,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.06922089914555693,
+        0.07474774086521602
+      ],
+      "velocity_rad_s": [
+        0.32645622403271696,
+        0.35521862037705854
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 8,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.07157742890852876,
+        0.0783770264087365
+      ],
+      "velocity_rad_s": [
+        0.09790979753153178,
+        0.11910663265112806
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 9,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.06974429766664518,
+        0.0775403449478759
+      ],
+      "velocity_rad_s": [
+        -0.0944000470663442,
+        -0.08824827015171534
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 10,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.06443648485660108,
+        0.07296523376042043
+      ],
+      "velocity_rad_s": [
+        -0.25117209136806223,
+        -0.2571868549625562
+      ],
+      "command_rad": [
+        0.039999999999999994,
+        0.039999999999999994
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 11,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.05671917144920723,
+        0.0653208352416983
+      ],
+      "velocity_rad_s": [
+        -0.37887004169026023,
+        -0.39400138304158533
+      ],
+      "command_rad": [
+        0.019999999999999993,
+        0.019999999999999993
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 12,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.04667990356644421,
+        0.05527891362330139
+      ],
+      "velocity_rad_s": [
+        -0.4848803084428613,
+        -0.5032383940355253
+      ],
+      "command_rad": [
+        -6.938893903907228e-18,
+        -6.938893903907228e-18
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 13,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.034740073783890345,
+        0.04326985857584832
+      ],
+      "velocity_rad_s": [
+        -0.5709235313728525,
+        -0.5916765387308756
+      ],
+      "command_rad": [
+        -0.020000000000000007,
+        -0.020000000000000007
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 14,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.021259708923747782,
+        0.029672236219591593
+      ],
+      "velocity_rad_s": [
+        -0.6404750357594275,
+        -0.6629146174991587
+      ],
+      "command_rad": [
+        -0.04000000000000001,
+        -0.04000000000000001
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 15,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.009999999999999995
+      ],
+      "increment_jump_rad": 0.010000000000000005,
+      "position_rad": [
+        0.0065408704086338115,
+        0.016209698710829012
+      ],
+      "velocity_rad_s": [
+        -0.6963036460228614,
+        -0.6366447425990389
+      ],
+      "command_rad": [
+        -0.06000000000000001,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 16,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        -0.01999999999999999,
+        0.0
+      ],
+      "increment_jump_rad": 0.009999999999999995,
+      "position_rad": [
+        -0.009172761658573355,
+        0.004711537092609644
+      ],
+      "velocity_rad_s": [
+        -0.7411362194403862,
+        -0.5239619301188202
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 17,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.01999999999999999,
+      "position_rad": [
+        -0.022533894863746327,
+        -0.004635429417260958
+      ],
+      "velocity_rad_s": [
+        -0.6091532083287151,
+        -0.42392829187096936
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 18,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.0334147069367429,
+        -0.0121888506697063
+      ],
+      "velocity_rad_s": [
+        -0.49408456337777396,
+        -0.34240441597095417
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 19,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.042231100087903845,
+        -0.018288540966376648
+      ],
+      "velocity_rad_s": [
+        -0.4001978033477403,
+        -0.2764730565155359
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 20,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.0493725337661491,
+        -0.023213277397105957
+      ],
+      "velocity_rad_s": [
+        -0.3242016134454185,
+        -0.22320219968752572
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 21,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.05515877722532326,
+        -0.027188870580534853
+      ],
+      "velocity_rad_s": [
+        -0.2627174562456719,
+        -0.18017586630140706
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 22,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.059848393044657826,
+        -0.03039796046762941
+      ],
+      "velocity_rad_s": [
+        -0.21295381232153582,
+        -0.1454329456605183
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 23,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06365021162915488,
+        -0.032988181994222515
+      ],
+      "velocity_rad_s": [
+        -0.17265833359531593,
+        -0.11738424638786184
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 24,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06673299468034789,
+        -0.03507881784155861
+      ],
+      "velocity_rad_s": [
+        -0.1400168743189307,
+        -0.09474315745014777
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 25,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06923321646773088,
+        -0.03676620729468769
+      ],
+      "velocity_rad_s": [
+        -0.11356688836189845,
+        -0.07646891603555583
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 26,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07126130634633641,
+        -0.03812813729834415
+      ],
+      "velocity_rad_s": [
+        -0.09212801920784887,
+        -0.06172020369097868
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 27,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07290666332972823,
+        -0.03922740207582605
+      ],
+      "velocity_rad_s": [
+        -0.07474677217395377,
+        -0.04981728413162719
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 28,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07424169093270941,
+        -0.040114685289199904
+      ],
+      "velocity_rad_s": [
+        -0.06065232157663081,
+        -0.04021118881335149
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 29,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07532504837194992,
+        -0.04083089149050433
+      ],
+      "velocity_rad_s": [
+        -0.04922112070957108,
+        -0.032458691572348645
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "success"
+    }
+  ],
+  [
+    {
+      "tick": 0,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.02,
+      "position_rad": [
+        0.003617889188251732,
+        0.0036999729084321795
+      ],
+      "velocity_rad_s": [
+        0.1670029624642929,
+        0.22157495720116288
+      ],
+      "command_rad": [
+        0.02,
+        0.02
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 1,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.010284467062166026,
+        0.01074766909528523
+      ],
+      "velocity_rad_s": [
+        0.3071146120654168,
+        0.36856189949801943
+      ],
+      "command_rad": [
+        0.04,
+        0.04
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 2,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.019999999999999997,
+        0.019999999999999997
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.019008871949038823,
+        0.020362100282147615
+      ],
+      "velocity_rad_s": [
+        0.422489226994931,
+        0.4838861412876006
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 3,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 6.938893903907228e-18,
+      "position_rad": [
+        0.029830559520009087,
+        0.032022576062383824
+      ],
+      "velocity_rad_s": [
+        0.5189047873565451,
+        0.5764101599249172
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 4,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.042373431472753964,
+        0.04532916438059355
+      ],
+      "velocity_rad_s": [
+        0.5975428159146856,
+        0.6509516834701488
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 5,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.05318902124522325,
+        0.05719569574578198
+      ],
+      "velocity_rad_s": [
+        0.49433645160274986,
+        0.5435394133671032
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 6,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.062035185868975246,
+        0.06690525339801028
+      ],
+      "velocity_rad_s": [
+        0.4022398992138411,
+        0.44047610698983647
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 7,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.06922089914555693,
+        0.07474774086521602
+      ],
+      "velocity_rad_s": [
+        0.32645622403271696,
+        0.35521862037705854
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 8,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07505047430687924,
+        0.08106914983449379
+      ],
+      "velocity_rad_s": [
+        0.2647790214113129,
+        0.28626384923743536
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 9,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07977782066873981,
+        0.08616336009267417
+      ],
+      "velocity_rad_s": [
+        0.2146870483909725,
+        0.2306951099892387
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 10,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.083610376109553,
+        0.09026892292791207
+      ],
+      "velocity_rad_s": [
+        0.17403511102291389,
+        0.18593325619210865
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 11,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08671696062847457,
+        0.09357808407506896
+      ],
+      "velocity_rad_s": [
+        0.14105981152488298,
+        0.14987361523480192
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 12,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08923477901493773,
+        0.09624562273664963
+      ],
+      "velocity_rad_s": [
+        0.11432078620307698,
+        0.12082006308098797
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 13,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09127524749356733,
+        0.09839616120944795
+      ],
+      "velocity_rad_s": [
+        0.09264425950195349,
+        0.09740805786490042
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 14,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09292878410159769,
+        0.1001300608026216
+      ],
+      "velocity_rad_s": [
+        0.07507511108137557,
+        0.07853975688050215
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 15,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.0942687308132258,
+        0.10152816061741117
+      ],
+      "velocity_rad_s": [
+        0.06083700549477737,
+        0.06333162777333592
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 16,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.09187082167779706,
+        0.09990419687327606
+      ],
+      "velocity_rad_s": [
+        -0.1177152599516398,
+        -0.11606364877822237
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 17,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08617535183502577,
+        0.09486069720873722
+      ],
+      "velocity_rad_s": [
+        -0.2694737583392187,
+        -0.2769251772616421
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 18,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07814149038127961,
+        0.08687292390562586
+      ],
+      "velocity_rad_s": [
+        -0.3938249239199769,
+        -0.40934180509078927
+      ],
+      "command_rad": [
+        0.039999999999999994,
+        0.039999999999999994
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 19,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.06784388686735039,
+        0.07656101243596848
+      ],
+      "velocity_rad_s": [
+        -0.49721611566089224,
+        -0.5154996780519142
+      ],
+      "command_rad": [
+        0.019999999999999993,
+        0.019999999999999993
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 20,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.05569246158784446,
+        0.06433614621346541
+      ],
+      "velocity_rad_s": [
+        -0.5811292540031119,
+        -0.6015430685962594
+      ],
+      "command_rad": [
+        -6.938893903907228e-18,
+        -6.938893903907228e-18
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 21,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.042038740833632626,
+        0.05056548343127213
+      ],
+      "velocity_rad_s": [
+        -0.6489354779082392,
+        -0.6708683711775897
+      ],
+      "command_rad": [
+        -0.020000000000000007,
+        -0.020000000000000007
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 22,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.027169977299085473,
+        0.03554945467019766
+      ],
+      "velocity_rad_s": [
+        -0.703653122595552,
+        -0.726669271779737
+      ],
+      "command_rad": [
+        -0.04000000000000001,
+        -0.04000000000000001
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 23,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.009999999999999995
+      ],
+      "increment_jump_rad": 0.010000000000000005,
+      "position_rad": [
+        0.011327138200413239,
+        0.020953915145016166
+      ],
+      "velocity_rad_s": [
+        -0.7474390260864563,
+        -0.6879440177590174
+      ],
+      "command_rad": [
+        -0.06000000000000001,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 24,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        -0.01999999999999999,
+        0.0
+      ],
+      "increment_jump_rad": 0.009999999999999995,
+      "position_rad": [
+        -0.005296044670476884,
+        0.008542551640198178
+      ],
+      "velocity_rad_s": [
+        -0.7825076115838873,
+        -0.5653454480117004
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 25,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.01999999999999999,
+      "position_rad": [
+        -0.019395246532420647,
+        -0.001541717769612556
+      ],
+      "velocity_rad_s": [
+        -0.642629995640569,
+        -0.45735381414084336
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 26,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.030872602523806233,
+        -0.009690726524830875
+      ],
+      "velocity_rad_s": [
+        -0.5211315594691662,
+        -0.3694056663728229
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 27,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.04017107094200231,
+        -0.016271497722840415
+      ],
+      "velocity_rad_s": [
+        -0.42206169256551457,
+        -0.2982813120684253
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 28,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.04770236910517384,
+        -0.02158475364783163
+      ],
+      "velocity_rad_s": [
+        -0.3418901923125568,
+        -0.24081305713836393
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 29,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.05380415312341128,
+        -0.0258740641928266
+      ],
+      "velocity_rad_s": [
+        -0.27703870012865983,
+        -0.19439521073568947
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 30,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.058749327763480325,
+        -0.0293364419740618
+      ],
+      "velocity_rad_s": [
+        -0.22455595687681876,
+        -0.15691283682258014
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 31,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06275824193256026,
+        -0.032131146919143795
+      ],
+      "velocity_rad_s": [
+        -0.1820624726588086,
+        -0.1266519232530921
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 32,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06600892589250379,
+        -0.0343868586380359
+      ],
+      "velocity_rad_s": [
+        -0.14764266468639492,
+        -0.10222470458805051
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 33,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06864532453006578,
+        -0.036207508722948235
+      ],
+      "velocity_rad_s": [
+        -0.11975281559354678,
+        -0.08250852722599838
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 34,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07078389701362267,
+        -0.03767701620444808
+      ],
+      "velocity_rad_s": [
+        -0.09714744354272824,
+        -0.06659583853269416
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 35,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07251891479534603,
+        -0.038863126723098274
+      ],
+      "velocity_rad_s": [
+        -0.07882068793554095,
+        -0.053753360752389595
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 36,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07392672228695894,
+        -0.039820521294940625
+      ],
+      "velocity_rad_s": [
+        -0.06395954069561935,
+        -0.04338887187304017
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 37,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07506916860556825,
+        -0.040593331192841635
+      ],
+      "velocity_rad_s": [
+        -0.051906425525588405,
+        -0.035024213302921534
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 38,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.075996375199646,
+        -0.04121717092289192
+      ],
+      "velocity_rad_s": [
+        -0.042129184320833256,
+        -0.028273407343039778
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "success"
+    }
+  ],
+  [
+    {
+      "tick": 0,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.02,
+      "position_rad": [
+        0.003617889188251732,
+        0.0036999729084321795
+      ],
+      "velocity_rad_s": [
+        0.1670029624642929,
+        0.22157495720116288
+      ],
+      "command_rad": [
+        0.02,
+        0.02
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 1,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.010284467062166026,
+        0.01074766909528523
+      ],
+      "velocity_rad_s": [
+        0.3071146120654168,
+        0.36856189949801943
+      ],
+      "command_rad": [
+        0.04,
+        0.04
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 2,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.019999999999999997,
+        0.019999999999999997
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.019008871949038823,
+        0.020362100282147615
+      ],
+      "velocity_rad_s": [
+        0.422489226994931,
+        0.4838861412876006
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 3,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 6.938893903907228e-18,
+      "position_rad": [
+        0.029830559520009087,
+        0.032022576062383824
+      ],
+      "velocity_rad_s": [
+        0.5189047873565451,
+        0.5764101599249172
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 4,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.042373431472753964,
+        0.04532916438059355
+      ],
+      "velocity_rad_s": [
+        0.5975428159146856,
+        0.6509516834701488
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 5,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.05318902124522325,
+        0.05719569574578198
+      ],
+      "velocity_rad_s": [
+        0.49433645160274986,
+        0.5435394133671032
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 6,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.062035185868975246,
+        0.06690525339801028
+      ],
+      "velocity_rad_s": [
+        0.4022398992138411,
+        0.44047610698983647
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 7,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.06922089914555693,
+        0.07474774086521602
+      ],
+      "velocity_rad_s": [
+        0.32645622403271696,
+        0.35521862037705854
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 8,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07505047430687924,
+        0.08106914983449379
+      ],
+      "velocity_rad_s": [
+        0.2647790214113129,
+        0.28626384923743536
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 9,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07977782066873981,
+        0.08616336009267417
+      ],
+      "velocity_rad_s": [
+        0.2146870483909725,
+        0.2306951099892387
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 10,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.083610376109553,
+        0.09026892292791207
+      ],
+      "velocity_rad_s": [
+        0.17403511102291389,
+        0.18593325619210865
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 11,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.08323843212833736,
+        0.09086658930577934
+      ],
+      "velocity_rad_s": [
+        -0.02589867978233385,
+        -0.01709688272299182
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 12,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07918746159424417,
+        0.08761095328849244
+      ],
+      "velocity_rad_s": [
+        -0.19497395890335148,
+        -0.1975161402339298
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 13,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07207811307805892,
+        0.08105418535626435
+      ],
+      "velocity_rad_s": [
+        -0.332763129339943,
+        -0.3456013790828078
+      ],
+      "command_rad": [
+        0.039999999999999994,
+        0.039999999999999994
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 14,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.06290885814905403,
+        0.07181206787634115
+      ],
+      "velocity_rad_s": [
+        -0.4449562241524324,
+        -0.46501982696356414
+      ],
+      "command_rad": [
+        0.019999999999999993,
+        0.019999999999999993
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 15,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.051692983143702576,
+        0.06050155736263885
+      ],
+      "velocity_rad_s": [
+        -0.5384459146747734,
+        -0.5600970911126606
+      ],
+      "command_rad": [
+        -6.938893903907228e-18,
+        -6.938893903907228e-18
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 16,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.03879965452781581,
+        0.04747482042887101
+      ],
+      "velocity_rad_s": [
+        -0.6143237481356852,
+        -0.6373735615798762
+      ],
+      "command_rad": [
+        -0.020000000000000007,
+        -0.020000000000000007
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 17,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.024546947460468812,
+        0.033058916514710504
+      ],
+      "velocity_rad_s": [
+        -0.6756233536835662,
+        -0.6996804458131929
+      ],
+      "command_rad": [
+        -0.04000000000000001,
+        -0.04000000000000001
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 18,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.009999999999999995
+      ],
+      "increment_jump_rad": 0.010000000000000005,
+      "position_rad": [
+        0.009202831135074389,
+        0.018943101458031283
+      ],
+      "velocity_rad_s": [
+        -0.7247530337407325,
+        -0.6662193773212839
+      ],
+      "command_rad": [
+        -0.06000000000000001,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 19,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        -0.01999999999999999,
+        0.0
+      ],
+      "increment_jump_rad": 0.009999999999999995,
+      "position_rad": [
+        -0.00701678707696145,
+        0.006918510667901754
+      ],
+      "velocity_rad_s": [
+        -0.76415349041489,
+        -0.547815996197302
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 20,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.01999999999999999,
+      "position_rad": [
+        -0.020788553595534706,
+        -0.0028534117753770383
+      ],
+      "velocity_rad_s": [
+        -0.6277780465529379,
+        -0.44319228167570573
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 21,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.03200123616856477,
+        -0.010750061502784129
+      ],
+      "velocity_rad_s": [
+        -0.5091306433179884,
+        -0.35796392894898116
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 22,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.04108578855925525,
+        -0.017126957770024858
+      ],
+      "velocity_rad_s": [
+        -0.4123591639682795,
+        -0.28903860773538653
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 23,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.04844406384494242,
+        -0.02227553900236199
+      ],
+      "velocity_rad_s": [
+        -0.3340394493743055,
+        -0.2333481253892981
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 24,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.05440579117058167,
+        -0.026431859619196713
+      ],
+      "velocity_rad_s": [
+        -0.27068164350792506,
+        -0.1883669746638046
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 25,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.05923751810457702,
+        -0.029786848486320065
+      ],
+      "velocity_rad_s": [
+        -0.21940522853921596,
+        -0.15204525985894585
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 26,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.0631544869657419,
+        -0.032494843841451335
+      ],
+      "velocity_rad_s": [
+        -0.17788703162268052,
+        -0.1227217681057134
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 27,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06633061815864472,
+        -0.03468054618634975
+      ],
+      "velocity_rad_s": [
+        -0.1442564118987976,
+        -0.09905153228328432
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 28,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06890654339226694,
+        -0.036444671631858334
+      ],
+      "velocity_rad_s": [
+        -0.11700562319436629,
+        -0.07994655478512415
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 29,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07099604722314873,
+        -0.037868541741358445
+      ],
+      "velocity_rad_s": [
+        -0.0949180500465688,
+        -0.06452731682861737
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 30,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07269123954251487,
+        -0.03901780449681967
+      ],
+      "velocity_rad_s": [
+        -0.07701104702911322,
+        -0.05208320942224612
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 31,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.074066716216314,
+        -0.03994544718178376
+      ],
+      "velocity_rad_s": [
+        -0.062490309902554095,
+        -0.042040323662548236
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 32,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07518291083963542,
+        -0.040694233670097425
+      ],
+      "velocity_rad_s": [
+        -0.05071335364092494,
+        -0.03393529472401679
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 33,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07608879821774157,
+        -0.04129867461511571
+      ],
+      "velocity_rad_s": [
+        -0.041160211249699534,
+        -0.027394090728744474
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "success"
+    }
+  ],
+  [
+    {
+      "tick": 0,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.02,
+      "position_rad": [
+        0.003617889188251732,
+        0.0036999729084321795
+      ],
+      "velocity_rad_s": [
+        0.1670029624642929,
+        0.22157495720116288
+      ],
+      "command_rad": [
+        0.02,
+        0.02
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 1,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.010284467062166026,
+        0.01074766909528523
+      ],
+      "velocity_rad_s": [
+        0.3071146120654168,
+        0.36856189949801943
+      ],
+      "command_rad": [
+        0.04,
+        0.04
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 2,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.019999999999999997,
+        0.019999999999999997
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.019008871949038823,
+        0.020362100282147615
+      ],
+      "velocity_rad_s": [
+        0.422489226994931,
+        0.4838861412876006
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 3,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 6.938893903907228e-18,
+      "position_rad": [
+        0.029830559520009087,
+        0.032022576062383824
+      ],
+      "velocity_rad_s": [
+        0.5189047873565451,
+        0.5764101599249172
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 4,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.042373431472753964,
+        0.04532916438059355
+      ],
+      "velocity_rad_s": [
+        0.5975428159146856,
+        0.6509516834701488
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 5,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.05318902124522325,
+        0.05719569574578198
+      ],
+      "velocity_rad_s": [
+        0.49433645160274986,
+        0.5435394133671032
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 6,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.062035185868975246,
+        0.06690525339801028
+      ],
+      "velocity_rad_s": [
+        0.4022398992138411,
+        0.44047610698983647
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 7,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.06922089914555693,
+        0.07474774086521602
+      ],
+      "velocity_rad_s": [
+        0.32645622403271696,
+        0.35521862037705854
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 8,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07505047430687924,
+        0.08106914983449379
+      ],
+      "velocity_rad_s": [
+        0.2647790214113129,
+        0.28626384923743536
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 9,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07977782066873981,
+        0.08616336009267417
+      ],
+      "velocity_rad_s": [
+        0.2146870483909725,
+        0.2306951099892387
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 10,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.083610376109553,
+        0.09026892292791207
+      ],
+      "velocity_rad_s": [
+        0.17403511102291389,
+        0.18593325619210865
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 11,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08671696062847457,
+        0.09357808407506896
+      ],
+      "velocity_rad_s": [
+        0.14105981152488298,
+        0.14987361523480192
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 12,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08923477901493773,
+        0.09624562273664963
+      ],
+      "velocity_rad_s": [
+        0.11432078620307698,
+        0.12082006308098797
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 13,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09127524749356733,
+        0.09839616120944795
+      ],
+      "velocity_rad_s": [
+        0.09264425950195349,
+        0.09740805786490042
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 14,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09292878410159769,
+        0.1001300608026216
+      ],
+      "velocity_rad_s": [
+        0.07507511108137557,
+        0.07853975688050215
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 15,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.0942687308132258,
+        0.10152816061741117
+      ],
+      "velocity_rad_s": [
+        0.06083700549477737,
+        0.06333162777333592
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 16,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.09187082167779706,
+        0.09990419687327606
+      ],
+      "velocity_rad_s": [
+        -0.1177152599516398,
+        -0.11606364877822237
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 17,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08617535183502577,
+        0.09486069720873722
+      ],
+      "velocity_rad_s": [
+        -0.2694737583392187,
+        -0.2769251772616421
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 18,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07814149038127961,
+        0.08687292390562586
+      ],
+      "velocity_rad_s": [
+        -0.3938249239199769,
+        -0.40934180509078927
+      ],
+      "command_rad": [
+        0.039999999999999994,
+        0.039999999999999994
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 19,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.06784388686735039,
+        0.07656101243596848
+      ],
+      "velocity_rad_s": [
+        -0.49721611566089224,
+        -0.5154996780519142
+      ],
+      "command_rad": [
+        0.019999999999999993,
+        0.019999999999999993
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 20,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.05569246158784446,
+        0.06433614621346541
+      ],
+      "velocity_rad_s": [
+        -0.5811292540031119,
+        -0.6015430685962594
+      ],
+      "command_rad": [
+        -6.938893903907228e-18,
+        -6.938893903907228e-18
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 21,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.042038740833632626,
+        0.05056548343127213
+      ],
+      "velocity_rad_s": [
+        -0.6489354779082392,
+        -0.6708683711775897
+      ],
+      "command_rad": [
+        -0.020000000000000007,
+        -0.020000000000000007
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 22,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.027169977299085473,
+        0.03554945467019766
+      ],
+      "velocity_rad_s": [
+        -0.703653122595552,
+        -0.726669271779737
+      ],
+      "command_rad": [
+        -0.04000000000000001,
+        -0.04000000000000001
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 23,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.009999999999999995
+      ],
+      "increment_jump_rad": 0.010000000000000005,
+      "position_rad": [
+        0.011327138200413239,
+        0.020953915145016166
+      ],
+      "velocity_rad_s": [
+        -0.7474390260864563,
+        -0.6879440177590174
+      ],
+      "command_rad": [
+        -0.06000000000000001,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 24,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        -0.01999999999999999,
+        0.0
+      ],
+      "increment_jump_rad": 0.009999999999999995,
+      "position_rad": [
+        -0.005296044670476884,
+        0.008542551640198178
+      ],
+      "velocity_rad_s": [
+        -0.7825076115838873,
+        -0.5653454480117004
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 25,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.01999999999999999,
+      "position_rad": [
+        -0.019395246532420647,
+        -0.001541717769612556
+      ],
+      "velocity_rad_s": [
+        -0.642629995640569,
+        -0.45735381414084336
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 26,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.030872602523806233,
+        -0.009690726524830875
+      ],
+      "velocity_rad_s": [
+        -0.5211315594691662,
+        -0.3694056663728229
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 27,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.04017107094200231,
+        -0.016271497722840415
+      ],
+      "velocity_rad_s": [
+        -0.42206169256551457,
+        -0.2982813120684253
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 28,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.04770236910517384,
+        -0.02158475364783163
+      ],
+      "velocity_rad_s": [
+        -0.3418901923125568,
+        -0.24081305713836393
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 29,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.05380415312341128,
+        -0.0258740641928266
+      ],
+      "velocity_rad_s": [
+        -0.27703870012865983,
+        -0.19439521073568947
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 30,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.058749327763480325,
+        -0.0293364419740618
+      ],
+      "velocity_rad_s": [
+        -0.22455595687681876,
+        -0.15691283682258014
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 31,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06275824193256026,
+        -0.032131146919143795
+      ],
+      "velocity_rad_s": [
+        -0.1820624726588086,
+        -0.1266519232530921
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 32,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06600892589250379,
+        -0.0343868586380359
+      ],
+      "velocity_rad_s": [
+        -0.14764266468639492,
+        -0.10222470458805051
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 33,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06864532453006578,
+        -0.036207508722948235
+      ],
+      "velocity_rad_s": [
+        -0.11975281559354678,
+        -0.08250852722599838
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 34,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07078389701362267,
+        -0.03767701620444808
+      ],
+      "velocity_rad_s": [
+        -0.09714744354272824,
+        -0.06659583853269416
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 35,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07251891479534603,
+        -0.038863126723098274
+      ],
+      "velocity_rad_s": [
+        -0.07882068793554095,
+        -0.053753360752389595
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 36,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07392672228695894,
+        -0.039820521294940625
+      ],
+      "velocity_rad_s": [
+        -0.06395954069561935,
+        -0.04338887187304017
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 37,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07506916860556825,
+        -0.040593331192841635
+      ],
+      "velocity_rad_s": [
+        -0.051906425525588405,
+        -0.035024213302921534
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 38,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.075996375199646,
+        -0.04121717092289192
+      ],
+      "velocity_rad_s": [
+        -0.042129184320833256,
+        -0.028273407343039778
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "success"
+    }
+  ],
+  [
+    {
+      "tick": 0,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.02,
+      "position_rad": [
+        0.003617889188251732,
+        0.0036999729084321795
+      ],
+      "velocity_rad_s": [
+        0.1670029624642929,
+        0.22157495720116288
+      ],
+      "command_rad": [
+        0.02,
+        0.02
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 1,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.02,
+        0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.010284467062166026,
+        0.01074766909528523
+      ],
+      "velocity_rad_s": [
+        0.3071146120654168,
+        0.36856189949801943
+      ],
+      "command_rad": [
+        0.04,
+        0.04
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 2,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.019999999999999997,
+        0.019999999999999997
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.019008871949038823,
+        0.020362100282147615
+      ],
+      "velocity_rad_s": [
+        0.422489226994931,
+        0.4838861412876006
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 3,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 6.938893903907228e-18,
+      "position_rad": [
+        0.029830559520009087,
+        0.032022576062383824
+      ],
+      "velocity_rad_s": [
+        0.5189047873565451,
+        0.5764101599249172
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 4,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.020000000000000004,
+        0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.042373431472753964,
+        0.04532916438059355
+      ],
+      "velocity_rad_s": [
+        0.5975428159146856,
+        0.6509516834701488
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 5,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.05318902124522325,
+        0.05719569574578198
+      ],
+      "velocity_rad_s": [
+        0.49433645160274986,
+        0.5435394133671032
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 6,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.062035185868975246,
+        0.06690525339801028
+      ],
+      "velocity_rad_s": [
+        0.4022398992138411,
+        0.44047610698983647
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 7,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.06922089914555693,
+        0.07474774086521602
+      ],
+      "velocity_rad_s": [
+        0.32645622403271696,
+        0.35521862037705854
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 8,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07505047430687924,
+        0.08106914983449379
+      ],
+      "velocity_rad_s": [
+        0.2647790214113129,
+        0.28626384923743536
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 9,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07977782066873981,
+        0.08616336009267417
+      ],
+      "velocity_rad_s": [
+        0.2146870483909725,
+        0.2306951099892387
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 10,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.083610376109553,
+        0.09026892292791207
+      ],
+      "velocity_rad_s": [
+        0.17403511102291389,
+        0.18593325619210865
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 11,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08671696062847457,
+        0.09357808407506896
+      ],
+      "velocity_rad_s": [
+        0.14105981152488298,
+        0.14987361523480192
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 12,
+      "true_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08923477901493773,
+        0.09624562273664963
+      ],
+      "velocity_rad_s": [
+        0.11432078620307698,
+        0.12082006308098797
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 13,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09127524749356733,
+        0.09839616120944795
+      ],
+      "velocity_rad_s": [
+        0.09264425950195349,
+        0.09740805786490042
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 14,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "planned_goal_rad": [
+        0.1,
+        0.1
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.09292878410159769,
+        0.1001300608026216
+      ],
+      "velocity_rad_s": [
+        0.07507511108137557,
+        0.07853975688050215
+      ],
+      "command_rad": [
+        0.1,
+        0.1
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 15,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.020000000000000004,
+      "position_rad": [
+        0.09078567735550766,
+        0.0987816177421117
+      ],
+      "velocity_rad_s": [
+        -0.10617081153417555,
+        -0.10378467877687853
+      ],
+      "command_rad": [
+        0.08,
+        0.08
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 16,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.08529695334078823,
+        0.0939599096741058
+      ],
+      "velocity_rad_s": [
+        -0.2601092796064472,
+        -0.26706923665475146
+      ],
+      "command_rad": [
+        0.06,
+        0.06
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 17,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.020000000000000004
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.07742978040734312,
+        0.08615002945159485
+      ],
+      "velocity_rad_s": [
+        -0.3862371706892696,
+        -0.40143891151793726
+      ],
+      "command_rad": [
+        0.039999999999999994,
+        0.039999999999999994
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 18,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 3.469446951953614e-18,
+      "position_rad": [
+        0.0672673069489326,
+        0.07597924084932997
+      ],
+      "velocity_rad_s": [
+        -0.49106367454321864,
+        -0.5091732142762538
+      ],
+      "command_rad": [
+        0.019999999999999993,
+        0.019999999999999993
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 19,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.05522542686083574,
+        0.06386759521235108
+      ],
+      "velocity_rad_s": [
+        -0.5761426932435365,
+        -0.5964572785886425
+      ],
+      "command_rad": [
+        -6.938893903907228e-18,
+        -6.938893903907228e-18
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 20,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.04166046763476929,
+        0.05018799481611725
+      ],
+      "velocity_rad_s": [
+        -0.6448957565304101,
+        -0.66677528515828
+      ],
+      "command_rad": [
+        -0.020000000000000007,
+        -0.020000000000000007
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 21,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        -0.02,
+        -0.02
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        0.02686359591940054,
+        0.03524526342268297
+      ],
+      "velocity_rad_s": [
+        -0.7003815712748536,
+        -0.723373590815726
+      ],
+      "command_rad": [
+        -0.04000000000000001,
+        -0.04000000000000001
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 22,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        -0.020000000000000004,
+        -0.009999999999999995
+      ],
+      "increment_jump_rad": 0.010000000000000005,
+      "position_rad": [
+        0.01107896403670641,
+        0.020708300446035173
+      ],
+      "velocity_rad_s": [
+        -0.7447907364521192,
+        -0.6852912051366035
+      ],
+      "command_rad": [
+        -0.06000000000000001,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 23,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        -0.01999999999999999,
+        0.0
+      ],
+      "increment_jump_rad": 0.009999999999999995,
+      "position_rad": [
+        -0.005497108397900321,
+        0.008344166996905017
+      ],
+      "velocity_rad_s": [
+        -0.7803646145398767,
+        -0.5632047261223254
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 24,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.01999999999999999,
+      "position_rad": [
+        -0.019558075530212292,
+        -0.0017019570429951459
+      ],
+      "velocity_rad_s": [
+        -0.6408956208624701,
+        -0.4556243209421423
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 25,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.03100452211695206,
+        -0.009820146289400145
+      ],
+      "velocity_rad_s": [
+        -0.5197299964842993,
+        -0.36800833027910823
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 26,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.04027800639012777,
+        -0.016376019055025563
+      ],
+      "velocity_rad_s": [
+        -0.42092843629735704,
+        -0.29715253177205936
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 27,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.0477890940951025,
+        -0.02166916346920541
+      ],
+      "velocity_rad_s": [
+        -0.34097310421649063,
+        -0.23990135696079928
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 28,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.053874516000404195,
+        -0.025942231304283546
+      ],
+      "velocity_rad_s": [
+        -0.276295982018262,
+        -0.19365892485454808
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 29,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.05880643491298073,
+        -0.02939149220099406
+      ],
+      "velocity_rad_s": [
+        -0.22395407292624617,
+        -0.15631826994068745
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 30,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 7,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06280460380926775,
+        -0.032175605167845414
+      ],
+      "velocity_rad_s": [
+        -0.18157446172731023,
+        -0.12617181406630595
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 31,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": true,
+      "plan_age_ticks": 0,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06604657336578874,
+        -0.034422764019359585
+      ],
+      "velocity_rad_s": [
+        -0.14724681075684354,
+        -0.10183702568415388
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 32,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 1,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.06867590184742979,
+        -0.03623650782687291
+      ],
+      "velocity_rad_s": [
+        -0.11943159957614331,
+        -0.08219548347560214
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 33,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 2,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.0708087362983463,
+        -0.037700438546730455
+      ],
+      "velocity_rad_s": [
+        -0.09688671381544516,
+        -0.06634305521556491
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 34,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 3,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07253909589488257,
+        -0.038882045762539286
+      ],
+      "velocity_rad_s": [
+        -0.07860900086016154,
+        -0.05354923203552745
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 35,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 4,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.07394312094909244,
+        -0.03983580373119831
+      ],
+      "velocity_rad_s": [
+        -0.06378763435354427,
+        -0.04322402627661151
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 36,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 5,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.0750824953250948,
+        -0.040605676792048746
+      ],
+      "velocity_rad_s": [
+        -0.05176679841437233,
+        -0.034891084790183595
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "running"
+    },
+    {
+      "tick": 37,
+      "true_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "observed_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "planned_goal_rad": [
+        -0.08,
+        -0.05
+      ],
+      "replan": false,
+      "plan_age_ticks": 6,
+      "applied_increment_rad": [
+        0.0,
+        0.0
+      ],
+      "increment_jump_rad": 0.0,
+      "position_rad": [
+        -0.0760072065847324,
+        -0.04122714468132236
+      ],
+      "velocity_rad_s": [
+        -0.042015757165799514,
+        -0.028165887760531666
+      ],
+      "command_rad": [
+        -0.08,
+        -0.05
+      ],
+      "outcome": "success"
+    }
+  ]
+]

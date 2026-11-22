@@ -1,0 +1,8 @@
+.............                                                            [100%]
+=============================== warnings summary ===============================
+../react-cpu-tests/lib/python3.11/site-packages/ml_collections/config_dict/config_dict.py:163
+  <本机路径> DeprecationWarning: invalid escape sequence '\['
+    index_match = re.match("(.*)\[([0-9]+)\]", key)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+13 passed, 1 warning in 62.13s (0:01:02)

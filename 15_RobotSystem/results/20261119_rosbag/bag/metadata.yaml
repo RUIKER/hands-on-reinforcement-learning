@@ -1,0 +1,54 @@
+rosbag2_bagfile_information:
+  version: 9
+  storage_identifier: mcap
+  duration:
+    nanoseconds: 2101185708
+  starting_time:
+    nanoseconds_since_epoch: 1795090699110592794
+  message_count: 229
+  topics_with_message_count:
+    - topic_metadata:
+        name: /clock
+        type: rosgraph_msgs/msg/Clock
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 106
+    - topic_metadata:
+        name: /panda/joint_states
+        type: sensor_msgs/msg/JointState
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 110
+    - topic_metadata:
+        name: /panda/trajectory
+        type: trajectory_msgs/msg/JointTrajectory
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 1
+    - topic_metadata:
+        name: /panda/trajectory_heartbeat
+        type: std_msgs/msg/Empty
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 12
+  compression_format: ""
+  compression_mode: ""
+  relative_file_paths:
+    - 0_bag_2026_11_19-20_18_19.mcap
+  files:
+    - path: 0_bag_2026_11_19-20_18_19.mcap
+      starting_time:
+        nanoseconds_since_epoch: 1795090699110592794
+      duration:
+        nanoseconds: 2101185708
+      message_count: 229
+  custom_data: ~
+  ros_distro: lyrical

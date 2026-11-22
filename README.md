@@ -2,6 +2,16 @@
 
 从表格型控制到连续动作策略，使用 Python、Gymnasium 和 PyTorch 实现并分析强化学习算法。项目以《动手学强化学习》等公开资料为起点，覆盖算法组件拆分、固定种子评估、失败案例诊断、消融实验，以及经典控制与模仿学习对照。
 
+## Panda 机械臂仿真与策略验证
+
+Panda 项目覆盖七轴位置跟踪、数值 IK、两轴 SAC/HER 对照和 ROS 2 闭环。面试可先看动作预览，再打开离线回放，切换固定轨迹、策略成功及策略超时三个用例。
+
+![Panda 七轴固定轨迹回放](15_RobotSystem/demo/panda-tracking.webp)
+
+- [离线交互回放](https://raw.githubusercontent.com/RUIKER/hands-on-reinforcement-learning/main/15_RobotSystem/demo/panda-replay.html)下载后在浏览器打开。
+- [Panda 工程与复现说明](15_RobotSystem/README.md)包含运行入口、公开日志和评估协议。
+- [WSL 仿真与后训练预检](15_RobotSystem/wsl_preflight/README.md)包含 LIBERO、ACT 与 REACT 的隔离检查。
+
 ## 项目重点
 
 - **算法实现**：Q-learning / SARSA、DQN 系列、REINFORCE、Actor-Critic、TRPO、PPO、DDPG、TD3、SAC 和 HER。每个章节保留独立入口，便于阅读更新公式与数据流。

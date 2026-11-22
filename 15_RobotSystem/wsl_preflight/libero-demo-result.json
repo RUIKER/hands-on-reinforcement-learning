@@ -1,0 +1,30 @@
+{
+  "task_id": 0,
+  "bddl": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl",
+  "episode": "demo_0",
+  "replayed_steps": 98,
+  "success_seen": true,
+  "batch_shapes": {
+    "observation.images.image": [
+      2,
+      3,
+      64,
+      64
+    ],
+    "observation.images.wrist_image": [
+      2,
+      3,
+      64,
+      64
+    ],
+    "observation.state": [
+      2,
+      8
+    ],
+    "action": [
+      2,
+      4,
+      7
+    ]
+  }
+}

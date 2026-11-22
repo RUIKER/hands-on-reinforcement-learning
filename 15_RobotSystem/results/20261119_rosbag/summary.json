@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "ros_distro": "lyrical",
+  "mujoco": "3.17.0",
+  "numpy": "2.5.4",
+  "command_messages": 1,
+  "heartbeat_messages": 12,
+  "state_replay_samples": 110,
+  "clock_replay_samples": 106,
+  "command_reexecution_samples": 40,
+  "recorded_acceptance_sim_ns": 1580000000,
+  "reexecution_acceptance_sim_ns": 2560000000,
+  "recorded_joint1_endpoint_rad": 0.09962211012372425,
+  "reexecuted_joint1_endpoint_rad": 0.0996221101237255,
+  "reexecution_max_abs_position_delta_rad": 2.1050228227181833e-10,
+  "reexecution_max_abs_velocity_delta_rad_s": 2.27638373433389e-09
+}

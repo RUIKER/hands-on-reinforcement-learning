@@ -1,0 +1,8 @@
+{
+  "task_id": 0,
+  "seed": 0,
+  "mode": "upstream_sync_wrapper_probe_expert",
+  "first_block_identical": true,
+  "eef_displacement_m": 0.020021976809111896,
+  "next_block_max_action_delta": 0.006919652223587036
+}
